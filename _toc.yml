@@ -1,0 +1,332 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+
+
+parts:
+
+  # - caption: ""  # <- This part has no title, acts like a loose section
+  #   chapters:
+    
+  - caption: Overview
+    chapters:
+    - file: Docs_MD/DesignSafe/Oview_TrainingObjectives.md
+    - file: Docs_MD/DesignSafe/Oview_DesignSafeOnTACC.md
+    
+  - caption: Computational Workflow
+    chapters:
+    - file: Docs_MD/DesignSafe/Oview_WorkflowArchitecture.md
+    - file: Docs_MD/DesignSafe/Oview_WorkflowArchitectureGuide.md
+
+  - caption: OpenSees
+    chapters:
+    - file: Docs_MD/DesignSafe/OpenSees_AndDesignSafe.md
+    - file: Docs_MD/DesignSafe/OpenSees_Interpreters.md
+    - file: Docs_MD/DesignSafe/OpenSees_Applications.md
+    - file: Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.md
+    
+
+
+
+ 
+      
+  - caption: Compute Environments
+    chapters:
+    - file: Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.md
+    - file: Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.md
+    - file: Docs_MD/DesignSafe/ComputeEnv_HPC.md
+      sections:
+      - file: Docs_MD/DesignSafe/HPC_Node.md
+      - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
+      - file: Docs_MD/DesignSafe/HPC_Core.md
+      - file: Docs_MD/DesignSafe/HPC_Queue.md
+      - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
+      - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
+      - file: Docs_MD/DesignSafe/HPC_allocations.md    
+    - file: Docs_MD/DesignSafe/ComputeEnv_Guide.md
+
+        
+    
+  - caption: File Storage
+    chapters:
+      - file: Docs_MD/DesignSafe/FileStorage_Overview.md
+      - file: Docs_MD/DesignSafe/FileStorage_Systems.md
+        sections:
+        - file: Docs_MD/DesignSafe/FileStorage_1_corral.md      
+        - file: Docs_MD/DesignSafe/FileStorage_2_compsys.md      
+        - file: Docs_MD/DesignSafe/FileStorage_3_compnode.md
+      - file: Docs_MD/DesignSafe/FileStorage_guide.md
+
+  - caption: JupyterHub
+    chapters:
+    - file: Docs_MD/DesignSafe/JupyterHub_Intro.md
+      sections:
+      - file: Docs_MD/DesignSafe/AccessJupyter.md
+      - file: Docs_MD/DesignSafe/JupyterHub_Workflow.md
+    - file: Docs_MD/DesignSafe/JupyterHub_Tools.md
+
+
+    
+  - caption: Paths
+    chapters:        
+      - file: Docs_MD/DesignSafe/Paths_Overview.md
+      - file: Jupyter_Notebooks/paths_InPython.ipynb
+        sections:
+        - file: Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_Manage.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_Contents.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_BuildPath.ipynb
+      - file: Jupyter_Notebooks/paths_StorageSystems.ipynb
+    
+
+
+    
+
+ 
+  - caption: DesignSafe Web Portal
+    chapters:      
+    - file: Docs_MD/DesignSafe/WebPortal_Overview.md
+    - file: Docs_MD/DesignSafe/WebPortal_Overview_Workflow.md
+      sections:
+      - file: Docs_MD/DesignSafe/WebPortal_1_CreateInput.md
+      - file: Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.md
+      - file: Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.md
+      - file: Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.md
+      - file: Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.md
+      - file: Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.ipynb
+      - file: Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb
+      
+
+
+
+
+  - caption: OpenSees on JupyterHub
+    chapters:   
+    - file: Docs_MD/DesignSafe/RunOpsInDS_JupyterHub_intro.md
+    - file: Docs_MD/DesignSafe/CLI.md
+    # - file: Docs_MD/DesignSafe/CLIaccess.md
+      # sections:
+        
+        # - file: Docs_MD/DesignSafe/RunOpsInDS_Interactive_Terminal.md
+        # - file: Docs_MD/DesignSafe/RunOpsInDS_InTerminal.md
+
+    - file: Docs_MD/DesignSafe/RunOpsInDS_Console.md
+    - file: Docs_MD/DesignSafe/RunOpsInDS_JupyterNotebook.md
+
+
+  - caption: OpenSees Execution
+    chapters:    
+    - file: Docs_MD/DesignSafe/Ops_CommandStrux.md
+      sections:
+      - file: Docs_MD/DesignSafe/Ops_CommandStrux_1_ExecutableFile.md
+      - file: Docs_MD/DesignSafe/Ops_CommandStrux_2_ScriptFile.md
+      - file: Docs_MD/DesignSafe/Ops_CommandStrux_3_CommandLineArgs.md    
+    - file: Docs_MD/DesignSafe/Ops_ParallelExec.md
+      sections:
+      - file: Docs_MD/DesignSafe/Ops_ParallelExec_MPI.md
+      - file: Docs_MD/DesignSafe/Ops_ParallelExec_Ibrun.md
+      - file: Docs_MD/DesignSafe/Ops_ParallelExec_python.md
+    - file: Docs_MD/DesignSafe/Ops_ExecGuide.md
+
+    
+    - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
+    - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
+    - file: Docs_MD/DesignSafe/RunOpsInDS_PythonWithinPython.md
+
+
+
+
+
+  - caption: HPC on TACC
+    chapters:
+    - file: Docs_MD/DesignSafe/HPCenv.md
+    # - file: Docs_MD/DesignSafe/HPCenv_Intro.md
+    - file: Docs_MD/DesignSafe/SLURM_TACCjobs.md
+      sections:
+      - file: Docs_MD/DesignSafe/SLURM_Intro.md
+      - file: Docs_MD/DesignSafe/SLURM_Workflow.md
+      - file: Docs_MD/DesignSafe/SLURM_Scheduling.md
+      - file: Docs_MD/DesignSafe/SLURM_Input.md
+      - file: Docs_MD/DesignSafe/SLURM_Script.md
+      - file: Docs_MD/DesignSafe/SLURM_Run.md
+      - file: Docs_MD/DesignSafe/SLURM_OutErrFiles.md
+      - file: Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.md
+        sections:
+          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction.md
+          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.md
+    - file: Docs_MD/DesignSafe/HPCenv_HPCjupyter.md
+          
+
+
+  - caption: Tapis
+    chapters:
+    
+    - file: Docs_MD/Tapis/tapis_intro.md
+    - file: Docs_MD/Tapis/tapis_interfacing.md
+    - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
+    - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
+    - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
+    - file: Docs_MD/Tapis/TapisFileManage.md
+
+  - caption: Tapis Jobs
+    chapters:  
+    - file: Docs_MD/Tapis/tapis_job.md
+    - file: Docs_MD/Tapis/tapis_queryJobs.md
+
+    # - file: Docs_MD/Tapis/tapis_jobs_query.md
+      sections:
+        - file: Docs_MD/Tapis/tapis_queryJobs_JobsList.md
+        - file: Docs_MD/Tapis/tapis_queryJobs_JobInfo.md
+        - file: Docs_MD/Tapis/tapis_queryJobs_Retrieve.md
+        - file: Docs_MD/Tapis/tapis_job_schema.md
+      # - file: Docs_MD/Tapis/tapis_job_get_methods.md
+       
+    # - file: Docs_MD/Tapis/tapis_getJobs.md
+    - file: Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb
+    - file: Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb
+    - file: Docs_MD/Tapis/TapisCancelJob.md
+
+    
+
+
+  - caption: Run OpenSees using Tapis Apps
+    chapters:   
+      - file: Docs_MD/DesignSafe/DSapps_OpenSees.md
+      - file: Docs_MD/Tapis/OpsApps_MPs3_submit.md
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.ipynb
+
+ 
+
+ 
+  - caption: Tapis Apps
+    chapters:  
+    - file: Docs_MD/Tapis/tapis_job_submittal.md
+    - file: Docs_MD/Tapis/tapis_job_attributes.md
+    
+    
+     
+    - file: Docs_MD/Tapis/tapis_Apps.md
+    - file: Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb
+    - file: Docs_MD/Tapis/tapis_AppTemp_Schema.md
+    - file: Jupyter_Notebooks/tapis_submitJob_getApps_Schema.ipynb
+
+    - file: Docs_MD/DesignSafe/DSapps.md
+      sections:
+      - file: Docs_MD/DesignSafe/DSapps_OpenFOAM.md
+      - file: Docs_MD/DesignSafe/DSapps_ADCIRC.md
+      - file: Docs_MD/DesignSafe/DSapps_Compare.md      
+    
+
+    - file: Docs_MD/Tapis/tapis_AppTemplates.md
+      sections:
+      - file: Docs_MD/Tapis/tapis_AppTemp_Structure.md
+      - file: Docs_MD/Tapis/tapis_app_def_files.md
+      - file: Docs_MD/Tapis/tapis_AppTemp_InputVSParams.md
+      - file: Docs_MD/Tapis/tapis_AppTemp_Inputs.md
+      - file: Docs_MD/Tapis/tapis_AppTemp_Parameters.md
+      - file: Docs_MD/Tapis/JobAttributes_vs_AppParams.md
+      - file: Docs_MD/Tapis/tapis_AppTemp_Outputs.md
+      
+        
+
+    # - file: Docs_MD/Tapis/UploadFileToTapis.md # i need to work on this one...
+    
+
+
+  - caption: OpenSees Tapis Apps Details
+    chapters: 
+    - file: Docs_MD/Tapis/OpsApps_Overview.md
+    - file: Docs_MD/Tapis/OpsApps_Express.md
+      sections:
+      - file: Docs_MD/Tapis/OpsApps_Express_fileStrux.md
+        sections:
+        - file: Docs_MD/Tapis/OpsApps_Express_app_json.md
+        - file: Docs_MD/Tapis/OpsApps_Express_app_sh.md
+      - file: Docs_MD/Tapis/OpsApps_Express_example.md
+    - file: Docs_MD/Tapis/OpsApps_MPs3.md
+      sections:
+      - file: Docs_MD/Tapis/OpsApps_MPs3_fileStrux.md
+        sections:
+        - file: Docs_MD/Tapis/OpsApps_MPs3_app_json.md
+        - file: Docs_MD/Tapis/OpsApps_MPs3_profile_json.md
+        - file: Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.md
+      
+
+
+  - caption: Custom Tapis Apps
+    chapters:
+
+
+
+    
+    - file: Docs_MD/Tapis/tapis_appsDev_CustomTapisApp.md
+    - file: Docs_MD/Tapis/tapis_appsDev_AppInputCats.md
+    - file: Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.ipynb
+    - file: Docs_MD/Tapis/tapis_appsDev_BestPractice.md
+    # - file: Docs_MD/Tapis/tapis_appsDev_WebFormGUI.md
+        
+    
+
+  - caption: Python Utilities
+    chapters:
+    - file: OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.md
+      # sections:
+    - file: OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.md
+      sections:
+      - file: OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/empty_folder.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/flatten_dict.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/get_now_unix.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/queryDF.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/show_video.md
+      - file: OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.md
+      
+    - file: OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.md
+      sections:
+      - file: OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/find_work_path.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.md
+      
+  - caption: Table of Contents
+    chapters:
+    - file: generated_toc.md
