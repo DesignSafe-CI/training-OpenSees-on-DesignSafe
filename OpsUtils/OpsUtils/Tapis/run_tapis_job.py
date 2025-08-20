@@ -117,7 +117,7 @@ def run_tapis_job(
             OpsUtils.monitor_tapis_job(t, jobUuid, returnDict.get("job_start_time"), askConfirmMonitorRT)
 
             # Always fetch basic status after monitoring
-            JobStatusData = OpsUtils.get_tapis_job_status(t, jobUuid, tapisInput)
+            JobStatusData = OpsUtils.get_tapis_job_status(t, jobUuid, tapisInput,return_values=True)
 
             # Optional enrichments
             if get_job_metadata:

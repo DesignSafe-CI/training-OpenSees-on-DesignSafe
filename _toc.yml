@@ -175,21 +175,17 @@ parts:
     chapters:  
     - file: Docs_MD/Tapis/tapis_job.md
     - file: Docs_MD/Tapis/tapis_queryJobs.md
-
-    # - file: Docs_MD/Tapis/tapis_jobs_query.md
       sections:
-        - file: Docs_MD/Tapis/tapis_queryJobs_JobsList.md
-        - file: Docs_MD/Tapis/tapis_queryJobs_JobInfo.md
-        - file: Docs_MD/Tapis/tapis_queryJobs_Retrieve.md
-        - file: Docs_MD/Tapis/tapis_job_schema.md
-      # - file: Docs_MD/Tapis/tapis_job_get_methods.md
-       
-    # - file: Docs_MD/Tapis/tapis_getJobs.md
+        - file: Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb
+        - file: Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb
+        - file: Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb
+            
     - file: Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb
     - file: Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb
     - file: Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb
     - file: Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb
     - file: Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb
+    - file: Docs_MD/Tapis/tapis_job_profiling.md
     - file: Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb
     - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb
     - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb
@@ -299,6 +295,7 @@ parts:
     - file: OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.md
       sections:
       - file: OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.md

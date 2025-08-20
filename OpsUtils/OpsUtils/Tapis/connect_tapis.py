@@ -75,6 +75,19 @@ def connect_tapis(token_filePath: str = "~/.tapis_tokens.json",
         except Exception:
             return None
 
+    def getTokensLoop():
+        username = getpass("Username: ")
+        password = getpass("Password: ")
+        t = Tapis(base_url=base_url, username=username, password=password)
+        try:
+            t.get_tokens()
+            return t
+        except Exception as e:
+            print(f" ** Warning ** could get token : {e},\n TRY AGAIN!")
+            t= getTokensLoop()
+            return t
+
+        
     print(" -- Checking Tapis token --")
     token_path = os.path.expanduser(token_filePath)
     now = datetime.now(timezone.utc)
@@ -113,7 +126,11 @@ def connect_tapis(token_filePath: str = "~/.tapis_tokens.json",
         if not password:
             password = getpass("Password: ")
         t = Tapis(base_url=base_url, username=username, password=password)
-        t.get_tokens()
+        try:
+            t.get_tokens()
+        except Exception as e:
+            print(f" ** Warning ** could get token : {e},\n TRY AGAIN!")
+            t= getTokensLoop()
         # Save the new token back to the chosen path
         try:
             tokens = {

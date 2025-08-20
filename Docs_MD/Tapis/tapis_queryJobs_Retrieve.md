@@ -1,7 +1,5 @@
 # Step 3: Retrieve Output
 
-Perfect 👍 — here’s the expanded **Step 3 introduction with a best-practice note** included:
-
 Once a job has completed, the final step is to **explore and retrieve its outputs**. Tapis automatically archives all files produced by your job into the designated archive system and path. These outputs may include:
 
 * **Primary results** (e.g., simulation data, processed files)

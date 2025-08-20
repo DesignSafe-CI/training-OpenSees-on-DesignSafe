@@ -2,7 +2,8 @@ def get_tapis_job_all_files(
     t, jobUuid, 
     displayIt=10, 
     target_dir=False, 
-    overwrite=False
+    overwrite=False,
+    display_file_content=True
 ):
     """
     Recursively retrieves all output files from a Tapis job, optionally downloading them.
@@ -76,6 +77,39 @@ def get_tapis_job_all_files(
     # Silvia Mazzoni, 2025
 
     import os
+    import OpsUtils
+    def view_tapis_file_in_accordion(selected_path):
+        import ipywidgets as widgets
+        from IPython.display import display, clear_output
+
+        
+    
+        view_select_out = widgets.Output()
+        view_select_out_acc = widgets.Accordion(children=[view_select_out])
+        view_select_out_acc.set_title(0, f" View File: {selected_path}")
+        # view_select_out_acc.selected_index = 0
+        display(view_select_out_acc)
+        with view_select_out:
+            if not os.path.splitext(selected_path)[-1] in ['.zip','.ZIP']:
+                clear_output()
+                if selected_path:
+                    local_file = selected_path.split('/')[-1]
+                    # print('selected_path',selected_path)
+                    data = t.jobs.getJobOutputDownload(jobUuid=jobUuid, outputPath=selected_path)
+                    print(f" Viewing: {selected_path}")
+                    textarea = widgets.Textarea(
+                        value=data,
+                        placeholder='',
+                        description='',
+                        disabled=False,
+                        layout=widgets.Layout(width='100%', height='500px')
+                    )
+                    display(textarea)
+                else:
+                    print(" No output file selected to download.")
+            else:
+                print("can't display content")
+
 
     # normalize displayIt
     if isinstance(displayIt, bool):
@@ -118,8 +152,8 @@ def get_tapis_job_all_files(
                 print('----------------------------')
                 print(f'TARGET DIR: {download_dir}')
                 print('----------------------------')
-
-    def get_files_recursive(path=""):
+    view_direct_out = widgets.Output()
+    def get_files_recursive(view_direct_out,path=""):
         Nfiles = 0
         returnFiles = []
         returnFilesPath = []
@@ -141,18 +175,27 @@ def get_tapis_job_all_files(
             if len(output_items_files)>0:
                 firstCase = output_items_files[0].path
                 dirr = os.path.dirname(firstCase)
-                print(f' {dirr}')
-            print(f'  {len(output_items_files)} files & {len(output_items_dirs)} directories:')
+                with view_direct_out:
+                    print(f' {dirr}')
+            with view_direct_out:
+                print(f'  {len(output_items_files)} files & {len(output_items_dirs)} directories:')
+            print(f'      {len(output_items_files)} files & {len(output_items_dirs)} directories')
 
         for item in output_items_ordered:
             remote_path = os.path.join(path, item.name) if path else item.name
 
             if getattr(item, "type", "") == "dir":
                 if displayLevel >= 1:
-                    print('----------------------------')
-                    print(f'DIRECTORY: {remote_path}')
+                    # print('----------------------------')
+                    # print(f'DIRECTORY: {remote_path}')
                     # print(f'DIRECTORY: {remote_path}\n{item.path}')
-                Nhere, hereFiles, hereFilesPath, hereItems = get_files_recursive(remote_path)
+                    view_direct_out = widgets.Output()
+                    view_direct_out_acc = widgets.Accordion(children=[view_direct_out])
+                    view_direct_out_acc.set_title(0, f"DIRECTORY: {remote_path}")
+                    # view_direct_out_acc.selected_index = 0
+                    display(view_direct_out_acc)
+
+                Nhere, hereFiles, hereFilesPath, hereItems = get_files_recursive(view_direct_out,remote_path)
                 Nfiles += Nhere
                 returnFiles.extend(hereFiles)
                 returnFilesPath.extend(hereFilesPath)
@@ -165,11 +208,15 @@ def get_tapis_job_all_files(
 
                 # print tree
                 if displayLevel >= 1 and (displayLimit is None or printed_count < displayLimit):
-                    if not download_dir:
-                        print(f'    FILE: {remote_path}')
-                    printed_count += 1
-                    if displayLimit is not None and printed_count == displayLimit:
-                        Nstopp = Nfiles
+                    with view_direct_out:
+                        if not download_dir:
+                            if display_file_content:
+                                view_tapis_file_in_accordion(remote_path)
+                            else:
+                                print(f'    FILE: {remote_path}')
+                        printed_count += 1
+                        if displayLimit is not None and printed_count == displayLimit:
+                            Nstopp = Nfiles
 
                 # download if needed
                 if download_dir:
@@ -206,14 +253,19 @@ def get_tapis_job_all_files(
         with filedata_out:
             print('----------------------------')
             print('DIRECTORY: "."')
-            Nfiles, FileList, FilesPathList, itemsList = get_files_recursive()
+            view_direct_out = widgets.Output()
+            view_direct_out_acc = widgets.Accordion(children=[view_direct_out])
+            view_direct_out_acc.set_title(0, f'DIRECTORY: "."')
+            # view_direct_out_acc.selected_index = 0
+            display(view_direct_out_acc)
+            Nfiles, FileList, FilesPathList, itemsList = get_files_recursive(view_direct_out)
     else:
-        Nfiles, FileList, FilesPathList, itemsList = get_files_recursive()
+        Nfiles, FileList, FilesPathList, itemsList = get_files_recursive(view_direct_out)
 
     if displayIt:
         with filedata_out:
             print(f"\nA total of {Nfiles} job-output files have been found"
-                  f"{' and downloaded' if download_dir else ''}."
+                  f"{' and downloaded' if download_dir else ''}"
                 "!")
 
     return {

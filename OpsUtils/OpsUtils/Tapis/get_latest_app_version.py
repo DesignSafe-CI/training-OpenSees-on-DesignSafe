@@ -72,9 +72,12 @@ def get_latest_app_version(
 
     # 1) Try official "latest" helper
     try:
+        # print('try')
         latest = t.apps.getAppLatestVersion(appId=app_id)
+        # print('latest',latest)
         latest = getattr(latest, "result", latest)
         v = _field(latest, "version")
+        # print('v',v)
         if isinstance(v, str) and v:
             if v.lower() != "latest":
                 return v  # concrete version resolved by the service
