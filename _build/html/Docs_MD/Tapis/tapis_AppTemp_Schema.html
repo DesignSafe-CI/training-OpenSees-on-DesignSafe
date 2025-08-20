@@ -1,0 +1,1480 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tapis App Schema &#8212; OpenSees-on-DesignSafe Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=4db13f68" />
+    <link rel="stylesheet" type="text/css" href="../../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Docs_MD/Tapis/tapis_AppTemp_Schema';</script>
+    <script src="../../_static/custom.js?v=831b1415"></script>
+    <script src="../../_static/.ipynb_checkpoints/custom-checkpoint.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Get Tapis App Schema 📒" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_Schema.html" />
+    <link rel="prev" title="List Tapis Apps 📒" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_List.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="OpenSees-on-DesignSafe Training - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="OpenSees-on-DesignSafe Training - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    OpenSees-on-DesignSafe Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_TrainingObjectives.html">Training Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_DesignSafeOnTACC.html">DesignSafe &amp; TACC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_WorkflowArchitecture.html">Workflow Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_WorkflowArchitectureGuide.html">Workflow Decision Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_AndDesignSafe.html">OpenSees on DesignSafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_Interpreters.html">OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_Applications.html">OpenSees Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_DecisionMatrixOpsDS.html">Decision Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compute Environments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_JupyterHubContainers.html">JupyterHub Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_VirtualMachines.html">Virtual Machines (VMs)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/ComputeEnv_HPC.html">HPC on TACC</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Node.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_NodeStampede3.html">Stampede3 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Core.html">Cores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Queue.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_QueueStampede3.html">Stampede3 Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_QueueSelexn.html">Queue Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_allocations.html">Allocations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_Guide.html">Environment Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">File Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/FileStorage_Overview.html">File Storage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/FileStorage_Systems.html">File Storage Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_1_corral.html">Corral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_2_compsys.html">Compute System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_3_compnode.html">Compute Nodes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/FileStorage_guide.html">File-Storage Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/JupyterHub_Intro.html">JupyterHub Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/AccessJupyter.html">Accessing JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/JupyterHub_Workflow.html">Workflow in JupyterHub</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/JupyterHub_Tools.html">JupyterHub Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paths</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Paths_Overview.html">Understanding Paths</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython.html">Paths in Python 📒</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_AbsVsRelative.html">Absolute vs Relative Path 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_RootAndHome.html">Root &amp; Home Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Manage.html">Managing Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Contents.html">Directory Contents 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_BuildPath.html">Building Paths 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/paths_StorageSystems.html">Storage-System Paths 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DesignSafe Web Portal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/WebPortal_Overview.html">DesignSafe Web Portal</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/WebPortal_Overview_Workflow.html">Web-Portal Demo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_1_CreateInput.html">1 Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.html">2 Submit OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.html">2 Submit OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.html">3 Monitor OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.html">3 Monitor OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.html">4 PostProcess Ops-Express 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.html">4 PostProcess Ops-MP 📒</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees on JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_JupyterHub_intro.html">JupyterHub for OpenSees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/CLI.html">Terminal CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_Console.html">Python Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_JupyterNotebook.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Execution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux.html">Command Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_1_ExecutableFile.html">Executable File (Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_2_ScriptFile.html">Input Script File (Non-Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_3_CommandLineArgs.html">Command-Line Arguments</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec.html">Parallel Execution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_MPI.html">Parallel Execution: MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_Ibrun.html">Parallel Execution: ibrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_python.html">OpenSeesPy Parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Ops_ExecGuide.html">Execution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.html">OpenSeesPy Interactive 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.html">Run ANY OpenSees in Python 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_PythonWithinPython.html">Python Script within Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HPC on TACC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/HPCenv.html">Accessing HPC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/SLURM_TACCjobs.html">TACC Jobs: SLURM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Intro.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Workflow.html">Job Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Scheduling.html">Job Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Input.html">Job Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Script.html">Job Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Run.html">Run a SLURM Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_OutErrFiles.html">SLURM Job Output</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../DesignSafe/SLURMmanual_ParameterSweep.html">Parameter Sweeps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../DesignSafe/SLURMmanual_PythonFunction.html">Write SLURM with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DesignSafe/SLURMmanual_PythonFunction2.html">Advanced Python Function</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/HPCenv_HPCjupyter.html">DesignSafe’s HPC Jupyter Lab</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_intro.html">What is Tapis?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_interfacing.html">Interfacing with Tapis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_connectToTapis.html">Tapis Authentication 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_establishSystemCredentials.html">Establish TMS Credentials 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_getSystemSpecs.html">System Specifications 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TapisFileManage.html">Tapis: File Management</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_job.html">Tapis Jobs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tapis_queryJobs.html">Query and Retrieve Jobs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.html">Step 1: Explore All Jobs 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_InspectJob.html">Step 2: Inspect Job 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.html">Step 3: Retrieve Output 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_AllJobs.html">Explore All Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_FilterJobs.html">Filter Tapis Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobStatus.html">Job Status 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.html">Job Metadata 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.html">Job History 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_profiling.html">Job Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_AccessData.html">Access Output Data 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.html">List All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.html">Download All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.html">Explore Jobs Interactively 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TapisCancelJob.html">Cancel Tapis Job</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run OpenSees using Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/DSapps_OpenSees.html">OpenSees App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpsApps_MPs3_submit.html">Submit to OpenSeesMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.html">Run OpenSees – Detailed 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.html">Run OpenSees – Compact 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Apps</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_submittal.html">Tapis-Job Submittal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_attributes.html">Job Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_Apps.html">Tapis Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_List.html">List Tapis Apps  📒</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tapis App Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_Schema.html">Get Tapis App Schema 📒</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/DSapps.html">DesignSafe Tapis Apps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_OpenFOAM.html">OpenFOAM app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_ADCIRC.html">ADCIRC app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_Compare.html">Compare Apps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tapis_AppTemplates.html">Tapis App Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Structure.html">Structure of App Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_app_def_files.html">App-Definition Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_InputVSParams.html">Inputs vs Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Inputs.html">Tapis App Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Parameters.html">Tapis App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JobAttributes_vs_AppParams.html">Job Attributes vs App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Outputs.html">Tapis App Output</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Tapis Apps Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OpsApps_Overview.html">OpenSees Tapis Apps</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="OpsApps_Express.html">OpenSees-EXPRESS App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="OpsApps_Express_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_Express_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_Express_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="OpsApps_Express_example.html">Example</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="OpsApps_MPs3.html">OpenSeesMP App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="OpsApps_MPs3_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_profile_json.html">profile.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_tapisjob_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Custom Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_CustomTapisApp.html">Custom Tapis App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_AppInputCats.html">App Input Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.html">My App: opensees-mp-s3-copy  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_BestPractice.html">Best Practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.html">OpsUtils</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.html">Miscellaneous OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.html">convert_tacc_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.html">convert_time_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.html">display_images_in_xbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/empty_folder.html">empty_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/flatten_dict.html">flatten_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.html">get_files_recursive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/get_now_unix.html">get_now_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/queryDF.html">queryDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.html">show_text_file_in_accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/show_video.html">show_video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.html">unix_to_tacc_time</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.html">Tapis OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.html">analyze_tacc_job_history</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.html">bump_app_version()</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.html">cancel_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.html">connect_tapis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.html">display_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.html">establish_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.html">explore_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.html">filter_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.html">find_work_path_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/find_work_path.html">find_work_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.html">get_latest_app_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.html">get_system_queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.html">get_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.html">get_tapis_job_all_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.html">get_tapis_job_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.html">get_tapis_job_history_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.html">get_tapis_job_metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.html">get_tapis_job_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.html">get_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.html">get_tapis_jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.html">get_tapis_tenant_and_username</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.html">get_tapis_username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.html">interactive_tapis_job_explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.html">monitor_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.html">print_nested_tapisresult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.html">revoke_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.html">run_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.html">submit_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.html">validate_app_folder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../generated_toc.html">Table of Contents</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe/issues/new?title=Issue%20on%20page%20%2FDocs_MD/Tapis/tapis_AppTemp_Schema.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Docs_MD/Tapis/tapis_AppTemp_Schema.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tapis App Schema</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tapis-app-schema">
+<h1>Tapis App Schema<a class="headerlink" href="#tapis-app-schema" title="Link to this heading">#</a></h1>
+<p>These tables describe the schema for the Tapis Applications.
+You can learn more in the apps definition in the following:</p>
+<ul class="simple">
+<li><p>(Tapis Apps Documentation)[https://tapis.readthedocs.io/en/latest/technical/apps.html]</p></li>
+<li><p>(Tapis Jobs Documentation)[https://tapis.readthedocs.io/en/latest/technical/jobs.html]</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Sample Schema</strong>: opensees-mp-s3 app.json**</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">sharedAppCtx</span><span class="p">:</span> <span class="s2">&quot;wma_prtl&quot;</span>
+  <span class="n">isPublic</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">tenant</span><span class="p">:</span> <span class="s2">&quot;designsafe&quot;</span>
+  <span class="nb">id</span><span class="p">:</span> <span class="s2">&quot;opensees-mp-s3&quot;</span>
+  <span class="n">version</span><span class="p">:</span> <span class="s2">&quot;latest&quot;</span>
+  <span class="n">description</span><span class="p">:</span> <span class="s2">&quot;Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.&quot;</span>
+  <span class="n">owner</span><span class="p">:</span> <span class="s2">&quot;wma_prtl&quot;</span>
+  <span class="n">enabled</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">versionEnabled</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">locked</span><span class="p">:</span> <span class="kc">False</span>
+  <span class="n">runtime</span><span class="p">:</span> <span class="s2">&quot;ZIP&quot;</span>
+  <span class="n">runtimeVersion</span><span class="p">:</span> <span class="kc">None</span>
+  <span class="n">runtimeOptions</span><span class="p">:</span> <span class="kc">None</span>
+  <span class="n">containerImage</span><span class="p">:</span> <span class="s2">&quot;tapis://cloud.data/corral/tacc/aci/CEP/applications/v3/opensees/latest/OpenSees/opensees.zip&quot;</span>
+  <span class="n">jobType</span><span class="p">:</span> <span class="s2">&quot;BATCH&quot;</span>
+  <span class="n">maxJobs</span><span class="p">:</span> <span class="mi">2147483647</span>
+  <span class="n">maxJobsPerUser</span><span class="p">:</span> <span class="mi">2147483647</span>
+  <span class="n">strictFileInputs</span><span class="p">:</span> <span class="kc">True</span>
+  <span class="n">uuid</span><span class="p">:</span> <span class="s2">&quot;1410a584-0c5e-4e47-b3b0-3a7bea0e1187&quot;</span>
+  <span class="n">deleted</span><span class="p">:</span> <span class="kc">False</span>
+  <span class="n">created</span><span class="p">:</span> <span class="s2">&quot;2025-02-20T18:01:49.005183Z&quot;</span>
+  <span class="n">updated</span><span class="p">:</span> <span class="s2">&quot;2025-07-25T19:55:59.261049Z&quot;</span>
+  <span class="n">sharedWithUsers</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="n">tags</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;portalName: DesignSafe&quot;</span><span class="p">,</span> <span class="s2">&quot;portalName: CEP&quot;</span><span class="p">]</span>
+  <span class="n">jobAttributes</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">description</span><span class="p">:</span> <span class="kc">None</span>
+    <span class="n">dynamicExecSystem</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">execSystemConstraints</span><span class="p">:</span> <span class="kc">None</span>
+    <span class="n">execSystemId</span><span class="p">:</span> <span class="s2">&quot;stampede3&quot;</span>
+    <span class="n">execSystemExecDir</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;</span>
+    <span class="n">execSystemInputDir</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;</span>
+    <span class="n">execSystemOutputDir</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;</span>
+    <span class="n">dtnSystemInputDir</span><span class="p">:</span> <span class="s2">&quot;!tapis_not_set&quot;</span>
+    <span class="n">dtnSystemOutputDir</span><span class="p">:</span> <span class="s2">&quot;!tapis_not_set&quot;</span>
+    <span class="n">execSystemLogicalQueue</span><span class="p">:</span> <span class="s2">&quot;skx&quot;</span>
+    <span class="n">archiveSystemId</span><span class="p">:</span> <span class="s2">&quot;stampede3&quot;</span>
+    <span class="n">archiveSystemDir</span><span class="p">:</span> <span class="s2">&quot;HOST_EVAL($WORK)/tapis-jobs-archive/$</span><span class="si">{JobCreateDate}</span><span class="s2">/$</span><span class="si">{JobName}</span><span class="s2">-$</span><span class="si">{JobUUID}</span><span class="s2">&quot;</span>
+    <span class="n">archiveOnAppError</span><span class="p">:</span> <span class="kc">True</span>
+    <span class="n">isMpi</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">mpiCmd</span><span class="p">:</span> <span class="kc">None</span>
+    <span class="n">cmdPrefix</span><span class="p">:</span> <span class="kc">None</span>
+    <span class="n">nodeCount</span><span class="p">:</span> <span class="mi">2</span>
+    <span class="n">coresPerNode</span><span class="p">:</span> <span class="mi">48</span>
+    <span class="n">memoryMB</span><span class="p">:</span> <span class="mi">192000</span>
+    <span class="n">maxMinutes</span><span class="p">:</span> <span class="mi">120</span>
+    <span class="n">fileInputs</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Input Directory&quot;</span>
+        <span class="n">description</span><span class="p">:</span> <span class="s2">&quot;Input directory that includes the tcl script as well as any other required files. Example input is in tapis://designsafe.storage.community/app_examples/opensees/OpenSeesMP&quot;</span>
+        <span class="n">inputMode</span><span class="p">:</span> <span class="s2">&quot;REQUIRED&quot;</span>
+        <span class="n">autoMountLocal</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="n">envKey</span><span class="p">:</span> <span class="s2">&quot;inputDirectory&quot;</span>
+        <span class="n">sourceUrl</span><span class="p">:</span> <span class="kc">None</span>
+        <span class="n">targetPath</span><span class="p">:</span> <span class="s2">&quot;inputDirectory&quot;</span>
+        <span class="n">notes</span><span class="p">:</span> <span class="p">{</span>
+          <span class="n">selectionMode</span><span class="p">:</span> <span class="s2">&quot;directory&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+    <span class="n">fileInputArrays</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="n">subscriptions</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="n">tags</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="n">parameterSet</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">appArgs</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">arg</span><span class="p">:</span> <span class="s2">&quot;OpenSeesMP&quot;</span>
+          <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;mainProgram&quot;</span>
+          <span class="n">description</span><span class="p">:</span> <span class="kc">None</span>
+          <span class="n">inputMode</span><span class="p">:</span> <span class="s2">&quot;FIXED&quot;</span>
+          <span class="n">notes</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">isHidden</span><span class="p">:</span> <span class="kc">True</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="p">{</span>
+          <span class="n">arg</span><span class="p">:</span> <span class="kc">None</span>
+          <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;Main Script&quot;</span>
+          <span class="n">description</span><span class="p">:</span> <span class="s2">&quot;The filename only of the OpenSees TCL script to execute. This file should reside in the Input Directory specified. To use with test input, use &#39;freeFieldEffective.tcl&#39;&quot;</span>
+          <span class="n">inputMode</span><span class="p">:</span> <span class="s2">&quot;REQUIRED&quot;</span>
+          <span class="n">notes</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">inputType</span><span class="p">:</span> <span class="s2">&quot;fileInput&quot;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+      <span class="n">containerArgs</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="n">schedulerOptions</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="n">arg</span><span class="p">:</span> <span class="s2">&quot;--tapis-profile OpenSees_default&quot;</span>
+          <span class="n">name</span><span class="p">:</span> <span class="s2">&quot;OpenSees TACC Scheduler Profile&quot;</span>
+          <span class="n">description</span><span class="p">:</span> <span class="s2">&quot;Scheduler profile for the default version of OpenSees&quot;</span>
+          <span class="n">inputMode</span><span class="p">:</span> <span class="s2">&quot;FIXED&quot;</span>
+          <span class="n">notes</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">isHidden</span><span class="p">:</span> <span class="kc">True</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+      <span class="n">envVariables</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="n">archiveFilter</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">includeLaunchFiles</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="n">includes</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="n">excludes</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+      <span class="n">logConfig</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">stdoutFilename</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">stderrFilename</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="n">notes</span><span class="p">:</span> <span class="p">{</span>
+    <span class="n">icon</span><span class="p">:</span> <span class="s2">&quot;OpenSees&quot;</span>
+    <span class="n">label</span><span class="p">:</span> <span class="s2">&quot;OpenSeesMP&quot;</span>
+    <span class="n">helpUrl</span><span class="p">:</span> <span class="s2">&quot;https://www.designsafe-ci.org/user-guide/tools/simulation/#opensees-user-guide&quot;</span>
+    <span class="n">category</span><span class="p">:</span> <span class="s2">&quot;Simulation&quot;</span>
+    <span class="n">isInteractive</span><span class="p">:</span> <span class="kc">False</span>
+    <span class="n">hideNodeCountAndCoresPerNode</span><span class="p">:</span> <span class="kc">False</span>
+  <span class="p">}</span>
+
+</pre></div>
+</div>
+</div>
+</details><p>The following tables provide details on the different components of an app’s schema.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Application</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">all attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Example</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">tenant</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">designsafe</p></td>
+<td><p class="sd-card-text">Name of the tenant for which the application is defined.<br>* <code class="docutils literal notranslate"><span class="pre">tenant</span> <span class="pre">+</span> <span class="pre">version</span> <span class="pre">+</span> <span class="pre">id</span></code> must be unique.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">id</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">my-ds-app</p></td>
+<td><p class="sd-card-text">Name of the application. URI safe. <br>* tenant + $version* + id must be unique. <br>* Allowed characters: Alphanumeric [0-9a-zA-Z], [-._~].<br>* <strong>Required at creation.</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">version</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">0.0.1</p></td>
+<td><p class="sd-card-text">Version of the application. URI safe. <br>* tenant + $version* + id must be unique. <br>* Allowed characters: Alphanumeric [0-9a-zA-Z], [-._~].<br>* <strong>Required at creation.</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">A sample application</p></td>
+<td><p class="sd-card-text">Optional description</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">owner</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">jdoe</p></td>
+<td><p class="sd-card-text">Username of the owner. Default is <code class="docutils literal notranslate"><span class="pre">${apiUserId}</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">enabled</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">FALSE</p></td>
+<td><p class="sd-card-text">Whether app is enabled. Default is TRUE.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">versionEnabled</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">FALSE</p></td>
+<td><p class="sd-card-text">Whether version is enabled. Default is TRUE.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">locked</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">FALSE</p></td>
+<td><p class="sd-card-text">Indicates if version is currently locked. Locking disallows updates. Default is FALSE.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">runtime</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text">SINGULARITY</p></td>
+<td><p class="sd-card-text">Runtime to be used when executing the application. <br>* Runtime: DOCKER, SINGULARITY, ZIP. <br>* Default is DOCKER.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">runtimeVersion</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">2.5.2</p></td>
+<td><p class="sd-card-text">Optional version or range of versions.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">runtimeOptions</p></td>
+<td><p class="sd-card-text">[enum]</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Options that apply to specific runtimes. <br>* Options: NONE, SINGULARITY_RUN. <br>* Default is NONE. <br>* WARNING Please note that use of SINGULARITY_START is no longer supported.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">containerImage</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">docker.io/hello-world</p></td>
+<td><p class="sd-card-text">Reference for the container image. <br>* Other examples: <br>* Singularity: shub://GodloveD/lolcow, <br>* Docker: tapis/hello-tapis:0.0.1<br>* <strong>Required at creation.</strong></p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">jobType</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text">BATCH</p></td>
+<td><p class="sd-card-text">Default job type: BATCH, FORK. <br>* Jobs will be of this type by default. <br>* May be overridden in the job submit request.<br>* Default is FORK.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">maxJobs</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text">10</p></td>
+<td><p class="sd-card-text">Max number of jobs that can be running for this app on a system.<br>* System may also limit the number of jobs. <br>* Set to -1 for unlimited. <br>* Default is unlimited.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">maxJobsPerUser</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text">2</p></td>
+<td><p class="sd-card-text">Max number of jobs per job owner.<br>* System may also limit the number of jobs.<br>* Set to -1 for unlimited.<br>* Default is unlimited.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">strictFileInputs</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">FALSE</p></td>
+<td><p class="sd-card-text">TRUE disallows unnamed file inputs. <br>* Indicates if a job request is allowed to have unnamed file inputs.<br>* If TRUE then a job request may only use named file inputs defined in the app.<br>* Default is FALSE.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">jobAttributes</p></td>
+<td><p class="sd-card-text">JobAttributes</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Attributes related to job execution. See below.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">tags</p></td>
+<td><p class="sd-card-text">[String]</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">List of tags as simple strings.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">notes</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">{“project”: “myproj”}</p></td>
+<td><p class="sd-card-text">Simple metadata in the form of a Json object.Not used by Tapis.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">uuid</p></td>
+<td><p class="sd-card-text">UUID</p></td>
+<td><p class="sd-card-text">20281</p></td>
+<td><p class="sd-card-text">Auto-generated by service.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">created</p></td>
+<td><p class="sd-card-text">Timestamp</p></td>
+<td><p class="sd-card-text">2020-06-19T15:10:43Z</p></td>
+<td><p class="sd-card-text">When the app was created. Maintained by service.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">updated</p></td>
+<td><p class="sd-card-text">Timestamp</p></td>
+<td><p class="sd-card-text">2020-07-04T23:21:22Z</p></td>
+<td><p class="sd-card-text">When the app was last updated. Maintained by service.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>jobAttributes</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Example</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Description to be filled in when this application is used to run a job. <br>* Macros allow this to act as a template to be filled in at job runtime.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">execSystemId</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Specific system on which the application is to be run.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">execSystemExecDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">${JobWorkingDir}/jobs/…</p></td>
+<td><p class="sd-card-text">* Application’s working directory. * Directory where application assets are staged. <br>* Current working directory at application launch time. <br>* Macro template variables such as ${JobWorkingDir} may be used. <br>* Default is ${JobWorkingDir}/jobs/${JobUUID}</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">execSystemInputDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">${JobWorkingDir}/jobs/…</p></td>
+<td><p class="sd-card-text">* Directory where Tapis is to stage the inputs required by the application. <br>* Macro template variables such as ${JobWorkingDir} may be used. <br>* Default is ${JobWorkingDir}/jobs/${JobUUID}</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">execSystemOutputDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">${JobWorkingDir}/jobs/…</p></td>
+<td><p class="sd-card-text">* Directory where Tapis expects the application to store its final output results. <br>* Files here are candidates for archiving. <br>* Macro template variables such as ${JobWorkingDir} may be used. <br>* Default is ${JobWorkingDir}/jobs/${JobUUID}/output</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">dtnSystemInputDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Directory relative to DTN rootDir to which input files will be transferred. <br>* Transfer happens prior to launching the application. <br>* Can be overriden by job submission request. <br>* Optional. If set will trigger use of DTN. <br>* Default is !tapis_not_set</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">dtnSystemOutputDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Directory relative to DTN rootDir from which output files will be transferred. <br>* Transfer happens during archiving phase of job execution. <br>* Can be overriden by job submission request. <br>* Optional. If set will trigger use of DTN. <br>* Default is !tapis_not_set</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">execSystemLogicalQueue</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">normal</p></td>
+<td><p class="sd-card-text">* Queue name</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">archiveSystemId</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* System to use when archiving outputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">archiveSystemDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">${JobWorkingDir}/jobs/…</p></td>
+<td><p class="sd-card-text">* Directory on archiveSystemId where outputs will be placed. <br>* This will be relative to the effective root directory defined for archiveSystemId. <br>* Default is ${JobWorkingDir}/jobs/${JobUUID}</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">archiveOnAppError</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">TRUE</p></td>
+<td><p class="sd-card-text">* Indicates if outputs should be archived if there is an error while running job. <br>* The default is TRUE.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">isMpi</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">FALSE</p></td>
+<td><p class="sd-card-text">* Indicates that application is to be executed as an MPI job. <br>* The default is FALSE.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">mpiCmd</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">mpirun, ibrun -n 4</p></td>
+<td><p class="sd-card-text">* Command used to launch MPI jobs. <br>* Prepended to the command used to execute the application. <br>* Conflicts with cmdPrefix if isMpi is set.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">cmdPrefix</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* String prepended to the application invocation command. <br>* Conflicts with mpiCmd if isMpi is set.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">parameterSet</p></td>
+<td><p class="sd-card-text">ParameterSet</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Various collections used during job execution. <br>* App arguments, container arguments, scheduler options, environment variables, etc. CLI args, env, filters. See below.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">fileInputs</p></td>
+<td><p class="sd-card-text">[FileInput]</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Collection of file inputs that must be staged for the application. <br>* Each input must have a name. <br>* strictFileInputs =TRUE means only inputs defined here may be specified for job. <br>* See table below.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">fileInputArrays</p></td>
+<td><p class="sd-card-text">[FileInputArray]</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Collection of arrays of inputs that must be staged for the application. <br>* Each input must have a name. All inputs in an array have the same target directory. <br>* strictFileInputs =TRUE means only inputs defined here may be specified for job. <br>* See table below.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">nodeCount</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Number of nodes to request during job submission.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">coresPerNode</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Number of cores per node to request during job submission.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">memoryMB</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Memory in megabytes to request during job submission.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">maxMinutes</p></td>
+<td><p class="sd-card-text">int</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Run time to request during job submission.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">subscriptions</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* Notification subscriptions. <br>* See table below.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">tags</p></td>
+<td><p class="sd-card-text">[String]</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">* List of tags as simple strings.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>fileInput</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">name</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Identifying label associated with the input. Typically used during a job request.<br>* <strong>Required at creation time.</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Optionaldescription.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">inputMode</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text">Indicates how input is to be treated when processing individual job requests.<br>* REQUIRED, OPTIONAL, FIXED<br>* Default is OPTIONAL.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">autoMountLocal</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">Indicates if Jobs service should automatically mount file paths into containers.<br>* Note that not all container runtimes require this.<br>* Setting to FALSE allows user complete control using containerArg parameters.<br>* Default is TRUE.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">sourceUrl</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Source used by Jobs service when staging file inputs.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">targetPath</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Target path used by Jobs service when staging file inputs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">fileInputArray Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">name</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Identifying label associated with the input. Typically used during a job request.<br>* <strong>Required at creation time.</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Optional description.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">inputMode</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text">REQUIRED, OPTIONAL, FIXED<br>* Default is OPTIONAL.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">sourceUrls</p></td>
+<td><p class="sd-card-text">[String]</p></td>
+<td><p class="sd-card-text">Array of sources used by Jobs service when staging file inputs.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">targetDir</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">Target directory used by Jobs service when staging file inputs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>parameterSet</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">all attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">appArgs</p></td>
+<td><p class="sd-card-text">[Arg]</p></td>
+<td><p class="sd-card-text">Command line arguments passed to the application.<br>* See table below for more information on Arg type entries.<br>* For more information on appArgs please see the chapter on Jobs</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">containerArgs</p></td>
+<td><p class="sd-card-text">[Arg]</p></td>
+<td><p class="sd-card-text">Command line arguments passed to the container runtime.<br>* See table below for more information on Arg type entries.<br>* For more information on containerArgs please see the chapter on Jobs</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">schedulerOptions</p></td>
+<td><p class="sd-card-text">[Arg]</p></td>
+<td><p class="sd-card-text">Scheduler options passed to the HPC batch scheduler.<br>* See table below for more information on Arg type entries.<br>* For more information on schedulerOptions please see the chapter on Jobs</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">envVariables</p></td>
+<td><p class="sd-card-text">[KeyValuePair]</p></td>
+<td><p class="sd-card-text">Environment variables placed into the runtime environment.<br>* Each entry has key (required) and value (optional) as well as other attributes.<br>* See table KeyValuePair Attributes below for more information.<br>* For more information on envVariables please see the chapter on Jobs</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">archiveFilter</p></td>
+<td><p class="sd-card-text">ArchiveFilter</p></td>
+<td><p class="sd-card-text">Sets of files to include or exclude when archiving.<br>* Default is to include all files in execSystemOutputDir.<br>* See table below for details of ArchiveFilter structure.<br>* For more information on archiveFilter support please see the chapter on Jobs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>appArgs</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Example</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">name</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Identifying label associated with the argument.<br>* <strong>Required at creation time.</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Optional description of the argument which may include usage, purpose, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">inputMode</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Indicates how argument is to be treated when processing individual job requests.<br>* Modes: REQUIRED, FIXED, INCLUDE_ON_DEMAND, INCLUDE_BY_DEFAULT<br>* Default is INCLUDE_ON_DEMAND.<br>* REQUIRED: Must be provided in a job request.<br>* FIXED: Completely defined in the application and not overridable in a job request.<br>* INCLUDE_ON_DEMAND: Included if referenced in a job request.<br>* INCLUDE_BY_DEFAULT: Included unless include=false in a job request.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">arg</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Value for the argument<br>* Required at creation time.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">notes</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">{“fieldType”: “int”}</p></td>
+<td><p class="sd-card-text">Optional Metadata in the form of a Json object, such as type, allowed values, etc.<br>* Not used by Tapis.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>containerArgs</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>schedulerOptions</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">from: (Tapis Jobs Documentation)[https://tapis.readthedocs.io/en/latest/technical/jobs.html]</p>
+<p class="sd-card-text">Specify HPC batch scheduler arguments for the container runtime using the schedulerOptions parameter. Arguments specified in the application definition are appended to those in the submission request. The arguments for each scheduler are passed using that scheduler’s conventions.</p>
+<p class="sd-card-text">Tapis defines a special scheduler option, –tapis-profile, to support local scheduler conventions. Data centers sometimes customize their schedulers or restrict how those schedulers can be used. The Systems service manages SchedulerProfile resources that are separate from any system definition, but can be referenced from system definitions. The Jobs service uses directives contained in profiles to tailor application execution to local requirements.</p>
+<p class="sd-card-text">As an example, below is the JSON input used to create the TACC scheduler profile.</p>
+<p class="sd-card-text">The moduleLoads array contains one or more objects. Each object contains a moduleLoadCommand, which specifies the local command used to load each of the modules (in order) in its modulesToLoad list.</p>
+<p class="sd-card-text">The hiddenOptions array identifies scheduler options that the local implementation prohibits. Options specified here will have the corresponding Slurm option suppressed. Supported options are “MEM” for –mem and “PARTITION” for –partition. Including an option in the array indicates that the corresponding Slurm option should never be passed through to Slurm.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TACC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;owner&quot;</span><span class="p">:</span> <span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Test profile for TACC Slurm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;moduleLoads&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;moduleLoadCommand&quot;</span><span class="p">:</span> <span class="s2">&quot;module load&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;modulesToLoad&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tacc-singularity&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;hiddenOptions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;MEM&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Scheduler-Specific Processing: Jobs will perform macro-substitution on Slurm scheduler options –job-name or -J. This substitution allows Slurm job names to be dynamically generated before submitting them.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>envVariables</strong> (KeyValuePair) Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Specify key-value pairs that will be injected as environment variables into the application’s container when it is launched. Key-value pairs specified in the execution system definition, application definition, and job submission request are aggregated using precedence ordering (system &lt; app &lt; request) to resolve conflicts.</p>
+<p class="sd-card-text">Both the key and value are required, though the value can be an empty string. Descriptions are optional but if present must contain 1 or more characters.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Example</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">key</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">INPUT_FILE</p></td>
+<td><p class="sd-card-text">Environment variable name. Required.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">value</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">/tmp/file.input</p></td>
+<td><p class="sd-card-text">Environment variable value</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">description</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text"></p></td>
+<td><p class="sd-card-text">Optional Description</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">inputMode</p></td>
+<td><p class="sd-card-text">enum</p></td>
+<td><p class="sd-card-text">REQUIRED</p></td>
+<td><p class="sd-card-text">As in Arg table<br>* Indicates how argument is to be treated when processing individual job requests.<br>* Modes: REQUIRED, FIXED, INCLUDE_ON_DEMAND, INCLUDE_BY_DEFAULT<br>* Default is INCLUDE_BY_DEFAULT.<br>* REQUIRED: Must be provided in a job request or application definition.<br>* FIXED: Not overridable in application or job request.<br>* INCLUDE_ON_DEMAND: Included if referenced in a job request.<br>* INCLUDE_BY_DEFAULT: Included unless include=false in a job request.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">notes</p></td>
+<td><p class="sd-card-text">String</p></td>
+<td><p class="sd-card-text">{}</p></td>
+<td><p class="sd-card-text">Simple metadata in the form of a Json object.<br>* Not used by Tapis.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><em><strong>inputMode</strong></em></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Applications use their AppArgSpecs to pass default values to job requests.</p>
+<p class="sd-card-text">The AppArgSpec’s inputMode determines how to handle arguments during job processing. An inputMode field can have these values:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>REQUIRED</strong>
+The argument must be provided for the job to run. If an arg value is not specified in the application definition, then it must be specified in the job request. When provided in both, the job request arg value overrides the one in application.</p></li>
+<li><p class="sd-card-text"><strong>FIXED</strong>
+The argument is completely defined in the application and not overridable in a job request.</p></li>
+<li><p class="sd-card-text"><strong>INCLUDE_ON_DEMAND</strong>
+The argument, if complete, will only be included in the final argument list constructed by Jobs if it’s explicitly referenced and included in the Job request. This is the default value.</p></li>
+<li><p class="sd-card-text"><strong>INCLUDE_BY_DEFAULT</strong>
+The argument, if complete, will automatically be included in the final argument list constructed by Jobs unless explicitly excluded in the Job request.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>archiveFilter</strong> Attributes</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The archiveFilter conforms to this JSON schema:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;archiveFilter&quot;</span><span class="p">:</span> <span class="p">{</span>
+   <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;includes&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;minLength&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s2">&quot;uniqueItems&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">},</span>
+      <span class="s2">&quot;excludes&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;array&quot;</span><span class="p">,</span> <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;minLength&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="s2">&quot;uniqueItems&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">},</span>
+      <span class="s2">&quot;includeLaunchFiles&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;boolean&quot;</span><span class="p">}</span>
+   <span class="p">},</span>
+   <span class="s2">&quot;additionalProperties&quot;</span><span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p class="sd-card-text">An archiveFilter can be specified in the application definition and/or the job submission request. The includes and excludes arrays are merged by appending entries from the application definition to those in the submission request.</p>
+<p class="sd-card-text">The excludes filter is applied first, so it takes precedence over includes. If excludes is empty, then no output file or directory will be explicitly excluded from archiving. If includes is empty, then all files in execSystemOutputDir will be archived unless explicitly excluded. If includes is not empty, then only files and directories that match an entry and not explicitly excluded will be archived.</p>
+<p class="sd-card-text">Each includes and excludes entry is a string, a string with wildcards or a regular expression. Entries represent directories or files. The wildcard semantics are that of glob (*), which is commonly used on the command line. Tapis implements Java glob semantics. To filter using a regular expression, construct the pattern using Java regex semantics and then preface it with REGEX: (case sensitive). Here are examples of globs and regular expressions that could appear in a filter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;myfile.*&quot;</span>
+<span class="s2">&quot;*2021-*-events.log&quot;</span>
+<span class="s2">&quot;REGEX:^[</span><span class="se">\\</span><span class="s2">p</span><span class="si">{IsAlphabetic}</span><span class="se">\\</span><span class="s2">p</span><span class="si">{IsDigit}</span><span class="s2">_</span><span class="se">\\</span><span class="s2">.</span><span class="se">\\</span><span class="s2">-]+$&quot;</span>
+<span class="s2">&quot;REGEX:</span><span class="se">\\</span><span class="s2">s+&quot;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">When includeLaunchFiles is true (the default), then the script (tapisjob.sh) and environment (tapisjob.env) files that Tapis generates in the execSystemExecDir are also archived. These launch files provide valuable information about how a job was configured and launched, so archiving them can help with debugging and improve reproducibility. Since these files may contain application secrets, such database passwords or other credentials, care must be taken to not expose private data through archiving.</p>
+<p class="sd-card-text">If no filtering is specified at all, then all files in execSystemOutputDir and the launch files are archived.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Attribute</p></th>
+<th class="head"><p class="sd-card-text">Type</p></th>
+<th class="head"><p class="sd-card-text">Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">includes</p></td>
+<td><p class="sd-card-text">[String]</p></td>
+<td><p class="sd-card-text">Files to include when archiving after execution of the application.<br>* excludes list has precedence.</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">excludes</p></td>
+<td><p class="sd-card-text">[String]</p></td>
+<td><p class="sd-card-text">Files to skip when archiving after execution of the application.<br>* excludes list has precedence.</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">includeLaunchFiles</p></td>
+<td><p class="sd-card-text">boolean</p></td>
+<td><p class="sd-card-text">Indicates if Tapis generated launch scripts are to be included when archiving.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="sd-card-text">The default is TRUE. |</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>logConfig</strong> Spec</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A LogConfig can be supplied in the job submission request and/or in the application definition, with the former overriding the latter when both are supplied. In supported runtimes (currently Singularity and ZIP), the logConfig parameter can be used to redirect the application container’s stdout and stderr to user-specified files.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>MPI</strong> and Related Support</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">On many systems, running Message Passing Interface (MPI) jobs is simply a matter of launching programs that have been configured or compiled with the proper MPI libraries. Most of the work in employing MPI involves parallelizing program logic and specifying the correct libraries for the target execution system. Once that is done, a command such as mpirun (or on TACC systems, ibrun) is passed the program’s pathname and arguments to kick off parallel execution.</p>
+<p class="sd-card-text">Tapis’s mpiCmd parameter lets users set the MPI launch command in a system definition, application definition and/or job submission request (lowest to highest priority). For example, if mpiCmd=mpirun, then the string “mpirun ” will be prepended to the command normally used to execute the application. Some MPI launchers have their own parameters, for instance, mpiCmd=ibrun -n 4 requests 4 MPI tasks.</p>
+<p class="sd-card-text">The isMpi parameter is specified in an application definition and/or job request to toggle MPI launching on or off. This switch allows the same system to run both MPI and non-MPI jobs depending on the needs of particular jobs or applications. The isMpi default is false, so this switch must be explicitly turned on to run an MPI job. When turned on, isMpi requires cmdMpi be assigned in the system, application and/or job request.</p>
+<p class="sd-card-text">The cmdPrefix parameter provides generalized support for launchers and is available in application definitions and job submission requests. Like mpiCmd, a cmdPrefix value is simply prepended to a program’s pathname and arguments. Being more general, cmdPrefix could specify an MPI launcher, but it’s not supported in system definitions and does not have a toggle to control usage.</p>
+<p class="sd-card-text">mpiCmd and cmdPrefix are mutually exclusive; so if isMpi is true, then cmdPrefix must not be set.</p>
+</div>
+</details></div>
+</details></div>
+</details></div>
+</details></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "silviamazzoni/training-OpenSees-on-DesignSafe",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Docs_MD/Tapis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../Jupyter_Notebooks/tapis_submitJob_getApps_List.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">List Tapis Apps  📒</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../Jupyter_Notebooks/tapis_submitJob_getApps_Schema.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Get Tapis App Schema 📒</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silvia Mazzoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

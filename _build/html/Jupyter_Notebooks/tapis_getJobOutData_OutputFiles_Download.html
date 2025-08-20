@@ -1,0 +1,1439 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Download All Job Output 📒 &#8212; OpenSees-on-DesignSafe Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4db13f68" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download';</script>
+    <script src="../_static/custom.js?v=831b1415"></script>
+    <script src="../_static/.ipynb_checkpoints/custom-checkpoint.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Explore Jobs Interactively 📒" href="tapis_getJobList_ExploreJobsInteractive.html" />
+    <link rel="prev" title="List All Job Output 📒" href="tapis_getJobOutData_OutputFiles_Metadata.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="OpenSees-on-DesignSafe Training - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="OpenSees-on-DesignSafe Training - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    OpenSees-on-DesignSafe Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_TrainingObjectives.html">Training Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_DesignSafeOnTACC.html">DesignSafe &amp; TACC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_WorkflowArchitecture.html">Workflow Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_WorkflowArchitectureGuide.html">Workflow Decision Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_AndDesignSafe.html">OpenSees on DesignSafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_Interpreters.html">OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_Applications.html">OpenSees Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.html">Decision Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compute Environments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.html">JupyterHub Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.html">Virtual Machines (VMs)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_HPC.html">HPC on TACC</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Node.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_NodeStampede3.html">Stampede3 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Core.html">Cores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Queue.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_QueueStampede3.html">Stampede3 Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_QueueSelexn.html">Queue Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_allocations.html">Allocations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_Guide.html">Environment Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">File Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_Overview.html">File Storage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_Systems.html">File Storage Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_1_corral.html">Corral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_2_compsys.html">Compute System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_3_compnode.html">Compute Nodes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_guide.html">File-Storage Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Intro.html">JupyterHub Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/AccessJupyter.html">Accessing JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Workflow.html">Workflow in JupyterHub</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Tools.html">JupyterHub Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paths</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Paths_Overview.html">Understanding Paths</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="paths_InPython.html">Paths in Python 📒</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_AbsVsRelative.html">Absolute vs Relative Path 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_RootAndHome.html">Root &amp; Home Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_Manage.html">Managing Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_Contents.html">Directory Contents 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_BuildPath.html">Building Paths 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="paths_StorageSystems.html">Storage-System Paths 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DesignSafe Web Portal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_Overview.html">DesignSafe Web Portal</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_Overview_Workflow.html">Web-Portal Demo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_1_CreateInput.html">1 Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.html">2 Submit OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.html">2 Submit OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.html">3 Monitor OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.html">3 Monitor OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webPortal_4_PostProcess_OpenSeesExpress.html">4 PostProcess Ops-Express 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webPortal_4_PostProcess_OpenSeesMP.html">4 PostProcess Ops-MP 📒</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees on JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_JupyterHub_intro.html">JupyterHub for OpenSees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/CLI.html">Terminal CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_Console.html">Python Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_JupyterNotebook.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Execution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux.html">Command Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_1_ExecutableFile.html">Executable File (Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_2_ScriptFile.html">Input Script File (Non-Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_3_CommandLineArgs.html">Command-Line Arguments</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec.html">Parallel Execution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_MPI.html">Parallel Execution: MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_Ibrun.html">Parallel Execution: ibrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_python.html">OpenSeesPy Parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ExecGuide.html">Execution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runOps_Ex1a.py.Canti2D.Push.html">OpenSeesPy Interactive 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runOps_RunAnyOpenSeesInPython.html">Run ANY OpenSees in Python 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_PythonWithinPython.html">Python Script within Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HPC on TACC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/HPCenv.html">Accessing HPC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_TACCjobs.html">TACC Jobs: SLURM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Intro.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Workflow.html">Job Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Scheduling.html">Job Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Input.html">Job Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Script.html">Job Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Run.html">Run a SLURM Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_OutErrFiles.html">SLURM Job Output</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.html">Parameter Sweeps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_PythonFunction.html">Write SLURM with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.html">Advanced Python Function</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/HPCenv_HPCjupyter.html">DesignSafe’s HPC Jupyter Lab</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_intro.html">What is Tapis?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_interfacing.html">Interfacing with Tapis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_connectToTapis.html">Tapis Authentication 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_establishSystemCredentials.html">Establish TMS Credentials 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_getSystemSpecs.html">System Specifications 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/TapisFileManage.html">Tapis: File Management</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Jobs</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job.html">Tapis Jobs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/tapis_queryJobs.html">Query and Retrieve Jobs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_ExploreAllJobs.html">Step 1: Explore All Jobs 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_InspectJob.html">Step 2: Inspect Job 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_RetrieveOutput.html">Step 3: Retrieve Output 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_AllJobs.html">Explore All Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_FilterJobs.html">Filter Tapis Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobStatus.html">Job Status 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobMetaData.html">Job Metadata 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobHistoryData.html">Job History 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_profiling.html">Job Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobOutData_AccessData.html">Access Output Data 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobOutData_OutputFiles_Metadata.html">List All Job Output 📒</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Download All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_ExploreJobsInteractive.html">Explore Jobs Interactively 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/TapisCancelJob.html">Cancel Tapis Job</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run OpenSees using Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_OpenSees.html">OpenSees App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_submit.html">Submit to OpenSeesMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_DSapp_OpenSees_Detailed.html">Run OpenSees – Detailed 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_DSapp_OpenSees_Compact.html">Run OpenSees – Compact 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_submittal.html">Tapis-Job Submittal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_attributes.html">Job Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_Apps.html">Tapis Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_getApps_List.html">List Tapis Apps  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Schema.html">Tapis App Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_getApps_Schema.html">Get Tapis App Schema 📒</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps.html">DesignSafe Tapis Apps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_OpenFOAM.html">OpenFOAM app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_ADCIRC.html">ADCIRC app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_Compare.html">Compare Apps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemplates.html">Tapis App Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Structure.html">Structure of App Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_app_def_files.html">App-Definition Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_InputVSParams.html">Inputs vs Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Inputs.html">Tapis App Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Parameters.html">Tapis App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/JobAttributes_vs_AppParams.html">Job Attributes vs App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Outputs.html">Tapis App Output</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Tapis Apps Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Overview.html">OpenSees Tapis Apps</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express.html">OpenSees-EXPRESS App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_example.html">Example</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3.html">OpenSeesMP App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_profile_json.html">profile.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Custom Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_CustomTapisApp.html">Custom Tapis App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_AppInputCats.html">App Input Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_CustomApp_opsmps3copy.html">My App: opensees-mp-s3-copy  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_BestPractice.html">Best Practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.html">OpsUtils</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.html">Miscellaneous OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.html">convert_tacc_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.html">convert_time_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.html">display_images_in_xbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/empty_folder.html">empty_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/flatten_dict.html">flatten_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.html">get_files_recursive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/get_now_unix.html">get_now_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/queryDF.html">queryDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.html">show_text_file_in_accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/show_video.html">show_video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.html">unix_to_tacc_time</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.html">Tapis OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.html">analyze_tacc_job_history</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.html">bump_app_version()</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.html">cancel_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.html">connect_tapis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.html">display_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.html">establish_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.html">explore_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.html">filter_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.html">find_work_path_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/find_work_path.html">find_work_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.html">get_latest_app_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.html">get_system_queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.html">get_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.html">get_tapis_job_all_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.html">get_tapis_job_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.html">get_tapis_job_history_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.html">get_tapis_job_metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.html">get_tapis_job_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.html">get_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.html">get_tapis_jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.html">get_tapis_tenant_and_username</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.html">get_tapis_username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.html">interactive_tapis_job_explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.html">monitor_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.html">print_nested_tapisresult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.html">revoke_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.html">run_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.html">submit_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.html">validate_app_folder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../generated_toc.html">Table of Contents</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/silviamazzoni/training-OpenSees-on-DesignSafe/blob/main/docs/Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe/issues/new?title=Issue%20on%20page%20%2FJupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Download All Job Output 📒</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-tapis">Connect to Tapis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-input-job-id">User Input – job id</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-files">Download Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-files-in-new-location">List files in new location</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-files-recursively">List files recursively</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-directory">Delete directory</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><a class="reference external" 
+    href="https://jupyter.designsafe-ci.org/hub/user-redirect/lab/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb" 
+    target="_blank"
+    >
+<img alt="Try on DesignSafe" src="https://raw.githubusercontent.com/DesignSafe-Training/pinn/main/DesignSafe-Badge.svg" /></a></p>
+<section id="download-all-job-output">
+<h1>Download All Job Output 📒<a class="headerlink" href="#download-all-job-output" title="Link to this heading">#</a></h1>
+<p><em><strong>Get list of ALL job-output files recursively with OPTIONAL download</strong></em></p>
+<p>by Silvia Mazzoni, DesignSafe, 2025</p>
+<p>I have created a single python function that will drill into the job output files recursively and returns both relative and full paths (not absolute, these are paths within tapis).<br>
+This function gives the user the option to download the files locally.</p>
+<p><strong>In this notebook we will copy the files over to our local project directory within DesignSafe.</strong></p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using local utilities library
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="connect-to-tapis">
+<h2>Connect to Tapis<a class="headerlink" href="#connect-to-tapis" title="Link to this heading">#</a></h2>
+<p>Yes, you need to first connect to Tapis, this authenticates you</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">OpsUtils</span><span class="o">.</span><span class="n">connect_tapis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -- Checking tapis Token --
+ Time now: 2025-08-02 23:14:47.356653+00:00
+ Token loaded from file.
+ Token is still valid!
+ Token expires At: 2025-08-02 23:55:31+00:00
+ Token expires In  0:40:43.643347  hh:mm:sec
+-- LOG IN SUCCESSFUL!!! --
+</pre></div>
+</div>
+</div>
+</div>
+<section id="user-input-job-id">
+<h3>User Input – job id<a class="headerlink" href="#user-input-job-id" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jobUuid</span> <span class="o">=</span> <span class="s1">&#39;4dfa35e1-15cd-48fd-a090-f348544dee1f-007&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="download-files">
+<h2>Download Files<a class="headerlink" href="#download-files" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">get_tapis_job_all_files.py</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('7f461dfaa77347748758ae46414c3b58').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="7f461dfaa77347748758ae46414c3b58" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># ../OpsUtils/OpsUtils/Tapis/get_tapis_job_all_files.py</b>
+def get_tapis_job_all_files(
+    t, jobUuid, 
+    displayIt=10, 
+    target_dir=False, 
+    overwrite=False
+):
+    """
+    Recursively retrieves all output files from a Tapis job, optionally downloading them.
+
+    This function connects to the Tapis job output system, traverses the job's complete 
+    output directory structure recursively, and collects:
+
+    - Local-style relative file paths (to recreate directory structure on disk),
+    - Full absolute Tapis paths for direct API use or metadata,
+    - Raw item objects returned by Tapis (which include size, lastModified, etc.),
+    - The total file count.
+
+    It can also automatically download these files into a local directory, preserving
+    the folder hierarchy.
+
+    Parameters
+    ----------
+    t : Tapis
+        An authenticated Tapis client object (typically created with connect_tapis()).
+
+    jobUuid : str
+        The UUID of the Tapis job whose output files you want to inspect or download.
+
+    displayIt : bool or int, optional
+        Controls printed output:
+            - False or 0: completely silent.
+            - True or 1: prints all files in all directories.
+            - int >= 2: prints at most `displayIt` files per directory,
+                        then indicates suppression.
+
+    target_dir : bool, None, or str, optional
+        Determines whether to download files:
+            - False or None: does not download files, only lists them.
+            - True: downloads files into a default directory './OutFiles_{jobUuid}'.
+            - str: downloads files into the specified local directory.
+
+    overwrite : bool, optional
+        If True, overwrites existing local files. If False (default), skips already
+        existing files.
+
+    Returns
+    -------
+    dict
+        {
+            'Nfiles': total number of files found,
+            'LocalPath': list of relative paths (like 'results/output.txt'),
+            'FullPath': list of absolute Tapis paths (like '/tapis/jobs/v2/...'),
+            'Items': list of raw Tapis file objects (metadata)
+        }
+
+    Examples
+    --------
+    # Just list files, print up to 5 per directory
+    >>> outputs = get_tapis_job_all_files(t, jobUuid, displayIt=5)
+
+    # List all files without printing anything
+    >>> outputs = get_tapis_job_all_files(t, jobUuid, displayIt=False)
+
+    # Download into default './OutFiles_{jobUuid}'
+    >>> outputs = get_tapis_job_all_files(t, jobUuid, target_dir=True)
+
+    # Download into a custom directory, overwriting if needed
+    >>> outputs = get_tapis_job_all_files(t, jobUuid, target_dir="my_results", overwrite=True)
+
+    Notes
+    -----
+    - Downloads replicate the Tapis directory structure inside the chosen local folder.
+    - Use 'LocalPath' and 'FullPath' together to pair local save paths with original remote locations.
+    - The 'Items' list provides full Tapis metadata for each file, which can be useful for logs.
+    """
+    # Silvia Mazzoni, 2025
+
+    import os
+
+    # normalize displayIt
+    if isinstance(displayIt, bool):
+        displayLevel = 1 if displayIt else 0
+        displayLimit = None
+    elif isinstance(displayIt, int):
+        displayLevel = 1
+        displayLimit = displayIt if displayIt >= 2 else None
+    else:
+        displayLevel = 0
+        displayLimit = None    
+
+    if displayLevel>=1:
+        print('----------------------------')
+        print(f'JOB: {jobUuid}')
+        print('----------------------------')
+    
+    # determine local download dir
+    if target_dir is True:
+        download_dir = f"./OutFiles_{jobUuid}"
+    elif isinstance(target_dir, str):
+        download_dir = target_dir
+    else:
+        download_dir = None  # no download
+
+    if displayLevel>=1:
+        if download_dir != None:
+            print('----------------------------')
+            print(f'TARGET DIR: {download_dir}')
+            print('----------------------------')
+
+    def get_files_recursive(path=""):
+        Nfiles = 0
+        returnFiles = []
+        returnFilesPath = []
+        returnItems = []
+
+        output_path = path if path else "."
+        output_items = t.jobs.getJobOutputList(jobUuid=jobUuid, outputPath=output_path)
+
+        # split into dirs vs files
+        output_items_dirs = [item for item in output_items if getattr(item, "type", "") == "dir"]
+        output_items_files = [item for item in output_items if getattr(item, "type", "") != "dir"]
+        output_items_ordered = output_items_files + output_items_dirs
+
+        
+        printed_count = 0
+        Nstopp = 0
+        hereDisplay = True
+        if displayLevel >= 1:
+            if len(output_items_files)>0:
+                firstCase = output_items_files[0].path
+                dirr = os.path.dirname(firstCase)
+                print(f' {dirr}')
+            print(f'  {len(output_items_files)} files & {len(output_items_dirs)} directories:')
+
+        for item in output_items_ordered:
+            remote_path = os.path.join(path, item.name) if path else item.name
+
+            if getattr(item, "type", "") == "dir":
+                if displayLevel >= 1:
+                    print('----------------------------')
+                    print(f'DIRECTORY: {remote_path}')
+                    # print(f'DIRECTORY: {remote_path}\n{item.path}')
+                Nhere, hereFiles, hereFilesPath, hereItems = get_files_recursive(remote_path)
+                Nfiles += Nhere
+                returnFiles.extend(hereFiles)
+                returnFilesPath.extend(hereFilesPath)
+                returnItems.extend(hereItems)
+            else:
+                returnFiles.append(remote_path)
+                returnFilesPath.append(item.path)
+                returnItems.append(item)
+                Nfiles += 1
+
+                # print tree
+                if displayLevel >= 1 and (displayLimit is None or printed_count < displayLimit):
+                    if not download_dir:
+                        print(f'    FILE: {remote_path}')
+                    printed_count += 1
+                    if displayLimit is not None and printed_count == displayLimit:
+                        Nstopp = Nfiles
+
+                # download if needed
+                if download_dir:
+                    # print('download_dir',download_dir)
+                    # print('remote_path',remote_path)
+                    local_file_path = os.path.join(download_dir, remote_path)
+                    homePath = os.path.expanduser('~')
+                    local_file_path = os.path.join(homePath, local_file_path)
+                    local_dir = os.path.dirname(local_file_path)
+                    # print('local_file_path',local_file_path)
+                    # print('local_dir',local_dir)
+                    os.makedirs(local_dir, exist_ok=True)
+
+                    if os.path.exists(local_file_path) and not overwrite:
+                        if hereDisplay:
+                            print(f"    [SKIP] {local_file_path} (already exists)")
+                        continue
+
+                    if hereDisplay:
+                        print(f"        [DOWNLOADING] {remote_path} -> {local_file_path}")
+                    data = t.jobs.getJobOutputDownload(jobUuid=jobUuid, outputPath=remote_path)
+                    with open(local_file_path, "wb") as f:
+                        f.write(data)
+
+                if displayLevel >= 1 and hereDisplay and Nstopp != 0:
+                    print(f'\n          ........(suppressing additional-file display beyond {displayLimit})')
+                    hereDisplay = False
+
+        
+        
+        return Nfiles, returnFiles, returnFilesPath, returnItems
+
+    if displayIt:
+        print('----------------------------')
+        print('DIRECTORY: "."')
+
+    Nfiles, FileList, FilesPathList, itemsList = get_files_recursive()
+
+    if displayIt:
+        print(f"\nA total of {Nfiles} job-output files have been found"
+              f"{' and downloaded' if download_dir else ''}."
+            "!")
+
+    return {
+        'Nfiles': Nfiles,
+        'LocalPath': FileList,
+        'FullPath': FilesPathList,
+        'Items': itemsList
+    }
+</pre>
+                      </details>
+                    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">projectDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/MyData/tmp_removeME&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">projectDir</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The path exists: </span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Path does not exist: </span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">projectDir</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Create directory: </span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The path exists: /home/jupyter/MyData/tmp_removeME
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">TapisJobFilesDict</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">get_tapis_job_all_files</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">jobUuid</span><span class="p">,</span> <span class="n">displayIt</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">target_dir</span><span class="o">=</span><span class="n">projectDir</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------------------
+JOB: 4dfa35e1-15cd-48fd-a090-f348544dee1f-007
+----------------------------
+----------------------------
+TARGET DIR: /home/jupyter/MyData/tmp_removeME
+----------------------------
+----------------------------
+DIRECTORY: &quot;.&quot;
+ silvia/tapis-jobs-archive/2025-05-07Z/opensees-mp-s3-latest_2025-05-07T22:13:08-4dfa35e1-15cd-48fd-a090-f348544dee1f-007
+  5 files &amp; 1 directories:
+        [DOWNLOADING] opensees.zip -&gt; /home/jupyter/MyData/tmp_removeME/opensees.zip
+        [DOWNLOADING] tapisjob.env -&gt; /home/jupyter/MyData/tmp_removeME/tapisjob.env
+        [DOWNLOADING] tapisjob.out -&gt; /home/jupyter/MyData/tmp_removeME/tapisjob.out
+        [DOWNLOADING] tapisjob.sh -&gt; /home/jupyter/MyData/tmp_removeME/tapisjob.sh
+        [DOWNLOADING] tapisjob_app.sh -&gt; /home/jupyter/MyData/tmp_removeME/tapisjob_app.sh
+----------------------------
+DIRECTORY: inputDirectory
+ silvia/tapis-jobs-archive/2025-05-07Z/opensees-mp-s3-latest_2025-05-07T22:13:08-4dfa35e1-15cd-48fd-a090-f348544dee1f-007/inputDirectory
+  8 files &amp; 2 directories:
+        [DOWNLOADING] inputDirectory/Ex1a.py.Canti2D.Push.mpi.py -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.mpi.py
+        [DOWNLOADING] inputDirectory/Ex1a.py.Canti2D.Push.mpi4py.py -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.mpi4py.py
+        [DOWNLOADING] inputDirectory/Ex1a.py.Canti2D.Push.py -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.py
+        [DOWNLOADING] inputDirectory/Ex1a.tcl.Canti2D.Push.mp.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.tcl.Canti2D.Push.mp.tcl
+        [DOWNLOADING] inputDirectory/Ex1a.tcl.Canti2D.Push.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.tcl.Canti2D.Push.tcl
+        [DOWNLOADING] inputDirectory/Ex1many-Copy1.tcl.Canti2D.Push.mp.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many-Copy1.tcl.Canti2D.Push.mp.tcl
+        [DOWNLOADING] inputDirectory/Ex1many_end.tcl.Canti2D.Push.mp.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many_end.tcl.Canti2D.Push.mp.tcl
+        [DOWNLOADING] inputDirectory/Ex1many_start.tcl.Canti2D.Push.mp.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many_start.tcl.Canti2D.Push.mp.tcl
+----------------------------
+DIRECTORY: inputDirectory/.ipynb_checkpoints
+ silvia/tapis-jobs-archive/2025-05-07Z/opensees-mp-s3-latest_2025-05-07T22:13:08-4dfa35e1-15cd-48fd-a090-f348544dee1f-007/inputDirectory/.ipynb_checkpoints
+  7 files &amp; 0 directories:
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1a.py.Canti2D.Push.mpi-checkpoint.py -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1a.py.Canti2D.Push.mpi-checkpoint.py
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1a.py.Canti2D.Push.mpi4py-checkpoint.py -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1a.py.Canti2D.Push.mpi4py-checkpoint.py
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1a.tcl.Canti2D.Push-checkpoint.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1a.tcl.Canti2D.Push-checkpoint.tcl
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1a.tcl.Canti2D.Push.mp-checkpoint.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1a.tcl.Canti2D.Push.mp-checkpoint.tcl
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1many-Copy1.tcl.Canti2D.Push.mp-checkpoint.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1many-Copy1.tcl.Canti2D.Push.mp-checkpoint.tcl
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1many_end.tcl.Canti2D.Push.mp-checkpoint.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1many_end.tcl.Canti2D.Push.mp-checkpoint.tcl
+        [DOWNLOADING] inputDirectory/.ipynb_checkpoints/Ex1many_start.tcl.Canti2D.Push.mp-checkpoint.tcl -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/.ipynb_checkpoints/Ex1many_start.tcl.Canti2D.Push.mp-checkpoint.tcl
+----------------------------
+DIRECTORY: inputDirectory/DataTCLmp
+ silvia/tapis-jobs-archive/2025-05-07Z/opensees-mp-s3-latest_2025-05-07T22:13:08-4dfa35e1-15cd-48fd-a090-f348544dee1f-007/inputDirectory/DataTCLmp
+  100 files &amp; 0 directories:
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol10.0.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol10.0.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol10.99099099099099.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol10.99099099099099.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol100.18018018018017.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol100.18018018018017.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol100.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol100.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol1000.0.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol1000.0.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol101.17117117117117.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol101.17117117117117.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol102.16216216216216.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol102.16216216216216.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol103.15315315315316.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol103.15315315315316.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol104.14414414414414.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol104.14414414414414.out
+        [DOWNLOADING] inputDirectory/DataTCLmp/DBase_Lcol105.13513513513513.out -&gt; /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol105.13513513513513.out
+
+          ........(suppressing additional-file display beyond 10)
+
+A total of 120 job-output files have been found and downloaded.!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="list-files-in-new-location">
+<h2>List files in new location<a class="headerlink" href="#list-files-in-new-location" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AllContents</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">projectDir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Get contents using: os.listdir(&#39;</span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&#39;): </span><span class="si">{</span><span class="n">AllContents</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Get contents using: os.listdir(&#39;/home/jupyter/MyData/tmp_removeME&#39;): [&#39;opensees.zip&#39;, &#39;tapisjob.env&#39;, &#39;tapisjob.out&#39;, &#39;tapisjob.sh&#39;, &#39;tapisjob_app.sh&#39;, &#39;inputDirectory&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="list-files-recursively">
+<h3>List files recursively<a class="headerlink" href="#list-files-recursively" title="Link to this heading">#</a></h3>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">get_files_recursive.py</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('0326097aff1a4edeb48cf025f3c6b505').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="0326097aff1a4edeb48cf025f3c6b505" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># ../OpsUtils/OpsUtils/Misc/get_files_recursive.py</b>
+def get_files_recursive(path="",displayIt=10, returnItems = False,displayLevel=0):
+    """
+    """
+    # Silvia Mazzoni, 2025
+
+    import os
+    if isinstance(displayIt, bool):
+        if displayLevel==0:
+            displayLevel = 1 if displayIt else 0
+        displayLimit = None
+    elif isinstance(displayIt, int):
+        if displayLevel==0:
+            displayLevel = 1
+        displayLimit = displayIt if displayIt >= 2 else None
+    else:
+        # displayLevel = 0
+        displayLimit = None    
+
+    if displayLevel==1:
+        print('----------------------------')
+        print(f'\nDIRECTORY: {path}')
+    
+    
+    # print(displayLevel)
+    # print('path',path)
+    Nfiles = 0
+    returnFiles = []
+    returnFilesPath = []
+    returnItems = []
+
+    output_path = path if path else "."
+    output_items = os.listdir(output_path)
+    # print(output_items)
+
+    # split into dirs vs files
+    output_items_dirs = [item for item in output_items if os.path.isdir(os.path.join(path, item))]
+    output_items_files = [item for item in output_items if not os.path.isdir(os.path.join(path, item))]
+    output_items_ordered = output_items_files + output_items_dirs
+
+    # print('output_items_dirs',output_items_dirs)
+    # print(output_items_files)
+    
+    printed_count = 0
+    Nstopp = 0
+    hereDisplay = True
+    if len(output_items_files)>0:
+        firstCase = output_items_files[0]
+        dirr = os.path.dirname(firstCase)
+        print(f' {dirr}')
+    print(f'  {len(output_items_files)} files & {len(output_items_dirs)} directories:')
+
+    for item in output_items_ordered:
+        if item == '.ipynb_checkpoints':
+            continue
+        remote_path = os.path.join(path, item) if path else item
+        # print(remote_path)
+
+        if os.path.isdir(remote_path):
+            print('----------------------------')
+            print(f'\nDIRECTORY: {remote_path}')
+            # print(f'DIRECTORY: {remote_path}\n{item.path}')
+            returnDict = get_files_recursive(remote_path,returnItems=True,displayLevel=displayLevel+1)
+            Nfiles += returnDict['Nfiles']
+            returnFiles.extend(returnDict['LocalPath'])
+            returnFilesPath.extend(returnDict['FullPath'])
+            returnItems.extend(returnDict['Items'])
+        else:
+            returnFiles.append(remote_path)
+            returnFilesPath.append(item)
+            returnItems.append(item)
+            Nfiles += 1
+
+            if displayLimit is None or printed_count < displayLimit:
+                print(f'    FILE: {remote_path}')
+                printed_count += 1
+                if displayLimit is not None and printed_count == displayLimit:
+                    Nstopp = Nfiles
+
+            # print('hereDisplay',hereDisplay)
+            # print('Nstopp',Nstopp)
+            if hereDisplay and Nstopp != 0:
+                print(f'\n          ........(suppressing additional-file display beyond {displayLimit})')
+                hereDisplay = False
+
+    if returnItems:
+        return {
+            'Nfiles': Nfiles,
+            'LocalPath': returnFiles,
+            'FullPath': returnFilesPath,
+            'Items': returnItems
+        }    
+
+</pre>
+                      </details>
+                    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">AllFiles</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">get_files_recursive</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">projectDir</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------------------
+
+DIRECTORY: /home/jupyter/MyData/tmp_removeME
+ 
+  5 files &amp; 1 directories:
+    FILE: /home/jupyter/MyData/tmp_removeME/opensees.zip
+    FILE: /home/jupyter/MyData/tmp_removeME/tapisjob.env
+    FILE: /home/jupyter/MyData/tmp_removeME/tapisjob.out
+    FILE: /home/jupyter/MyData/tmp_removeME/tapisjob.sh
+    FILE: /home/jupyter/MyData/tmp_removeME/tapisjob_app.sh
+----------------------------
+
+DIRECTORY: /home/jupyter/MyData/tmp_removeME/inputDirectory
+ 
+  8 files &amp; 2 directories:
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.mpi.py
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.mpi4py.py
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.py.Canti2D.Push.py
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.tcl.Canti2D.Push.mp.tcl
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1a.tcl.Canti2D.Push.tcl
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many-Copy1.tcl.Canti2D.Push.mp.tcl
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many_end.tcl.Canti2D.Push.mp.tcl
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/Ex1many_start.tcl.Canti2D.Push.mp.tcl
+----------------------------
+
+DIRECTORY: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp
+ 
+  100 files &amp; 0 directories:
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol10.0.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol10.99099099099099.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol100.18018018018017.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol100.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol1000.0.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol101.17117117117117.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol102.16216216216216.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol103.15315315315316.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol104.14414414414414.out
+    FILE: /home/jupyter/MyData/tmp_removeME/inputDirectory/DataTCLmp/DBase_Lcol105.13513513513513.out
+
+          ........(suppressing additional-file display beyond 10)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="delete-directory">
+<h2>Delete directory<a class="headerlink" href="#delete-directory" title="Link to this heading">#</a></h2>
+<p>Clean up: this was just a temporary directory</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s use shutil utility to delete non-empty directory. BE CAREFUL!</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">projectDir</span><span class="p">):</span>
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">projectDir</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Deleted directory and all contents: </span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directory not found: </span><span class="si">{</span><span class="n">projectDir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Deleted directory and all contents: /home/jupyter/MyData/tmp_removeME
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "silviamazzoni/training-OpenSees-on-DesignSafe",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Jupyter_Notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="tapis_getJobOutData_OutputFiles_Metadata.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">List All Job Output 📒</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tapis_getJobList_ExploreJobsInteractive.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Explore Jobs Interactively 📒</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-tapis">Connect to Tapis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-input-job-id">User Input – job id</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-files">Download Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-files-in-new-location">List files in new location</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-files-recursively">List files recursively</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-directory">Delete directory</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silvia Mazzoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

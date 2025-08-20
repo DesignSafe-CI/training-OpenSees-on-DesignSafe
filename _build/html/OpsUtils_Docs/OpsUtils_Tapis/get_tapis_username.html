@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>get_tapis_username &#8212; OpenSees-on-DesignSafe Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=4db13f68" />
+    <link rel="stylesheet" type="text/css" href="../../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username';</script>
+    <script src="../../_static/custom.js?v=831b1415"></script>
+    <script src="../../_static/.ipynb_checkpoints/custom-checkpoint.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="interactive_tapis_job_explorer" href="interactive_tapis_job_explorer.html" />
+    <link rel="prev" title="get_tapis_tenant_and_username" href="get_tapis_tenant_and_username.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="OpenSees-on-DesignSafe Training - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="OpenSees-on-DesignSafe Training - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    OpenSees-on-DesignSafe Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Oview_TrainingObjectives.html">Training Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Oview_DesignSafeOnTACC.html">DesignSafe &amp; TACC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Oview_WorkflowArchitecture.html">Workflow Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Oview_WorkflowArchitectureGuide.html">Workflow Decision Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/OpenSees_AndDesignSafe.html">OpenSees on DesignSafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/OpenSees_Interpreters.html">OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/OpenSees_Applications.html">OpenSees Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.html">Decision Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compute Environments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.html">JupyterHub Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.html">Virtual Machines (VMs)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/ComputeEnv_HPC.html">HPC on TACC</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_Node.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_NodeStampede3.html">Stampede3 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_Core.html">Cores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_Queue.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_QueueStampede3.html">Stampede3 Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_QueueSelexn.html">Queue Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPC_allocations.html">Allocations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/ComputeEnv_Guide.html">Environment Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">File Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_Overview.html">File Storage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_Systems.html">File Storage Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_1_corral.html">Corral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_2_compsys.html">Compute System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_3_compnode.html">Compute Nodes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/FileStorage_guide.html">File-Storage Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/JupyterHub_Intro.html">JupyterHub Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/AccessJupyter.html">Accessing JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/JupyterHub_Workflow.html">Workflow in JupyterHub</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/JupyterHub_Tools.html">JupyterHub Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paths</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Paths_Overview.html">Understanding Paths</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython.html">Paths in Python 📒</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_AbsVsRelative.html">Absolute vs Relative Path 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_RootAndHome.html">Root &amp; Home Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Manage.html">Managing Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Contents.html">Directory Contents 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_BuildPath.html">Building Paths 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/paths_StorageSystems.html">Storage-System Paths 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DesignSafe Web Portal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_Overview.html">DesignSafe Web Portal</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_Overview_Workflow.html">Web-Portal Demo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_1_CreateInput.html">1 Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.html">2 Submit OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.html">2 Submit OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.html">3 Monitor OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.html">3 Monitor OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.html">4 PostProcess Ops-Express 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.html">4 PostProcess Ops-MP 📒</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees on JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/RunOpsInDS_JupyterHub_intro.html">JupyterHub for OpenSees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/CLI.html">Terminal CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/RunOpsInDS_Console.html">Python Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/RunOpsInDS_JupyterNotebook.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Execution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_CommandStrux.html">Command Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_CommandStrux_1_ExecutableFile.html">Executable File (Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_CommandStrux_2_ScriptFile.html">Input Script File (Non-Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_CommandStrux_3_CommandLineArgs.html">Command-Line Arguments</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_ParallelExec.html">Parallel Execution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_ParallelExec_MPI.html">Parallel Execution: MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_ParallelExec_Ibrun.html">Parallel Execution: ibrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_ParallelExec_python.html">OpenSeesPy Parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/Ops_ExecGuide.html">Execution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.html">OpenSeesPy Interactive 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.html">Run ANY OpenSees in Python 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/RunOpsInDS_PythonWithinPython.html">Python Script within Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HPC on TACC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPCenv.html">Accessing HPC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_TACCjobs.html">TACC Jobs: SLURM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Intro.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Workflow.html">Job Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Scheduling.html">Job Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Input.html">Job Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Script.html">Job Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_Run.html">Run a SLURM Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURM_OutErrFiles.html">SLURM Job Output</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.html">Parameter Sweeps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURMmanual_PythonFunction.html">Write SLURM with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.html">Advanced Python Function</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/HPCenv_HPCjupyter.html">DesignSafe’s HPC Jupyter Lab</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_intro.html">What is Tapis?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_interfacing.html">Interfacing with Tapis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_connectToTapis.html">Tapis Authentication 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_establishSystemCredentials.html">Establish TMS Credentials 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_getSystemSpecs.html">System Specifications 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/TapisFileManage.html">Tapis: File Management</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_job.html">Tapis Jobs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_queryJobs.html">Query and Retrieve Jobs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.html">Step 1: Explore All Jobs 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_InspectJob.html">Step 2: Inspect Job 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.html">Step 3: Retrieve Output 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_AllJobs.html">Explore All Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_FilterJobs.html">Filter Tapis Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobStatus.html">Job Status 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.html">Job Metadata 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.html">Job History 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_job_profiling.html">Job Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_AccessData.html">Access Output Data 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.html">List All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.html">Download All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.html">Explore Jobs Interactively 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/TapisCancelJob.html">Cancel Tapis Job</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run OpenSees using Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/DesignSafe/DSapps_OpenSees.html">OpenSees App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3_submit.html">Submit to OpenSeesMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.html">Run OpenSees – Detailed 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.html">Run OpenSees – Compact 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_job_submittal.html">Tapis-Job Submittal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_job_attributes.html">Job Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_Apps.html">Tapis Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_List.html">List Tapis Apps  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_Schema.html">Tapis App Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_Schema.html">Get Tapis App Schema 📒</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/DesignSafe/DSapps.html">DesignSafe Tapis Apps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/DSapps_OpenFOAM.html">OpenFOAM app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/DSapps_ADCIRC.html">ADCIRC app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/DesignSafe/DSapps_Compare.html">Compare Apps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemplates.html">Tapis App Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_Structure.html">Structure of App Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_app_def_files.html">App-Definition Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_InputVSParams.html">Inputs vs Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_Inputs.html">Tapis App Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_Parameters.html">Tapis App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/JobAttributes_vs_AppParams.html">Job Attributes vs App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_AppTemp_Outputs.html">Tapis App Output</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Tapis Apps Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Overview.html">OpenSees Tapis Apps</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Express.html">OpenSees-EXPRESS App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Express_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Express_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Express_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_Express_example.html">Example</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3.html">OpenSeesMP App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3_profile_json.html">profile.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Custom Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_appsDev_CustomTapisApp.html">Custom Tapis App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_appsDev_AppInputCats.html">App Input Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.html">My App: opensees-mp-s3-copy  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Docs_MD/Tapis/tapis_appsDev_BestPractice.html">Best Practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Utilities</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OpsUtils_Misc/OpsUtils_Intro.html">OpsUtils</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../OpsUtils_Misc/OpsUtils_Misc.html">Miscellaneous OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/convert_tacc_time.html">convert_tacc_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/convert_time_unix.html">convert_time_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/display_images_in_xbox.html">display_images_in_xbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/empty_folder.html">empty_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/flatten_dict.html">flatten_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/get_files_recursive.html">get_files_recursive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/get_now_unix.html">get_now_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/queryDF.html">queryDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/show_text_file_in_accordion.html">show_text_file_in_accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/show_video.html">show_video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Misc/unix_to_tacc_time.html">unix_to_tacc_time</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="OpsUtils_Tapis.html">Tapis OpsUtils</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="analyze_tacc_job_history.html">analyze_tacc_job_history</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="bump_app_version.html">bump_app_version()</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="cancel_tapis_job.html">cancel_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="connect_tapis.html">connect_tapis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="display_tapis_app_schema.html">display_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="establish_tms_credentials.html">establish_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="explore_tapis_job.html">explore_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filter_tapis_jobs_df.html">filter_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="find_work_path_path.html">find_work_path_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="find_work_path.html">find_work_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_latest_app_version.html">get_latest_app_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_system_queues.html">get_system_queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_app_schema.html">get_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_job_all_files.html">get_tapis_job_all_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_job_description.html">get_tapis_job_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_job_history_data.html">get_tapis_job_history_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_job_metadata.html">get_tapis_job_metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_job_status.html">get_tapis_job_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_jobs_df.html">get_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_jobs.html">get_tapis_jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_tapis_tenant_and_username.html">get_tapis_tenant_and_username</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">get_tapis_username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive_tapis_job_explorer.html">interactive_tapis_job_explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="monitor_tapis_job.html">monitor_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="print_nested_tapisresult.html">print_nested_tapisresult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="revoke_tms_credentials.html">revoke_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="run_tapis_job.html">run_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="submit_tapis_job.html">submit_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validate_app_folder.html">validate_app_folder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../generated_toc.html">Table of Contents</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe/issues/new?title=Issue%20on%20page%20%2FOpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>get_tapis_username</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-does">What it does</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature">Signature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-tips">Notes &amp; tips</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files">Files</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="get-tapis-username">
+<h1>get_tapis_username<a class="headerlink" href="#get-tapis-username" title="Link to this heading">#</a></h1>
+<p><strong><em>get_tapis_username(t,</em>,prefer_userinfo: bool = True,fallback_to_token: bool = True,default=None,verbose: bool = False)</strong>*</p>
+<p><strong>Purpose:</strong> Robustly determine the <strong>Tapis username</strong> from an authenticated <em>tapipy.tapis.Tapis</em> client, even in environments where certain endpoints are restricted.</p>
+<section id="what-it-does">
+<h2>What it does<a class="headerlink" href="#what-it-does" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Primary</strong>: calls <em>t.authenticator.get_userinfo()</em> and returns <em>.username</em>.</p></li>
+<li><p><strong>Fallbacks</strong> (no crashes):</p>
+<ol class="arabic simple">
+<li><p><em>t.username</em> attribute (if set by the client).</p></li>
+<li><p>Access token <strong>claims</strong>:</p>
+<ul>
+<li><p><em>t.access_token.claims[“tapis/username”]</em> (or <em>“username”</em>)</p></li>
+<li><p><em>t.tokens.validateToken()[“tapis/username”]</em> as a last resort.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Returns <em>default</em> if none of the above yield a username.</p></li>
+</ul>
+</section>
+<section id="signature">
+<h2>Signature<a class="headerlink" href="#signature" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">get_tapis_username</span><span class="p">(</span>
+    <span class="n">t</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">prefer_userinfo</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">fallback_to_token</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Any</span>
+</pre></div>
+</div>
+</section>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>t</strong> (<em>tapipy.tapis.Tapis</em>): Authenticated client.</p></li>
+<li><p><strong>prefer_userinfo</strong> (<em>bool, default True</em>): Try the userinfo endpoint first.</p></li>
+<li><p><strong>fallback_to_token</strong> (<em>bool, default True</em>): Use token claims if userinfo is unavailable.</p></li>
+<li><p><strong>default</strong> (<em>Any, default None</em>): Value returned when no username can be found.</p></li>
+<li><p><strong>verbose</strong> (<em>bool, default False</em>): Print short diagnostics while resolving.</p></li>
+</ul>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>str</strong> — the resolved username (e.g., <em>“silvia”</em>), or</p></li>
+<li><p><em><strong>default</strong></em> — if no method could determine the username.</p></li>
+</ul>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Basic</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">get_tapis_username</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tapis username:&quot;</span><span class="p">,</span> <span class="n">user</span> <span class="ow">or</span> <span class="s2">&quot;(unknown)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Verbose troubleshooting and strict check</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">get_tapis_username</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Could not determine Tapis username from userinfo, client, or token claims.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="notes-tips">
+<h2>Notes &amp; tips<a class="headerlink" href="#notes-tips" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>In some <strong>managed hubs</strong> or service-token contexts, <em>get_userinfo()</em> may be disabled; token claims are usually available and are safe to use for identifying the caller.</p></li>
+<li><p>If you need both the <strong>tenant</strong> and username for logging, you can also read <em>t.access_token.claims[“tapis/tenant_id”]</em> when available.</p></li>
+<li><p>Avoid caching the result for long-running jobs if you rotate tokens mid-session.</p></li>
+</ul>
+<section id="files">
+<h3>Files<a class="headerlink" href="#files" title="Link to this heading">#</a></h3>
+<p>You can find these files in Community Data.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-file-code" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg></span><span class="sd-summary-text">get_tapis_username.py</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>def get_tapis_username(
+    t,
+    *,
+    prefer_userinfo: bool = True,
+    fallback_to_token: bool = True,
+    default=None,
+    verbose: bool = False,
+):
+    &quot;&quot;&quot;
+    Return the Tapis username from an authenticated client `t`, with safe fallbacks.
+
+    Resolution order (robust to Tapipy resource objects and dicts):
+      1) userinfo endpoint (if available):
+         t.authenticator.get_userinfo().username
+      2) client attribute:
+         getattr(t, &quot;username&quot;, None)
+      3) token claims (if fallback_to_token=True):
+         - t.access_token.claims.get(&quot;tapis/username&quot;) or &quot;username&quot;
+         - t.tokens.validateToken()[&quot;tapis/username&quot;] (as a last resort)
+
+    Parameters
+    ----------
+    t : tapipy.tapis.Tapis
+        Authenticated Tapis client.
+    prefer_userinfo : bool, default True
+        Try `t.authenticator.get_userinfo()` first. Some managed hubs disable this;
+        if it fails, the function silently falls back.
+    fallback_to_token : bool, default True
+        Allow using access-token claims or `validateToken()` as a fallback.
+    default : Any, default None
+        Value to return if no username can be determined.
+    verbose : bool, default False
+        If True, print brief hints when a resolution step fails.
+
+    Returns
+    -------
+    str | Any
+        The resolved username (e.g., &quot;silvia&quot;), or `default` if none found.
+
+    Notes
+    -----
+    - Some deployments restrict the userinfo endpoint; token claims usually work.
+    - If you always want a strict failure when username can&#39;t be found, set
+      `default=None` (the default) and check for `None` at the call site.
+
+    Examples
+    --------
+    &gt;&gt;&gt; u = get_tapis_username(t)
+    &gt;&gt;&gt; if u is None:
+    ...     raise RuntimeError(&quot;No Tapis username available&quot;)
+    ... 
+    &gt;&gt;&gt; print(&quot;Running as:&quot;, u)
+    &quot;&quot;&quot;
+    # 1) userinfo (preferred)
+    if prefer_userinfo:
+        try:
+            ui = t.authenticator.get_userinfo()
+            uname = getattr(ui, &quot;username&quot;, None)
+            if not uname and isinstance(ui, dict):
+                uname = ui.get(&quot;username&quot;)
+            if uname:
+                return uname
+            if verbose:
+                print(&quot;userinfo returned no &#39;username&#39;; falling back…&quot;)
+        except Exception as e:
+            if verbose:
+                print(f&quot;userinfo unavailable: {e}; falling back…&quot;)
+
+    # 2) client attribute
+    try:
+        uname = getattr(t, &quot;username&quot;, None)
+        if uname:
+            return uname
+    except Exception:
+        pass
+
+    # 3) token claims (optional)
+    if fallback_to_token:
+        # 3a) direct claims on access_token (common in Tapipy)
+        try:
+            claims = getattr(getattr(t, &quot;access_token&quot;, None), &quot;claims&quot;, None)
+            if isinstance(claims, dict):
+                uname = claims.get(&quot;tapis/username&quot;) or claims.get(&quot;username&quot;)
+                if uname:
+                    return uname
+        except Exception as e:
+            if verbose:
+                print(f&quot;access_token.claims unavailable: {e}&quot;)
+
+        # 3b) validateToken() call
+        try:
+            tok = t.tokens.validateToken()
+            if isinstance(tok, dict):
+                uname = tok.get(&quot;tapis/username&quot;) or tok.get(&quot;username&quot;)
+                if uname:
+                    return uname
+        except Exception as e:
+            if verbose:
+                print(f&quot;tokens.validateToken failed: {e}&quot;)
+
+    # Nothing worked
+    return default
+</pre></div>
+</div>
+</div>
+</details><hr class="docutils" />
+<p><strong>Author:</strong> Silvia Mazzoni, DesignSafe (silviamazzoni&#64;yahoo.com)
+<strong>Date:</strong> 2025-08-14
+<strong>Version:</strong> 1.0</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "silviamazzoni/training-OpenSees-on-DesignSafe",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./OpsUtils_Docs/OpsUtils_Tapis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="get_tapis_tenant_and_username.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">get_tapis_tenant_and_username</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="interactive_tapis_job_explorer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">interactive_tapis_job_explorer</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-does">What it does</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signature">Signature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters">Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#returns">Returns</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-tips">Notes &amp; tips</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files">Files</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silvia Mazzoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

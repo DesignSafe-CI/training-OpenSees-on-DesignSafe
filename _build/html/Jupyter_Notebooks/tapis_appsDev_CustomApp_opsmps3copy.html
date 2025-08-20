@@ -1,0 +1,2198 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>My App: opensees-mp-s3-copy 📒 &#8212; OpenSees-on-DesignSafe Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4db13f68" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy';</script>
+    <script src="../_static/custom.js?v=831b1415"></script>
+    <script src="../_static/.ipynb_checkpoints/custom-checkpoint.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Best Practices" href="../Docs_MD/Tapis/tapis_appsDev_BestPractice.html" />
+    <link rel="prev" title="App Input Categories" href="../Docs_MD/Tapis/tapis_appsDev_AppInputCats.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="OpenSees-on-DesignSafe Training - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="OpenSees-on-DesignSafe Training - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    OpenSees-on-DesignSafe Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_TrainingObjectives.html">Training Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_DesignSafeOnTACC.html">DesignSafe &amp; TACC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_WorkflowArchitecture.html">Workflow Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Oview_WorkflowArchitectureGuide.html">Workflow Decision Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_AndDesignSafe.html">OpenSees on DesignSafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_Interpreters.html">OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_Applications.html">OpenSees Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.html">Decision Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compute Environments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.html">JupyterHub Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.html">Virtual Machines (VMs)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_HPC.html">HPC on TACC</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Node.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_NodeStampede3.html">Stampede3 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Core.html">Cores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_Queue.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_QueueStampede3.html">Stampede3 Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_QueueSelexn.html">Queue Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/HPC_allocations.html">Allocations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/ComputeEnv_Guide.html">Environment Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">File Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_Overview.html">File Storage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_Systems.html">File Storage Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_1_corral.html">Corral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_2_compsys.html">Compute System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_3_compnode.html">Compute Nodes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/FileStorage_guide.html">File-Storage Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Intro.html">JupyterHub Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/AccessJupyter.html">Accessing JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Workflow.html">Workflow in JupyterHub</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/JupyterHub_Tools.html">JupyterHub Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paths</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Paths_Overview.html">Understanding Paths</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="paths_InPython.html">Paths in Python 📒</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_AbsVsRelative.html">Absolute vs Relative Path 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_RootAndHome.html">Root &amp; Home Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_Manage.html">Managing Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_Contents.html">Directory Contents 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="paths_InPython_BuildPath.html">Building Paths 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="paths_StorageSystems.html">Storage-System Paths 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DesignSafe Web Portal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_Overview.html">DesignSafe Web Portal</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_Overview_Workflow.html">Web-Portal Demo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_1_CreateInput.html">1 Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.html">2 Submit OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.html">2 Submit OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.html">3 Monitor OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.html">3 Monitor OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webPortal_4_PostProcess_OpenSeesExpress.html">4 PostProcess Ops-Express 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webPortal_4_PostProcess_OpenSeesMP.html">4 PostProcess Ops-MP 📒</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees on JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_JupyterHub_intro.html">JupyterHub for OpenSees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/CLI.html">Terminal CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_Console.html">Python Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_JupyterNotebook.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Execution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux.html">Command Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_1_ExecutableFile.html">Executable File (Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_2_ScriptFile.html">Input Script File (Non-Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_CommandStrux_3_CommandLineArgs.html">Command-Line Arguments</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec.html">Parallel Execution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_MPI.html">Parallel Execution: MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_Ibrun.html">Parallel Execution: ibrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ParallelExec_python.html">OpenSeesPy Parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/Ops_ExecGuide.html">Execution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runOps_Ex1a.py.Canti2D.Push.html">OpenSeesPy Interactive 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runOps_RunAnyOpenSeesInPython.html">Run ANY OpenSees in Python 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/RunOpsInDS_PythonWithinPython.html">Python Script within Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HPC on TACC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/HPCenv.html">Accessing HPC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_TACCjobs.html">TACC Jobs: SLURM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Intro.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Workflow.html">Job Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Scheduling.html">Job Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Input.html">Job Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Script.html">Job Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_Run.html">Run a SLURM Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURM_OutErrFiles.html">SLURM Job Output</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.html">Parameter Sweeps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_PythonFunction.html">Write SLURM with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.html">Advanced Python Function</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/HPCenv_HPCjupyter.html">DesignSafe’s HPC Jupyter Lab</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_intro.html">What is Tapis?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_interfacing.html">Interfacing with Tapis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_connectToTapis.html">Tapis Authentication 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_establishSystemCredentials.html">Establish TMS Credentials 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapisConnect_getSystemSpecs.html">System Specifications 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/TapisFileManage.html">Tapis: File Management</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job.html">Tapis Jobs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/tapis_queryJobs.html">Query and Retrieve Jobs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_ExploreAllJobs.html">Step 1: Explore All Jobs 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_InspectJob.html">Step 2: Inspect Job 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_queryJobs_RetrieveOutput.html">Step 3: Retrieve Output 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_AllJobs.html">Explore All Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_FilterJobs.html">Filter Tapis Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobStatus.html">Job Status 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobMetaData.html">Job Metadata 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobMeta_JobHistoryData.html">Job History 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_profiling.html">Job Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobOutData_AccessData.html">Access Output Data 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobOutData_OutputFiles_Metadata.html">List All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobOutData_OutputFiles_Download.html">Download All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_getJobList_ExploreJobsInteractive.html">Explore Jobs Interactively 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/TapisCancelJob.html">Cancel Tapis Job</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run OpenSees using Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_OpenSees.html">OpenSees App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_submit.html">Submit to OpenSeesMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_DSapp_OpenSees_Detailed.html">Run OpenSees – Detailed 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_DSapp_OpenSees_Compact.html">Run OpenSees – Compact 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_submittal.html">Tapis-Job Submittal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_job_attributes.html">Job Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_Apps.html">Tapis Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_getApps_List.html">List Tapis Apps  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Schema.html">Tapis App Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_submitJob_getApps_Schema.html">Get Tapis App Schema 📒</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps.html">DesignSafe Tapis Apps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_OpenFOAM.html">OpenFOAM app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_ADCIRC.html">ADCIRC app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/DesignSafe/DSapps_Compare.html">Compare Apps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemplates.html">Tapis App Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Structure.html">Structure of App Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_app_def_files.html">App-Definition Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_InputVSParams.html">Inputs vs Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Inputs.html">Tapis App Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Parameters.html">Tapis App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/JobAttributes_vs_AppParams.html">Job Attributes vs App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/tapis_AppTemp_Outputs.html">Tapis App Output</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Tapis Apps Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Overview.html">OpenSees Tapis Apps</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express.html">OpenSees-EXPRESS App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_Express_example.html">Example</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3.html">OpenSeesMP App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_profile_json.html">profile.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Custom Tapis Apps</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_CustomTapisApp.html">Custom Tapis App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_AppInputCats.html">App Input Categories</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">My App: opensees-mp-s3-copy  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docs_MD/Tapis/tapis_appsDev_BestPractice.html">Best Practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.html">OpsUtils</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.html">Miscellaneous OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.html">convert_tacc_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.html">convert_time_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.html">display_images_in_xbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/empty_folder.html">empty_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/flatten_dict.html">flatten_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.html">get_files_recursive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/get_now_unix.html">get_now_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/queryDF.html">queryDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.html">show_text_file_in_accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/show_video.html">show_video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.html">unix_to_tacc_time</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.html">Tapis OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.html">analyze_tacc_job_history</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.html">bump_app_version()</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.html">cancel_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.html">connect_tapis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.html">display_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.html">establish_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.html">explore_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.html">filter_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.html">find_work_path_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/find_work_path.html">find_work_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.html">get_latest_app_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.html">get_system_queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.html">get_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.html">get_tapis_job_all_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.html">get_tapis_job_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.html">get_tapis_job_history_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.html">get_tapis_job_metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.html">get_tapis_job_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.html">get_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.html">get_tapis_jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.html">get_tapis_tenant_and_username</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.html">get_tapis_username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.html">interactive_tapis_job_explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.html">monitor_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.html">print_nested_tapisresult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.html">revoke_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.html">run_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.html">submit_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.html">validate_app_folder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../generated_toc.html">Table of Contents</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/silviamazzoni/training-OpenSees-on-DesignSafe/blob/main/docs/Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe/issues/new?title=Issue%20on%20page%20%2FJupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>My App: opensees-mp-s3-copy  📒</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">✅ Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-tapis">Connect to Tapis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-app">Configure App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoincrement-version">Autoincrement version</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-folder-structure-app-id-version">Define folder structure: app_id/version</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-app-files">Create the App Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md-app-description"><strong>Readme.MD</strong> – App Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-json-app-definition"><strong>app.json</strong> – App Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profile-json-environment-setup"><strong>profile.json</strong> – Environment Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tapisjob-app-sh-wrapper-script"><strong>tapisjob_app.sh</strong> – Wrapper Script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-check">File Check</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validate-app-locally">Validate App Locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-the-app">Deploy the App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-username">Get username</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-the-directory-inside-your-mydata-on-designsafe-storage-default">Make the directory inside your ‘MyData’ on designsafe.storage.default.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-files-to-your-deployment-system-e-g-designsafe-default-storage">Upload files to your deployment system (e.g., DesignSafe default storage)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-upload">Verify upload</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-app">Register the App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-app-is-up">Check that app is up</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list-all-apps">List all apps</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list-the-new-app">List the new app</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-job">Submit a Job</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-specific-input">App-Specific Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#job-specific-input">Job-Specific Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit">Submit</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p><a class="reference external" 
+    href="https://jupyter.designsafe-ci.org/hub/user-redirect/lab/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.ipynb" 
+    target="_blank"
+    >
+<img alt="Try on DesignSafe" src="https://raw.githubusercontent.com/DesignSafe-Training/pinn/main/DesignSafe-Badge.svg" /></a></p>
+<section id="my-app-opensees-mp-s3-copy">
+<h1>My App: opensees-mp-s3-copy  📒<a class="headerlink" href="#my-app-opensees-mp-s3-copy" title="Link to this heading">#</a></h1>
+<p><em><strong>Create your own Tapis App</strong></em></p>
+<p>by Silvia Mazzoni, DesignSafe, 2025</p>
+<p>This is a step-by-step guide to help you write your own <strong>Tapis v3 App</strong> — from defining the app, to registering it, and running it.</p>
+<p>This is a practical walkthrough for defining and deploying an <strong>HPC</strong> app using the Tapis v3 API.</p>
+<p>In this notebook we will replicate the opensees-mp-s3 app verbatim</p>
+<section id="workflow">
+<h2>✅ Workflow<a class="headerlink" href="#workflow" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Step</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1. Create <em>app.json</em></p></td>
+<td><p>Describes the app, its inputs, execution system, and wrapper script</p></td>
+</tr>
+<tr class="row-odd"><td><p>2. Create <em>tapisjob_app.sh</em></p></td>
+<td><p>Runs your analysis (e.g., ibrun OpenSees main.tcl)</p></td>
+</tr>
+<tr class="row-even"><td><p>3. Create <em>profile.json</em></p></td>
+<td><p>(Optional) Loads modules/environment</p></td>
+</tr>
+<tr class="row-odd"><td><p>4. Upload Files</p></td>
+<td><p>To the deployment path in your storage system</p></td>
+</tr>
+<tr class="row-even"><td><p>5. Register App</p></td>
+<td><p>With Tapis via CLI or Python</p></td>
+</tr>
+<tr class="row-odd"><td><p>6. Submit Job</p></td>
+<td><p>Define <code class="docutils literal notranslate"><span class="pre">job.json</span></code> and submit</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/jupyter/MyData/_ToCommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using local utilities library
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make these True once you are done validating</span>
+<span class="n">do_makeAppFiles</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">do_upload</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">do_register</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">do_submitJob</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="connect-to-tapis">
+<h2>Connect to Tapis<a class="headerlink" href="#connect-to-tapis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">OpsUtils</span><span class="o">.</span><span class="n">connect_tapis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> -- Checking Tapis token --
+ Token loaded from file. Token is still valid!
+ Token expires at: 2025-08-20T22:46:16+00:00
+ Token expires in: 3:42:22.844628
+-- LOG IN SUCCESSFUL! --
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="configure-app">
+<h2>Configure App<a class="headerlink" href="#configure-app" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">app_id</span> <span class="o">=</span> <span class="s1">&#39;opensees-mp-s3-copy-mine&#39;</span>
+<span class="c1"># app_version = &#39;0.0.3&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="autoincrement-version">
+<h3>Autoincrement version<a class="headerlink" href="#autoincrement-version" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_makeAppFiles</span> <span class="ow">or</span> <span class="n">do_upload</span> <span class="ow">or</span> <span class="n">do_register</span><span class="p">:</span>
+    <span class="n">latest_app_version</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">get_latest_app_version</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">app_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;now latest_app_version&#39;</span><span class="p">,</span><span class="n">latest_app_version</span><span class="p">)</span>
+    <span class="n">app_version</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">bump_app_version</span><span class="p">(</span><span class="n">latest_app_version</span><span class="p">,</span><span class="s1">&#39;patch&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;now app_version&#39;</span><span class="p">,</span><span class="n">app_version</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>now latest_app_version 0.0.8
+now app_version 0.0.9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-folder-structure-app-id-version">
+<h3>Define folder structure: app_id/version<a class="headerlink" href="#define-folder-structure-app-id-version" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">app_folderName</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;~/MyData/myAuthoredTapisApps/</span><span class="si">{</span><span class="n">app_id</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">app_version</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">;</span> <span class="c1"># your choice</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">app_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">app_folderName</span><span class="p">))</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">app_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;app_folder: </span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="se">\n</span><span class="s1"> exists:&#39;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">app_folder</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>app_folder: /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9
+ exists: True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="create-the-app-files">
+<h2>Create the App Files<a class="headerlink" href="#create-the-app-files" title="Link to this heading">#</a></h2>
+<p>A Tapis app needs the following <strong>core files</strong>:</p>
+<p>We will be creating an app that runs an OpenSeesMP simulation on Stampede3. This app is an identical copy to <strong>opensees-mp-s3</strong> on DesignSafe –
+<a class="reference external" href="https://github.com/TACC/WMA-Tapis-Templates/tree/main/applications/opensees-mp/opensees-mp-s3">Template in GitHub</a></p>
+<ul class="simple">
+<li><p><strong>Readme.MD</strong> – App Description (OPTIONAL)<br>
+This file is helpful in communicating content to the app user.</p></li>
+<li><p><strong>app.json</strong> – App Definition<br>
+Defines the app’s metadata, inputs, parameters, and execution configuration.</p></li>
+<li><p><strong>profile.json</strong> – Environment Setup <em>(optional but common)</em><br>
+Loads modules or sets environment variables on the execution system. This file will load modules before your script runs. This is executed on the compute node.</p></li>
+<li><p><strong>tapisjob_app.sh</strong> – Wrapper Script<br>
+Wrapper script executed by the job; this is the command that launches your code (e.g., runs <em>OpenSeesMP</em>, Python, or a script)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># let&#39;s collect the list of files we are creating as we will need this list in upload</span>
+<span class="n">appFilesList</span> <span class="o">=</span> <span class="p">[];</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="readme-md-app-description">
+<h3><strong>Readme.MD</strong> – App Description<a class="headerlink" href="#readme-md-app-description" title="Link to this heading">#</a></h3>
+<p>This file is helpful in communicating content to the app user.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisFilename</span> <span class="o">=</span> <span class="s1">&#39;ReadMe.MD&#39;</span>
+<span class="k">if</span> <span class="n">do_makeAppFiles</span><span class="p">:</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">    # OpenSees-MP Stampede3 version Latest -- copy Silvia</span>
+<span class="s2">    </span>
+<span class="s2">    This app uses opensees tacc module with tapis zip runtime.</span>
+<span class="s2">    Just testing the original app with no modifications</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">thisFilename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">thisText</span><span class="p">)</span>
+
+<span class="n">appFilesList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisFilename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="app-json-app-definition">
+<h3><strong>app.json</strong> – App Definition<a class="headerlink" href="#app-json-app-definition" title="Link to this heading">#</a></h3>
+<p>Defines the app’s metadata, inputs, parameters, and execution configuration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisFilename</span> <span class="o">=</span> <span class="s1">&#39;app.json&#39;</span>
+<span class="k">if</span> <span class="n">do_makeAppFiles</span><span class="p">:</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">    {</span>
+<span class="s2">      &quot;id&quot;: &quot;__app_id__&quot;,</span>
+<span class="s2">      &quot;version&quot;: &quot;__app_version__&quot;,</span>
+<span class="s2">      &quot;description&quot;: &quot;Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.&quot;,</span>
+<span class="s2">      &quot;owner&quot;: &quot;$</span><span class="si">{apiUserId}</span><span class="s2">&quot;,</span>
+<span class="s2">      &quot;enabled&quot;: true,</span>
+<span class="s2">      &quot;runtime&quot;: &quot;ZIP&quot;,</span>
+<span class="s2">      &quot;runtimeVersion&quot;: null,</span>
+<span class="s2">      &quot;runtimeOptions&quot;: null,</span>
+<span class="s2">      &quot;containerImage&quot;: &quot;tapis://cloud.data/corral/tacc/aci/CEP/applications/v3/opensees/latest/OpenSees/opensees.zip&quot;,</span>
+<span class="s2">      &quot;jobType&quot;: &quot;BATCH&quot;,</span>
+<span class="s2">      &quot;maxJobs&quot;: -1,</span>
+<span class="s2">      &quot;maxJobsPerUser&quot;: -1,</span>
+<span class="s2">      &quot;strictFileInputs&quot;: true,</span>
+<span class="s2">      &quot;jobAttributes&quot;: {</span>
+<span class="s2">        &quot;execSystemConstraints&quot;: null,</span>
+<span class="s2">        &quot;execSystemId&quot;: &quot;stampede3&quot;,</span>
+<span class="s2">        &quot;execSystemExecDir&quot;: &quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;execSystemInputDir&quot;: &quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;execSystemOutputDir&quot;: &quot;$</span><span class="si">{JobWorkingDir}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;execSystemLogicalQueue&quot;: &quot;skx&quot;,</span>
+<span class="s2">        &quot;archiveSystemId&quot;: &quot;stampede3&quot;,</span>
+<span class="s2">        &quot;archiveSystemDir&quot;: &quot;HOST_EVAL($WORK)/tapis-jobs-archive/$</span><span class="si">{JobCreateDate}</span><span class="s2">/$</span><span class="si">{JobName}</span><span class="s2">-$</span><span class="si">{JobUUID}</span><span class="s2">&quot;,</span>
+<span class="s2">        &quot;archiveOnAppError&quot;: true,</span>
+<span class="s2">        &quot;isMpi&quot;: false,</span>
+<span class="s2">        &quot;mpiCmd&quot;: null,</span>
+<span class="s2">        &quot;parameterSet&quot;: {</span>
+<span class="s2">          &quot;appArgs&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">              &quot;name&quot;: &quot;Main Program&quot;,</span>
+<span class="s2">              &quot;arg&quot;: &quot;OpenSeesMP&quot;,</span>
+<span class="s2">              &quot;inputMode&quot;: &quot;FIXED&quot;,</span>
+<span class="s2">              &quot;notes&quot;: {</span>
+<span class="s2">                &quot;isHidden&quot;: true</span>
+<span class="s2">              }</span>
+<span class="s2">            },</span>
+<span class="s2">            {</span>
+<span class="s2">              &quot;name&quot;: &quot;Main Script&quot;,</span>
+<span class="s2">              &quot;description&quot;: &quot;The filename only of the OpenSees TCL script to execute. This file should reside in the Input Directory specified. To use with test input, use &#39;freeFieldEffective.tcl&#39;&quot;,</span>
+<span class="s2">              &quot;arg&quot;: null,</span>
+<span class="s2">              &quot;inputMode&quot;: &quot;REQUIRED&quot;,</span>
+<span class="s2">              &quot;notes&quot;: {</span>
+<span class="s2">                &quot;inputType&quot;: &quot;fileInput&quot;</span>
+<span class="s2">              }</span>
+<span class="s2">            }</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;containerArgs&quot;: [],</span>
+<span class="s2">          &quot;schedulerOptions&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">              &quot;name&quot;: &quot;OpenSees TACC Scheduler Profile&quot;,</span>
+<span class="s2">              &quot;description&quot;: &quot;Scheduler profile for the default version of OpenSees&quot;,</span>
+<span class="s2">              &quot;inputMode&quot;: &quot;FIXED&quot;,</span>
+<span class="s2">              &quot;arg&quot;: &quot;--tapis-profile OpenSees_default&quot;,</span>
+<span class="s2">              &quot;notes&quot;: {</span>
+<span class="s2">                &quot;isHidden&quot;: true</span>
+<span class="s2">              }</span>
+<span class="s2">            }</span>
+<span class="s2">          ],</span>
+<span class="s2">          &quot;envVariables&quot;: [],</span>
+<span class="s2">          &quot;archiveFilter&quot;: {</span>
+<span class="s2">            &quot;includes&quot;: [],</span>
+<span class="s2">            &quot;excludes&quot;: [],</span>
+<span class="s2">            &quot;includeLaunchFiles&quot;: true</span>
+<span class="s2">          }</span>
+<span class="s2">        },</span>
+<span class="s2">        &quot;fileInputs&quot;: [</span>
+<span class="s2">          {</span>
+<span class="s2">            &quot;name&quot;: &quot;Input Directory&quot;,</span>
+<span class="s2">            &quot;inputMode&quot;: &quot;REQUIRED&quot;,</span>
+<span class="s2">            &quot;sourceUrl&quot;: null,</span>
+<span class="s2">            &quot;targetPath&quot;: &quot;inputDirectory&quot;,</span>
+<span class="s2">            &quot;envKey&quot;: &quot;inputDirectory&quot;,</span>
+<span class="s2">            &quot;description&quot;: &quot;Input directory that includes the tcl script as well as any other required files. Example input is in tapis://designsafe.storage.community/app_examples/opensees/OpenSeesMP&quot;,</span>
+<span class="s2">            &quot;notes&quot;: {</span>
+<span class="s2">              &quot;selectionMode&quot;: &quot;directory&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">          }</span>
+<span class="s2">        ],</span>
+<span class="s2">        &quot;fileInputArrays&quot;: [],</span>
+<span class="s2">        &quot;nodeCount&quot;: 2,</span>
+<span class="s2">        &quot;coresPerNode&quot;: 48,</span>
+<span class="s2">        &quot;memoryMB&quot;: 192000,</span>
+<span class="s2">        &quot;maxMinutes&quot;: 120,</span>
+<span class="s2">        &quot;subscriptions&quot;: [],</span>
+<span class="s2">        &quot;tags&quot;: []</span>
+<span class="s2">      },</span>
+<span class="s2">      &quot;tags&quot;: [</span>
+<span class="s2">        &quot;portalName: DesignSafe&quot;,</span>
+<span class="s2">        &quot;portalName: CEP&quot;</span>
+<span class="s2">      ],</span>
+<span class="s2">      &quot;notes&quot;: {</span>
+<span class="s2">        &quot;label&quot;: &quot;OpenSeesMP&quot;,</span>
+<span class="s2">        &quot;helpUrl&quot;: &quot;https://www.designsafe-ci.org/user-guide/tools/simulation/#opensees-user-guide&quot;,</span>
+<span class="s2">        &quot;hideNodeCountAndCoresPerNode&quot;: false,</span>
+<span class="s2">        &quot;isInteractive&quot;: false,</span>
+<span class="s2">        &quot;icon&quot;: &quot;OpenSees&quot;,</span>
+<span class="s2">        &quot;category&quot;: &quot;Simulation&quot;</span>
+<span class="s2">      }</span>
+<span class="s2">    }</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="n">thisText</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;__app_id__&quot;</span><span class="p">,</span> <span class="n">app_id</span><span class="p">)</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="n">thisText</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;__app_version__&quot;</span><span class="p">,</span> <span class="n">app_version</span><span class="p">)</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">thisFilename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">thisText</span><span class="p">)</span>
+
+<span class="n">appFilesList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisFilename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="profile-json-environment-setup">
+<h3><strong>profile.json</strong> – Environment Setup<a class="headerlink" href="#profile-json-environment-setup" title="Link to this heading">#</a></h3>
+<p>This file will load modules before your script runs. This is executed on the compute node.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisFilename</span> <span class="o">=</span> <span class="s1">&#39;profile.json&#39;</span>
+<span class="k">if</span> <span class="n">do_makeAppFiles</span><span class="p">:</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">    {</span>
+<span class="s2">        &quot;name&quot;: &quot;OpenSees_default&quot;,</span>
+<span class="s2">        &quot;description&quot;: &quot;Modules to load for the default version of OpenSees&quot;,</span>
+<span class="s2">        &quot;moduleLoads&quot;: [</span>
+<span class="s2">            {</span>
+<span class="s2">                &quot;modulesToLoad&quot;: [</span>
+<span class="s2">                    &quot;hdf5/1.14.4&quot;,</span>
+<span class="s2">                    &quot;opensees&quot;</span>
+<span class="s2">                ],</span>
+<span class="s2">                &quot;moduleLoadCommand&quot;: &quot;module load&quot;</span>
+<span class="s2">            }</span>
+<span class="s2">        ],</span>
+<span class="s2">        &quot;hiddenOptions&quot;: [</span>
+<span class="s2">            &quot;MEM&quot;</span>
+<span class="s2">        ]</span>
+<span class="s2">    }</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">thisFilename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">thisText</span><span class="p">)</span>
+
+<span class="n">appFilesList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisFilename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tapisjob-app-sh-wrapper-script">
+<h3><strong>tapisjob_app.sh</strong> – Wrapper Script<a class="headerlink" href="#tapisjob-app-sh-wrapper-script" title="Link to this heading">#</a></h3>
+<p>Wrapper script executed by the job; this is the command that launches your code (e.g., runs <em>OpenSeesMP</em>, Python, or a script)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thisFilename</span> <span class="o">=</span> <span class="s1">&#39;tapisjob_app.sh&#39;</span>
+<span class="k">if</span> <span class="n">do_makeAppFiles</span><span class="p">:</span>
+    <span class="n">thisText</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">    set -x</span>
+<span class="s2">    </span>
+<span class="s2">    BINARYNAME=$1</span>
+<span class="s2">    INPUTSCRIPT=$2</span>
+<span class="s2">    echo &quot;INPUTSCRIPT is $INPUTSCRIPT&quot;</span>
+<span class="s2">    </span>
+<span class="s2">    TCLSCRIPT=&quot;${INPUTSCRIPT##*/}&quot;</span>
+<span class="s2">    echo &quot;TCLSCRIPT is $TCLSCRIPT&quot;</span>
+<span class="s2">    </span>
+<span class="s2">    cd &quot;$</span><span class="si">{inputDirectory}</span><span class="s2">&quot;</span>
+<span class="s2">    </span>
+<span class="s2">    echo &quot;Running $BINARYNAME&quot;</span>
+<span class="s2">    </span>
+<span class="s2">    ibrun $BINARYNAME $TCLSCRIPT</span>
+<span class="s2">    if [ ! $? ]; then</span>
+<span class="s2">          echo &quot;OpenSees exited with an error status. $?&quot; &gt;&amp;2</span>
+<span class="s2">          exit</span>
+<span class="s2">    fi</span>
+<span class="s2">    </span>
+<span class="s2">    cd ..</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">thisFilename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">thisText</span><span class="p">)</span>
+
+<span class="n">appFilesList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">thisFilename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="file-check">
+<h3>File Check<a class="headerlink" href="#file-check" title="Link to this heading">#</a></h3>
+<p>Look at the files we have written and check for typos or formatting errors.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;ReadMe.MD&#39;, &#39;app.json&#39;, &#39;profile.json&#39;, &#39;tapisjob_app.sh&#39;]
+</pre></div>
+</div>
+<div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">ReadMe.MD</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('2d3092a97311409f9a59d5931eab7aa5').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="2d3092a97311409f9a59d5931eab7aa5" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9/ReadMe.MD</b>
+    # OpenSees-MP Stampede3 version Latest -- copy Silvia
+
+    This app uses opensees tacc module with tapis zip runtime.
+    Just testing the original app with no modifications
+    </pre>
+                      </details>
+                    </div><div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">app.json</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('be644af27b4648709909b256b848f67f').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="be644af27b4648709909b256b848f67f" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9/app.json</b>
+    {
+      "id": "opensees-mp-s3-copy-mine",
+      "version": "0.0.9",
+      "description": "Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.",
+      "owner": "${apiUserId}",
+      "enabled": true,
+      "runtime": "ZIP",
+      "runtimeVersion": null,
+      "runtimeOptions": null,
+      "containerImage": "tapis://cloud.data/corral/tacc/aci/CEP/applications/v3/opensees/latest/OpenSees/opensees.zip",
+      "jobType": "BATCH",
+      "maxJobs": -1,
+      "maxJobsPerUser": -1,
+      "strictFileInputs": true,
+      "jobAttributes": {
+        "execSystemConstraints": null,
+        "execSystemId": "stampede3",
+        "execSystemExecDir": "${JobWorkingDir}",
+        "execSystemInputDir": "${JobWorkingDir}",
+        "execSystemOutputDir": "${JobWorkingDir}",
+        "execSystemLogicalQueue": "skx",
+        "archiveSystemId": "stampede3",
+        "archiveSystemDir": "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}",
+        "archiveOnAppError": true,
+        "isMpi": false,
+        "mpiCmd": null,
+        "parameterSet": {
+          "appArgs": [
+            {
+              "name": "Main Program",
+              "arg": "OpenSeesMP",
+              "inputMode": "FIXED",
+              "notes": {
+                "isHidden": true
+              }
+            },
+            {
+              "name": "Main Script",
+              "description": "The filename only of the OpenSees TCL script to execute. This file should reside in the Input Directory specified. To use with test input, use 'freeFieldEffective.tcl'",
+              "arg": null,
+              "inputMode": "REQUIRED",
+              "notes": {
+                "inputType": "fileInput"
+              }
+            }
+          ],
+          "containerArgs": [],
+          "schedulerOptions": [
+            {
+              "name": "OpenSees TACC Scheduler Profile",
+              "description": "Scheduler profile for the default version of OpenSees",
+              "inputMode": "FIXED",
+              "arg": "--tapis-profile OpenSees_default",
+              "notes": {
+                "isHidden": true
+              }
+            }
+          ],
+          "envVariables": [],
+          "archiveFilter": {
+            "includes": [],
+            "excludes": [],
+            "includeLaunchFiles": true
+          }
+        },
+        "fileInputs": [
+          {
+            "name": "Input Directory",
+            "inputMode": "REQUIRED",
+            "sourceUrl": null,
+            "targetPath": "inputDirectory",
+            "envKey": "inputDirectory",
+            "description": "Input directory that includes the tcl script as well as any other required files. Example input is in tapis://designsafe.storage.community/app_examples/opensees/OpenSeesMP",
+            "notes": {
+              "selectionMode": "directory"
+            }
+          }
+        ],
+        "fileInputArrays": [],
+        "nodeCount": 2,
+        "coresPerNode": 48,
+        "memoryMB": 192000,
+        "maxMinutes": 120,
+        "subscriptions": [],
+        "tags": []
+      },
+      "tags": [
+        "portalName: DesignSafe",
+        "portalName: CEP"
+      ],
+      "notes": {
+        "label": "OpenSeesMP",
+        "helpUrl": "https://www.designsafe-ci.org/user-guide/tools/simulation/#opensees-user-guide",
+        "hideNodeCountAndCoresPerNode": false,
+        "isInteractive": false,
+        "icon": "OpenSees",
+        "category": "Simulation"
+      }
+    }
+    </pre>
+                      </details>
+                    </div><div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">profile.json</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('d15f6faac6c24692bb569965c269e333').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="d15f6faac6c24692bb569965c269e333" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9/profile.json</b>
+    {
+        "name": "OpenSees_default",
+        "description": "Modules to load for the default version of OpenSees",
+        "moduleLoads": [
+            {
+                "modulesToLoad": [
+                    "hdf5/1.14.4",
+                    "opensees"
+                ],
+                "moduleLoadCommand": "module load"
+            }
+        ],
+        "hiddenOptions": [
+            "MEM"
+        ]
+    }
+    </pre>
+                      </details>
+                    </div><div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">tapisjob_app.sh</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('b7a845109b8f4622a9e280710b63a70c').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="b7a845109b8f4622a9e280710b63a70c" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9/tapisjob_app.sh</b>
+    set -x
+
+    BINARYNAME=$1
+    INPUTSCRIPT=$2
+    echo "INPUTSCRIPT is $INPUTSCRIPT"
+
+    TCLSCRIPT="${INPUTSCRIPT##*/}"
+    echo "TCLSCRIPT is $TCLSCRIPT"
+
+    cd "${inputDirectory}"
+
+    echo "Running $BINARYNAME"
+
+    ibrun $BINARYNAME $TCLSCRIPT
+    if [ ! $? ]; then
+          echo "OpenSees exited with an error status. $?" >&2
+          exit
+    fi
+
+    cd ..
+    </pre>
+                      </details>
+                    </div></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="validate-app-locally">
+<h2>Validate App Locally<a class="headerlink" href="#validate-app-locally" title="Link to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">validate_app_folder.py</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('3becb1422a1c40b8b2767e0349b01b71').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="3becb1422a1c40b8b2767e0349b01b71" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># ../OpsUtils/OpsUtils/Tapis/validate_app_folder.py</b>
+def validate_app_folder(folder, required_files):
+    """
+    Validate an app deployment folder:
+      1) Check that all `required_files` exist under `folder`.
+      2) Parse any `.json` files and merge their objects (later files overwrite earlier keys).
+      3) Print a concise summary (id, name, version, params/inputs/outputs, top-level keys).
+
+    Safe behavior:
+      - Never raises KeyError for missing identity keys; prints "(missing)" instead.
+      - Handles non-list or malformed `parameters/inputs/outputs` gracefully.
+
+    Parameters
+    ----------
+    folder : str | os.PathLike
+        Path to the app/version directory (e.g., "apps/opensees-mp/1.0/").
+    required_files : Iterable[str]
+        Filenames expected inside `folder` (e.g., ["app.json", "profile.json", "tapisjob_app.sh"]).
+
+    Returns
+    -------
+    bool
+        True  -> all required files present and all JSON parsed successfully.
+        False -> at least one file missing OR a JSON parse error occurred.
+
+    Notes
+    -----
+    - If multiple JSON files are in `required_files`, later files overwrite earlier keys.
+    - Only performs **syntactic** JSON validation (no schema validation).
+    """
+    import os, json
+    from pathlib import Path
+
+    folder_path = Path(folder)
+    print(f"🔍 Validating app folder: {folder_path}\n")
+
+    # 1) Presence check
+    missing = [f for f in required_files if not (folder_path / f).exists()]
+    if missing:
+        print(f"❌ Missing required files: {missing}")
+        return False
+    else:
+        print("✅ All required files are present.\n")
+
+    # 2) Parse & merge JSON files
+    app_def = {}
+    for fname in required_files:
+        if Path(fname).suffix.lower() == ".json":
+            fpath = folder_path / fname
+            try:
+                with fpath.open() as fp:
+                    obj = json.load(fp)
+                if isinstance(obj, dict):
+                    app_def.update(obj)  # later files override earlier keys
+                else:
+                    print(f"❌ {fname} contains JSON that is not an object (dict).")
+                    return False
+            except json.JSONDecodeError as exc:
+                print(f"❌ {fname} is not valid JSON: {exc}")
+                return False
+
+    # 3) Friendly summary (safe lookups)
+    app_id      = app_def.get("id", "(missing)")
+    app_name    = app_def.get("name", "(missing)")
+    app_version = app_def.get("version", "(missing)")
+
+    def _collect_ids(val, key="id"):
+        # Accepts list[dict], dict (single), or anything else -> robust fallback
+        if isinstance(val, list):
+            return [str(x.get(key, "(no-id)")) for x in val if isinstance(x, dict)]
+        if isinstance(val, dict):
+            return [str(val.get(key, "(no-id)"))]
+        return []
+
+    param_ids  = _collect_ids(app_def.get("parameters", []), "id")
+    input_ids  = _collect_ids(app_def.get("inputs", []), "id")
+    output_ids = _collect_ids(app_def.get("outputs", []), "id")
+
+    print(f"📄 App ID: {app_id}")
+    print(f"📄 App Name: {app_name}")
+    print(f"📄 Version: {app_version}")
+    print(f"🔧 Parameters: {param_ids}")
+    print(f"📦 Inputs: {input_ids}")
+    print(f"📤 Outputs: {output_ids}")
+    print(f"\nApp Keys: {list(app_def.keys())}")
+    print("\n✅ Basic validation complete. App folder looks good!")
+    return True
+</pre>
+                      </details>
+                    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run validation</span>
+<span class="n">validation</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">validate_app_folder</span><span class="p">(</span><span class="n">app_folder</span><span class="p">,</span><span class="n">appFilesList</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">validation</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Validation Failed: stopping here!!!!&#39;</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="o">/</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔍 Validating app folder: /home/jupyter/MyData/myAuthoredTapisApps/opensees-mp-s3-copy-mine/0.0.9
+
+✅ All required files are present.
+
+📄 App ID: opensees-mp-s3-copy-mine
+📄 App Name: OpenSees_default
+📄 Version: 0.0.9
+🔧 Parameters: []
+📦 Inputs: []
+📤 Outputs: []
+
+App Keys: [&#39;id&#39;, &#39;version&#39;, &#39;description&#39;, &#39;owner&#39;, &#39;enabled&#39;, &#39;runtime&#39;, &#39;runtimeVersion&#39;, &#39;runtimeOptions&#39;, &#39;containerImage&#39;, &#39;jobType&#39;, &#39;maxJobs&#39;, &#39;maxJobsPerUser&#39;, &#39;strictFileInputs&#39;, &#39;jobAttributes&#39;, &#39;tags&#39;, &#39;notes&#39;, &#39;name&#39;, &#39;moduleLoads&#39;, &#39;hiddenOptions&#39;]
+
+✅ Basic validation complete. App folder looks good!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="deploy-the-app">
+<h2>Deploy the App<a class="headerlink" href="#deploy-the-app" title="Link to this heading">#</a></h2>
+<section id="get-username">
+<h3>Get username<a class="headerlink" href="#get-username" title="Link to this heading">#</a></h3>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+                      <details style="margin-top:1em; font-family:monospace; background:white; 
+                          padding:0.25em; border-radius:6px; border:1px solid #ccc;">
+                        <summary style="cursor:pointer; font-weight:bold; background:white; 
+                          padding:0.3em 0.5em; border-radius:4px;">get_tapis_username.py</summary>
+
+                        <button onclick="navigator.clipboard.writeText(document.getElementById('c0785efea40a47638fcf7bbfed050d18').innerText)">
+                          📋 Copy
+                        </button>
+                        <pre id="c0785efea40a47638fcf7bbfed050d18" style="white-space:pre-wrap; margin:0.25em 0 0 0; 
+                            background:#d4fbff; padding:.3em; border-radius:5px;">
+<b># ../OpsUtils/OpsUtils/Tapis/get_tapis_username.py</b>
+def get_tapis_username(
+    t,
+    *,
+    prefer_userinfo: bool = True,
+    fallback_to_token: bool = True,
+    default=None,
+    verbose: bool = False,
+):
+    """
+    Return the Tapis username from an authenticated client `t`, with safe fallbacks.
+
+    Resolution order (robust to Tapipy resource objects and dicts):
+      1) userinfo endpoint (if available):
+         t.authenticator.get_userinfo().username
+      2) client attribute:
+         getattr(t, "username", None)
+      3) token claims (if fallback_to_token=True):
+         - t.access_token.claims.get("tapis/username") or "username"
+         - t.tokens.validateToken()["tapis/username"] (as a last resort)
+
+    Parameters
+    ----------
+    t : tapipy.tapis.Tapis
+        Authenticated Tapis client.
+    prefer_userinfo : bool, default True
+        Try `t.authenticator.get_userinfo()` first. Some managed hubs disable this;
+        if it fails, the function silently falls back.
+    fallback_to_token : bool, default True
+        Allow using access-token claims or `validateToken()` as a fallback.
+    default : Any, default None
+        Value to return if no username can be determined.
+    verbose : bool, default False
+        If True, print brief hints when a resolution step fails.
+
+    Returns
+    -------
+    str | Any
+        The resolved username (e.g., "silvia"), or `default` if none found.
+
+    Notes
+    -----
+    - Some deployments restrict the userinfo endpoint; token claims usually work.
+    - If you always want a strict failure when username can't be found, set
+      `default=None` (the default) and check for `None` at the call site.
+
+    Examples
+    --------
+    >>> u = get_tapis_username(t)
+    >>> if u is None:
+    ...     raise RuntimeError("No Tapis username available")
+    ... 
+    >>> print("Running as:", u)
+    """
+    # 1) userinfo (preferred)
+    if prefer_userinfo:
+        try:
+            ui = t.authenticator.get_userinfo()
+            uname = getattr(ui, "username", None)
+            if not uname and isinstance(ui, dict):
+                uname = ui.get("username")
+            if uname:
+                return uname
+            if verbose:
+                print("userinfo returned no 'username'; falling back…")
+        except Exception as e:
+            if verbose:
+                print(f"userinfo unavailable: {e}; falling back…")
+
+    # 2) client attribute
+    try:
+        uname = getattr(t, "username", None)
+        if uname:
+            return uname
+    except Exception:
+        pass
+
+    # 3) token claims (optional)
+    if fallback_to_token:
+        # 3a) direct claims on access_token (common in Tapipy)
+        try:
+            claims = getattr(getattr(t, "access_token", None), "claims", None)
+            if isinstance(claims, dict):
+                uname = claims.get("tapis/username") or claims.get("username")
+                if uname:
+                    return uname
+        except Exception as e:
+            if verbose:
+                print(f"access_token.claims unavailable: {e}")
+
+        # 3b) validateToken() call
+        try:
+            tok = t.tokens.validateToken()
+            if isinstance(tok, dict):
+                uname = tok.get("tapis/username") or tok.get("username")
+                if uname:
+                    return uname
+        except Exception as e:
+            if verbose:
+                print(f"tokens.validateToken failed: {e}")
+
+    # Nothing worked
+    return default
+</pre>
+                      </details>
+                    </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">get_tapis_username</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">,</span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>username silvia
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="make-the-directory-inside-your-mydata-on-designsafe-storage-default">
+<h3>Make the directory inside your ‘MyData’ on designsafe.storage.default.<a class="headerlink" href="#make-the-directory-inside-your-mydata-on-designsafe-storage-default" title="Link to this heading">#</a></h3>
+<p>The apps in this folder are the ones that area actually uploaded.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_upload</span><span class="p">:</span>
+    <span class="n">app_system_id</span><span class="o">=</span><span class="s2">&quot;designsafe.storage.default&quot;</span>
+    <span class="n">app_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">/apps/</span><span class="si">{</span><span class="n">app_id</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">app_version</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">systemId</span><span class="o">=</span><span class="n">app_system_id</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">app_path</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;app_path&#39;</span><span class="p">,</span><span class="n">app_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>app_path silvia/apps/opensees-mp-s3-copy-mine/0.0.9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="upload-files-to-your-deployment-system-e-g-designsafe-default-storage">
+<h3>Upload files to your deployment system (e.g., DesignSafe default storage)<a class="headerlink" href="#upload-files-to-your-deployment-system-e-g-designsafe-default-storage" title="Link to this heading">#</a></h3>
+<p>Using Tapipy (Python SDK) in a Jupyter Notebook</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_upload</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="n">appFilesList</span><span class="p">:</span>
+        <span class="n">fpath</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">source_file_path</span><span class="o">=</span><span class="n">fpath</span><span class="p">,</span>
+                 <span class="n">system_id</span><span class="o">=</span><span class="n">app_system_id</span><span class="p">,</span>
+                 <span class="n">dest_file_path</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">app_path</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="verify-upload">
+<h4>Verify upload<a class="headerlink" href="#verify-upload" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_upload</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;app_system_id:&#39;</span><span class="p">,</span><span class="n">app_system_id</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;app_path:&#39;</span><span class="p">,</span><span class="n">app_path</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">listFiles</span><span class="p">(</span><span class="n">systemId</span><span class="o">=</span><span class="n">app_system_id</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">app_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>app_system_id: designsafe.storage.default
+app_path: silvia/apps/opensees-mp-s3-copy-mine/0.0.9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="register-the-app">
+<h2>Register the App<a class="headerlink" href="#register-the-app" title="Link to this heading">#</a></h2>
+<p>This creates the actual App record that Jobs can run.</p>
+<p>Do this Using Tapipy (Python)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_register</span><span class="p">:</span>
+    <span class="c1"># Create (or create a new version) of the app</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">app_folder</span><span class="si">}</span><span class="s1">/app.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">app_def</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">createAppVersion</span><span class="p">(</span><span class="o">**</span><span class="n">app_def</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="check-that-app-is-up">
+<h3>Check that app is up<a class="headerlink" href="#check-that-app-is-up" title="Link to this heading">#</a></h3>
+<section id="list-all-apps">
+<h4>List all apps<a class="headerlink" href="#list-all-apps" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_register</span><span class="p">:</span>
+    <span class="n">listType</span> <span class="o">=</span> <span class="s1">&#39;ALL&#39;</span> <span class="c1"># Include all items requester is authorized to view. Includes check for READ or MODIFY permission.</span>
+    <span class="n">select</span> <span class="o">=</span> <span class="s1">&#39;id,created,description,version,owner&#39;</span> <span class="c1"># Attributes to return in each result.</span>
+    <span class="n">orderBy</span> <span class="o">=</span> <span class="s1">&#39;created(asc)&#39;</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">getApps</span><span class="p">(</span> <span class="n">orderBy</span><span class="o">=</span><span class="n">orderBy</span><span class="p">,</span>
+                             <span class="n">select</span><span class="o">=</span><span class="n">select</span><span class="p">)</span>  
+    <span class="k">for</span> <span class="n">thisRes</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">thisRes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--
+
+created: 2024-12-13T20:15:33.014747Z
+description: Run shell commands on remote systems
+id: shell-runner-1.0.0
+owner: silvia
+version: 1.0.0
+--
+
+created: 2024-12-14T15:49:21.510206Z
+description: Run shell commands on remote systems
+id: shell-runner
+owner: silvia
+version: 1.0.0
+--
+
+created: 2025-08-16T16:51:35.355715Z
+description: Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.
+id: opensees-mp-s3-silvia
+owner: silvia
+version: latest
+--
+
+created: 2025-08-16T18:53:58.422294Z
+description: Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.
+id: opensees-mp-s3-silvia-new
+owner: silvia
+version: latest
+--
+
+created: 2025-08-17T22:34:01.193589Z
+description: Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.
+id: opensees-mp-s3-copy-silvia
+owner: silvia
+version: 0.0.2
+--
+
+created: 2025-08-20T19:03:55.567374Z
+description: Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.
+id: opensees-mp-s3-copy-mine
+owner: silvia
+version: 0.0.9
+--
+
+created: 2025-08-18T02:18:22.973797Z
+description: Run either OpenSeesSP or OpenSeesMP
+id: opensees-tcl-mine
+owner: silvia
+version: 0.0.1
+--
+
+created: 2025-08-18T04:35:56.608017Z
+description: Run any OpenSees
+id: opensees-agnostic
+owner: silvia
+version: 0.0.5
+--
+
+created: 2025-08-18T06:19:28.859427Z
+description: Run any OpenSees
+id: opensees-agnostic2
+owner: silvia
+version: 0.0.3
+--
+
+created: 2025-08-20T04:17:18.959161Z
+description: Run any Executable
+id: agnostic-app-test
+owner: silvia
+version: 0.0.23
+--
+
+created: 2025-08-20T18:24:58.182260Z
+description: get work path
+id: get-work-path-test
+owner: silvia
+version: 0.0.14
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="list-the-new-app">
+<h4>List the new app<a class="headerlink" href="#list-the-new-app" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">do_register</span><span class="p">:</span>
+    <span class="n">appMetaData</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">getAppLatestVersion</span><span class="p">(</span><span class="n">appId</span><span class="o">=</span><span class="n">app_def</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">appMetaData</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>containerImage: tapis://cloud.data/corral/tacc/aci/CEP/applications/v3/opensees/latest/OpenSees/opensees.zip
+created: 2025-08-20T19:03:55.567374Z
+deleted: False
+description: Runs all the processors in parallel. Requires understanding of parallel processing and the capabilities to write parallel scripts.
+enabled: True
+id: opensees-mp-s3-copy-mine
+isPublic: False
+jobAttributes: 
+archiveOnAppError: True
+archiveSystemDir: HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}
+archiveSystemId: stampede3
+cmdPrefix: None
+coresPerNode: 48
+description: None
+dtnSystemInputDir: !tapis_not_set
+dtnSystemOutputDir: !tapis_not_set
+dynamicExecSystem: False
+execSystemConstraints: None
+execSystemExecDir: ${JobWorkingDir}
+execSystemId: stampede3
+execSystemInputDir: ${JobWorkingDir}
+execSystemLogicalQueue: skx
+execSystemOutputDir: ${JobWorkingDir}
+fileInputArrays: []
+fileInputs: [
+autoMountLocal: True
+description: Input directory that includes the tcl script as well as any other required files. Example input is in tapis://designsafe.storage.community/app_examples/opensees/OpenSeesMP
+envKey: inputDirectory
+inputMode: REQUIRED
+name: Input Directory
+notes: 
+selectionMode: directory
+sourceUrl: None
+targetPath: inputDirectory]
+isMpi: False
+maxMinutes: 120
+memoryMB: 192000
+mpiCmd: None
+nodeCount: 2
+parameterSet: 
+appArgs: [
+arg: OpenSeesMP
+description: None
+inputMode: FIXED
+name: Main Program
+notes: 
+isHidden: True, 
+arg: None
+description: The filename only of the OpenSees TCL script to execute. This file should reside in the Input Directory specified. To use with test input, use &#39;freeFieldEffective.tcl&#39;
+inputMode: REQUIRED
+name: Main Script
+notes: 
+inputType: fileInput]
+archiveFilter: 
+excludes: []
+includeLaunchFiles: True
+includes: []
+containerArgs: []
+envVariables: []
+logConfig: 
+stderrFilename: 
+stdoutFilename: 
+schedulerOptions: [
+arg: --tapis-profile OpenSees_default
+description: Scheduler profile for the default version of OpenSees
+inputMode: FIXED
+name: OpenSees TACC Scheduler Profile
+notes: 
+isHidden: True]
+subscriptions: []
+tags: []
+jobType: BATCH
+locked: False
+maxJobs: 2147483647
+maxJobsPerUser: 2147483647
+notes: 
+category: Simulation
+helpUrl: https://www.designsafe-ci.org/user-guide/tools/simulation/#opensees-user-guide
+hideNodeCountAndCoresPerNode: False
+icon: OpenSees
+isInteractive: False
+label: OpenSeesMP
+owner: silvia
+runtime: ZIP
+runtimeOptions: None
+runtimeVersion: None
+sharedAppCtx: silvia
+sharedWithUsers: []
+strictFileInputs: False
+tags: [&#39;portalName: DesignSafe&#39;, &#39;portalName: CEP&#39;]
+tenant: designsafe
+updated: 2025-08-20T19:03:55.567374Z
+uuid: 17af5e3d-9649-45e4-9a34-75405f7b4ada
+version: 0.0.9
+versionEnabled: True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="submit-a-job">
+<h2>Submit a Job<a class="headerlink" href="#submit-a-job" title="Link to this heading">#</a></h2>
+<p>You can now submit a job using this app. You can use the Tapis CLI, Tapipy, or a web form.</p>
+<p>We are using TapiPy directly from this notebook. We will not specify a version so that the latest is used by default in the description.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;app_id:&#39;</span><span class="p">,</span><span class="n">app_id</span><span class="p">)</span>
+<span class="c1"># print(&#39;app_version:&#39;,app_version)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>app_id: opensees-mp-s3-copy-mine
+</pre></div>
+</div>
+</div>
+</div>
+<section id="app-specific-input">
+<h3>App-Specific Input<a class="headerlink" href="#app-specific-input" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initalize</span>
+<span class="n">tapisInputAll</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;SilviaApp_OpenSeesMPs3Copy&#39;</span>
+
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;appId&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">app_id</span> <span class="c1"># options: &quot;opensees-express&quot;, &quot;opensees-mp-s3&quot;, &quot;opensees-2p-s3&quot;</span>
+<span class="c1"># tapisInputAll[&quot;appVersion&quot;] = app_version # always use latest in this Notebook Template</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;maxMinutes&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1"># OpenSees-mp-s3 and OpenSees-xp-s3 only:</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;execSystemId&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;stampede3&quot;</span> <span class="c1"># the app runs on stampede only</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;execSystemLogicalQueue&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;skx-dev&quot;</span> <span class="c1"># &quot;skx&quot;, &quot;skx-dev&quot;</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;nodeCount&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># limits set by which compute nodes you use</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;coresPerNode&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">48</span> <span class="c1"># limits set by which compute nodes you use</span>
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s2">&quot;allocation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;DS-HPC1&quot;</span>
+
+<span class="n">tapisInputAll</span><span class="p">[</span><span class="s1">&#39;archive_system&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;MyData&#39;</span> <span class="c1"># Options: MyData or Work</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="job-specific-input">
+<h3>Job-Specific Input<a class="headerlink" href="#job-specific-input" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initalize</span>
+<span class="n">tapisInput</span> <span class="o">=</span> <span class="n">tapisInputAll</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">tapisInput</span><span class="p">[</span><span class="s1">&#39;storage_system&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;CommunityData&#39;</span>
+<span class="n">tapisInput</span><span class="p">[</span><span class="s1">&#39;input_folder&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Examples_OpenSees/BasicExamples&#39;</span>
+
+<span class="n">tapisInput</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tapisInput</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">tapisInput</span><span class="p">[</span><span class="s1">&#39;storage_system&#39;</span><span class="p">]</span>
+
+<span class="n">tapisInput</span><span class="p">[</span><span class="s1">&#39;Main Script&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Ex1a_verymany.Canti2D.Push.mp.tcl&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="submit">
+<h3>Submit<a class="headerlink" href="#submit" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -----------------------------------------------------</span>
+<span class="k">if</span> <span class="n">do_submitJob</span><span class="p">:</span>
+    <span class="n">jobReturns</span> <span class="o">=</span> <span class="n">OpsUtils</span><span class="o">.</span><span class="n">run_tapis_job</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">tapisInput</span><span class="p">,</span><span class="n">get_job_metadata</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">get_job_history</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">get_job_filedata</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">askConfirmJob</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span><span class="n">askConfirmMonitorRT</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;JobStatusData:&#39;</span><span class="p">,</span><span class="n">jobReturns</span><span class="p">[</span><span class="s1">&#39;JobStatusData&#39;</span><span class="p">])</span>
+<span class="c1"># -----------------------------------------------------</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating job_description
+Submitting Job
+Job submitted! ID: 3fd6ba10-f3fb-4403-b756-51da71437229-007
+job_start_time: 1755716639.0309427
+
+Real-Time Job-Status Updates...
+--------------------
+	 Elapsed job time: 1.04 sec	 Current Status: PENDING
+	 Elapsed job time: 2.07 sec	 Current Status: STAGING_INPUTS		(PENDING took 1.03 sec)
+	 Elapsed job time: 27.82 sec	 Current Status: STAGING_JOB		(STAGING_INPUTS took 25.75 sec)
+	 Elapsed job time: 44.22 sec	 Current Status: SUBMITTING_JOB		(STAGING_JOB took 16.4 sec)
+	 Elapsed job time: 45.28 sec	 Current Status: QUEUED		(SUBMITTING_JOB took 1.05 sec)
+	 Elapsed job time: 47.31 sec	 Current Status: RUNNING		(QUEUED took 2.03 sec)
+	 Elapsed job time: 172.54 sec	 Current Status: ARCHIVING		(RUNNING took 125.23 sec)
+	 Elapsed job time: 2385.59 sec	 Current Status: FINISHED		(ARCHIVING took 2213.06 sec)
+	  Status: FINISHED	 Elapsed job time: 2385.59 sec
+--------------------
+Elapsed time since Job was submitted: 2385.59 sec
+--------------------
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "90f89f33fbea4642ba8f34badd01d52e", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "87b3348e273649b286dea163c6baf204", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "cd561587e37840bfb3bfc6b486d0e860", "version_major": 2, "version_minor": 0}</script><script type="application/vnd.jupyter.widget-view+json">{"model_id": "3ffd65ba515143ef89a64d97d7f065af", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;jobUuid&#39;, &#39;submitted_job&#39;, &#39;job_start_time&#39;, &#39;runJobStatus&#39;, &#39;job_description&#39;, &#39;JobHistory&#39;, &#39;JobMetadata&#39;, &#39;JobFiledata&#39;, &#39;JobStatusData&#39;])
+JobStatusData: 
+condition: NORMAL_COMPLETION
+status: FINISHED
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "silviamazzoni/training-OpenSees-on-DesignSafe",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Jupyter_Notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Docs_MD/Tapis/tapis_appsDev_AppInputCats.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">App Input Categories</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Docs_MD/Tapis/tapis_appsDev_BestPractice.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Best Practices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">✅ Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-tapis">Connect to Tapis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-app">Configure App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#autoincrement-version">Autoincrement version</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-folder-structure-app-id-version">Define folder structure: app_id/version</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-app-files">Create the App Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md-app-description"><strong>Readme.MD</strong> – App Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-json-app-definition"><strong>app.json</strong> – App Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profile-json-environment-setup"><strong>profile.json</strong> – Environment Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tapisjob-app-sh-wrapper-script"><strong>tapisjob_app.sh</strong> – Wrapper Script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-check">File Check</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validate-app-locally">Validate App Locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deploy-the-app">Deploy the App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-username">Get username</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-the-directory-inside-your-mydata-on-designsafe-storage-default">Make the directory inside your ‘MyData’ on designsafe.storage.default.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-files-to-your-deployment-system-e-g-designsafe-default-storage">Upload files to your deployment system (e.g., DesignSafe default storage)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-upload">Verify upload</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-app">Register the App</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-that-app-is-up">Check that app is up</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list-all-apps">List all apps</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list-the-new-app">List the new app</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-job">Submit a Job</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app-specific-input">App-Specific Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#job-specific-input">Job-Specific Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#submit">Submit</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silvia Mazzoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

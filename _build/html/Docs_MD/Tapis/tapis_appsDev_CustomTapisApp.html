@@ -1,0 +1,1056 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Custom Tapis App &#8212; OpenSees-on-DesignSafe Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=4db13f68" />
+    <link rel="stylesheet" type="text/css" href="../../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXXXXX');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Docs_MD/Tapis/tapis_appsDev_CustomTapisApp';</script>
+    <script src="../../_static/custom.js?v=831b1415"></script>
+    <script src="../../_static/.ipynb_checkpoints/custom-checkpoint.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="App Input Categories" href="tapis_appsDev_AppInputCats.html" />
+    <link rel="prev" title="tapisjob_app.sh" href="OpsApps_MPs3_tapisjob_app_sh.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="OpenSees-on-DesignSafe Training - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="OpenSees-on-DesignSafe Training - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../README.html">
+                    OpenSees-on-DesignSafe Training
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_TrainingObjectives.html">Training Objectives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_DesignSafeOnTACC.html">DesignSafe &amp; TACC</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Computational Workflow</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_WorkflowArchitecture.html">Workflow Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Oview_WorkflowArchitectureGuide.html">Workflow Decision Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_AndDesignSafe.html">OpenSees on DesignSafe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_Interpreters.html">OpenSees Interpreters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_Applications.html">OpenSees Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/OpenSees_DecisionMatrixOpsDS.html">Decision Matrix</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compute Environments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_JupyterHubContainers.html">JupyterHub Containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_VirtualMachines.html">Virtual Machines (VMs)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/ComputeEnv_HPC.html">HPC on TACC</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Node.html">Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_NodeStampede3.html">Stampede3 Nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Core.html">Cores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_Queue.html">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_QueueStampede3.html">Stampede3 Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_QueueSelexn.html">Queue Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/HPC_allocations.html">Allocations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/ComputeEnv_Guide.html">Environment Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">File Storage</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/FileStorage_Overview.html">File Storage</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/FileStorage_Systems.html">File Storage Systems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_1_corral.html">Corral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_2_compsys.html">Compute System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/FileStorage_3_compnode.html">Compute Nodes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/FileStorage_guide.html">File-Storage Guide</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/JupyterHub_Intro.html">JupyterHub Environment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/AccessJupyter.html">Accessing JupyterHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/JupyterHub_Workflow.html">Workflow in JupyterHub</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/JupyterHub_Tools.html">JupyterHub Tools</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Paths</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Paths_Overview.html">Understanding Paths</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython.html">Paths in Python 📒</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_AbsVsRelative.html">Absolute vs Relative Path 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_RootAndHome.html">Root &amp; Home Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Manage.html">Managing Paths 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_Contents.html">Directory Contents 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/paths_InPython_BuildPath.html">Building Paths 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/paths_StorageSystems.html">Storage-System Paths 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">DesignSafe Web Portal</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/WebPortal_Overview.html">DesignSafe Web Portal</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/WebPortal_Overview_Workflow.html">Web-Portal Demo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_1_CreateInput.html">1 Create Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_2_SubmitJob_OpenSeesExpress.html">2 Submit OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_2_SubmitJob_OpenSeesMP.html">2 Submit OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_3_MonitorJob_OpenSeesExpress.html">3 Monitor OpenSees-Express</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/WebPortal_3_MonitorJob_OpenSeesMP.html">3 Monitor OpenSeesMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.html">4 PostProcess Ops-Express 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.html">4 PostProcess Ops-MP 📒</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees on JupyterHub</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_JupyterHub_intro.html">JupyterHub for OpenSees</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/CLI.html">Terminal CLI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_Console.html">Python Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_JupyterNotebook.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Execution</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux.html">Command Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_1_ExecutableFile.html">Executable File (Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_2_ScriptFile.html">Input Script File (Non-Interactive)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_CommandStrux_3_CommandLineArgs.html">Command-Line Arguments</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec.html">Parallel Execution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_MPI.html">Parallel Execution: MPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_Ibrun.html">Parallel Execution: ibrun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/Ops_ParallelExec_python.html">OpenSeesPy Parallel</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/Ops_ExecGuide.html">Execution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.html">OpenSeesPy Interactive 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.html">Run ANY OpenSees in Python 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/RunOpsInDS_PythonWithinPython.html">Python Script within Notebook</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HPC on TACC</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/HPCenv.html">Accessing HPC</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/SLURM_TACCjobs.html">TACC Jobs: SLURM</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Intro.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Workflow.html">Job Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Scheduling.html">Job Scheduling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Input.html">Job Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Script.html">Job Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_Run.html">Run a SLURM Job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/SLURM_OutErrFiles.html">SLURM Job Output</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../DesignSafe/SLURMmanual_ParameterSweep.html">Parameter Sweeps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../DesignSafe/SLURMmanual_PythonFunction.html">Write SLURM with Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../DesignSafe/SLURMmanual_PythonFunction2.html">Advanced Python Function</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/HPCenv_HPCjupyter.html">DesignSafe’s HPC Jupyter Lab</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_intro.html">What is Tapis?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_interfacing.html">Interfacing with Tapis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_connectToTapis.html">Tapis Authentication 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_establishSystemCredentials.html">Establish TMS Credentials 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapisConnect_getSystemSpecs.html">System Specifications 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TapisFileManage.html">Tapis: File Management</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Jobs</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_job.html">Tapis Jobs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tapis_queryJobs.html">Query and Retrieve Jobs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.html">Step 1: Explore All Jobs 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_InspectJob.html">Step 2: Inspect Job 📒</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.html">Step 3: Retrieve Output 📒</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_AllJobs.html">Explore All Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_FilterJobs.html">Filter Tapis Jobs 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobStatus.html">Job Status 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.html">Job Metadata 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.html">Job History 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_profiling.html">Job Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_AccessData.html">Access Output Data 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.html">List All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.html">Download All Job Output 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.html">Explore Jobs Interactively 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TapisCancelJob.html">Cancel Tapis Job</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Run OpenSees using Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../DesignSafe/DSapps_OpenSees.html">OpenSees App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OpsApps_MPs3_submit.html">Submit to OpenSeesMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.html">Run OpenSees – Detailed 📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.html">Run OpenSees – Compact 📒</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tapis Apps</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_submittal.html">Tapis-Job Submittal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_job_attributes.html">Job Attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_Apps.html">Tapis Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_List.html">List Tapis Apps  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_AppTemp_Schema.html">Tapis App Schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_submitJob_getApps_Schema.html">Get Tapis App Schema 📒</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../DesignSafe/DSapps.html">DesignSafe Tapis Apps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_OpenFOAM.html">OpenFOAM app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_ADCIRC.html">ADCIRC app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DesignSafe/DSapps_Compare.html">Compare Apps</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tapis_AppTemplates.html">Tapis App Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Structure.html">Structure of App Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_app_def_files.html">App-Definition Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_InputVSParams.html">Inputs vs Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Inputs.html">Tapis App Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Parameters.html">Tapis App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="JobAttributes_vs_AppParams.html">Job Attributes vs App Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tapis_AppTemp_Outputs.html">Tapis App Output</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">OpenSees Tapis Apps Details</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="OpsApps_Overview.html">OpenSees Tapis Apps</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="OpsApps_Express.html">OpenSees-EXPRESS App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="OpsApps_Express_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_Express_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_Express_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="OpsApps_Express_example.html">Example</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="OpsApps_MPs3.html">OpenSeesMP App</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="OpsApps_MPs3_fileStrux.html">App Structure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_app_json.html">app.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_profile_json.html">profile.json</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OpsApps_MPs3_tapisjob_app_sh.html">tapisjob_app.sh</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Custom Tapis Apps</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Custom Tapis App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_AppInputCats.html">App Input Categories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Jupyter_Notebooks/tapis_appsDev_CustomApp_opsmps3copy.html">My App: opensees-mp-s3-copy  📒</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tapis_appsDev_BestPractice.html">Best Practices</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python Utilities</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.html">OpsUtils</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.html">Miscellaneous OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.html">convert_tacc_time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.html">convert_time_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.html">display_images_in_xbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/empty_folder.html">empty_folder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/flatten_dict.html">flatten_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.html">get_files_recursive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/get_now_unix.html">get_now_unix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/queryDF.html">queryDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.html">show_text_file_in_accordion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/show_video.html">show_video</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.html">unix_to_tacc_time</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.html">Tapis OpsUtils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.html">analyze_tacc_job_history</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.html">bump_app_version()</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.html">cancel_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.html">connect_tapis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.html">display_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.html">establish_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.html">explore_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.html">filter_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.html">find_work_path_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/find_work_path.html">find_work_path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.html">get_latest_app_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.html">get_system_queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.html">get_tapis_app_schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.html">get_tapis_job_all_files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.html">get_tapis_job_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.html">get_tapis_job_history_data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.html">get_tapis_job_metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.html">get_tapis_job_status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.html">get_tapis_jobs_df</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.html">get_tapis_jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.html">get_tapis_tenant_and_username</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.html">get_tapis_username</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.html">interactive_tapis_job_explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.html">monitor_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.html">print_nested_tapisresult</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.html">revoke_tms_credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.html">run_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.html">submit_tapis_job</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.html">validate_app_folder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../generated_toc.html">Table of Contents</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe/issues/new?title=Issue%20on%20page%20%2FDocs_MD/Tapis/tapis_appsDev_CustomTapisApp.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Docs_MD/Tapis/tapis_appsDev_CustomTapisApp.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Custom Tapis App</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-and-best-practices">Tips and Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="custom-tapis-app">
+<h1>Custom Tapis App<a class="headerlink" href="#custom-tapis-app" title="Link to this heading">#</a></h1>
+<p><em><strong>Create and Run a Custom App on DesignSafe Using TACC Modules (No Docker)</strong></em></p>
+<p>This is a <strong>comprehensive, unified guide</strong>: it walks you through creating a <strong>custom HPC-enabled Tapis app on DesignSafe</strong> that uses <strong>TACC’s environment modules (not Docker)</strong>, and is launchable through both <strong>code (Python + Tapipy)</strong> and the <strong>DesignSafe GUI</strong>.</p>
+<p>This guide ties together:</p>
+<ul class="simple">
+<li><p>Tapis-based app registration and job management</p></li>
+<li><p>Module-based (non-container) execution on TACC resources</p></li>
+<li><p>DesignSafe-specific deployment and GUI launching</p></li>
+</ul>
+<p>This guide helps you define a reusable, shareable app that:</p>
+<ul class="simple">
+<li><p>Runs on <strong>TACC HPC systems</strong> like <strong>Stampede3 or Frontera</strong></p></li>
+<li><p>Uses <strong>modules</strong> (like <em>module load python</em>, <em>OpenSees</em>, etc.)</p></li>
+<li><p>Can be launched from either the <strong>DesignSafe GUI</strong> or <strong>Tapipy in Python</strong></p></li>
+</ul>
+<hr class="docutils" />
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A <a class="reference external" href="https://www.designsafe-ci.org">DesignSafe account</a></p></li>
+<li><p>Basic knowledge of Python and shell scripting</p></li>
+<li><p>Access to a TACC execution system (e.g., <em>stampede3</em>)</p></li>
+<li><p>Installed tools:</p>
+<ul>
+<li><p>Python environment with <em>tapipy</em></p></li>
+<li><p>Optionally: <em>tapis-cli-ng</em> for terminal-based registration</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 1: Set Up Your App Directory</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Structure your folder like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>my-awesome-app/
+├── run_analysis.py       # Your Python script
+├── wrapper.sh            # Wrapper to load modules and run the script
+├── app-definition.json   # Tapis app definition (for GUI + CLI)
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 2: Your Python Code (<em>run_analysis.py</em>)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Example script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Usage: python run_analysis.py &lt;input_file&gt;&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== File Contents ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 3: Wrapper Script (<em>wrapper.sh</em>)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This script is executed on the HPC system.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$WORK</span>/<span class="nv">$JOB_NAME</span>
+
+<span class="c1"># Load the necessary environment modules</span>
+module<span class="w"> </span>load<span class="w"> </span>python/3.9
+
+<span class="c1"># Run your Python script using an input file provided by the user</span>
+python<span class="w"> </span>run_analysis.py<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$input_file</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Make it executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>wrapper.sh
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 4: Tapis App Definition (<em>app-definition.json</em>)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-awesome-app-1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My Awesome App&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;executionSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;designsafe.community.execution&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deploymentPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;apps/my-awesome-app/1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;templatePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wrapper.sh&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;executionType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HPC&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;runtime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;LINUX&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;jobType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BATCH&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;parallelism&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SERIAL&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;maxJobs&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;defaultMemory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2GB&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;defaultProcessors&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;defaultNodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;defaultMaxRunTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;00:30:00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deploymentSystem&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;designsafe.storage.default&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;inputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input_file&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Input File&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A file to process&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;inputType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;URI&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;parameters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;outputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;stdout.txt&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;stdout.txt&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;designsafe&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 5: Upload to DesignSafe/TACC</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Upload your app files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>my-awesome-app/<span class="w"> </span>yourusername@login.designsafe-ci.org:/work/apps/my-awesome-app/1.0
+</pre></div>
+</div>
+<p class="sd-card-text">Or via the <strong>DesignSafe Data Depot</strong> → move the files to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">app</span><span class="o">/</span><span class="mf">1.0</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 6: Register the App via Tapis CLI (Optional)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you prefer CLI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>tapis-cli-ng
+tapis<span class="w"> </span>auth<span class="w"> </span>login
+tapis<span class="w"> </span>apps<span class="w"> </span>create<span class="w"> </span>-F<span class="w"> </span>app-definition.json
+tapis<span class="w"> </span>apps<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>my-awesome-app
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 7: Register and Use the App in Python with Tapipy</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<h3 class="rubric" id="authenticate-and-upload-your-files-same-as-above">Authenticate and upload your files (same as above)</h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tapipy.tapis</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tapis</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">Tapis</span><span class="p">(</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="s2">&quot;https://designsafe.dev.tapis.io&quot;</span><span class="p">,</span>  <span class="c1"># or production URL</span>
+    <span class="n">username</span><span class="o">=</span><span class="s2">&quot;your-username&quot;</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="s2">&quot;your-password&quot;</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="s2">&quot;designsafe&quot;</span>
+<span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">get_tokens</span><span class="p">()</span>
+
+<span class="c1"># Register the app</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;app-definition.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">app_def</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">apps</span><span class="o">.</span><span class="n">createAppVersion</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">app_def</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 8: Upload an Input File</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;example_input.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">client</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span>
+        <span class="n">systemId</span><span class="o">=</span><span class="s2">&quot;designsafe.storage.default&quot;</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="s2">&quot;input/example_input.txt&quot;</span><span class="p">,</span>
+        <span class="n">file</span><span class="o">=</span><span class="n">f</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 9: Submit a Job from Python</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">job</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">submitJob</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-first-designsafe-job&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;appId&quot;</span><span class="p">:</span> <span class="s2">&quot;my-awesome-app-1.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;appVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inputs&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;input_file&quot;</span><span class="p">:</span> <span class="s2">&quot;tapis://designsafe.storage.default/input/example_input.txt&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;archive&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;archiveSystemId&quot;</span><span class="p">:</span> <span class="s2">&quot;designsafe.storage.default&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;archivePath&quot;</span><span class="p">:</span> <span class="s2">&quot;archive/my-awesome-output&quot;</span>
+<span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Job submitted:&quot;</span><span class="p">,</span> <span class="n">job</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 10: Monitor and Download Output</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">getJob</span><span class="p">(</span><span class="n">jobId</span><span class="o">=</span><span class="n">job</span><span class="o">.</span><span class="n">id</span><span class="p">)</span><span class="o">.</span><span class="n">status</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Status:&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">status</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;FINISHED&quot;</span><span class="p">,</span> <span class="s2">&quot;FAILED&quot;</span><span class="p">,</span> <span class="s2">&quot;CANCELLED&quot;</span><span class="p">]:</span>
+        <span class="k">break</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Download output</span>
+<span class="n">client</span><span class="o">.</span><span class="n">jobs</span><span class="o">.</span><span class="n">getJobOutput</span><span class="p">(</span><span class="n">jobId</span><span class="o">=</span><span class="n">job</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;stdout.txt&quot;</span><span class="p">,</span> <span class="n">destination</span><span class="o">=</span><span class="s2">&quot;./stdout.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 11: Launch from DesignSafe GUI</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Once registered:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Go to <strong>Workspace → Tools &amp; Applications → Private Apps</strong></p></li>
+<li><p class="sd-card-text">Click your app: “My Awesome App”</p></li>
+<li><p class="sd-card-text">Fill in input fields (like file selectors)</p></li>
+<li><p class="sd-card-text">Launch job – Tapis runs it on Stampede3 or Frontera</p></li>
+<li><p class="sd-card-text">Results appear in your <strong>Project Data</strong> folder</p></li>
+</ol>
+</div>
+</details></section>
+<section id="tips-and-best-practices">
+<h2>Tips and Best Practices<a class="headerlink" href="#tips-and-best-practices" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Use <em>parallelism: PARALLEL</em> for MPI or multithreaded jobs</p></li>
+<li><p>Use <em>$SCRATCH</em> for fast, temporary storage; <em>$WORK</em> for persistent storage</p></li>
+<li><p>Load any required tools (MATLAB, R, Python, etc.) with <em>module load</em> inside <em>wrapper.sh</em></p></li>
+<li><p>Add <em>“helpURI”</em> to your app JSON for linking to documentation</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>By following this guide, you’ve created a <strong>DesignSafe app</strong> that:</p>
+<ul class="simple">
+<li><p>Runs on <strong>TACC’s HPC</strong> with <strong>no containers</strong></p></li>
+<li><p>Loads modules using <em>module load</em></p></li>
+<li><p>Is callable via <strong>GUI or Python</strong></p></li>
+<li><p>Provides full reproducibility and reusability for your workflows</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "silviamazzoni/training-OpenSees-on-DesignSafe",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Docs_MD/Tapis"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="OpsApps_MPs3_tapisjob_app_sh.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">tapisjob_app.sh</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tapis_appsDev_AppInputCats.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">App Input Categories</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-and-best-practices">Tips and Best Practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Silvia Mazzoni
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
