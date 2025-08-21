@@ -25,6 +25,7 @@ parts:
     - file: Docs_MD/DesignSafe/OpenSees_AndDesignSafe.md
     - file: Docs_MD/DesignSafe/OpenSees_Interpreters.md
     - file: Docs_MD/DesignSafe/OpenSees_Applications.md
+    - file: Docs_MD/DesignSafe/OpenSees_Workflows.md
     - file: Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.md
 
   - caption: Compute Environments
@@ -227,6 +228,7 @@ parts:
     - file: Docs_MD/Tapis/tapis_AppTemplates.md
       sections:
       - file: Docs_MD/Tapis/tapis_AppTemp_Structure.md
+      - file: Docs_MD/Tapis/tapis_appsDev_Jsons.md
       - file: Docs_MD/Tapis/tapis_app_def_files.md
       - file: Docs_MD/Tapis/tapis_AppTemp_InputVSParams.md
       - file: Docs_MD/Tapis/tapis_AppTemp_Inputs.md
@@ -319,6 +321,7 @@ parts:
       - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.md
+      - file: OpsUtils_Docs/OpsUtils_Tapis/get_user_work_path.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.md
       - file: OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.md

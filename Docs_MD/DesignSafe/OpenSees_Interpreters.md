@@ -1,5 +1,5 @@
-# OpenSees Interpreters
-***Tcl & Python***
+# OpenSees-Tcl & OpenSeesPy
+***OpenSees Interpreters***
 
 There are two main interpreter-based versions of **OpenSees**:
 
@@ -7,6 +7,11 @@ There are two main interpreter-based versions of **OpenSees**:
 * **OpenSeesPy**, which is a Python library that extends Python with OpenSees-specific commands.
 
 At the core, both are compiled from the same source code and perform the same types of structural and geotechnical simulations. The difference lies in **how they’re executed**, which impacts your workflow on HPC systems, in Jupyter, and when designing automated pipelines.
+
+:::{admonition} **Quick Comparison**
+**OpenSees-Tcl** runs as an external executable—great for stable batch scripts and domain-decomposed **OpenSeesSP** jobs—while **OpenSeesPy** runs *inside Python*, letting you interrogate and steer the model during execution, integrate with scientific Python, and smoothly scale via **Tapis** to large parametric studies (with **OpenSeesMP** or *mpi4py*). Use **OpenSees-Express** for quick sequential jobs and first-time runs; move to Jupyter for interactive development; and submit production jobs with Tapis for automation, provenance, and scale.
+:::
+
 ## How they run
 
 :::{dropdown} **OpenSees-Tcl**
@@ -42,7 +47,8 @@ where `model.py` is a standard Python script that builds your model and analysis
 
 Because OpenSeesPy sits inside Python, it benefits from Python’s full ecosystem for data processing, visualization, and automation. However, support for `OpenSeesMP` and `OpenSeesSP` features in OpenSeesPy can vary by platform, so it’s recommended to test parallel capabilities explicitly on Jupyter Hub vs the HPC environment.
 
-::
+:::
+
 This setup — where an application either wraps its own interpreter (like OpenSees-Tcl) or extends an existing one (like OpenSeesPy) — is **standard in computational research**. Most HPC applications work this way:
 
 * You run a command at the CLI, optionally pass an input file, and the program processes commands line by line.

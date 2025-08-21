@@ -164,7 +164,7 @@ def display_tapis_app_schema(thisAppSchema):
     print('########################################')
 
     # Body (start with a label to indicate the root)
-    print('root: {')
+    print('{')
     print_nested("", thisAppSchema, indent=1)
     print('}')
     print('########################################')
