@@ -1,45 +1,32 @@
-# Book settings
-# Learn more at https://jupyterbook.org/customize/config.html
-
 title: "OpenSees-on-DesignSafe Training"
 author: "Silvia Mazzoni"
 copyright: "2025"
 
 only_build_toc_files: true
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: "off"
 
-
-tags:
-  remove_input: true
-
 sphinx:
+  # Append extra Sphinx extensions without overriding JB defaults
+  extra_extensions:
+    - sphinx_last_updated_by_git
+    - sphinx_sitemap
   config:
     suppress_warnings:
       - myst.header
-    extensions:
-      - sphinx_last_updated_by_git
-      - sphinx_sitemap
     html_baseurl: "https://silviamazzoni.github.io/training-OpenSees-on-DesignSafe/"
-    html_copy_source: true          # enables “.md” (source) in the download menu
-
+    html_copy_source: true
 
 launch_buttons:
   notebook_interface: "jupyterlab"
+  colab_url: "https://colab.research.google.com"
   thebe: true
 
-  
-# Information about where the book exists on the web
 repository:
-  url: https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe # Online location of your book
-  # path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: main  # Which branch of the repository should be used when creating links (optional)
+  url: https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe
+  branch: main
 
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_edit_page_button: true
   use_issues_button: true
@@ -53,7 +40,6 @@ html:
   extra_js:
     - custom.js
 
-
 parse:
   myst_enable_extensions:
     - html_admonition
@@ -62,4 +48,3 @@ parse:
   nb_remove_input_tags: ["remove-input"]
   nb_remove_cell_tags: ["remove-cell"]
   nb_remove_all_outputs_tags: ["remove-output"]
-
