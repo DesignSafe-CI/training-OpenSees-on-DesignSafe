@@ -5,10 +5,12 @@ JupyterHub is a web-based Integrated Development Environment (IDE) that provides
 
 Each user session comes equipped with Notebooks, Consoles, Terminal Access, and text-file editors. Jupyter Hub supports **Python** like **Julia**, **MATLAB**, and **R** — useful for researchers integrating multi-language workflows.
 
-You can click this button to start a JupyterHub session -- you will be asked to log in.
+
+You can click the "Open in DesignSafe" button to start a JupyterHub session -- you will be asked to log in: 
 <a class="reference external" 
 href="https://jupyter.designsafe-ci.org/hub/user-redirect/lab/workspaces/auto-Y" 
 target="_blank"><img alt="Try on DesignSafe" src="https://raw.githubusercontent.com/DesignSafe-Training/pinn/main/DesignSafe-Badge.svg" /></a>
+
 
 
 The tools can be accessed from the JupyterHub **Launcher**, shown in the figure below:
@@ -21,7 +23,7 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 
 
 
-:::{dropdown} ## **Terminal**
+:::{dropdown} **Terminal**
 
 * A full Linux command-line interface (CLI) that allows users to run OpenSees (Tcl or Python) scripts directly, compile code, use Git, or execute batch-style workflows.
 * Provides **real-time error messages**, standard input/output handling, and access to the full Python and Unix toolchain.
@@ -36,7 +38,7 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 
 :::
 
-:::{dropdown} ## **Console**
+:::{dropdown} **Console**
 
 * A standalone REPL (Read-Eval-Print Loop) environment for Python.
 * Allows you to test snippets of OpenSeesPy code without launching a full notebook.
@@ -48,7 +50,7 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 
 :::
 
-:::{dropdown} ## **Notebook Interface (Jupyter Notebooks)**
+:::{dropdown} **Notebook Interface (Jupyter Notebooks)**
 
 * Combines executable code, documentation, and visualizations in a single document.
 * Ideal for OpenSeesPy workflows, where users can iteratively run cells, plot results, and write notes alongside their code.
@@ -59,7 +61,7 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 
 :::
 
-:::{dropdown} ## **File Manager**
+:::{dropdown} **File Manager**
 
 * Visual interface for navigating, organizing, renaming, and deleting files in your Jupyter workspace.
 * Drag-and-drop support for uploading or downloading files.
@@ -69,7 +71,7 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 
 :::
 
-:::{dropdown} ## **Text Editor (Code Editor)**
+:::{dropdown} **Text Editor (Code Editor)**
 
 * Built-in lightweight code editor with syntax highlighting for Tcl, Python, JSON, and other formats.
 * Allows quick edits to scripts without switching to a notebook or terminal editor like *vim*.
@@ -84,8 +86,6 @@ As shown in the figures at the bottom of this page: **You can have multiple** it
 :::
 
 The following screenshot is an "extreme" example of how you can use all of these tools symultaneously:
-
-<img src="../../_images/JupyterHub_All.jpg" alt="JupyterHub All" width="100%" />
 
 <img src="../../_images/JupyterHub_Connections.jpg" alt="JupyterHub Connections" width="100%" />
 

@@ -305,10 +305,10 @@ def get_tapis_job_description(t, tapisInput):
             job_description["archiveSystemId"] = "designsafe.storage.default"
             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
-    if nmiss == 0:
-        for envVar in ['zipFileIn','zipFolderOut']:
-            if envVar in tapisInput:
-                job_description["parameterSet"]['envVariables'].append({"key": envVar, "value": tapisInput[envVar]})
+    # if nmiss == 0:
+    #     for envVar in ['zipFileIn','zipFolderOut']:
+    #         if envVar in tapisInput:
+    #             job_description["parameterSet"]['envVariables'].append({"key": envVar, "value": tapisInput[envVar]})
                 
 
     # --- Finalize ---
@@ -317,4 +317,5 @@ def get_tapis_job_description(t, tapisInput):
         return -1
     else:
         # print("All Input is Complete")
+        print('job_description',job_description)
         return job_description

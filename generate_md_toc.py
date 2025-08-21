@@ -26,7 +26,7 @@ def generate_jupyterhub_links(notebook_path):
     jupyter_link = get_notebook_link(notebook_path)
     download_link = notebook_path
     # return f"\n      <sub>📂 [Open in JupyterHub]({jupyter_link}) • 💾 [Download]({download_link})</sub>"
-    return f"\n      <sub>📂 [Open in JupyterHub]({jupyter_link})</sub>"
+    return f"\n      <sub>📂 <a href='{jupyter_link}' target='_blank'>Open in JupyterHub</a></sub>"
 
 
 

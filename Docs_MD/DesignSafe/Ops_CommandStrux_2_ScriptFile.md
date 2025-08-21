@@ -302,7 +302,7 @@ You will see the following response:
 
 
 
-:::{dropdown} 1a. At the Command-line prompt (OpenSeesPy mpi)**.<br>
+:::{dropdown} 1a. At the Command-line prompt, OpenSeesPy mpi.<br>
 
 Type the following command at the command-line prompt:
 
@@ -351,7 +351,7 @@ You may run into the problem that the OpenSeesPy MPI does not work properly -- i
 
 :::
 
-:::{dropdown} 1b. At the Command-line prompt (use mpi4pi)**.<br>
+:::{dropdown} 1b. At the Command-line prompt, use mpi4py.<br>
 Type the following command in a notebook cell:
 
      mpiexec -np 3 python Ex1a.Canti2D.Push.mpi4py.py
@@ -383,7 +383,7 @@ You now see the three pids out of 3, and each processor ran only the analysis it
 
 :::
 
-:::{dropdown} 2a. In a Jupyter Notebook -- shell command, OpenSeesPy-MPI**<br>
+:::{dropdown} 2a. In a Jupyter Notebook -- shell command, OpenSeesPy-MPI<br>
 Type the following command in a notebook cell:
 
      import os
@@ -428,7 +428,7 @@ You will see the following response. Note that the program exits once the analys
 As expected, you have the same problem as you had at the command line.
 :::
 
-:::{dropdown} 2. In a Jupyter Notebook -- shell command, mpi4py**<br>
+:::{dropdown} 2. In a Jupyter Notebook -- shell command, mpi4py<br>
 Type the following command in a notebook cell:
 
      import os
@@ -463,7 +463,7 @@ As expected, using mpi4pi has resolved the issue.
 ## Example Files Used in this demo
 You can find these files in Community Data:
 
-:::{dropdown} Tcl
+:::{dropdown} OpenSeesMP
 
 ```{dropdown}  Ex1a.Canti2D.Push.tcl
 :icon: file-code
@@ -476,6 +476,7 @@ You can find these files in Community Data:
 :language: none
 ```
 
+:::
 
 :::{dropdown} OpenSeesPy
 

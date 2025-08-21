@@ -28,10 +28,10 @@
 #     ------------------------------
 #     *OpenSees-Express* (`appId == "opensees-express"`)
 #       Required: ['name','appId','appVersion','maxMinutes','archive_system',
-#                  'storage_system','input_folder','input_filename']
+#                  'storage_system','input_folder','Main Script']
 #       - Sets `parameterSet.envVariables` with:
 #           mainProgram = OpenSees
-#           tclScript   = <input_filename>
+#           tclScript   = <Main Script>
 #       - `fileInputs = [{"name": "Input Directory", "sourceUrl": "<base>/<input_folder>"}]`
 #       - Archive options:
 #           archive_system == 'MyData' -> designsafe.storage.default under
@@ -41,9 +41,9 @@
 #     *HPC OpenSees apps* (e.g., opensees-mp-s3, opensees-sp-*, etc.)
 #       Required: ['name','appId','appVersion','execSystemId','execSystemLogicalQueue',
 #                  'nodeCount','coresPerNode','maxMinutes','allocation','archive_system',
-#                  'storage_system','input_folder','input_filename']
+#                  'storage_system','input_folder','Main Script']
 #       - Sets base job attributes (system, queue, resources).
-#       - `parameterSet.appArgs = [{"name": "Main Script", "arg": <input_filename>}]`
+#       - `parameterSet.appArgs = [{"name": "Main Script", "arg": <Main Script>}]`
 #       - `parameterSet.schedulerOptions = [{"name": "TACC Allocation",
 #                                            "arg": f"-A {allocation}"}]`
 #       - `fileInputs` as above.
@@ -87,45 +87,105 @@
 #         return nmiss
 
 #     # --- Resolve storage baseURL if needed ---
-#     if "storage_system_baseURL" not in tapisInput:
-#         storage_system_lower = tapisInput.get("storage_system", "").lower()
-#         if "mydata" in storage_system_lower:
-#             # Get user information for MyData path
-#             user_info = t.authenticator.get_userinfo()
-#             username = user_info.username
-#             tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
-#         elif "community" in storage_system_lower:
-#             tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
-#         elif "published" in storage_system_lower:
-#             tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
-#         else:
-#             print("Please specify tapisInput['storage_system_baseURL']!")
-#             return -1
+#     if "sourceUrl" not in tapisInput:
+#         if "storage_system_baseURL" not in tapisInput:
+#             storage_system_lower = tapisInput.get("storage_system", "").lower()
+#             if "mydata" in storage_system_lower:
+#                 # Get user information for MyData path
+#                 user_info = t.authenticator.get_userinfo()
+#                 username = user_info.username
+#                 tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
+#             elif "community" in storage_system_lower:
+#                 tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
+#             elif "published" in storage_system_lower:
+#                 tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
+#             else:
+#                 print("Please specify tapisInput['storage_system_baseURL']!")
+#                 return -1
+    
+#         tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
+        
+#     # # --- Resolve storage baseURL if needed ---
+#     # if "storage_system_baseURL" not in tapisInput:
+#     #     storage_system_lower = tapisInput.get("storage_system", "").lower()
+#     #     if "mydata" in storage_system_lower:
+#     #         # Get user information for MyData path
+#     #         user_info = t.authenticator.get_userinfo()
+#     #         username = user_info.username
+#     #         tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
+#     #     elif "community" in storage_system_lower:
+#     #         tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
+#     #     elif "published" in storage_system_lower:
+#     #         tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
+#     #     else:
+#     #         print("Please specify tapisInput['storage_system_baseURL']!")
+#     #         return -1
 
-#     sourceUrl = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
+#     # sourceUrl = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
+
+#     appId = tapisInput["appId"]
+#     # print('appId',appId)
 
 #     # --- Ensure a concrete appVersion (resolve 'latest' or missing) ---
-#     appId = tapisInput["appId"]
 #     if ("appVersion" not in tapisInput) or (str(tapisInput["appVersion"]).lower() == "latest"):
 #         resolved = OpsUtils.get_latest_app_version(t, appId)
 #         if not resolved or resolved in ("none", ""):
 #             print(f"Unable to resolve latest version for appId='{appId}'. Please specify appVersion.")
 #             return -1
 #         tapisInput["appVersion"] = resolved
+        
 
+
+#     # --- Get App Schema ---
+#     appMetaData = t.apps.getAppLatestVersion(appId=appId)
+#     app_MetaData = appMetaData.__dict__
+#     app_jobAttributes = app_MetaData['jobAttributes'].__dict__
+#     app_parameterSet = app_jobAttributes['parameterSet'].__dict__
+#     inputKeys_App = ['id','version']
+#     inputKeys_jobAttributes = ['execSystemId', 'execSystemLogicalQueue', 'archiveSystemId', 'archiveSystemDir', 'nodeCount', 'coresPerNode', 'memoryMB', 'maxMinutes']    
+    
+#     # appInputs={}
+#     # appInputs['appArgs'] = app_parameterSet['appArgs']
+#     # appInputs['envVariables'] = app_parameterSet['envVariables']
+#     # appInputs['fileInputs'] = app_jobAttributes['fileInputs']
+#     # appInputsPath={}
+#     # appInputsPath['appArgs'] = "app['jobAttributes']['parameterSet']"
+#     # appInputsPath['envVariables'] = "app['jobAttributes']['parameterSet']"
+#     # appInputsPath['fileInputs'] = "app['jobAttributes']"
+#     # for app_key,app_Dict_List in appInputs.items():
+#     #     print(f' ++ {app_key} ++')
+#     #     # app_Dict_List = app_parameterSet[app_key]
+#     #     for app_Dict in app_Dict_List:
+#     #         app_Dict = app_Dict.__dict__
+#     #         app_Dict_keys = list(app_Dict.keys())
+#     #         myKeyList = ['name','description','arg']
+#     #         for thisKey in myKeyList:
+#     #             if thisKey in app_Dict_keys:
+#     #                 app_Dict_keys.remove(thisKey)
+#     #             else:
+#     #                 myKeyList.remove(thisKey)
+#     #         thisKeyList = [*myKeyList,*app_Dict_keys]
+#     #         for thisKey in thisKeyList:
+#     #             thisVal = app_Dict[thisKey]
+#     #             print(f'{thisKey}: {thisVal}')
+#     #         print('--')
+
+    
 #     # --- Defaults & branching ---
 #     # If Express, default the exec system to the Express VM unless provided
 #     if appId == "opensees-express" and "execSystemId" not in tapisInput:
 #         tapisInput["execSystemId"] = "wma-exec-01"
+#     if "execSystemId" not in tapisInput:
+#         tapisInput["execSystemId"] = "stampede3"
 
 #     job_description = {}
 #     nmiss = 999
 
 #     # Express (runs on wma-exec-01)
-#     if tapisInput.get("execSystemId") == "wma-exec-01":
+#     if appId == "opensees-express":
 #         RequiredInputList = [
-#             "name", "appId", "appVersion", "maxMinutes", "archive_system",
-#             "storage_system", "input_folder", "input_filename"
+#             "name", "appId", "maxMinutes", "archive_system",
+#             "storage_system", "input_folder", "Main Script"
 #         ]
 #         nmiss = checkRequirements(tapisInput, RequiredInputList)
 #         if nmiss == 0:
@@ -133,30 +193,38 @@
 #             job_description["name"] = tapisInput["name"]
 #             job_description["maxMinutes"] = tapisInput["maxMinutes"]
 #             job_description["appId"] = tapisInput["appId"]
-#             job_description["appVersion"] = tapisInput["appVersion"]
-#             fileInputs = [{"name": "Input Directory", "sourceUrl": sourceUrl}]
+#             if 'appVersion' in tapisInput.keys():
+#                 job_description["appVersion"] = tapisInput["appVersion"]
+#             fileInputs = [{"name": "Input Directory", "sourceUrl": tapisInput["sourceUrl"]}]; # keep as is!
+#             if not 'Main Program' in tapisInput.keys():
+#                 tapisInput["Main Program"] = 'OpenSees'
 #             parameterSet["envVariables"] = [
-#                 {"key": "mainProgram", "value": "OpenSees"},
-#                 {"key": "tclScript", "value": tapisInput["input_filename"]},
+#                 {"key": "mainProgram", "value": tapisInput["Main Program"]},
+#                 {"key": "tclScript", "value": tapisInput["Main Script"]},
 #             ]
 #             job_description["fileInputs"] = fileInputs
 #             job_description["parameterSet"] = parameterSet
 
 #             # Archive location
 #             if "archive_system" in tapisInput:
-#                 if tapisInput["archive_system"] == "MyData":
+#                 if tapisInput["archive_system"] in ["MyData"]:
 #                     job_description["archiveSystemId"] = "designsafe.storage.default"
 #                     job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 #                 elif tapisInput["archive_system"] == "Temp":
 #                     job_description["archiveSystemId"] = "cloud.data"
 #                     job_description["archiveSystemDir"] = "/tmp/${JobOwner}/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
+#             else:
+#                 # default to MyData
+#                 job_description["archiveSystemId"] = "designsafe.storage.default"
+#                 job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
 #     else:
 #         # HPC (e.g., OpenSeesMP/SP on Stampede3)
+
 #         RequiredInputList = [
-#             "name","appId","appVersion","execSystemId","execSystemLogicalQueue",
+#             "name","appId","execSystemId","execSystemLogicalQueue",
 #             "nodeCount","coresPerNode","maxMinutes","allocation","archive_system",
-#             "storage_system","input_folder","input_filename"
+#             "storage_system","input_folder","Main Script"
 #         ]
 #         nmiss = checkRequirements(tapisInput, RequiredInputList)
 #         if nmiss == 0:
@@ -168,26 +236,85 @@
 #             job_description["nodeCount"] = tapisInput["nodeCount"]
 #             job_description["coresPerNode"] = tapisInput["coresPerNode"]
 #             job_description["appId"] = tapisInput["appId"]
-#             job_description["appVersion"] = tapisInput["appVersion"]
-#             fileInputs = [{"name": "Input Directory", "sourceUrl": sourceUrl}]
-#             parameterSet["appArgs"] = [{"name": "Main Script", "arg": tapisInput["input_filename"]}]
+#             if 'appVersion' in tapisInput.keys():
+#                 job_description["appVersion"] = tapisInput["appVersion"]
+#             fileInputs = [{"name": "Input Directory", "sourceUrl": tapisInput["sourceUrl"]}]
+#             if not 'Main Program' in tapisInput.keys():
+#                 tapisInput["Main Program"] = 'OpenSeesMP'
+#             if not 'CommandLine Arguments' in tapisInput:
+#                 tapisInput["CommandLine Arguments"] = ''
+#             # parameterSet["appArgs"] = [{"name": "Main Program", "arg": tapisInput["Main Program"]},
+#             #                            {"name": "Main Script", "arg": tapisInput["Main Script"]},
+#             #                            {"name": "CommandLine Arguments", "arg": tapisInput["CommandLine Arguments"]}
+#             #                           ]
+#             parameterSet["appArgs"] = []
+#             for app_Dict in app_parameterSet['appArgs']:
+#                 app_Dict = app_Dict.__dict__
+#                 here_name = app_Dict['name']
+#                 here_dict = {"name":here_name,"arg":app_Dict['arg']}
+#                 if 'notes' in app_Dict:
+#                     app_Dict_notes = app_Dict['notes'].__dict__
+#                     if 'isHidden' in app_Dict_notes and app_Dict_notes['isHidden']==True:
+#                         continue
+#                 if here_name in tapisInput:
+#                     here_dict["arg"] = tapisInput[here_name]
+#                 parameterSet["appArgs"].append(here_dict)
+#             parameterSet["envVariables"] = []
+#             for app_Dict in app_parameterSet['envVariables']:
+#                 app_Dict = app_Dict.__dict__
+#                 here_name = app_Dict['key']
+#                 here_dict = {"key":here_name,"value":app_Dict['value']}
+#                 if 'notes' in app_Dict:
+#                     app_Dict_notes = app_Dict['notes'].__dict__
+#                     if 'isHidden' in app_Dict_notes and app_Dict_notes['isHidden']==True:
+#                         continue
+#                 if here_name in tapisInput:
+#                     here_dict["value"] = tapisInput[here_name]
+#                 parameterSet["envVariables"].append(here_dict)
+    
+
+            
+            
 #             parameterSet["schedulerOptions"] = [{"name": "TACC Allocation", "arg": f"-A {tapisInput['allocation']}"}]
 #             job_description["fileInputs"] = fileInputs
 #             job_description["parameterSet"] = parameterSet
 
-#             # Archive location
-#             if "archive_system" in tapisInput:
-#                 if tapisInput["archive_system"] == "MyData":
-#                     job_description["archiveSystemId"] = "designsafe.storage.default"
-#                     job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-#                 elif tapisInput["archive_system"] == "Work":
-#                     job_description["archiveSystemId"] = tapisInput["execSystemId"]
-#                     job_description["archiveSystemDir"] = "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
+#             # # Archive location
+#             # if "archive_system" in tapisInput:
+#             #     if tapisInput["archive_system"] == "MyData":
+#             #         job_description["archiveSystemId"] = "designsafe.storage.default"
+#             #         job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+#             #     elif tapisInput["archive_system"] == "Work":
+#             #         job_description["archiveSystemId"] = tapisInput["execSystemId"]
+#             #         job_description["archiveSystemDir"] = "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
+
+#     if nmiss == 0:
+#         # Archive location
+#         if "archive_system" in tapisInput:
+#             if tapisInput["archive_system"] == "MyData":
+#                 job_description["archiveSystemId"] = "designsafe.storage.default"
+#                 job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+#             elif tapisInput["archive_system"] == "Work" and tapisInput["execSystemId"] != "wma-exec-01":
+#                 job_description["archiveSystemId"] = tapisInput["execSystemId"]
+#                 job_description["archiveSystemDir"] = "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
+#             else:
+#                 job_description["archiveSystemId"] = "designsafe.storage.default"
+#                 job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+
+#         else:
+#             job_description["archiveSystemId"] = "designsafe.storage.default"
+#             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+
+#     if nmiss == 0:
+#         for envVar in ['zipFileIn','zipFolderOut']:
+#             if envVar in tapisInput:
+#                 job_description["parameterSet"]['envVariables'].append({"key": envVar, "value": tapisInput[envVar]})
+                
 
 #     # --- Finalize ---
 #     if nmiss > 0:
 #         print("Please resubmit with all required input")
 #         return -1
 #     else:
-#         print("All Input is Complete")
+#         # print("All Input is Complete")
 #         return job_description
