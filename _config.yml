@@ -3,18 +3,15 @@
 
 title: "OpenSees-on-DesignSafe Training"
 author: "Silvia Mazzoni"
-url: "https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe"
-
 copyright: "2025"
+
+only_build_toc_files: true
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: "off"
 
-# Add a bibtex file so that we can create citations
-
-only_build_toc_files: true
 
 tags:
   remove_input: true
@@ -25,17 +22,15 @@ sphinx:
       - myst.header
     extensions:
       - sphinx_last_updated_by_git
-    html_baseurl: "https://silviamazzoni.github.io/training-OpenSees-on-DesignSafe/"
-    extensions:
       - sphinx_sitemap
+    html_baseurl: "https://silviamazzoni.github.io/training-OpenSees-on-DesignSafe/"
+    html_copy_source: true          # enables “.md” (source) in the download menu
+
 
 launch_buttons:
   notebook_interface: "jupyterlab"
-  colab_url: "https://colab.research.google.com"
   thebe: true
 
-- name: Link check
-  run: sphinx-build -b linkcheck . _build/linkcheck
   
 # Information about where the book exists on the web
 repository:
@@ -53,7 +48,6 @@ html:
   logo: logo.png
   extra_static_paths:
     - _static
-    - _images
   extra_css:
     - custom.css
   extra_js:
@@ -64,7 +58,7 @@ parse:
   myst_enable_extensions:
     - html_admonition
     - html_image
-    - "colon_fence"
+    - colon_fence
   nb_remove_input_tags: ["remove-input"]
   nb_remove_cell_tags: ["remove-cell"]
   nb_remove_all_outputs_tags: ["remove-output"]
