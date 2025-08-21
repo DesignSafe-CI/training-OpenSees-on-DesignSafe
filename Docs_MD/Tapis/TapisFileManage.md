@@ -59,7 +59,7 @@ Until automated tools are provided, here’s a reliable method to find valid Tap
 
 ### 🔍 To find your `/work` path on Stampede3:
 
-1. Go to the [OpenSeesMP App on DesignSafe](https://www.designsafe-ci.org/workspace/opensees-mp-s3).
+1. Go to the OpenSeesMP App on DesignSafe: 'https://www.designsafe-ci.org/workspace/opensees-mp-s3'.
 2. Start creating a job (no need to submit it).
 3. In the **Input Directory** field, click the folder icon to browse.
 4. Navigate to your work folder and select it.
