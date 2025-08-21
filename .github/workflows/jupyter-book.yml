@@ -22,8 +22,11 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install jupyter-book sphinx-sitemap sphinx-last-updated-by-git
+          pip install jupyter-book sphinx-sitemap sphinx-last-updated-by-git playwright
 
+      -name: Install Playwright browser (Chromium + system deps)
+        run: python m playwright install --with-deps chromium
+          
       - name: Build HTML
         run: jb build . --keep-going
 
@@ -37,6 +40,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
+
+      - name: Copy PDF into site
+        run: |
+          mkdir -p _build/html/assets
+          cp _build/pdf/book.pdf _build/html/assets/OpenSees-on-DesignSafe.pdf || true
 
   deploy:
     needs: build
