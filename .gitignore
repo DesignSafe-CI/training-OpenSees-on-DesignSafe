@@ -6,3 +6,7 @@ untitled.txt
 untitled.txt
 
 _build/
+
+# Jupyter artifacts
+.ipynb_checkpoints/
+untitled*.txt
