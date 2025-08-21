@@ -37,16 +37,20 @@ parts:
     - file: Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.md
     - file: Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.md
     - file: Docs_MD/DesignSafe/ComputeEnv_HPC.md
-      sections:
-      - file: Docs_MD/DesignSafe/HPC_Node.md
-      - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
-      - file: Docs_MD/DesignSafe/HPC_Core.md
-      - file: Docs_MD/DesignSafe/HPC_Queue.md
-      - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
-      - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
-      - file: Docs_MD/DesignSafe/HPC_allocations.md    
+      
     - file: Docs_MD/DesignSafe/ComputeEnv_Guide.md
 
+  - caption: HPC on TACC
+    chapters:
+      - file: Docs_MD/DesignSafe/HPC_Node.md
+      sections:
+          - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
+      - file: Docs_MD/DesignSafe/HPC_Core.md
+      - file: Docs_MD/DesignSafe/HPC_Queue.md
+      sections:
+          - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
+      - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
+      - file: Docs_MD/DesignSafe/HPC_allocations.md    
         
     
   - caption: File Storage
