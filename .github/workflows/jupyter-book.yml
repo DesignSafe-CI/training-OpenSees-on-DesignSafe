@@ -28,7 +28,7 @@ jobs:
         run: jb build . --keep-going
 
       - name: Link check
-        run: sphinx-build -b linkcheck . _build/linkcheck
+        run: jb build . --builder linkcheck
 
       - name: Build PDF (html-based)
         run: jb build . --builder pdfhtml
