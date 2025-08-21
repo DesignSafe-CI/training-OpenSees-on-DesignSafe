@@ -25,17 +25,12 @@ sphinx:
       - myst.header
     extensions:
       - sphinx_last_updated_by_git
-    html_baseurl: "https://silviamazzoni.github.io/training-OpenSees-on-DesignSafe/"
-    extensions:
-      - sphinx_sitemap
 
 launch_buttons:
   notebook_interface: "jupyterlab"
   colab_url: "https://colab.research.google.com"
   thebe: true
 
-- name: Link check
-  run: sphinx-build -b linkcheck . _build/linkcheck
   
 # Information about where the book exists on the web
 repository:
