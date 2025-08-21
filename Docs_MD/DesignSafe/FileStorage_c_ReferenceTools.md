@@ -2,7 +2,7 @@
 
 ## Quick Reference: Cheat Sheet
 
-\:::{admonition} **Storage Cheat Sheet**
+:::{admonition} **Storage Cheat Sheet**
 
 * **MyData** → Your personal notebook
 
@@ -23,13 +23,13 @@
 
 * *If it’s important, back it up (MyData or MyProjects).*
 * *If it’s temporary, run it in Work.*
-  \:::
+:::
 
 ---
 
 ## Common Mistakes to Avoid
 
-\:::{admonition} ⚠️ Storage Pitfalls
+:::{admonition} ⚠️ Storage Pitfalls
 
 1. **Leaving important results in Work**
 
@@ -57,13 +57,13 @@
    * Use MyProjects for durable project data.
 
 **Remember:** Corral = archive, Work = scratch, Node-local = temporary runtime.
-\:::
+:::
 
 ---
 
 ## Storage Decision Tree
 
-\:::{admonition} **Which Storage Should I Use?**
+:::{admonition} **Which Storage Should I Use?**
 
 * **Step 1: Are you running a compute job?**
 
@@ -92,4 +92,4 @@
 * **MyData** = personal (private, backed up).
 * **Community/Published** = reference only.
 
-\:::
+:::
