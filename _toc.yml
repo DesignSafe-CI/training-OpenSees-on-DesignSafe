@@ -26,12 +26,7 @@ parts:
     - file: Docs_MD/DesignSafe/OpenSees_Interpreters.md
     - file: Docs_MD/DesignSafe/OpenSees_Applications.md
     - file: Docs_MD/DesignSafe/OpenSees_DecisionMatrixOpsDS.md
-    
 
-
-
- 
-      
   - caption: Compute Environments
     chapters:
     - file: Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.md
@@ -42,15 +37,15 @@ parts:
 
   - caption: HPC on TACC
     chapters:
-      - file: Docs_MD/DesignSafe/HPC_Node.md
+    - file: Docs_MD/DesignSafe/HPC_Node.md
       sections:
-          - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
-      - file: Docs_MD/DesignSafe/HPC_Core.md
-      - file: Docs_MD/DesignSafe/HPC_Queue.md
+      - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
+    - file: Docs_MD/DesignSafe/HPC_Core.md
+    - file: Docs_MD/DesignSafe/HPC_Queue.md
       sections:
-          - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
-      - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
-      - file: Docs_MD/DesignSafe/HPC_allocations.md    
+      - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
+    - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
+    - file: Docs_MD/DesignSafe/HPC_allocations.md    
         
     
   - caption: File Storage

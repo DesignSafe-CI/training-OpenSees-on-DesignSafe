@@ -18,22 +18,25 @@
 - [JupyterHub Containers](Docs_MD/DesignSafe/ComputeEnv_JupyterHubContainers.md)
 - [Virtual Machines (VMs)](Docs_MD/DesignSafe/ComputeEnv_VirtualMachines.md)
 - [HPC on TACC](Docs_MD/DesignSafe/ComputeEnv_HPC.md)
-  - [Nodes](Docs_MD/DesignSafe/HPC_Node.md)
-  - [Stampede3 Nodes](Docs_MD/DesignSafe/HPC_NodeStampede3.md)
-  - [Cores](Docs_MD/DesignSafe/HPC_Core.md)
-  - [Queues](Docs_MD/DesignSafe/HPC_Queue.md)
-  - [Stampede3 Queues](Docs_MD/DesignSafe/HPC_QueueStampede3.md)
-  - [Queue Selection](Docs_MD/DesignSafe/HPC_QueueSelexn.md)
-  - [Allocations](Docs_MD/DesignSafe/HPC_allocations.md)
 - [Environment Guide](Docs_MD/DesignSafe/ComputeEnv_Guide.md)
 
+## HPC on TACC
+- [Nodes](Docs_MD/DesignSafe/HPC_Node.md)
+  - [Stampede3 Nodes](Docs_MD/DesignSafe/HPC_NodeStampede3.md)
+- [Cores](Docs_MD/DesignSafe/HPC_Core.md)
+- [Queues](Docs_MD/DesignSafe/HPC_Queue.md)
+  - [Stampede3 Queues](Docs_MD/DesignSafe/HPC_QueueStampede3.md)
+- [Queue Selection](Docs_MD/DesignSafe/HPC_QueueSelexn.md)
+- [Allocations](Docs_MD/DesignSafe/HPC_allocations.md)
+
 ## File Storage
-- [File Storage](Docs_MD/DesignSafe/FileStorage_Overview.md)
-- [File Storage Systems](Docs_MD/DesignSafe/FileStorage_Systems.md)
-  - [Corral](Docs_MD/DesignSafe/FileStorage_1_corral.md)
-  - [Compute System](Docs_MD/DesignSafe/FileStorage_2_compsys.md)
-  - [Compute Nodes](Docs_MD/DesignSafe/FileStorage_3_compnode.md)
-- [File-Storage Guide](Docs_MD/DesignSafe/FileStorage_guide.md)
+- [File Storage: Concepts](Docs_MD/DesignSafe/FileStorage_a_Concepts.md)
+- [File Storage: Practical Usage](Docs_MD/DesignSafe/FileStorage_b_PracticalUsage.md)
+- [File Storage: Reference Tools](Docs_MD/DesignSafe/FileStorage_c_ReferenceTools.md)
+- [File Storage: Quick Training Guide](Docs_MD/DesignSafe/FileStorage_d_QuickGuide.md)
+- [FileStorage on Corral](Docs_MD/DesignSafe/FileStorage_1_corral.md)
+- [FileStorage on Compute System](Docs_MD/DesignSafe/FileStorage_2_compsys.md)
+- [FileStorage on Compute Nodes](Docs_MD/DesignSafe/FileStorage_3_compnode.md)
 
 ## JupyterHub
 - [JupyterHub Environment](Docs_MD/DesignSafe/JupyterHub_Intro.md)
