@@ -9,9 +9,9 @@ execute:
 
 sphinx:
   # Append extra Sphinx extensions without overriding JB defaults
-  extra_extensions:
-    - sphinx_last_updated_by_git
-    - sphinx_sitemap
+  # extra_extensions:
+  #   - sphinx_last_updated_by_git
+  #   - sphinx_sitemap
   config:
     suppress_warnings:
       - myst.header
@@ -21,7 +21,7 @@ sphinx:
 launch_buttons:
   notebook_interface: "jupyterlab"
   # colab_url: "https://colab.research.google.com"
-  thebe: false
+  thebe: true
 
 repository:
   url: https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe
