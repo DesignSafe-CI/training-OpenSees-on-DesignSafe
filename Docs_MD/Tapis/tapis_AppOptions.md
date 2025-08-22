@@ -1,69 +1,78 @@
-## Using Public Apps vs. Writing Your Own
+# Public & Custom Apps
+***Using Public Apps vs. Writing Your Own***
 
-### Use an existing (public) app
+On DesignSafe, you have two productive ways to run work on HPC systems:
 
-Public apps on DesignSafe are vetted templates for common tools (e.g., OpenSees, OpenFOAM). They’re the fastest path to results.
+* **Use a public Tapis App** — pre-configured, maintained templates for common tools (e.g., OpenSees, OpenFOAM). Fastest path to results, minimal setup.
+* **Author your own Tapis App** — a custom template you control (*wrapper* + *app.json* \[+ optional *profile.json*]) when you need different binaries, launch logic, inputs/parameters, or project-specific defaults.
 
-**Where to find them**
-
-* **Web Portal → Tools & Applications**: browse/search, read the app’s help page.
-* In notebooks/CLI: identify the app’s ***appId*** (and optional version) from the portal, then submit jobs programmatically.
-
-**How to run effectively**
-
-* Review the app’s **inputs** and **parameters** (defined by the app schema).
-* Start with a **small test case**; use defaults for resources (you can tune later).
-* Prefer **stable** or **latest** versions noted in the catalog.
-* Keep your inputs on a Tapis-visible system (e.g., **MyData**, **Work**).
-
-**When public apps are ideal**
-
-* Your workflow matches the app’s interface.
-* You want a **supported**, **reproducible** environment with minimal setup.
-* You don’t need custom launch logic or nonstandard dependencies.
+**How to choose (at a glance):**
+Start with a **public app** if your workflow fits its interface. Write a **custom app** when you need non-standard flags, containers/modules, pre/post steps, or a lab-specific interface you’ll reuse.
 
 ---
 
-### Write your own app
+## Use an Existing (Public) App
 
-Create a Tapis app when you need custom behavior, a different software version, or a specialized interface for your lab/project.
+Public apps on DesignSafe are vetted templates for common tools. They’re the fastest path to results.
+
+**Where to find them**
+
+* **Web Portal → Tools & Applications** to browse/search and read the app’s help page.
+* In notebooks/CLI, grab the app’s ***appId*** (and optional version) from the portal and submit jobs programmatically.
+
+**How to run effectively**
+
+* Review the app’s **inputs** and **parameters** (from its schema).
+* Start with a **small test case**; keep default resources, tune later.
+* Prefer **stable/latest** versions shown in the catalog.
+* Keep inputs on a Tapis-visible system (e.g., **MyData**, **Work**).
+
+**When public apps are ideal**
+
+* Your workflow matches the app interface.
+* You want a **supported, reproducible** environment with minimal setup.
+* You don’t need custom launch logic or unusual dependencies.
+
+---
+
+## Write Your Own App
+
+Create a Tapis App when you need custom behavior, different software versions, or a specialized interface for your project.
 
 **Building blocks**
 
 1. **Wrapper** (e.g., *tapisjob_app.sh*): non-interactive, writes outputs to *$PWD*, handles launch (*ibrun*/*mpirun*/*srun*) and logging.
-2. ***app.json* (required)**: ID, version, execution system, execution type (*HPC*), job type (*MPI*/*SERIAL*), defaults (nodes, ppn, walltime), **inputs** and **parameters**.
-3. ***profile.json* (optional)**: modules and env vars (or rely on containers).
-4. **Test dataset**: a tiny, shareable case for validation.
+2. ***app.json* (required)**: app ID/version, execution system/type (HPC), job type (MPI/SERIAL), defaults (nodes/ppn/walltime), **inputs** & **parameters**.
+3. ***profile.json* (optional)**: modules and env vars (or use containers).
+4. **Tiny test dataset** for validation.
 
 **Registration & sharing**
 
-* Register the app (via portal form or API), then **share** with your project/team.
-* For broader visibility in the portal catalog, follow DesignSafe’s publication/review process.
+* Register via portal or API, then **share** with your project/team.
+* For catalog visibility, follow DesignSafe’s review/publication process.
 
 **Best practices**
 
-* **Version** every change (e.g., *1.2.0*), keep a changelog, don’t break existing users.
-* Avoid hard-coded paths; use **Tapis URIs** and app parameters.
+* **Version** every change (e.g., *1.2.0*); keep a changelog; avoid breaking users.
+* Use **Tapis URIs** and parameters—no hard-coded paths.
 * Set **sensible defaults** (resources, inputs) and document them.
-* Keep profiles minimal; prefer containers or a small *modules* list for stability.
-* Provide **clear labels/descriptions** for inputs/parameters so users don’t guess.
+* Keep profiles minimal; prefer containers or a short *modules* list.
+* Provide **clear labels/descriptions** so users don’t guess.
 
 **When custom apps shine**
 
-* You need a new executable/version, custom pre/post steps, or a lab-specific interface.
-* You’re automating **parameter sweeps**, ensembles, or multi-stage workflows.
-* You want your group’s **reproducible** template others can reuse.
+* New binaries/flags, custom pre/post steps, lab-specific UI.
+* Automated **parameter sweeps**, ensembles, multi-stage workflows.
+* A **reproducible** template your group can reuse.
 
 ---
 
-### Quick chooser
+## Quick Chooser
 
-| Need                                    | Use a public app | Write your own |
-| --------------------------------------- | ---------------- | -------------- |
-| Fast start with a standard tool         | ✅                |                |
-| Custom binaries, flags, or launch logic |                  | ✅              |
-| Team-specific interface & defaults      |                  | ✅              |
-| Minimal maintenance                     | ✅                |                |
-| Full control / special dependencies     |                  | ✅              |
-
-> In the next sections you can dive into: finding *appId*s, reading an app’s input/parameter schema, authoring *app.json*/*profile.json*, and testing/iterating your own apps.
+| Need                                    | Public app | Your app |
+| --------------------------------------- | :--------: | :------: |
+| Fast start with a standard tool         |      ✅     |          |
+| Custom binaries, flags, or launch logic |            |     ✅    |
+| Team-specific interface & defaults      |            |     ✅    |
+| Minimal maintenance                     |      ✅     |          |
+| Full control / special dependencies     |            |     ✅    |
