@@ -210,8 +210,7 @@ parts:
     - file: Docs_MD/Tapis/tapis_job_submittal.md
     # - file: Docs_MD/Tapis/tapis_job_attributes.md
     
-    
-     
+
     - file: Docs_MD/Tapis/tapis_Apps.md
     - file: Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb
     - file: Docs_MD/Tapis/tapis_AppTemp_Schema.md
