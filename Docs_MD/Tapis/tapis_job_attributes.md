@@ -2,9 +2,9 @@
 ***Job Submission Attributes in Tapis***
 
 
-Unlike traditional schedulers, Tapis provides a consistent interface for job submission, regardless of the underlying scheduler or system. Whether you're running on a supercomputer or a container-based environment, you interact with Tapis Jobs using the same structured request—either through a web form or a JSON POST to the Jobs API.<br>
+<!-- Unlike traditional schedulers, Tapis provides a consistent interface for job submission, regardless of the underlying scheduler or system. Whether you're running on a supercomputer or a container-based environment, you interact with Tapis Jobs using the same structured request—either through a web form or a JSON POST to the Jobs API.<br>
 Importantly, Tapis decouples application logic from system-level details. When you submit a job, you don’t need to understand how the scheduler works or what modules to load on the compute nodes. Instead, you focus on specifying inputs and parameters for a registered app, and Tapis handles the rest—resource provisioning, environment setup, execution, and archiving.<br>
-To submit a job, you send a job request (in JSON or form format) that includes both required fields and optional attributes. At minimum, this includes the job name and the app ID. Additional job submission attributes control how the job is run and managed.
+To submit a job, you send a job request (in JSON or form format) that includes both required fields and optional attributes. At minimum, this includes the job name and the app ID. Additional job submission attributes control how the job is run and managed. -->
 
 When submitting a job to Tapis, the job request JSON includes fields that describe how the job should be scheduled and executed on the compute system. These are called **job submission attributes**. They are interpreted by the Tapis platform—not the app itself—to control resource requests, queuing, archiving, and naming.<br>
 These fields are distinct from application parameters and inputs. <br>

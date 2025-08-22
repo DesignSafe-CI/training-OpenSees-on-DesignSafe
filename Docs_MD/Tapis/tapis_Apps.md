@@ -1,13 +1,13 @@
 # Tapis Apps
 ***Simplifying HPC Job Execution on DesignSafe***
 
-**Tapis Apps** are pre-configured software templates that let researchers run simulations, analyses, and data workflows on high-performance computing (HPC) systems — **without needing to write job scripts or manage SLURM directly**.
+<!-- **Tapis Apps** are pre-configured software templates that let researchers run simulations, analyses, and data workflows on high-performance computing (HPC) systems — **without needing to write job scripts or manage SLURM directly**.
 
 These apps are available through the **DesignSafe Web Portal**, or programmatically via **Jupyter notebooks** or the **Tapis CLI**. Each app encapsulates all the information needed to run a specific scientific application — such as **OpenSees**, **OpenFOAM**, or custom tools — using best practices for performance and reproducibility.
+ -->
 
 
-
-## What Do Tapis Apps Do?
+<!-- ## What Do Tapis Apps Do?
 
 When you submit a job via a Tapis App, the system automatically:
 
@@ -107,3 +107,4 @@ You have two great options:
 * Leverage the same execution environments used by the Web Portal — just with more control.
 
 This is often the **next step** after mastering the Web Portal — combining the **reliability of Tapis apps** with the **flexibility of scripting and automation**.
+ -->

@@ -1,7 +1,7 @@
 # Tapis-Job Submittal
 ***How to Run Remote Apps on HPC Systems***
 
-Tapis Jobs allow you to **submit** and **run computational tasks** on remote systems — such as HPC clusters, cloud VMs, and containerized environments — through a standardized API like Tapipy or the Web Portal.
+<!-- Tapis Jobs allow you to **submit** and **run computational tasks** on remote systems — such as HPC clusters, cloud VMs, and containerized environments — through a standardized API like Tapipy or the Web Portal.
 
 A **Job Submission** is a request you send to Tapis that says: *“Run this app, using these specific inputs and parameters, on this system, with these resources.”*
 
@@ -15,7 +15,7 @@ Tapis will take care of:
 * Running the app
 * Monitoring progress
 * Archiving results
-
+ -->
 ---
 ## Submitting a Job
 Jobs can be submitted through various interfaces:
@@ -24,7 +24,7 @@ Jobs can be submitted through various interfaces:
 * **Tapis CLI**: Submit jobs using terminal commands
 Behind the scenes, all submissions follow the same general pattern.
 
-## What Happens When You Submit a Job
+<!-- ## What Happens When You Submit a Job
 
 Submitting a job is how you run a Tapis App with your own data, configuration, and compute resources. Whether you're using the Web UI, CLI, or Python (Tapipy), the core process is the same:
 
@@ -47,10 +47,10 @@ Submitting a job is how you run a Tapis App with your own data, configuration, a
    Outputs are collected and saved to a defined archive system and path. You can browse, download, or reuse the data in other workflows.
 
 > On shared systems like **Stampede3**, jobs may queue before running due to demand — this delay is the trade-off for accessing powerful resources.
-
+ -->
 ---
 
-## Submitting Jobs with Tapipy
+<!-- ## Submitting Jobs with Tapipy
 
 
 Below is the typical workflow for submitting and managing jobs directly from Python, using Tapipy (Python SDK):
@@ -186,7 +186,7 @@ The file paths (like *"stdout.txt"*) depend on how your app writes output.
 
 :::
 
-
+ -->
 ---
 
 ## At a Glance: Job Submission Components
@@ -205,7 +205,7 @@ The file paths (like *"stdout.txt"*) depend on how your app writes output.
 | *archiveOnAppError* | Whether to archive even if the job fails  |
 
 ---
-
+<!-- 
 ## Why This Matters for Scientific Workflows
 The use of templates, like the one for OpenSeesMP, is a cornerstone of scalable research computing. They:
 * Reduce errors by automating input/output handling
@@ -218,4 +218,4 @@ Most importantly, they allow researchers to focus on science, not infrastructure
 * Use *client.apps.getApps()* to browse available apps. (if available)
 * Use *client.systems.getSystems()* to find storage or execution systems you have access to. *(see next section)*
 * Input files must already be available on a Tapis-accessible system, or uploaded ahead of time.
-```
+``` -->

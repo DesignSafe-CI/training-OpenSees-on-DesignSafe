@@ -1,4 +1,4 @@
-# File Storage: Practical Usage
+# Practical Usage
 
 ## Using MyData, MyProjects, and Work
 
