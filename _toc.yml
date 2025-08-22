@@ -204,10 +204,6 @@ parts:
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.ipynb
 
 
-
-
- 
-
  
   - caption: Tapis Apps
     chapters:  
@@ -240,6 +236,7 @@ parts:
     - file: Docs_MD/Tapis/JobAttributes_vs_AppParams.md
     - file: Docs_MD/Tapis/tapis_AppTemp_Outputs.md
       
+
         
 
     # - file: Docs_MD/Tapis/UploadFileToTapis.md # i need to work on this one...
