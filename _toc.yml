@@ -224,17 +224,18 @@ parts:
       - file: Docs_MD/DesignSafe/DSapps_ADCIRC.md
       - file: Docs_MD/DesignSafe/DSapps_Compare.md      
     
+  - caption: Tapis App Templates
+    chapters: 
 
     - file: Docs_MD/Tapis/tapis_AppTemplates.md
-      sections:
-      - file: Docs_MD/Tapis/tapis_AppTemp_Structure.md
-      - file: Docs_MD/Tapis/tapis_appsDev_Jsons.md
-      - file: Docs_MD/Tapis/tapis_app_def_files.md
-      - file: Docs_MD/Tapis/tapis_AppTemp_InputVSParams.md
-      - file: Docs_MD/Tapis/tapis_AppTemp_Inputs.md
-      - file: Docs_MD/Tapis/tapis_AppTemp_Parameters.md
-      - file: Docs_MD/Tapis/JobAttributes_vs_AppParams.md
-      - file: Docs_MD/Tapis/tapis_AppTemp_Outputs.md
+    - file: Docs_MD/Tapis/tapis_AppTemp_Structure.md
+    - file: Docs_MD/Tapis/tapis_appsDev_Jsons.md
+    - file: Docs_MD/Tapis/tapis_app_def_files.md
+    - file: Docs_MD/Tapis/tapis_AppTemp_InputVSParams.md
+    - file: Docs_MD/Tapis/tapis_AppTemp_Inputs.md
+    - file: Docs_MD/Tapis/tapis_AppTemp_Parameters.md
+    - file: Docs_MD/Tapis/JobAttributes_vs_AppParams.md
+    - file: Docs_MD/Tapis/tapis_AppTemp_Outputs.md
       
         
 
