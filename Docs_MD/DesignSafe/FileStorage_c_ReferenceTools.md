@@ -2,8 +2,6 @@
 
 ## Quick Reference: Cheat Sheet
 
-:::{admonition} **Storage Cheat Sheet**
-
 * **MyData** → Your personal notebook
 
   * Private, backed up, long-term
@@ -19,51 +17,14 @@
   * High-performance, temporary, not backed up
   * Best for staging inputs & writing job outputs
 
-**Rule of Thumb:**
+:::{admonition} **Rule of Thumb:**
 
 * *If it’s important, back it up (MyData or MyProjects).*
 * *If it’s temporary, run it in Work.*
 :::
 
----
-
-## Common Mistakes to Avoid
-
-:::{admonition} ⚠️ Storage Pitfalls
-
-1. **Leaving important results in Work**
-
-   * Work is **not backed up** and may be purged without warning.
-   * Always copy valuable results to MyProjects or MyData.
-
-2. **Using MyData for team projects**
-
-   * Files in MyData are private unless explicitly shared.
-   * Use MyProjects for collaboration.
-
-3. **Relying on CommunityData or Published for active work**
-
-   * These directories are **read-only**.
-   * They are for reference only.
-
-4. **Running HPC jobs directly from Corral**
-
-   * Corral is network-mounted and slower for I/O-intensive workloads.
-   * Always stage input/output to Work for active jobs.
-
-5. **Confusing Work with long-term project storage**
-
-   * Work is high-performance but temporary.
-   * Use MyProjects for durable project data.
-
-**Remember:** Corral = archive, Work = scratch, Node-local = temporary runtime.
-:::
-
----
-
 ## Storage Decision Tree
-
-:::{admonition} **Which Storage Should I Use?**
+**Which Storage Should I Use?**
 
 * **Step 1: Are you running a compute job?**
 
@@ -92,4 +53,34 @@
 * **MyData** = personal (private, backed up).
 * **Community/Published** = reference only.
 
+
+## Common Mistakes to Avoid
+
+:::{dropdown}Don’t leave important results in Work — it’s not backed up
+   * Work is **not backed up** and may be purged without warning.
+   * Always copy valuable results to MyProjects or MyData.
 :::
+:::{dropdown}Don’t use MyData for team projects — use MyProjects instead
+   * Files in MyData are private unless explicitly shared.
+   * Use MyProjects for collaboration.
+:::
+:::{dropdown}Don’t try to save to Community/Published — they’re read-only
+   * These directories are **read-only**.
+   * They are for reference only.
+:::
+:::{dropdown}Don’t run jobs directly from Corral — stage to Work first
+   * Corral is network-mounted and slower for I/O-intensive workloads.
+   * Always stage input/output to Work for active jobs.
+:::
+
+
+:::{dropdown}Don’t Use Work for long-term project storage
+   * Work is high-performance but temporary.
+   * Use MyProjects for durable project data.
+:::
+
+**Remember:** 
+* Corral = archive
+* Work = scratch
+* Node-local = temporary runtime.
+

@@ -14,7 +14,7 @@ Each of the three main storage areas has a distinct role. Selecting the correct 
 
 ---
 
-:::{admonition} **MyData**
+:::{drowpdown} **MyData**
 *Personal private storage space.*
 
 * For input files, scripts, outputs, notes, small datasets.
@@ -25,7 +25,7 @@ Each of the three main storage areas has a distinct role. Selecting the correct 
 ***Use MyData when you’re working solo or building/testing something privately.***
 :::
 
-:::{admonition} **MyProjects**
+:::{drowpdown} **MyProjects**
 *Collaborative project-based storage.*
 
 * Linked to a DesignSafe project ID.
@@ -37,7 +37,7 @@ Each of the three main storage areas has a distinct role. Selecting the correct 
 ***Use MyProjects when collaborating, sharing, or curating data for publication.***
 :::
 
-:::{admonition} **Work**
+:::{drowpdown} **Work**
 *Temporary high-performance scratch storage.*
 
 * Optimized for active HPC jobs.

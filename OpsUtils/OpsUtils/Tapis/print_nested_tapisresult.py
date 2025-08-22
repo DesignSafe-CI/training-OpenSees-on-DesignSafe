@@ -1,5 +1,6 @@
 def print_nested_tapisresult(obj, key0: str = "obj.", indent: int = 0):
     """
+    YOU SHOULD USE: display_tapis_results()
     Pretty-print a nested TapisResult/dict/list in a JSON-like, readable form.
     Keys are grouped: scalars → lists → nested dicts. TapisResult objects are
     unwrapped via their internal ``__dict__`` so you can explore schemas/results.

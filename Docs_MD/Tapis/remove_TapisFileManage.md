@@ -1,4 +1,4 @@
-# Tapis: File Management
+<!-- # Tapis: File Management
 ***How DesignSafe File Storage and Tapis Work Together***
 
 Tapis powers file access and job submission on DesignSafe. It provides a consistent interface to interact with **multiple storage systems** and **compute environments**, making it easier to manage data before, during, and after simulation workflows.
@@ -81,3 +81,4 @@ Repeat this for each storage system you use and **save the paths** in a file lik
 ---
 
 This approach ensures you’re using correct and consistent Tapis URIs across different tools, scripts, and environments—an essential skill for automating job submissions and managing your project data efficiently on DesignSafe.
+ -->

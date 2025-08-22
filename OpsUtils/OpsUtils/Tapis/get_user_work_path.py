@@ -1,3 +1,4 @@
+from __future__ import annotations
 def get_user_work_path(
     t,
     system_id: str = "stampede3",
@@ -58,7 +59,7 @@ def get_user_work_path(
     -------
     1.0
     """
-    from __future__ import annotations
+    
     
     import re
     from pathlib import Path

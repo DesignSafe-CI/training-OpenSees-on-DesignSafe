@@ -54,11 +54,10 @@ parts:
     - file: Docs_MD/DesignSafe/FileStorage_a_Concepts.md
     - file: Docs_MD/DesignSafe/FileStorage_b_PracticalUsage.md
     - file: Docs_MD/DesignSafe/FileStorage_c_ReferenceTools.md
-    - file: Docs_MD/DesignSafe/FileStorage_d_QuickGuide.md
     - file: Docs_MD/DesignSafe/FileStorage_1_corral.md      
     - file: Docs_MD/DesignSafe/FileStorage_2_compsys.md      
     - file: Docs_MD/DesignSafe/FileStorage_3_compnode.md
-
+    - file: Docs_MD/DesignSafe/FileStorage_4_compare.md
 
   - caption: JupyterHub
     chapters:
