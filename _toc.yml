@@ -204,10 +204,6 @@ parts:
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.ipynb
 
 
-
-
- 
-
  
   - caption: Tapis Apps
     chapters:  
