@@ -2,7 +2,7 @@ name: Build & Deploy Jupyter Book
 
 on:
   push:
-    branches: [ main, silvia-edits]
+    branches: [ main]
   workflow_dispatch:
 
 jobs:
