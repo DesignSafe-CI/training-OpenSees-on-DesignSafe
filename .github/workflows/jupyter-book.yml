@@ -2,8 +2,17 @@ name: Build & Deploy Jupyter Book
 
 on:
   push:
-    branches: [ main]
+    branches: [ main ]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -11,51 +20,36 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0   # needed for sphinx_last_updated_by_git
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install deps
+      - name: Install Jupyter Book
         run: |
           python -m pip install --upgrade pip
-          pip install jupyter-book sphinx-sitemap sphinx-last-updated-by-git playwright
+          pip install jupyter-book
 
-      - name: Install Playwright browser (Chromium + system deps)
-        run: python -m playwright install --with-deps chromium
-          
-      - name: Build HTML
-        run: jb build . --keep-going
+      - name: make toc
+        run: |
+          python generate_md_toc.py
 
-      - name: Link check
-        run: jb build . --builder linkcheck
-
-      - name: Build PDF (html-based)
-        run: jb build . --builder pdfhtml
+      - name: Build the book
+        run: |
+          jupyter-book build .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/html
-
-      - name: Copy PDF into site
-        run: |
-          mkdir -p _build/html/assets
-          cp _build/pdf/book.pdf _build/html/assets/OpenSees-on-DesignSafe.pdf || true
+          path: ./_build/html
 
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
