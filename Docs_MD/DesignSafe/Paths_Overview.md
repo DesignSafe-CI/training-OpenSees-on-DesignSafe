@@ -2,52 +2,151 @@
 
 ***Why Paths Matter When Running Applications***
 
-A **path** is a string that describes the **location of a file or directory** in a storage system. It tells applications—like OpenSees or any Tapis App—**where to find input data and where to save outputs**, whether that’s in your **MyData**, **MyProjects**, or **shared workspace**, such as Stampede3.
+A **path** is the address of a file or directory. It tells applications—like OpenSees or any Tapis app—**where to find inputs and where to write outputs** across your storage spaces (*MyData*, *MyProjects*, shared work areas, and HPC systems like Stampede3).
 
-On DesignSafe, you’ll often need to specify **full file paths** when working in environments such as:
+---
 
-* **JupyterHub**
-* **Tapis**
-* **Stampede3 (HPC)**
+## Relative vs. Full (Absolute) Paths
 
-But **path formats vary** depending on the system, and each storage system is **mounted differently**:
+**Relative path**
 
-| Environment    | Path Format               | Example                                                    |
-| -------------- | ------------------------- | ---------------------------------------------------------- |
-| **JupyterHub** | Mounted virtual folders   | `/home/jovyan/MyData/myfile.tcl`                           |
-| **Stampede3**  | Absolute UNIX-style paths | `/scratch/01234/username/project/run01/input.tcl`          |
-| **Tapis**      | URI-style references      | `tapis://designsafe.storage.community/myproject/input.tcl` |
+* Interpreted **from your current working directory (CWD)**.
+* Short and convenient when you’re “already in” the right folder.
+* **Does not start with `/`**.
+* Changes meaning if your CWD changes.
 
+**Full (absolute) path**
 
+* The **complete address from the filesystem root**, starting with **/**.
+* Works regardless of CWD—**safer for batch jobs, Tapis jobs, and SLURM**.
+* Often uses env vars (*$HOME*, *$WORK*, *$SCRATCH*) for portability.
 
-## Why Paths Behave Differently
+**What Jupyter shows vs. what the OS/HPC uses**
 
-Although these systems all live under the DesignSafe umbrella, they are **physically separate compute and storage systems**, and each mounts file systems differently:
+* The **Jupyter file browser** and notebooks operate relative to the notebook’s CWD, so *data/run1.csv* “just works” there.
+* HPC/Tapis launchers may change CWD; **absolute paths are more reliable** in wrappers and batch jobs.
 
-* All file systems (e.g., MyData, Community, Projects, Work, and even Scratch) are **mounted on the DesignSafe Data Depot backend**, even if you can’t see them all in the **web portal**.
-* For example, **Stampede3’s `/scratch` directory is mounted**, but **not exposed** in the Data Depot interface.
-* The **`Work` directory is your shared path**: it is mounted on both **JupyterHub and Stampede3**, meaning you can **exchange files** easily between your notebook session and an HPC job.
-* However, files written to **Stampede’s scratch** during execution **cannot be directly accessed** from JupyterHub or Data Depot unless they are **copied to `Work` or `MyData`**. While the Data Depot doesn't give you direct access to scratch, it may give you access to them as the "execution directory" while a job is running.
-* **Tapis can access all of these systems**, making it a unifying layer for automation, but it still requires you to provide the correct path for the system you're referencing.
+### Quick examples
 
+| Context                             | You write                         | Resolves to                     |
+| ----------------------------------- | --------------------------------- | ------------------------------- |
+| Relative (CWD = */home/user/book/*) | *data/run1.csv*                   | */home/user/book/data/run1.csv* |
+| “Go up one level”                   | *../inputs/record.at2*            | */home/user/inputs/record.at2*  |
+| Full (absolute)                     | */home/user/book/data/run1.csv*   | Always that path                |
+| Home shortcut                       | *~/book/data/run1.csv*            | *$HOME/book/data/run1.csv*      |
+| HPC env var                         | *$WORK/myproj/cases/c1*           | Your site’s “work” area         |
+| Python (portable)                   | *Path("data/run1.csv").resolve()* | Absolute path computed from CWD |
 
+---
+
+## Path Formats by Environment
+
+Path formats vary by system, and each storage is **mounted differently**.
+
+| Environment    | Path Format                           | Example                                                    |
+| -------------- | ------------------------------------- | ---------------------------------------------------------- |
+| **JupyterHub** | Mounted home/workspaces (Linux paths) | */home/jovyan/MyData/myfile.tcl*                           |
+| **Stampede3**  | Absolute UNIX paths                   | */scratch/01234/username/project/run01/input.tcl*          |
+| **Tapis**      | System + path (URI-like reference)    | *tapis://designsafe.storage.community/myproject/input.tcl* |
+
+> **Note:** In Tapis code you usually pass ***systemId* + *path*** rather than a literal *tapis://* URI; the URI form is a convenient shorthand for documentation.
+
+---
+
+## Why Paths Behave Differently on DesignSafe
+
+Although they’re under the DesignSafe umbrella, **compute and storage systems are physically separate**, and mounts differ:
+
+* All file systems (MyData, Community, Projects, Work, Scratch) are mounted on the **Data Depot backend**, even if not all are visible in the web UI.
+* *Stampede3 /scratch* is mounted on HPC but **not directly exposed** in the Data Depot interface.
+* ***Work* is your shared bridge**: it’s mounted on **both JupyterHub, Stampede3, and Data Depot**, so you can **exchange files** between notebooks and HPC jobs.
+* Files written to **Stampede3 scratch** during execution **aren’t visible** in JupyterHub/Data Depot **unless you copy them** to *Work* or *MyData*. (During an active job, the portal may show an *execution directory* view, but that’s transient.)
+* **Tapis can access all of these systems**—it’s a unifying layer—but you must provide **the correct path for the target system** in Tapis format (more on this later).
+
+---
+
+## When to Use Relative vs. Full Paths
+
+* **Use relative paths** for quick local work **inside Jupyter** when you control CWD (notebooks, small scripts).
+* **Use full paths** when:
+
+  * Submitting **Tapis** or **SLURM** jobs (launchers may change CWD).
+  * Sharing inputs/outputs across scripts, nodes, or users.
+  * Writing **reusable automation** that must run from any directory.
+
+---
+
+:::{dropdown}Practical Recipes
+
+**In a Notebook (Python):**
+
+```python
+from pathlib import Path
+print("CWD:", Path.cwd())                           # where you are
+print("Absolute:", Path("data/run1.csv").resolve()) # get a full path
+print("Home:", Path("~").expanduser())              # your home dir
+```
+
+**In a shell (terminal or notebook cell):**
+
+```bash
+pwd                  # show current directory
+echo "$HOME"         # home
+echo "$WORK"         # HPC work area (if defined by site)
+# show absolute path (many Linux systems)
+readlink -f data/run1.csv
+```
+
+**Anchor relative paths to a script’s location (Python):**
+
+```python
+from pathlib import Path
+BASE = Path(__file__).resolve().parent
+inp = BASE / "inputs" / "model.tcl"    # stable even if CWD changes
+```
+
+**Keep outputs portable (Python):**
+
+```python
+outdir = Path("~/results").expanduser()
+outdir.mkdir(parents=True, exist_ok=True)
+f = outdir / "run1.csv"
+```
+
+**Tapis transfers (conceptual):**
+
+* Think: **`(systemId="designsafe.storage.default", path="/Users/you/inputs/model.tcl")`**
+* For HPC job I/O, your wrapper will typically use **absolute filesystem paths** on the compute system (e.g., `$WORK/myproj/...`).
+
+:::
+---
+
+## Common Errors & Quick Fixes
+
+* **File not found in jobs** → Use **full paths** or anchor relative paths to a known base.
+* **Works in Jupyter, fails on HPC** → CWD differs; switch to **absolute paths** or expand `~`/env vars.
+* **Scratch outputs “missing” in Jupyter** → Copy results from **Scratch → Work/MyData** before inspecting in Jupyter.
+* **Spaces in paths** → Avoid them. Otherwise, quote carefully or use `pathlib.Path`.
+
+---
 
 ## Why This Matters
 
-Understanding which storage systems are available—and how they’re mounted—will help you avoid common issues like:
+Understanding mounts and path semantics helps you avoid:
 
-* File not found errors
-* Job failures due to incorrect input/output paths
-* Confusion when outputs don’t appear where you expect
+* “File not found” errors
+* Job failures due to incorrect I/O locations
+* Confusion when outputs “disappear” (they’re in Scratch, not Work)
 
+With the right path strategy you can:
 
+* Place inputs where jobs can read them quickly,
+* Retrieve outputs reliably,
+* Write **portable workflows** that run across Jupyter, Tapis, and Stampede3 without edits.
 
-## Takeaway
+---
 
-Yes, file management across DesignSafe can feel complex—because **each system is designed for a specific purpose**, and their **physical separation affects access**. But understanding these mount relationships gives you powerful control over:
+:::{admonition}One-Paragraph Takeaway
 
-* **How and where you store inputs**
-* **How to retrieve outputs after a job**
-* **How to write portable workflows across Jupyter, Tapis, and Stampede3**
-
-By being intentional with your file paths and storage targets, you can **avoid disconnections**, streamline your workflows, and fully leverage the power of DesignSafe’s infrastructure.
+Relative paths are **shortcuts from where you’re standing** (your CWD); full paths are the **complete address**. Jupyter emphasizes relative convenience; **HPC/Tapis workflows are safer with full paths** and environment variables. Use `pathlib` to resolve and compose paths cleanly, rely on **`Work`** as your bridge between Jupyter and Stampede3, and copy any **Scratch** results you need to keep into **Work** or **MyData**.
+:::
