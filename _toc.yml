@@ -209,7 +209,7 @@ parts:
   - caption: Tapis Apps
     chapters:  
     - file: Docs_MD/Tapis/tapis_job_submittal.md
-    - file: Docs_MD/Tapis/tapis_job_attributes.md
+    # - file: Docs_MD/Tapis/tapis_job_attributes.md
     
     
      
