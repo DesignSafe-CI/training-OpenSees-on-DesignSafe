@@ -11,6 +11,9 @@ These fields are distinct from application parameters and inputs. <br>
 Job submission attributes are evaluated by the Tapis system and are not automatically passed into your application logic or wrapper scripts.
 
 
+
+
+
 ## Common Job Submission Attributes
 
 The optional and required attributes common to all job submissions.
