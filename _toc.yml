@@ -170,7 +170,7 @@ parts:
     - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
     - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
     # - file: Docs_MD/Tapis/TapisFileManage.md
-    - file: Jupyter_Notebooks/paths_StorageSystems.ipynb
+    - file: Jupyter_Notebooks/paths_Tapis.ipynb
 
   - caption: Tapis Jobs
     chapters:  
