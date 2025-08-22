@@ -1,5 +1,5 @@
-# get_user_work_path
-***get_user_work_path(t,system_id: str = "stampede3",*,valid_systems: Iterable[str] = ("stampede3", "ls6", "frontera"),app_suffix: str = "-credential",job_name: str = "getWork",) -> Path***
+# get_user_work_tapis_uri
+***get_user_work_tapis_uri(t,system_id: str = "stampede3",*,valid_systems: Iterable[str] = ("stampede3", "ls6", "frontera"),app_suffix: str = "-credential",job_name: str = "getWork",) -> Path***
 
 ## Purpose
 
