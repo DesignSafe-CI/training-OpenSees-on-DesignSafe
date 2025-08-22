@@ -1,7 +1,9 @@
 # Tapis Jobs
 
 Tapis Jobs allow users to submit and run computational tasks on remote systems (e.g., HPC clusters, cloud VMs, containers) via a standardized API, such as **Tapipy**. 
-You can learn more at the <a href="https://tapis.readthedocs.io/en/latest/technical/jobs.html" target="_blank">Tapis Documentation.</a>
+
+In this chapter we’ll begin by exploring results from completed Tapis jobs, since you may have already run one via the Web Portal.
+
 
 ## What is a Tapis App?
 
@@ -180,3 +182,4 @@ Most importantly, they allow researchers to **focus on science**, not infrastruc
 * **Apps** are pre-defined software packages with configurable inputs and settings
 * Templates like OpenSeesMP simplify reproducibility and accessibility
 
+You can learn more at the <a href="https://tapis.readthedocs.io/en/latest/technical/jobs.html" target="_blank">Tapis Jobs Documentation.</a>

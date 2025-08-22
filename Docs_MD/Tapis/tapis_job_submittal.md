@@ -63,6 +63,8 @@ Run this once to install the SDK:
 ```bash
 pip install tapipy
 ```
+
+tapipy may have already been installed in Jupyter Hub.
 :::
 
 :::{dropdown} **Connect to Tapis**
