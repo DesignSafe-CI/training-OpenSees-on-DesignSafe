@@ -73,9 +73,9 @@ work_dir = get_user_work_path(t, "ls6")
 #### Files
 You can find these files in Community Data.
 
-```{dropdown} get_user_work_path.py
+```{dropdown} get_user_work_tapis_uri.py
 :icon: file-code
-```{literalinclude} ../../OpsUtils/OpsUtils/Tapis/get_user_work_path.py
+```{literalinclude} ../../OpsUtils/OpsUtils/Tapis/get_user_work_tapis_uri.py
 :language: none
 ```
 

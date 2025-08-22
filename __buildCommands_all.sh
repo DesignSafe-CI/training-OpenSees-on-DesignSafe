@@ -1,7 +1,12 @@
 pip install jupyter-book
-pip install OpenSeesPy
 
-cd ~/MyData/_ToCommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe
+python -m pip install sphinx-last-updated-by-git
+python -c "import sphinx_last_updated_by_git; print('ok')"
+
+
+# pip install OpenSeesPy
+
+# cd ~/MyData/_ToCommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe
 
 jupyter-book clean . --all; python generate_md_toc.py ; jupyter-book build .
 

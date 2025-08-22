@@ -210,8 +210,7 @@ parts:
     - file: Docs_MD/Tapis/tapis_job_submittal.md
     # - file: Docs_MD/Tapis/tapis_job_attributes.md
     
-    
-     
+
     - file: Docs_MD/Tapis/tapis_Apps.md
     - file: Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb
     - file: Docs_MD/Tapis/tapis_AppTemp_Schema.md
@@ -282,54 +281,54 @@ parts:
 
   - caption: Python Utilities
     chapters:
-    - file: OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Intro.md
+    - file: OpsUtils_Docs/Misc/OpsUtils_Intro.md
       # sections:
-    - file: OpsUtils_Docs/OpsUtils_Misc/OpsUtils_Misc.md
+    - file: OpsUtils_Docs/Misc/OpsUtils_Misc.md
       sections:
-      - file: OpsUtils_Docs/OpsUtils_Misc/convert_tacc_time.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/convert_time_unix.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/display_images_in_xbox.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/empty_folder.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/flatten_dict.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/get_files_recursive.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/get_now_unix.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/queryDF.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/show_text_file_in_accordion.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/show_video.md
-      - file: OpsUtils_Docs/OpsUtils_Misc/unix_to_tacc_time.md
+      - file: OpsUtils_Docs/Misc/convert_tacc_time.md
+      - file: OpsUtils_Docs/Misc/convert_time_unix.md
+      - file: OpsUtils_Docs/Misc/display_images_in_xbox.md
+      - file: OpsUtils_Docs/Misc/empty_folder.md
+      - file: OpsUtils_Docs/Misc/flatten_dict.md
+      - file: OpsUtils_Docs/Misc/get_files_recursive.md
+      - file: OpsUtils_Docs/Misc/get_now_unix.md
+      - file: OpsUtils_Docs/Misc/queryDF.md
+      - file: OpsUtils_Docs/Misc/show_text_file_in_accordion.md
+      - file: OpsUtils_Docs/Misc/show_video.md
+      - file: OpsUtils_Docs/Misc/unix_to_tacc_time.md
       
-    - file: OpsUtils_Docs/OpsUtils_Tapis/OpsUtils_Tapis.md
+    - file: OpsUtils_Docs/Tapis/OpsUtils_Tapis.md
       sections:
-      - file: OpsUtils_Docs/OpsUtils_Tapis/analyze_tacc_job_history.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/bump_app_version.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/cancel_tapis_job.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/connect_tapis.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/display_tapis_app_schema.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/establish_tms_credentials.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/explore_tapis_job.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/filter_tapis_jobs_df.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/find_work_path_path.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/find_work_path.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_latest_app_version.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_system_queues.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_app_schema.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_all_files.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_description.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_history_data.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_metadata.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_job_status.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs_df.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_jobs.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_tenant_and_username.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_tapis_username.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/get_user_work_path.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/interactive_tapis_job_explorer.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/monitor_tapis_job.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/print_nested_tapisresult.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/revoke_tms_credentials.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/run_tapis_job.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/submit_tapis_job.md
-      - file: OpsUtils_Docs/OpsUtils_Tapis/validate_app_folder.md
+      - file: OpsUtils_Docs/Tapis/analyze_tacc_job_history.md
+      - file: OpsUtils_Docs/Tapis/bump_app_version.md
+      - file: OpsUtils_Docs/Tapis/cancel_tapis_job.md
+      - file: OpsUtils_Docs/Tapis/connect_tapis.md
+      - file: OpsUtils_Docs/Tapis/display_tapis_app_schema.md
+      - file: OpsUtils_Docs/Tapis/establish_tms_credentials.md
+      - file: OpsUtils_Docs/Tapis/explore_tapis_job.md
+      - file: OpsUtils_Docs/Tapis/filter_tapis_jobs_df.md
+      - file: OpsUtils_Docs/Tapis/find_work_path_path.md
+      - file: OpsUtils_Docs/Tapis/find_work_path.md
+      - file: OpsUtils_Docs/Tapis/get_latest_app_version.md
+      - file: OpsUtils_Docs/Tapis/get_system_queues.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_app_schema.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_job_all_files.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_job_description.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_job_history_data.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_job_metadata.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_job_status.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_jobs_df.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_jobs.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_tenant_and_username.md
+      - file: OpsUtils_Docs/Tapis/get_tapis_username.md
+      - file: OpsUtils_Docs/Tapis/get_user_work_tapis_uri.md
+      - file: OpsUtils_Docs/Tapis/interactive_tapis_job_explorer.md
+      - file: OpsUtils_Docs/Tapis/monitor_tapis_job.md
+      - file: OpsUtils_Docs/Tapis/print_nested_tapisresult.md
+      - file: OpsUtils_Docs/Tapis/revoke_tms_credentials.md
+      - file: OpsUtils_Docs/Tapis/run_tapis_job.md
+      - file: OpsUtils_Docs/Tapis/submit_tapis_job.md
+      - file: OpsUtils_Docs/Tapis/validate_app_folder.md
       
   - caption: Table of Contents
     chapters:
