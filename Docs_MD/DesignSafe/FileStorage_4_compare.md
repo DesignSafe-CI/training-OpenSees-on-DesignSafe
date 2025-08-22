@@ -1,4 +1,4 @@
-# File Storage Comparison
+# Comparison
 ***Comparing Storage Options***
 
 Here is a **compact comparison table** that shows at a glance how **Corral**, **Work**, and **Node-local** differ in persistence, performance, and access. You can immediately see why Corral is for **long-term use**, while Work and node-local are for **jobs**.

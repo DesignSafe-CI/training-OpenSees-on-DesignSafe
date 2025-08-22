@@ -1,4 +1,4 @@
-# FileStorage on Corral
+# On Corral
 ***The Backbone of DesignSafe Storage***
 
 For **long-term, collaborative, and cross-platform data management**, DesignSafe uses **Corral**, a dedicated storage system fully integrated with the DesignSafe interface. Corral is the **central file system at TACC** that underpins most persistent storage in DesignSafe, including:

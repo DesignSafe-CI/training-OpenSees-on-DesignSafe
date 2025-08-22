@@ -1,4 +1,4 @@
-# File Storage: Concepts
+# Concepts
 
 ***Understanding Storage on DesignSafe***
 

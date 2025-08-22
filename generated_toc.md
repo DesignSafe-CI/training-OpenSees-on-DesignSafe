@@ -31,13 +31,13 @@
 - [Allocations](Docs_MD/DesignSafe/HPC_allocations.md)
 
 ## File Storage
-- [File Storage: Concepts](Docs_MD/DesignSafe/FileStorage_a_Concepts.md)
-- [File Storage: Practical Usage](Docs_MD/DesignSafe/FileStorage_b_PracticalUsage.md)
-- [File Storage: Reference Tools](Docs_MD/DesignSafe/FileStorage_c_ReferenceTools.md)
-- [FileStorage on Corral](Docs_MD/DesignSafe/FileStorage_1_corral.md)
-- [FileStorage on Compute System](Docs_MD/DesignSafe/FileStorage_2_compsys.md)
-- [FileStorage on Compute Nodes](Docs_MD/DesignSafe/FileStorage_3_compnode.md)
-- [File Storage Comparison](Docs_MD/DesignSafe/FileStorage_4_compare.md)
+- [Concepts](Docs_MD/DesignSafe/FileStorage_a_Concepts.md)
+- [Practical Usage](Docs_MD/DesignSafe/FileStorage_b_PracticalUsage.md)
+- [Reference Tools](Docs_MD/DesignSafe/FileStorage_c_ReferenceTools.md)
+- [On Corral](Docs_MD/DesignSafe/FileStorage_1_corral.md)
+- [On Compute System](Docs_MD/DesignSafe/FileStorage_2_compsys.md)
+- [On Compute Nodes](Docs_MD/DesignSafe/FileStorage_3_compnode.md)
+- [Comparison](Docs_MD/DesignSafe/FileStorage_4_compare.md)
 
 ## JupyterHub
 - [JupyterHub Environment](Docs_MD/DesignSafe/JupyterHub_Intro.md)
@@ -163,8 +163,8 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 
 ## Tapis Apps
-- [Tapis-Job Submittal](Docs_MD/Tapis/tapis_job_submittal.md)
-- [Tapis Apps](Docs_MD/Tapis/tapis_Apps.md)
+- [Tapis Jobs & Apps](Docs_MD/Tapis/tapis_JobsAndApps.md)
+- [tapis_AppOptions](Docs_MD/Tapis/tapis_AppOptions.md)
 - [tapis_submitJob_getApps_List](Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 - [Tapis App Schema](Docs_MD/Tapis/tapis_AppTemp_Schema.md)

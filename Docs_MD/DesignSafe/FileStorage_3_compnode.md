@@ -1,4 +1,4 @@
-# FileStorage on Compute Nodes
+# On Compute Nodes
 ***Storage on Compute Nodes: /tmp***
 
 In addition to *Home*, *Work*, and *Scratch*, **each compute node** on any Compute System such as Stampede3 **has its own local temporary storage**, typically mounted at:
