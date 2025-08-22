@@ -20,8 +20,8 @@ sphinx:
 
 launch_buttons:
   notebook_interface: "jupyterlab"
-  colab_url: "https://colab.research.google.com"
-  thebe: true
+  # colab_url: "https://colab.research.google.com"
+  thebe: false
 
 repository:
   url: https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe
