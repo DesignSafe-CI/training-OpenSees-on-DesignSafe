@@ -1,10 +1,11 @@
 # app.json
 
-Here's a **detailed walkthrough of each field** in the `app.json` file for the `OpenSees-express` Tapis App.
+Here's a **detailed walkthrough of each field** in the *app.json* file for the *OpenSees-express* Tapis App.
 
 https://github.com/TACC/WMA-Tapis-Templates/blob/main/applications/opensees-express/app.json
 
-:::{dropdown} app.json
+##  App-Definition File
+:::{dropdown} **app.json**
 The following json was copied from github and may have changed.
 ```
 {

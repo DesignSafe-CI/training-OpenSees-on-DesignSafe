@@ -89,5 +89,5 @@ def submit_tapis_job(t, job_description, askConfirmJob: bool = True):
             'jobUuid': jobUuid,
             'submitted_job': submitted_job,
             'job_start_time': job_start_time,
-            'runJobStatus': 'Finished',
+            'runJobStatus': 'Submitted',
         }

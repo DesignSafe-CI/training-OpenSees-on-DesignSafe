@@ -113,35 +113,24 @@ def run_tapis_job(
             if not job_description:
                 print('Creating job_description')
                 job_description = OpsUtils.get_tapis_job_description(t, tapisInput)
-            print('job_description:',OpsUtils.display_tapis_results(job_description))
+                print('job_description:',OpsUtils.display_tapis_results(job_description))
         
         if job_description == -1:
             return {"runJobStatus": "Incomplete"}
     
+        returnDict = OpsUtils.submit_tapis_job(t, job_description, askConfirmJob)
         submit_out = widgets.Output()
         submit_accordion = widgets.Accordion(children=[submit_out])
         # submit_accordion.selected_index = 0
-        
         submit_accordion.set_title(0, f'Submit Returned Data')
 
         with submit_out:
-            returnDict = OpsUtils.submit_tapis_job(t, job_description, askConfirmJob)
-
-        
             OpsUtils.display_tapis_results(returnDict)
         
         display(submit_accordion)
-        
-        if returnDict.get("runJobStatus") == "Submitted":
-
-            monitor_out = widgets.Output()
-            monitor_accordion = widgets.Accordion(children=[monitor_out])
-            monitor_accordion.selected_index = 0
-            monitor_accordion.set_title(0, f'Monitor Job')
-            display(monitor_accordion)
-            with monitor_out:
-            
-                print("job_start_time:", returnDict.get("job_start_time"))
+    
+        if returnDict.get("runJobStatus") == "Finished":
+            print("job_start_time:", returnDict.get("job_start_time"))
             jobUuid = returnDict.get("jobUuid")
             job_accordion.set_title(0, f'Job Run:  {jobUuid} ...')
     
@@ -151,12 +140,15 @@ def run_tapis_job(
             JobStatusData = {}
     
             if monitor_job and jobUuid:
+                monitor_out = widgets.Output()
+                monitor_accordion = widgets.Accordion(children=[monitor_out])
+                monitor_accordion.selected_index = 0
+                monitor_accordion.set_title(0, f'Monitor Job')
                 with monitor_out:
                     OpsUtils.monitor_tapis_job(t, jobUuid, returnDict.get("job_start_time"), askConfirmMonitorRT)
     
                 # Always fetch basic status after monitoring
                 JobStatusData = OpsUtils.get_tapis_job_status(t, jobUuid, tapisInput,return_values=True)
-                job_accordion.set_title(0, f'Job :  {jobUuid} {JobStatusData.status} {JobStatusData.condition}')
     
                 # Optional enrichments
                 if get_job_metadata:

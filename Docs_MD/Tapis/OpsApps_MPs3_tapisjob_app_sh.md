@@ -4,7 +4,8 @@ This script runs on the Stampede3 compute node after the job is submitted via SL
 
 https://github.com/TACC/WMA-Tapis-Templates/blob/main/applications/opensees-mp/opensees-mp-s3/tapisjob_app.sh
 
-:::{dropdown} tapisjob_app.sh
+## App-Definition File
+:::{dropdown} **tapisjob_app.sh**
 The following json was copied from github and may have changed.
 
 ```
@@ -36,10 +37,10 @@ cd ..
 
 | Step                           | Purpose                                                                                  |
 | ------------------------------ | ---------------------------------------------------------------------------------------- |
-| `set -x`                       | Enables debug output in logs                                                             |
-| Parses `$1` and `$2`           | Reads the OpenSees binary name and `.tcl` script filename from parameters                |
-| `cd "${inputDirectory}"`       | Changes to the user’s input directory                                                    |
-| `ibrun $BINARYNAME $TCLSCRIPT` | Runs OpenSeesMP in parallel across all assigned cores using SLURM's MPI launcher `ibrun` |
+| *set -x*                       | Enables debug output in logs                                                             |
+| Parses *$1* and *$2*           | Reads the OpenSees binary name and *.tcl* script filename from parameters                |
+| *cd "${inputDirectory}"*       | Changes to the user’s input directory                                                    |
+| *ibrun $BINARYNAME $TCLSCRIPT* | Runs OpenSeesMP in parallel across all assigned cores using SLURM's MPI launcher *ibrun* |
 | Error check block              | Detects failure and exits cleanly if the job fails                                       |
 
 ## Line-by-Line Explanation
@@ -56,9 +57,9 @@ INPUTSCRIPT=$2
 TCLSCRIPT="${INPUTSCRIPT##*/}"
 ```
 
-* `$1` = `"OpenSeesMP"` from app parameters
-* `$2` = name of the `.tcl` script
-* `TCLSCRIPT` strips the path, keeping only the filename
+* *$1* = *"OpenSeesMP"* from app parameters
+* *$2* = name of the *.tcl* script
+* *TCLSCRIPT* strips the path, keeping only the filename
 
 ```bash
 cd "${inputDirectory}"
@@ -70,7 +71,7 @@ cd "${inputDirectory}"
 ibrun $BINARYNAME $TCLSCRIPT
 ```
 
-* The core of the job: runs OpenSeesMP using TACC’s `ibrun`, which launches an MPI job across the allocated nodes/cores.
+* The core of the job: runs OpenSeesMP using TACC’s *ibrun*, which launches an MPI job across the allocated nodes/cores.
 
 ```bash
 if [ ! $? ]; then
@@ -85,9 +86,9 @@ fi
 
 | Task            | Mechanism                                 |
 | --------------- | ----------------------------------------- |
-| Launch OpenSees | `ibrun OpenSeesMP model.tcl`              |
+| Launch OpenSees | *ibrun OpenSeesMP model.tcl*              |
 | Handle failure  | Exit if OpenSees crashes or returns error |
-| Log output      | `set -x` prints all commands for tracing  |
+| Log output      | *set -x* prints all commands for tracing  |
 
 
 

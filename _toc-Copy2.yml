@@ -36,45 +36,18 @@ parts:
       
     - file: Docs_MD/DesignSafe/ComputeEnv_Guide.md
 
-  - caption: HPC on TACC
-    chapters:
-    - file: Docs_MD/DesignSafe/HPC_Node.md
-      sections:
-      - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
-    - file: Docs_MD/DesignSafe/HPC_Core.md
-    - file: Docs_MD/DesignSafe/HPC_Queue.md
-      sections:
-      - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
-    - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
-    - file: Docs_MD/DesignSafe/HPC_allocations.md    
-
-    - file: Docs_MD/DesignSafe/HPCenv.md
-    # - file: Docs_MD/DesignSafe/HPCenv_Intro.md
-    - file: Docs_MD/DesignSafe/SLURM_TACCjobs.md
-      sections:
-      - file: Docs_MD/DesignSafe/SLURM_Intro.md
-      - file: Docs_MD/DesignSafe/SLURM_Workflow.md
-      - file: Docs_MD/DesignSafe/SLURM_Scheduling.md
-      - file: Docs_MD/DesignSafe/SLURM_Input.md
-      - file: Docs_MD/DesignSafe/SLURM_Script.md
-      - file: Docs_MD/DesignSafe/SLURM_Run.md
-      - file: Docs_MD/DesignSafe/SLURM_OutErrFiles.md
-      - file: Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.md
-        sections:
-          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction.md
-          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.md
-    
-
-  - caption: JupyterHub
-    chapters:
-    - file: Docs_MD/DesignSafe/JupyterHub_Intro.md
-      sections:
-      - file: Docs_MD/DesignSafe/AccessJupyter.md
-      - file: Docs_MD/DesignSafe/JupyterHub_Workflow.md
-    - file: Docs_MD/DesignSafe/JupyterHub_Tools.md
-    - file: Docs_MD/DesignSafe/HPCenv_HPCjupyter.md
-
-    
+  # - caption: HPC on TACC
+  #   chapters:
+  #   - file: Docs_MD/DesignSafe/HPC_Node.md
+  #     sections:
+  #     - file: Docs_MD/DesignSafe/HPC_NodeStampede3.md
+  #   - file: Docs_MD/DesignSafe/HPC_Core.md
+  #   - file: Docs_MD/DesignSafe/HPC_Queue.md
+  #     sections:
+  #     - file: Docs_MD/DesignSafe/HPC_QueueStampede3.md
+  #   - file: Docs_MD/DesignSafe/HPC_QueueSelexn.md
+  #   - file: Docs_MD/DesignSafe/HPC_allocations.md    
+        
     
   - caption: File Storage
     chapters:
@@ -85,6 +58,14 @@ parts:
     - file: Docs_MD/DesignSafe/FileStorage_2_compsys.md      
     - file: Docs_MD/DesignSafe/FileStorage_3_compnode.md
     - file: Docs_MD/DesignSafe/FileStorage_4_compare.md
+
+  - caption: JupyterHub
+    chapters:
+    - file: Docs_MD/DesignSafe/JupyterHub_Intro.md
+      sections:
+      - file: Docs_MD/DesignSafe/AccessJupyter.md
+      - file: Docs_MD/DesignSafe/JupyterHub_Workflow.md
+    - file: Docs_MD/DesignSafe/JupyterHub_Tools.md
 
 
     
@@ -105,7 +86,7 @@ parts:
     
 
  
-  - caption: OpenSees in Web Portal
+  - caption: DesignSafe Web Portal
     chapters:      
     - file: Docs_MD/DesignSafe/WebPortal_Overview.md
     - file: Docs_MD/DesignSafe/WebPortal_Overview_Workflow.md
@@ -136,7 +117,7 @@ parts:
     - file: Docs_MD/DesignSafe/RunOpsInDS_JupyterNotebook.md
 
 
-  - caption: Running OpenSees
+  - caption: OpenSees Execution
     chapters:    
     - file: Docs_MD/DesignSafe/Ops_CommandStrux.md
       sections:
@@ -159,24 +140,24 @@ parts:
 
 
 
-  # - caption: HPC on TACC
-  #   chapters:
-  #   - file: Docs_MD/DesignSafe/HPCenv.md
-  #   # - file: Docs_MD/DesignSafe/HPCenv_Intro.md
-  #   - file: Docs_MD/DesignSafe/SLURM_TACCjobs.md
-  #     sections:
-  #     - file: Docs_MD/DesignSafe/SLURM_Intro.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Workflow.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Scheduling.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Input.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Script.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Run.md
-  #     - file: Docs_MD/DesignSafe/SLURM_OutErrFiles.md
-  #     - file: Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.md
-  #       sections:
-  #         - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction.md
-  #         - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.md
-  #   - file: Docs_MD/DesignSafe/HPCenv_HPCjupyter.md
+  - caption: HPC on TACC
+    chapters:
+    - file: Docs_MD/DesignSafe/HPCenv.md
+    # - file: Docs_MD/DesignSafe/HPCenv_Intro.md
+    - file: Docs_MD/DesignSafe/SLURM_TACCjobs.md
+      sections:
+      - file: Docs_MD/DesignSafe/SLURM_Intro.md
+      - file: Docs_MD/DesignSafe/SLURM_Workflow.md
+      - file: Docs_MD/DesignSafe/SLURM_Scheduling.md
+      - file: Docs_MD/DesignSafe/SLURM_Input.md
+      - file: Docs_MD/DesignSafe/SLURM_Script.md
+      - file: Docs_MD/DesignSafe/SLURM_Run.md
+      - file: Docs_MD/DesignSafe/SLURM_OutErrFiles.md
+      - file: Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.md
+        sections:
+          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction.md
+          - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.md
+    - file: Docs_MD/DesignSafe/HPCenv_HPCjupyter.md
           
 
 
@@ -187,7 +168,9 @@ parts:
     - file: Docs_MD/Tapis/tapis_interfacing.md
     - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
     - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
-
+    - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
+    # - file: Docs_MD/Tapis/TapisFileManage.md
+    - file: Jupyter_Notebooks/paths_Tapis.ipynb
 
   - caption: Tapis Jobs
     chapters:  
@@ -213,6 +196,15 @@ parts:
     
 
 
+  - caption: Run OpenSees using Tapis Apps
+    chapters:   
+      - file: Docs_MD/DesignSafe/DSapps_OpenSees.md
+      - file: Docs_MD/Tapis/OpsApps_MPs3_submit.md
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
+
+
  
   - caption: Tapis Apps
     chapters:  
@@ -228,30 +220,16 @@ parts:
     - file: Jupyter_Notebooks/tapis_submitJob_getApps_List.ipynb
     - file: Docs_MD/Tapis/tapis_AppTemp_Schema.md
     - file: Jupyter_Notebooks/tapis_submitJob_getApps_Schema.ipynb
-    - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
-    - file: Jupyter_Notebooks/paths_Tapis.ipynb
 
-
-
-
-
-  - caption: Run OpenSees using Tapis Apps
-    chapters:   
-      - file: Docs_MD/DesignSafe/DSapps_OpenSees.md
-      - file: Docs_MD/Tapis/OpsApps_MPs3_submit.md
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
-
-
-    
-  - caption: Tapis App Templates
-    chapters: 
     - file: Docs_MD/DesignSafe/DSapps.md
       sections:
       - file: Docs_MD/DesignSafe/DSapps_OpenFOAM.md
       - file: Docs_MD/DesignSafe/DSapps_ADCIRC.md
       - file: Docs_MD/DesignSafe/DSapps_Compare.md      
+    
+  - caption: Tapis App Templates
+    chapters: 
+
     - file: Docs_MD/Tapis/tapis_AppTemplates.md
     - file: Docs_MD/Tapis/tapis_AppTemp_Structure.md
     - file: Docs_MD/Tapis/tapis_appsDev_Jsons.md

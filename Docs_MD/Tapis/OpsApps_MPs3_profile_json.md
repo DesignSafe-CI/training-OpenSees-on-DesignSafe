@@ -2,6 +2,28 @@
     
 This file ensures the Stampede3 environment is correctly set up for OpenSeesMP.
 
+## App-Definition File
+:::{dropdown}**profile.json**
+```
+{
+    "name": "OpenSees_default",
+    "description": "Modules to load for the default version of OpenSees",
+    "moduleLoads": [
+        {
+            "modulesToLoad": [
+                "hdf5/1.14.4",
+                "opensees"
+            ],
+            "moduleLoadCommand": "module load"
+        }
+    ],
+    "hiddenOptions": [
+        "MEM"
+    ]
+}
+```
+:::
+
 ## What It Does
 
 | Field           | Meaning                                                  |

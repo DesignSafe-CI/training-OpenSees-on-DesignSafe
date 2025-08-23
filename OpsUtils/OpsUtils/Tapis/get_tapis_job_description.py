@@ -311,13 +311,11 @@ def get_tapis_job_description(t, tapisInput):
             job_description["archiveSystemId"] = "designsafe.storage.default"
             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
-        if tapisInput["archive_system"] and tapisInput["archive_system"].lower() in ["null","none",""]:
-            print('a1')
-            job_description['archiveFilter'] = {'includes':['none'],'excludes':['BasicExamples/*'],"includeLaunchFiles":True}
-            # job_description["archiveSystemId"] = ''
-            # job_description["archiveSystemDir"] = ''
+        # if tapisInput["archive_system"] and tapisInput["archive_system"].lower() in ["null","none",""]:
+        #     job_description['archiveFilter'] = {'includes':['none'],'excludes':['*'],"includeLaunchFiles":True}
+
             
-    print(job_description)
+    
     # if nmiss == 0:
     #     for envVar in ['zipFileIn','zipFolderOut']:
     #         if envVar in tapisInput:
