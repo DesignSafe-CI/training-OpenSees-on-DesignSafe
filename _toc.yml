@@ -201,7 +201,8 @@ parts:
       - file: Docs_MD/DesignSafe/DSapps_OpenSees.md
       - file: Docs_MD/Tapis/OpsApps_MPs3_submit.md
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact.ipynb
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
+      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
 
 
  
@@ -325,6 +326,7 @@ parts:
       - file: OpsUtils_Docs/Tapis/get_tapis_jobs.md
       - file: OpsUtils_Docs/Tapis/get_tapis_tenant_and_username.md
       - file: OpsUtils_Docs/Tapis/get_tapis_username.md
+      - file: OpsUtils_Docs/Tapis/get_user_path_tapis_uri.md
       - file: OpsUtils_Docs/Tapis/get_user_work_tapis_uri.md
       - file: OpsUtils_Docs/Tapis/interactive_tapis_job_explorer.md
       - file: OpsUtils_Docs/Tapis/monitor_tapis_job.md

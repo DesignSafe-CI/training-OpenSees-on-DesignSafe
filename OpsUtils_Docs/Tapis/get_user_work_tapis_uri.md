@@ -1,74 +1,75 @@
 # get_user_work_tapis_uri
-***get_user_work_tapis_uri(t,system_id: str = "stampede3",*,valid_systems: Iterable[str] = ("stampede3", "ls6", "frontera"),app_suffix: str = "-credential",job_name: str = "getWork",) -> Path***
 
+***def get_user_path_tapis_uri(
+    t,
+    file_system: str = "none",                  # "none" | "mydata" | "community" | "work/stampede3","work/ls6","work/frontera"
+
+    paths_file_path: str = "~/MyData/.tapis_user_paths.json",
+    force_refresh: bool = False,
+) -> Union[str, Dict]***
+    
+    
 ## Purpose
 
-Return the user’s **work** directory on a target HPC system by submitting the
-system’s *credential* app (e.g., *stampede3-credential*) and parsing the job’s
-archive directory. This avoids hard-coding paths and stays aligned with site
-conventions.
+Return the user’s **Work base** as a **Tapis URI** for a given HPC system (e.g., *stampede3*, *ls6*, *frontera*). The function submits the system’s **credential app**, reads the job’s *archiveSystemDir* (an HPC filesystem path), and constructs a Tapis URI by taking the path prefix up to the system name and converting it to:
 
-## Signature
+```
+tapis://<tapis_work_system_id>/<work-prefix>/<system_id>[/]
+```
+
+* By default there’s **no trailing slash**; set *ensure_trailing_slash=True* to include it.
+* The default Tapis Work system on DesignSafe is ***cloud.data***.
+
+#### Signature
 
 ```python
-get_user_work_path(
+get_user_work_tapis_uri(
     t,
     system_id: str = "stampede3",
     *,
     valid_systems: Iterable[str] = ("stampede3", "ls6", "frontera"),
+    tapis_work_system_id: str = "cloud.data",
     app_suffix: str = "-credential",
     job_name: str = "getWork",
-) -> pathlib.Path
-````
-
-## How it works
-
-1. Builds *app_id = f"{system_id}{app_suffix}"* (e.g., *stampede3-credential*).
-2. Queries the app’s **latest** version.
-3. Submits a tiny credential job.
-4. Reads *archiveSystemDir* from the submission response.
-5. Truncates that path at */{system_id}* to produce a stable **work** root
-   (e.g., */work2/01121/stampede3*).
-
-## Examples
-
-```python
-from tapipy.tapis import Tapis
-from pathlib import Path
-
-# Assume t is an authenticated Tapipy client
-work_dir = get_user_work_path(t, "stampede3")
-print(work_dir)  # -> /work2/01121/stampede3
+    ensure_trailing_slash: bool = False,
+) -> str
 ```
 
-Switching system:
+#### Parameters
 
-```python
-work_dir = get_user_work_path(t, "ls6")
+* **t** — authenticated Tapipy v3 client.
+* **system\_id** — target HPC system (*"stampede3"*, *"ls6"*, *"frontera"*).
+* **valid\_systems** — allowed system IDs for validation.
+* **tapis\_work\_system\_id** — Tapis system that fronts Work (DesignSafe: *"cloud.data"*).
+* **app\_suffix** — suffix for the credential app ID (*"{system_id}{app_suffix}"*).
+* **job\_name** — name for the short-lived credential job.
+* **ensure\_trailing\_slash** — append a */* at the end of the returned URI (handy for simple string joins).
+
+#### Returns
+
+A **string** Tapis URI representing the user’s Work base for the given system, for example:
+
+```
+tapis://cloud.data/work2/01121/jdoe/stampede3/
 ```
 
-## Errors & Troubleshooting
+*(trailing slash present only if *ensure_trailing_slash=True*)*
 
-* **ValueError: Unknown system**
-  Ensure *system_id* is one of the allowed systems or extend *valid_systems*.
+#### Raises
 
-* **Could not resolve latest version for app**
-  Your site may not expose *getAppLatestVersion*. The helper falls back to
-  *getApp(..., appVersion="latest")*. If both fail, confirm your app ID (e.g.,
-  *stampede3-credential*) exists and you have permission to read it.
+* **ValueError** — unknown *system_id*.
+* **RuntimeError** — app version resolution, job submission, or response fields are missing/invalid.
 
-* **Response missing *archiveSystemDir* or cannot parse work path**
-  Check the job definition for the credential app. If the archive path format
-  changed, update the parsing rule (regex) accordingly.
+#### Example
 
-## Design Notes
+```python
+uri = get_user_work_tapis_uri(t, system_id="stampede3", ensure_trailing_slash=True)
+# e.g., "tapis://cloud.data/work2/01121/jdoe/stampede3/"
+inputs = uri + "inputs/model.tcl"
+outputs = uri + "outputs/run01/"
+```
 
-* Returns a *pathlib.Path* for convenient path ops.
-* Raises exceptions (no *print*) so upstream callers can log or handle errors
-  consistently.
-* If your site’s naming differs (e.g., *-cred* instead of *-credential*), set
-  *app_suffix* accordingly.
-
+> Tip: Run this once per system and **cache** the resulting base URIs (e.g., in *~/.tapis_user_paths.json*) for reuse across notebooks and job submissions.
 
 #### Files
 You can find these files in Community Data.

@@ -90,20 +90,23 @@ def get_tapis_job_description(t, tapisInput):
     if "sourceUrl" not in tapisInput:
         if "storage_system_baseURL" not in tapisInput:
             storage_system_lower = tapisInput.get("storage_system", "").lower()
-            if "mydata" in storage_system_lower:
-                # Get user information for MyData path
-                user_info = t.authenticator.get_userinfo()
-                username = user_info.username
-                tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
-            elif "community" in storage_system_lower:
-                tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
-            elif "published" in storage_system_lower:
-                tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
-            else:
-                print("Please specify tapisInput['storage_system_baseURL']!")
-                return -1
-    
+            # if "mydata" in storage_system_lower:
+            #     # Get user information for MyData path
+            #     user_info = t.authenticator.get_userinfo()
+            #     username = user_info.username
+            #     tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
+            # elif "community" in storage_system_lower:
+            #     tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
+            # elif "published" in storage_system_lower:
+            #     tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
+            # else:
+            #     print("Please specify tapisInput['storage_system_baseURL']!")
+            #     return -1
+            tapisInput['storage_system_baseURL'] = OpsUtils.get_user_path_tapis_uri(t,storage_system_lower)
+            # print("tapisInput['storage_system_baseURL']",tapisInput['storage_system_baseURL'])
         tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
+    
+    print('input directory:',tapisInput["sourceUrl"])
         
     # # --- Resolve storage baseURL if needed ---
     # if "storage_system_baseURL" not in tapisInput:
@@ -205,18 +208,22 @@ def get_tapis_job_description(t, tapisInput):
             job_description["fileInputs"] = fileInputs
             job_description["parameterSet"] = parameterSet
 
-            # Archive location
-            if "archive_system" in tapisInput:
-                if tapisInput["archive_system"] in ["MyData"]:
-                    job_description["archiveSystemId"] = "designsafe.storage.default"
-                    job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-                elif tapisInput["archive_system"] == "Temp":
-                    job_description["archiveSystemId"] = "cloud.data"
-                    job_description["archiveSystemDir"] = "/tmp/${JobOwner}/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
-            else:
-                # default to MyData
-                job_description["archiveSystemId"] = "designsafe.storage.default"
-                job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+            # # Archive location
+            # if "archive_system" in tapisInput:
+            #     if tapisInput["archive_system"].lower() in ["null","none"]:
+            #         job_description["archiveSystemId"] = 'null'
+            #         job_description["archiveSystemDir"] = 'null'
+            #     else:
+            #         if tapisInput["archive_system"] in ["MyData"]:
+            #             job_description["archiveSystemId"] = "designsafe.storage.default"
+            #             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
+            #         elif tapisInput["archive_system"] == "Temp":
+            #             job_description["archiveSystemId"] = "cloud.data"
+            #             job_description["archiveSystemDir"] = "/tmp/${JobOwner}/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
+            # else:
+            #     # default to MyData
+            #     job_description["archiveSystemId"] = "designsafe.storage.default"
+            #     job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
     else:
         # HPC (e.g., OpenSeesMP/SP on Stampede3)
@@ -300,11 +307,17 @@ def get_tapis_job_description(t, tapisInput):
             else:
                 job_description["archiveSystemId"] = "designsafe.storage.default"
                 job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-
         else:
             job_description["archiveSystemId"] = "designsafe.storage.default"
             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
+        if tapisInput["archive_system"] and tapisInput["archive_system"].lower() in ["null","none",""]:
+            print('a1')
+            job_description['archiveFilter'] = {'includes':['none'],'excludes':['BasicExamples/*'],"includeLaunchFiles":True}
+            # job_description["archiveSystemId"] = ''
+            # job_description["archiveSystemDir"] = ''
+            
+    print(job_description)
     # if nmiss == 0:
     #     for envVar in ['zipFileIn','zipFolderOut']:
     #         if envVar in tapisInput:
@@ -317,5 +330,5 @@ def get_tapis_job_description(t, tapisInput):
         return -1
     else:
         # print("All Input is Complete")
-        print('job_description',job_description)
+        # print('job_description',job_description)
         return job_description
