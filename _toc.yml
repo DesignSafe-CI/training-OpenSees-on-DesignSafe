@@ -275,17 +275,15 @@ parts:
     - file: Docs_MD/Tapis/OpsApps_Express.md
       sections:
       - file: Docs_MD/Tapis/OpsApps_Express_fileStrux.md
-        sections:
-        - file: Docs_MD/Tapis/OpsApps_Express_app_json.md
-        - file: Docs_MD/Tapis/OpsApps_Express_app_sh.md
+      - file: Docs_MD/Tapis/OpsApps_Express_app_json.md
+      - file: Docs_MD/Tapis/OpsApps_Express_app_sh.md
       - file: Docs_MD/Tapis/OpsApps_Express_example.md
     - file: Docs_MD/Tapis/OpsApps_MPs3.md
       sections:
       - file: Docs_MD/Tapis/OpsApps_MPs3_fileStrux.md
-        sections:
-        - file: Docs_MD/Tapis/OpsApps_MPs3_app_json.md
-        - file: Docs_MD/Tapis/OpsApps_MPs3_profile_json.md
-        - file: Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.md
+      - file: Docs_MD/Tapis/OpsApps_MPs3_app_json.md
+      - file: Docs_MD/Tapis/OpsApps_MPs3_profile_json.md
+      - file: Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.md
       
 
 
