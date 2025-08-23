@@ -34,31 +34,40 @@ This environment is optimized for:
 You can run OpenSees in a variety of flexible ways from within this environment:
 
 1. **Run OpenSees at the Terminal**
+
    Launch any Tcl or Python OpenSees script interactively using the terminal.
+   
    → This is your **recommended starting point** if it is a natural transition from your personal desktop.
 
-2. **Run OpenSeesPy in a Jupyter Notebook**
+3. **Run OpenSeesPy in a Jupyter Notebook**
+
    Embed scripts and results in a single document for reproducibility and sharing.
 
-3. **Run Tcl or Python OpenSees via `os.system()`**
+5. **Run Tcl or Python OpenSees via `os.system()`**
+
    Execute command-line jobs from within a Python notebook. Works for both sequential and parallel jobs.
 
    * Note: `%run` can also work, but doesn’t accept variable substitution.
 
-4. **Run OpenSeesPy in the Python Console**
+7. **Run OpenSeesPy in the Python Console**
+
    Useful for quick one-liners, loading external modules, or running python scripts you had developed on your desktop in Spyder or another IDE.
 
-5. **Pre- and Post-Process Your Models**
+9. **Pre- and Post-Process Your Models**
+
    Use Python, NumPy, Pandas, Plotly, and other libraries to prepare inputs or analyze results.
 
-6. **Submit HPC Jobs Using Tapis**
-   Automate job submission from notebooks using the Tapis Python SDK (Tapipy) or helper functions.
+11. **Submit HPC Jobs Using Tapis**
 
-7. **Use the Integrated File Editor and Manager**
-   Quickly edit your input files or scripts and organize your workspace.
+    Automate job submission from notebooks using the Tapis Python SDK (Tapipy) or helper functions.
 
-8. **Upload and Download Files with the Uploader Tool**
-   Manage your working directory and sync files from external sources.
+13. **Use the Integrated File Editor and Manager**
+
+    Quickly edit your input files or scripts and organize your workspace.
+
+14. **Upload and Download Files with the Uploader Tool**
+
+    Manage your working directory and sync files from external sources.
 
 ## Summary
 

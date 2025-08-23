@@ -157,26 +157,6 @@ parts:
 
 
 
-
-
-  # - caption: HPC on TACC
-  #   chapters:
-  #   - file: Docs_MD/DesignSafe/HPCenv.md
-  #   # - file: Docs_MD/DesignSafe/HPCenv_Intro.md
-  #   - file: Docs_MD/DesignSafe/SLURM_TACCjobs.md
-  #     sections:
-  #     - file: Docs_MD/DesignSafe/SLURM_Intro.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Workflow.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Scheduling.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Input.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Script.md
-  #     - file: Docs_MD/DesignSafe/SLURM_Run.md
-  #     - file: Docs_MD/DesignSafe/SLURM_OutErrFiles.md
-  #     - file: Docs_MD/DesignSafe/SLURMmanual_ParameterSweep.md
-  #       sections:
-  #         - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction.md
-  #         - file: Docs_MD/DesignSafe/SLURMmanual_PythonFunction2.md
-  #   - file: Docs_MD/DesignSafe/HPCenv_HPCjupyter.md
           
 
 
