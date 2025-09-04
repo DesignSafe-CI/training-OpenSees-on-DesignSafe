@@ -83,7 +83,7 @@ def connect_tapis(token_filePath: str = "~/.tapis_tokens.json",
             t.get_tokens()
             return t
         except Exception as e:
-            print(f" ** Warning ** could get token : {e},\n TRY AGAIN!")
+            print(f" ** Warning ** could NOT get token : {e},\n TRY AGAIN!")
             t= getTokensLoop()
             return t
 
@@ -129,7 +129,7 @@ def connect_tapis(token_filePath: str = "~/.tapis_tokens.json",
         try:
             t.get_tokens()
         except Exception as e:
-            print(f" ** Warning ** could get token : {e},\n TRY AGAIN!")
+            print(f" ** Warning ** could NOT get token : {e},\n TRY AGAIN!")
             t= getTokensLoop()
         # Save the new token back to the chosen path
         try:

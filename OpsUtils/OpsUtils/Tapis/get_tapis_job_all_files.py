@@ -87,7 +87,8 @@ def get_tapis_job_all_files(
         view_select_out = widgets.Output()
         view_select_out_acc = widgets.Accordion(children=[view_select_out])
         view_select_out_acc.set_title(0, f" View File: {selected_path}")
-        # view_select_out_acc.selected_index = 0
+        if selected_path == '.':
+            view_select_out_acc.selected_index = 0
         display(view_select_out_acc)
         with view_select_out:
             if not os.path.splitext(selected_path)[-1] in ['.zip','.ZIP']:
@@ -252,11 +253,11 @@ def get_tapis_job_all_files(
     if displayIt:
         with filedata_out:
             print('----------------------------')
-            print('DIRECTORY: "."')
+            # print('DIRECTORY: "."')
             view_direct_out = widgets.Output()
             view_direct_out_acc = widgets.Accordion(children=[view_direct_out])
             view_direct_out_acc.set_title(0, f'DIRECTORY: "."')
-            # view_direct_out_acc.selected_index = 0
+            view_direct_out_acc.selected_index = 0
             display(view_direct_out_acc)
             Nfiles, FileList, FilesPathList, itemsList = get_files_recursive(view_direct_out)
     else:

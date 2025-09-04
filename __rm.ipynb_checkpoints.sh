@@ -1,7 +1,5 @@
 rm -rf .ipynb_checkpoints
 rm -rf ./Docs_MD/.ipynb_checkpoints
-rm -rf ./Docs_MD/DesignSafe/.ipynb_checkpoints
-rm -rf ./Docs_MD/Tapis/.ipynb_checkpoints
 rm -rf ./_images/.ipynb_checkpoints
 rm -rf ./_static/.ipynb_checkpoints
 rm -rf ./Examples_OpenSees/.ipynb_checkpoints

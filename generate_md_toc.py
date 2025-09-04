@@ -9,7 +9,7 @@ from urllib.parse import quote
 doTagCells = True
 doJubHubLinks = True
 doAppendTOC = False
-addNBicon = True
+addNBicon = False # they are distracting
 
 jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/"
 jupyterNotebooksPath_mid = f"CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/"
@@ -64,19 +64,48 @@ def generate_jupyterhub_links(notebook_path):
 
 def get_heading_from_file(file_path):
     """Extract the first level-1 Markdown heading from a file."""
+    if file_path.endswith(".ipynb") or file_path.endswith(".py"):
+        return get_heading_from_notebook(file_path)
+    else:
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip().startswith("# "):
+                        # print('line',line.strip().lstrip("# ").strip())
+                        return line.strip().lstrip("# ").strip()
+                # try to look for next level of heading....
+                for line in f:
+                    if line.strip().startswith("## "):
+                        print('two #')
+                        return line.strip().lstrip("## ").strip()
+        except FileNotFoundError:
+            print('FileNotFoundError')
+            return Path(file_path).stem  # fallback if file doesn't exist
+        return Path(file_path).stem  # fallback if no heading found
+
+
+def get_heading_from_notebook(notebook_path):
+    functionTagMap = {'# Local Utilities Library':'remove-input','OpsUtils.show_video':'remove-input','OpsUtils.show_text_file_in_accordion':'remove-input'}
+    # Load notebook
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            for line in f:
-                if line.strip().startswith("# "):
-                    return line.strip().lstrip("# ").strip()
-            # try to look for next level of heading....
-            for line in f:
-                if line.strip().startswith("## "):
-                    print('two #')
-                    return line.strip().lstrip("## ").strip()
+        with open(notebook_path, 'r', encoding='utf-8') as f:
+            nb = nbformat.read(f, as_version=4)
+
+        for idx, cell in enumerate(nb['cells']):
+            if cell['cell_type'] == 'markdown':
+                original_text = cell['source']
+                if original_text[0:2] == "# ":
+                    lines = cell.source.splitlines()
+                    for i, line in enumerate(lines):
+                        if line.startswith("# "):
+                            return line.strip().lstrip("# ").strip()
     except FileNotFoundError:
+        print('FileNotFoundError')
         return Path(file_path).stem  # fallback if file doesn't exist
     return Path(file_path).stem  # fallback if no heading found
+
+
+
 
 
 
@@ -125,7 +154,9 @@ def tag_cells(notebook_path):
     
 def format_link(file_path):
     """Create a Markdown link with optional JupyterHub links."""
+
     title = get_heading_from_file(file_path)
+    
     if title == 'Table of Contents':
         return ''
     link_line = f"[{title}]({file_path})"
