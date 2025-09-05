@@ -42,13 +42,33 @@ This process is essential for efficient HPC use but is also error-prone and requ
 
 The app streamlines this entire process so you can **focus on your engineering analysis**, not on cluster logistics.
 
+---
+## Prerequisites
 
+Before you begin:
+
+* You have a **DesignSafe account**
+* You are configured to use the **TACC Tapis tenant**
+    You have established a TMS token -- this is done only once per system, and has been shown elsewhere in this training module.
+* You’ve obtained an **access token** and instantiated a *Tapis* client -- you have connected to Tapis
+* Your **input folder** is already uploaded to a Tapis-accessible system like *MyData*
+
+## Example Input Directory Structure
+
+As the very first step, Tapis moves your input directory into the execution directory, so you need a folder structure such as the following:
+
+```
+designsafe.storage.default:/myuser/projects/opensees-tests/run01/
+├── model.tcl
+├── loads/ground1.at2
+└── params.txt
+```
 
 ---
 
 ## Step-by-Step: How an OpenSeesMP Job Runs
 
-1. **Job Submission**
+1. **Job Definition**
     * Either fill out the **OpenSeesMP app form** on the DesignSafe WebPortal: select your input *.tcl* file, number of cores, wall time, etc.
     * Or in a **Jupyter Notebook** manually create a job-definition json object, with content similar to the web-portal input.
 1. **Job Submission**
@@ -77,7 +97,6 @@ Ideal for medium-to-large OpenSeesMP models and for researchers who want reprodu
 :::
 
 ---
-
 ## Launching OpenSees Tapis Apps
 
 You can launch the OpenSees apps in three ways:
@@ -115,3 +134,11 @@ There you’ll find:
 
 This transparency lets you see exactly how your parameters translate into SLURM submissions, and how file staging is performed. Studying this repo is an excellent way to learn exactly how your inputs turn into HPC jobs, which helps when you want to move to more advanced workflows (like building your own SLURM scripts or automating with Tapis).
 
+
+## Summary
+
+This workflow allows you to:
+
+* Programmatically submit OpenSeesMP jobs from Python
+* Automate batch simulations or parametric sweeps
+* Integrate with Jupyter Notebooks or external orchestration scripts
