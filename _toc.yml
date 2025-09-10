@@ -55,14 +55,15 @@ parts:
     - file: Docs_MD/FileStorage_a_Concepts.md
       sections:
       - file: Docs_MD/FileStorage_b_PracticalUsage.md
-      - file: Docs_MD/FileStorage_c_ReferenceTools.md
-      - file: Docs_MD/FileStorage_1_corral.md      
-      - file: Docs_MD/FileStorage_2_compsys.md      
-      - file: Docs_MD/FileStorage_3_compnode.md
-      - file: Docs_MD/FileStorage_4_compare.md
+      - file: Docs_MD/FileStorage_c_Guide.md
+      - file: Docs_MD/FileStorage_0_options.md
+        sections:
+        - file: Docs_MD/FileStorage_1_corral.md      
+        - file: Docs_MD/FileStorage_2_compsys.md      
+        - file: Docs_MD/FileStorage_3_compnode.md
 
-      - file: Docs_MD/Paths_Overview.md
-      - file: Jupyter_Notebooks/paths_StorageSystems.ipynb    
+      
+      
 
 
   - caption: HPC Environment
@@ -104,11 +105,13 @@ parts:
     
     - file: Jupyter_Notebooks/paths_InPython.ipynb
       sections:
+      - file: Docs_MD/Paths_Overview.md
       - file: Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb
       - file: Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb
       - file: Jupyter_Notebooks/paths_InPython_Manage.ipynb
       - file: Jupyter_Notebooks/paths_InPython_Contents.ipynb
       - file: Jupyter_Notebooks/paths_InPython_BuildPath.ipynb
+      - file: Jupyter_Notebooks/paths_StorageSystems.ipynb    
     
 
 
