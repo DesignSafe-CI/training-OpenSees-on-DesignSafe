@@ -55,12 +55,12 @@ parts:
     - file: Docs_MD/FileStorage_a_Concepts.md
       sections:
       - file: Docs_MD/FileStorage_b_PracticalUsage.md
-      - file: Docs_MD/FileStorage_c_Guide.md
       - file: Docs_MD/FileStorage_0_options.md
         sections:
         - file: Docs_MD/FileStorage_1_corral.md      
         - file: Docs_MD/FileStorage_2_compsys.md      
         - file: Docs_MD/FileStorage_3_compnode.md
+      - file: Docs_MD/FileStorage_c_Guide.md
 
       
       
