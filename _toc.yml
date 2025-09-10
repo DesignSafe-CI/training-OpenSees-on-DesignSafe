@@ -151,8 +151,6 @@ parts:
     - file: Docs_MD/tapis_intro.md
       sections:
       - file: Docs_MD/tapis_interfacing.md
-    - file: Docs_MD/tapis_utilities.md
-      sections:
       - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
       - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
       - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
