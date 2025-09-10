@@ -1,4 +1,5 @@
-# What is Tapis?
+# Tapis
+***What is Tapis?***
 
 Tapis is a **network-based API** built on **REST architecture**, enabling users to manage computational jobs, data, and workflows across high-performance computing (HPC) and cloud systems — all through a consistent and secure interface.
 

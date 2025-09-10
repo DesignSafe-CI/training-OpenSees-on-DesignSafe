@@ -46,9 +46,50 @@ parts:
     - file: Docs_MD/ComputeEnvironments.md
       sections:
       - file: Docs_MD/ComputeEnv_JupyterHubContainers.md
-      - file: Docs_MD/ComputeEnv_VirtualMachines.md
-      - file: Docs_MD/ComputeEnv_HPC.md
+        sections:
+        - file: Docs_MD/JupyterHub_Intro.md
+          sections:
+          - file: Docs_MD/AccessJupyter.md
+          - file: Docs_MD/JupyterHub_Workflow.md
+        - file: Docs_MD/JupyterHub_Tools.md
+    
+        - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
+          sections:
+          - file: Docs_MD/CLI.md
+          - file: Docs_MD/RunOpsInDS_Console.md
 
+
+
+      
+
+      - file: Docs_MD/ComputeEnv_HPC.md
+        sections:
+        - file: Docs_MD/HPC_Intro.md
+          sections:
+          - file: Docs_MD/HPC_Node.md
+          - file: Docs_MD/HPC_NodeStampede3.md
+          - file: Docs_MD/HPC_Core.md
+          - file: Docs_MD/HPC_Queue.md
+          - file: Docs_MD/HPC_QueueStampede3.md
+          - file: Docs_MD/HPC_QueueSelexn.md
+          - file: Docs_MD/HPC_allocations.md
+          - file: Docs_MD/HPCenv_Access.md
+          - file: Docs_MD/HPCenv_HPCjupyter.md
+        - file: Docs_MD/SLURM_TACCjobs.md
+          sections:
+          - file: Docs_MD/SLURM_Intro.md
+          - file: Docs_MD/SLURM_Workflow.md
+          - file: Docs_MD/SLURM_Scheduling.md
+          - file: Docs_MD/SLURM_Input.md
+          - file: Docs_MD/SLURM_Script.md
+          - file: Docs_MD/SLURM_Run.md
+          - file: Docs_MD/SLURM_OutErrFiles.md
+          - file: Docs_MD/SLURMmanual_ParameterSweep.md
+            sections:
+            - file: Docs_MD/SLURMmanual_PythonFunction.md
+            - file: Docs_MD/SLURMmanual_PythonFunction2.md    
+
+      - file: Docs_MD/ComputeEnv_VirtualMachines.md
     
 
     
@@ -62,63 +103,12 @@ parts:
         - file: Docs_MD/FileStorage_2_compsys.md      
         - file: Docs_MD/FileStorage_3_compnode.md
       - file: Docs_MD/FileStorage_c_Guide.md
-
-      
-      
-
-
-  - caption: HPC Environment
-    chapters:
-    - file: Docs_MD/HPC_Intro.md
-      sections:
-      - file: Docs_MD/HPC_Node.md
-      - file: Docs_MD/HPC_NodeStampede3.md
-      - file: Docs_MD/HPC_Core.md
-      - file: Docs_MD/HPC_Queue.md
-      - file: Docs_MD/HPC_QueueStampede3.md
-      - file: Docs_MD/HPC_QueueSelexn.md
-      - file: Docs_MD/HPC_allocations.md
-      - file: Docs_MD/HPCenv_Access.md
-      - file: Docs_MD/HPCenv_HPCjupyter.md
-    - file: Docs_MD/SLURM_TACCjobs.md
-      sections:
-      - file: Docs_MD/SLURM_Intro.md
-      - file: Docs_MD/SLURM_Workflow.md
-      - file: Docs_MD/SLURM_Scheduling.md
-      - file: Docs_MD/SLURM_Input.md
-      - file: Docs_MD/SLURM_Script.md
-      - file: Docs_MD/SLURM_Run.md
-      - file: Docs_MD/SLURM_OutErrFiles.md
-      - file: Docs_MD/SLURMmanual_ParameterSweep.md
-        sections:
-        - file: Docs_MD/SLURMmanual_PythonFunction.md
-        - file: Docs_MD/SLURMmanual_PythonFunction2.md    
-
-
-            
-  - caption: JupyterHub
-    chapters:
-    - file: Docs_MD/JupyterHub_Intro.md
-      sections:
-      - file: Docs_MD/AccessJupyter.md
-      - file: Docs_MD/JupyterHub_Workflow.md
-    - file: Docs_MD/JupyterHub_Tools.md
-
-    - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
-      sections:
-      - file: Docs_MD/CLI.md
-      - file: Docs_MD/RunOpsInDS_Console.md
-
-
-  - caption: Tapis
-    chapters:
-    
     - file: Docs_MD/tapis_intro.md
-    - file: Docs_MD/tapis_jobs.md
-    - file: Docs_MD/tapis_apps.md
+      sections:
+      - file: Docs_MD/tapis_jobs.md
+      - file: Docs_MD/tapis_apps.md
 
-
-
+      
   - caption: Training Modules
     chapters:
     - file: Docs_MD/Paths_Overview.md
