@@ -94,7 +94,7 @@ def get_tapis_job_description(t, tapisInput):
             # print("tapisInput['storage_system_baseURL']",tapisInput['storage_system_baseURL'])
         tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
     
-    print('input directory:',tapisInput["sourceUrl"])
+    print('input directory URI:',tapisInput["sourceUrl"])
         
 
     appId = tapisInput["appId"]
@@ -216,11 +216,11 @@ def get_tapis_job_description(t, tapisInput):
 
     
     if nmiss == 0:
-        print('app_MetaData_keys',app_MetaData.keys())
+        # print('app_MetaData_keys',app_MetaData.keys())
         for hereKey in tapisInput.keys():
-            print('hereKey',hereKey)
+            # print('hereKey',hereKey)
             if hereKey in app_MetaData.keys() or hereKey in ['moduleLoads']:
-                print('yes')
+                # print('yes')
                 job_description[hereKey] = tapisInput[hereKey]
         
         # Archive location

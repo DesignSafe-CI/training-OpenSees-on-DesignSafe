@@ -47,32 +47,8 @@ parts:
       - file: Docs_MD/ComputeEnv_JupyterHubContainers.md
       - file: Docs_MD/ComputeEnv_VirtualMachines.md
       - file: Docs_MD/ComputeEnv_HPC.md
-      sections:
-      - file: Docs_MD/HPC_Intro.md
-        sections:
-        - file: Docs_MD/HPC_Node.md
-        - file: Docs_MD/HPC_NodeStampede3.md
-        - file: Docs_MD/HPC_Core.md
-        - file: Docs_MD/HPC_Queue.md
-        - file: Docs_MD/HPC_QueueStampede3.md
-        - file: Docs_MD/HPC_QueueSelexn.md
-        - file: Docs_MD/HPC_allocations.md
-        - file: Docs_MD/HPCenv_Access.md
-        - file: Docs_MD/HPCenv_HPCjupyter.md
 
-      - file: Docs_MD/SLURM_TACCjobs.md
-        sections:
-        - file: Docs_MD/SLURM_Intro.md
-        - file: Docs_MD/SLURM_Workflow.md
-        - file: Docs_MD/SLURM_Scheduling.md
-        - file: Docs_MD/SLURM_Input.md
-        - file: Docs_MD/SLURM_Script.md
-        - file: Docs_MD/SLURM_Run.md
-        - file: Docs_MD/SLURM_OutErrFiles.md
-        - file: Docs_MD/SLURMmanual_ParameterSweep.md
-          sections:
-            - file: Docs_MD/SLURMmanual_PythonFunction.md
-            - file: Docs_MD/SLURMmanual_PythonFunction2.md        
+    
 
     
 
@@ -89,8 +65,35 @@ parts:
       - file: Jupyter_Notebooks/paths_StorageSystems.ipynb    
 
 
+  - caption: HPC Environment
+    chapters:
+    - file: Docs_MD/HPC_Intro.md
+      sections:
+      - file: Docs_MD/HPC_Node.md
+      - file: Docs_MD/HPC_NodeStampede3.md
+      - file: Docs_MD/HPC_Core.md
+      - file: Docs_MD/HPC_Queue.md
+      - file: Docs_MD/HPC_QueueStampede3.md
+      - file: Docs_MD/HPC_QueueSelexn.md
+      - file: Docs_MD/HPC_allocations.md
+      - file: Docs_MD/HPCenv_Access.md
+      - file: Docs_MD/HPCenv_HPCjupyter.md
+    - file: Docs_MD/SLURM_TACCjobs.md
+      sections:
+      - file: Docs_MD/SLURM_Intro.md
+      - file: Docs_MD/SLURM_Workflow.md
+      - file: Docs_MD/SLURM_Scheduling.md
+      - file: Docs_MD/SLURM_Input.md
+      - file: Docs_MD/SLURM_Script.md
+      - file: Docs_MD/SLURM_Run.md
+      - file: Docs_MD/SLURM_OutErrFiles.md
+      - file: Docs_MD/SLURMmanual_ParameterSweep.md
+        sections:
+        - file: Docs_MD/SLURMmanual_PythonFunction.md
+        - file: Docs_MD/SLURMmanual_PythonFunction2.md    
 
 
+            
   - caption: JupyterHub
     chapters:
     - file: Docs_MD/JupyterHub_Intro.md
@@ -144,11 +147,12 @@ parts:
     - file: Docs_MD/tapis_intro.md
       sections:
       - file: Docs_MD/tapis_interfacing.md
-      - file: Jupyter_Notebooks/paths_Tapis.ipynb      
-      - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
-    - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
+    - file: Docs_MD/tapis_utilities.md
       sections:
+      - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
+      - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
       - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
+      - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
 
 
     - file: Docs_MD/tapis_jobs.md
