@@ -1,4 +1,4 @@
-# Web-Portal Demo
+# Web-Portal Workflow
 ***End-to-End Workflow: JupyterHub + Web Portal***
 
 This recommended workflow integrates both the Web Portal and JupyterHub to leverage their strengths:

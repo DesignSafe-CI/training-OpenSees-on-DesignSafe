@@ -1,4 +1,4 @@
-# Understanding Paths
+# Working with Paths
 
 ***Why Paths Matter When Running Applications***
 

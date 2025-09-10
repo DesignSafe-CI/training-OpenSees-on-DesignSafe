@@ -1,4 +1,4 @@
-# Jupyter Notebooks
+# Jupyter Notebooks & OpenSees
 
 ***Interactive Development for OpenSees + Seamless HPC Scaling  on DesignSafe***
 

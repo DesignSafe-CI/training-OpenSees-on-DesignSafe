@@ -3,6 +3,13 @@
 
 Once you've submitted a job using Tapis, you may need to **stop or cancel** it—for example, if you detect a mistake in the input, want to halt a long-running job, or need to resubmit with different parameters. Tapis provides the ability to **cancel a job that is queued or currently running**.
 
+**NOTE**: This page is **not** an interactive Jupyter Notebook. 
+
+
+## How to Cancel a Job (Recommended Approach)
+If you need to cancel a job, the quickest and safest method is often to do it manually through the [DesignSafe Job Management page](https://www.designsafe-ci.org/workspace/history). Using the web portal reduces the chance of errors and provides immediate visual confirmation that the job has been cancelled.
+
+
 ## Stopping a Job via CLI
 
 If you're using the Tapis CLI, you can cancel a job using the following command:
