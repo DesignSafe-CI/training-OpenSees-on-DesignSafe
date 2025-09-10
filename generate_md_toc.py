@@ -11,7 +11,8 @@ doJubHubLinks = True
 doAppendTOC = False
 addNBicon = False # they are distracting
 
-jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/"
+# jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/"
+jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/tree/"
 jupyterNotebooksPath_mid = f"CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/"
 
 # https://jupyter.designsafe-ci.org/hub/user-redirect/lab/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks
