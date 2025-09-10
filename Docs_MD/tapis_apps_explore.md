@@ -1,4 +1,5 @@
-# Exploring Tapis Apps with Notebooks
+# Explore Tapis Apps
+***Exploring Tapis Apps with Notebooks***
 
 We have already introduced **Tapis Apps** — the packaged definitions that describe how to run software on DesignSafe’s compute systems. Each app includes information such as its executable, required modules, inputs, parameters, and outputs.
 
