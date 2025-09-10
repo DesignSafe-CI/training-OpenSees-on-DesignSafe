@@ -10,7 +10,6 @@ parts:
   - caption: ""  # <- This part has no title, acts like a loose section
     chapters:
     - file: Docs_MD/Oview_TrainingObjectives.md
-    - file: Docs_MD/TrainingNotebooks.md
     - file: generated_toc.md
     
   - caption: Overview
