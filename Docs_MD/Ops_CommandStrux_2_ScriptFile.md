@@ -1,4 +1,4 @@
-# Input Script File (Non-Interactive)
+# Input Script File
 ***Non-Interactive Mode with Script Files (Optional)***
 
 When you run OpenSees or OpenSeesPy with a script file as the first argument, the program will **exit automatically once the script finishes executing**. This is known as **Non-Interactive Mode** — the file is read from top to bottom, and all commands are executed without any additional user input.

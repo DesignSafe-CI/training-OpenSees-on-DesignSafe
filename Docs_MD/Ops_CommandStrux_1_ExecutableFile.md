@@ -1,4 +1,4 @@
-# Executable File (Interactive)
+# Executable File
 
 ***Interactive Mode:** Running the program without a script for live, one-command-at-a-time execution*
 
