@@ -178,6 +178,9 @@ parts:
       - file: Docs_MD/tapis_cancelJob.md
  
     - file: Docs_MD/tapis_apps.md
+      sections:
+      - file: Jupyter_Notebooks/tapis_getApps_List.ipynb
+      - file: Jupyter_Notebooks/tapis_getApps_Schema.ipynb
     - file: Docs_MD/tapis_OpenSeesApps.md
       sections:
       # - file: Docs_MD/tapis_submit_process.md

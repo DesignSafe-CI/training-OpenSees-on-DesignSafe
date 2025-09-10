@@ -89,10 +89,15 @@ def get_tapis_job_description(t, tapisInput):
     # --- Resolve storage baseURL if needed ---
     if "sourceUrl" not in tapisInput:
         if "storage_system_baseURL" not in tapisInput:
+            if 'storage_system' not in tapisInput:
+                print('NEED more info for your input directory')
+                return -1
             storage_system_lower = tapisInput.get("storage_system", "").lower()
             tapisInput['storage_system_baseURL'] = OpsUtils.get_user_path_tapis_uri(t,storage_system_lower)
             # print("tapisInput['storage_system_baseURL']",tapisInput['storage_system_baseURL'])
-        tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
+        tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}"
+        if 'input_folder' in tapisInput:
+            tapisInput["sourceUrl"] = f"{tapisInput['sourceUrl']}/{tapisInput['input_folder']}"
     
     print('input directory URI:',tapisInput["sourceUrl"])
         
@@ -115,6 +120,7 @@ def get_tapis_job_description(t, tapisInput):
     app_MetaData = appMetaData.__dict__
     app_jobAttributes = app_MetaData['jobAttributes'].__dict__
     app_parameterSet = app_jobAttributes['parameterSet'].__dict__
+
     inputKeys_App = ['id','version']
     inputKeys_jobAttributes = ['execSystemId', 'execSystemLogicalQueue', 'archiveSystemId', 'archiveSystemDir', 'nodeCount', 'coresPerNode', 'memoryMB', 'maxMinutes']    
     
@@ -159,7 +165,6 @@ def get_tapis_job_description(t, tapisInput):
         RequiredInputList = [
             "name","appId","execSystemId","execSystemLogicalQueue",
             "nodeCount","coresPerNode","maxMinutes","allocation","archive_system",
-            "storage_system","input_folder","Main Script"
         ]
         nmiss = checkRequirements(tapisInput, RequiredInputList)
         if nmiss == 0:
@@ -174,14 +179,19 @@ def get_tapis_job_description(t, tapisInput):
             if 'appVersion' in tapisInput.keys():
                 job_description["appVersion"] = tapisInput["appVersion"]
             fileInputs = [{"name": "Input Directory", "sourceUrl": tapisInput["sourceUrl"]}]
-            if not 'Main Program' in tapisInput.keys():
-                tapisInput["Main Program"] = 'OpenSeesMP'
-            if not 'CommandLine Arguments' in tapisInput:
-                tapisInput["CommandLine Arguments"] = ''
+            # if not 'Main Program' in tapisInput.keys():
+            #     tapisInput["Main Program"] = 'OpenSeesMP'
+            # if not 'CommandLine Arguments' in tapisInput:
+            #     tapisInput["CommandLine Arguments"] = ''
+
+
+            
             HEREkey = 'appArgs'
+            print('HEREkey',HEREkey)
             parameterSet[HEREkey] = []
             for app_Dict in app_parameterSet[HEREkey]:
                 app_Dict = app_Dict.__dict__
+                print('app_Dict',app_Dict)
                 here_name = app_Dict['name']
                 here_dict = {"name":here_name,"arg":app_Dict['arg']}
                 if 'notes' in app_Dict:
@@ -192,9 +202,11 @@ def get_tapis_job_description(t, tapisInput):
                     here_dict["arg"] = tapisInput[here_name]
                 parameterSet[HEREkey].append(here_dict)
             HEREkey = 'envVariables'
+            print('HEREkey',HEREkey)
             parameterSet[HEREkey] = []
             for app_Dict in app_parameterSet[HEREkey]:
                 app_Dict = app_Dict.__dict__
+                print('app_Dict',app_Dict)
                 here_name = app_Dict['key']
                 here_dict = {"key":here_name,"value":app_Dict['value']}
                 if 'notes' in app_Dict:

@@ -90,41 +90,12 @@
 #     if "sourceUrl" not in tapisInput:
 #         if "storage_system_baseURL" not in tapisInput:
 #             storage_system_lower = tapisInput.get("storage_system", "").lower()
-#             # if "mydata" in storage_system_lower:
-#             #     # Get user information for MyData path
-#             #     user_info = t.authenticator.get_userinfo()
-#             #     username = user_info.username
-#             #     tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
-#             # elif "community" in storage_system_lower:
-#             #     tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
-#             # elif "published" in storage_system_lower:
-#             #     tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
-#             # else:
-#             #     print("Please specify tapisInput['storage_system_baseURL']!")
-#             #     return -1
 #             tapisInput['storage_system_baseURL'] = OpsUtils.get_user_path_tapis_uri(t,storage_system_lower)
 #             # print("tapisInput['storage_system_baseURL']",tapisInput['storage_system_baseURL'])
 #         tapisInput["sourceUrl"] = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
     
-#     print('input directory:',tapisInput["sourceUrl"])
+#     print('input directory URI:',tapisInput["sourceUrl"])
         
-#     # # --- Resolve storage baseURL if needed ---
-#     # if "storage_system_baseURL" not in tapisInput:
-#     #     storage_system_lower = tapisInput.get("storage_system", "").lower()
-#     #     if "mydata" in storage_system_lower:
-#     #         # Get user information for MyData path
-#     #         user_info = t.authenticator.get_userinfo()
-#     #         username = user_info.username
-#     #         tapisInput["storage_system_baseURL"] = f"tapis://designsafe.storage.default/{username}"
-#     #     elif "community" in storage_system_lower:
-#     #         tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.community"
-#     #     elif "published" in storage_system_lower:
-#     #         tapisInput["storage_system_baseURL"] = "tapis://designsafe.storage.published"
-#     #     else:
-#     #         print("Please specify tapisInput['storage_system_baseURL']!")
-#     #         return -1
-
-#     # sourceUrl = f"{tapisInput['storage_system_baseURL']}/{tapisInput['input_folder']}"
 
 #     appId = tapisInput["appId"]
 #     # print('appId',appId)
@@ -147,32 +118,6 @@
 #     inputKeys_App = ['id','version']
 #     inputKeys_jobAttributes = ['execSystemId', 'execSystemLogicalQueue', 'archiveSystemId', 'archiveSystemDir', 'nodeCount', 'coresPerNode', 'memoryMB', 'maxMinutes']    
     
-#     # appInputs={}
-#     # appInputs['appArgs'] = app_parameterSet['appArgs']
-#     # appInputs['envVariables'] = app_parameterSet['envVariables']
-#     # appInputs['fileInputs'] = app_jobAttributes['fileInputs']
-#     # appInputsPath={}
-#     # appInputsPath['appArgs'] = "app['jobAttributes']['parameterSet']"
-#     # appInputsPath['envVariables'] = "app['jobAttributes']['parameterSet']"
-#     # appInputsPath['fileInputs'] = "app['jobAttributes']"
-#     # for app_key,app_Dict_List in appInputs.items():
-#     #     print(f' ++ {app_key} ++')
-#     #     # app_Dict_List = app_parameterSet[app_key]
-#     #     for app_Dict in app_Dict_List:
-#     #         app_Dict = app_Dict.__dict__
-#     #         app_Dict_keys = list(app_Dict.keys())
-#     #         myKeyList = ['name','description','arg']
-#     #         for thisKey in myKeyList:
-#     #             if thisKey in app_Dict_keys:
-#     #                 app_Dict_keys.remove(thisKey)
-#     #             else:
-#     #                 myKeyList.remove(thisKey)
-#     #         thisKeyList = [*myKeyList,*app_Dict_keys]
-#     #         for thisKey in thisKeyList:
-#     #             thisVal = app_Dict[thisKey]
-#     #             print(f'{thisKey}: {thisVal}')
-#     #         print('--')
-
     
 #     # --- Defaults & branching ---
 #     # If Express, default the exec system to the Express VM unless provided
@@ -208,23 +153,6 @@
 #             job_description["fileInputs"] = fileInputs
 #             job_description["parameterSet"] = parameterSet
 
-#             # # Archive location
-#             # if "archive_system" in tapisInput:
-#             #     if tapisInput["archive_system"].lower() in ["null","none"]:
-#             #         job_description["archiveSystemId"] = 'null'
-#             #         job_description["archiveSystemDir"] = 'null'
-#             #     else:
-#             #         if tapisInput["archive_system"] in ["MyData"]:
-#             #             job_description["archiveSystemId"] = "designsafe.storage.default"
-#             #             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-#             #         elif tapisInput["archive_system"] == "Temp":
-#             #             job_description["archiveSystemId"] = "cloud.data"
-#             #             job_description["archiveSystemDir"] = "/tmp/${JobOwner}/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
-#             # else:
-#             #     # default to MyData
-#             #     job_description["archiveSystemId"] = "designsafe.storage.default"
-#             #     job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-
 #     else:
 #         # HPC (e.g., OpenSeesMP/SP on Stampede3)
 
@@ -250,12 +178,9 @@
 #                 tapisInput["Main Program"] = 'OpenSeesMP'
 #             if not 'CommandLine Arguments' in tapisInput:
 #                 tapisInput["CommandLine Arguments"] = ''
-#             # parameterSet["appArgs"] = [{"name": "Main Program", "arg": tapisInput["Main Program"]},
-#             #                            {"name": "Main Script", "arg": tapisInput["Main Script"]},
-#             #                            {"name": "CommandLine Arguments", "arg": tapisInput["CommandLine Arguments"]}
-#             #                           ]
-#             parameterSet["appArgs"] = []
-#             for app_Dict in app_parameterSet['appArgs']:
+#             HEREkey = 'appArgs'
+#             parameterSet[HEREkey] = []
+#             for app_Dict in app_parameterSet[HEREkey]:
 #                 app_Dict = app_Dict.__dict__
 #                 here_name = app_Dict['name']
 #                 here_dict = {"name":here_name,"arg":app_Dict['arg']}
@@ -265,9 +190,10 @@
 #                         continue
 #                 if here_name in tapisInput:
 #                     here_dict["arg"] = tapisInput[here_name]
-#                 parameterSet["appArgs"].append(here_dict)
-#             parameterSet["envVariables"] = []
-#             for app_Dict in app_parameterSet['envVariables']:
+#                 parameterSet[HEREkey].append(here_dict)
+#             HEREkey = 'envVariables'
+#             parameterSet[HEREkey] = []
+#             for app_Dict in app_parameterSet[HEREkey]:
 #                 app_Dict = app_Dict.__dict__
 #                 here_name = app_Dict['key']
 #                 here_dict = {"key":here_name,"value":app_Dict['value']}
@@ -277,8 +203,9 @@
 #                         continue
 #                 if here_name in tapisInput:
 #                     here_dict["value"] = tapisInput[here_name]
-#                 parameterSet["envVariables"].append(here_dict)
-    
+#                 parameterSet[HEREkey].append(here_dict)
+
+
 
             
             
@@ -286,16 +213,16 @@
 #             job_description["fileInputs"] = fileInputs
 #             job_description["parameterSet"] = parameterSet
 
-#             # # Archive location
-#             # if "archive_system" in tapisInput:
-#             #     if tapisInput["archive_system"] == "MyData":
-#             #         job_description["archiveSystemId"] = "designsafe.storage.default"
-#             #         job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
-#             #     elif tapisInput["archive_system"] == "Work":
-#             #         job_description["archiveSystemId"] = tapisInput["execSystemId"]
-#             #         job_description["archiveSystemDir"] = "HOST_EVAL($WORK)/tapis-jobs-archive/${JobCreateDate}/${JobName}-${JobUUID}"
 
+    
 #     if nmiss == 0:
+#         # print('app_MetaData_keys',app_MetaData.keys())
+#         for hereKey in tapisInput.keys():
+#             # print('hereKey',hereKey)
+#             if hereKey in app_MetaData.keys() or hereKey in ['moduleLoads']:
+#                 # print('yes')
+#                 job_description[hereKey] = tapisInput[hereKey]
+        
 #         # Archive location
 #         if "archive_system" in tapisInput:
 #             if tapisInput["archive_system"] == "MyData":
@@ -311,16 +238,7 @@
 #             job_description["archiveSystemId"] = "designsafe.storage.default"
 #             job_description["archiveSystemDir"] = "${EffectiveUserId}/tapis-jobs-archive/${JobCreateDate}/${JobUUID}"
 
-#         # if tapisInput["archive_system"] and tapisInput["archive_system"].lower() in ["null","none",""]:
-#         #     job_description['archiveFilter'] = {'includes':['none'],'excludes':['*'],"includeLaunchFiles":True}
 
-            
-    
-#     # if nmiss == 0:
-#     #     for envVar in ['zipFileIn','zipFolderOut']:
-#     #         if envVar in tapisInput:
-#     #             job_description["parameterSet"]['envVariables'].append({"key": envVar, "value": tapisInput[envVar]})
-                
 
 #     # --- Finalize ---
 #     if nmiss > 0:
