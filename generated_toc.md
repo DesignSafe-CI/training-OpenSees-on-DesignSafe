@@ -1,12 +1,12 @@
 # Table of Contents
 
 ## 
-- [Oview_TrainingObjectives](Docs_MD/Oview_TrainingObjectives.md)
-- [Training Material](Docs_MD/TrainingNotebooks.md)
+- [Training Objectives](Docs_MD/Oview_TrainingObjectives.md)
 
-## Overview
+## Guides
 - [DesignSafe & TACC](Docs_MD/Oview_DesignSafeOnTACC.md)
   - [Workflow Architecture](Docs_MD/Oview_WorkflowArchitecture.md)
+  - [Compute Environments](Docs_MD/ComputeEnvironments.md)
   - [Workflow Decision Guide](Docs_MD/Oview_WorkflowArchitectureGuide.md)
 - [OpenSees on DesignSafe](Docs_MD/OpenSees_AndDesignSafe.md)
   - [OpenSees-Tcl & OpenSeesPy](Docs_MD/OpenSees_Interpreters.md)
@@ -14,18 +14,46 @@
   - [Interpreters & Workflows](Docs_MD/OpenSees_Workflows.md)
   - [Decision Matrix](Docs_MD/OpenSees_DecisionMatrixOpsDS.md)
   - [Command Structure](Docs_MD/Ops_CommandStrux.md)
-    - [Executable File (Interactive)](Docs_MD/Ops_CommandStrux_1_ExecutableFile.md)
-    - [Input Script File (Non-Interactive)](Docs_MD/Ops_CommandStrux_2_ScriptFile.md)
+    - [Executable File](Docs_MD/Ops_CommandStrux_1_ExecutableFile.md)
+    - [Input Script File](Docs_MD/Ops_CommandStrux_2_ScriptFile.md)
     - [Command-Line Arguments](Docs_MD/Ops_CommandStrux_3_CommandLineArgs.md)
   - [Parallel Execution](Docs_MD/Ops_ParallelExec.md)
     - [Parallel Execution: MPI](Docs_MD/Ops_ParallelExec_MPI.md)
     - [Parallel Execution: ibrun](Docs_MD/Ops_ParallelExec_Ibrun.md)
     - [OpenSeesPy Parallel](Docs_MD/Ops_ParallelExec_python.md)
   - [Execution Guide](Docs_MD/Ops_ExecGuide.md)
-- [Compute Environments](Docs_MD/ComputeEnvironments.md)
-  - [JupyterHub Containers](Docs_MD/ComputeEnv_JupyterHubContainers.md)
+- [JupyterHub](Docs_MD/ComputeEnv_JupyterHubContainers.md)
+  - [JupyterHub Environment](Docs_MD/JupyterHub_Intro.md)
+    - [Accessing JupyterHub](Docs_MD/AccessJupyter.md)
+    - [Workflow in JupyterHub](Docs_MD/JupyterHub_Workflow.md)
+  - [JupyterHub Tools](Docs_MD/JupyterHub_Tools.md)
+  - [JupyterHub for OpenSees](Docs_MD/RunOpsInDS_JupyterHub_intro.md)
+    - [Terminal CLI](Docs_MD/CLI.md)
+    - [Python Console](Docs_MD/RunOpsInDS_Console.md)
+    - [Python Scripts](Docs_MD/RunOpsInDS_PythonWithinPython.md)
+- [HPC on TACC](Docs_MD/ComputeEnv_HPC.md)
+  - [HPC Resources](Docs_MD/HPC_Intro.md)
+    - [Nodes](Docs_MD/HPC_Node.md)
+    - [Stampede3 Nodes](Docs_MD/HPC_NodeStampede3.md)
+    - [Cores](Docs_MD/HPC_Core.md)
+    - [Queues](Docs_MD/HPC_Queue.md)
+    - [Stampede3 Queues](Docs_MD/HPC_QueueStampede3.md)
+    - [Queue Selection](Docs_MD/HPC_QueueSelexn.md)
+    - [Allocations](Docs_MD/HPC_allocations.md)
+    - [Accessing HPC](Docs_MD/HPCenv_Access.md)
+    - [DesignSafe's HPC Jupyter Lab](Docs_MD/HPCenv_HPCjupyter.md)
+  - [SLURM Jobs](Docs_MD/SLURM_TACCjobs.md)
+    - [SLURM](Docs_MD/SLURM_Intro.md)
+    - [SLURM_Workflow](Docs_MD/SLURM_Workflow.md)
+    - [Job Scheduling](Docs_MD/SLURM_Scheduling.md)
+    - [Job Input](Docs_MD/SLURM_Input.md)
+    - [Job Script](Docs_MD/SLURM_Script.md)
+    - [Run a SLURM Job](Docs_MD/SLURM_Run.md)
+    - [SLURM Job Output](Docs_MD/SLURM_OutErrFiles.md)
+    - [Parameter Sweeps](Docs_MD/SLURMmanual_ParameterSweep.md)
+      - [Write SLURM with Python](Docs_MD/SLURMmanual_PythonFunction.md)
+      - [Advanced Python Function](Docs_MD/SLURMmanual_PythonFunction2.md)
   - [Virtual Machines (VMs)](Docs_MD/ComputeEnv_VirtualMachines.md)
-  - [HPC on TACC](Docs_MD/ComputeEnv_HPC.md)
 - [File Storage](Docs_MD/FileStorage_a_Concepts.md)
   - [Practical Usage](Docs_MD/FileStorage_b_PracticalUsage.md)
   - [Storage Options](Docs_MD/FileStorage_0_options.md)
@@ -33,43 +61,9 @@
     - [On Compute System](Docs_MD/FileStorage_2_compsys.md)
     - [On Compute Nodes](Docs_MD/FileStorage_3_compnode.md)
   - [Storage Guide](Docs_MD/FileStorage_c_Guide.md)
-
-## HPC Environment
-- [HPC Resources](Docs_MD/HPC_Intro.md)
-  - [Nodes](Docs_MD/HPC_Node.md)
-  - [Stampede3 Nodes](Docs_MD/HPC_NodeStampede3.md)
-  - [Cores](Docs_MD/HPC_Core.md)
-  - [Queues](Docs_MD/HPC_Queue.md)
-  - [Stampede3 Queues](Docs_MD/HPC_QueueStampede3.md)
-  - [Queue Selection](Docs_MD/HPC_QueueSelexn.md)
-  - [Allocations](Docs_MD/HPC_allocations.md)
-  - [Accessing HPC](Docs_MD/HPCenv_Access.md)
-  - [DesignSafe's HPC Jupyter Lab](Docs_MD/HPCenv_HPCjupyter.md)
-- [SLURM Jobs](Docs_MD/SLURM_TACCjobs.md)
-  - [SLURM](Docs_MD/SLURM_Intro.md)
-  - [SLURM_Workflow](Docs_MD/SLURM_Workflow.md)
-  - [Job Scheduling](Docs_MD/SLURM_Scheduling.md)
-  - [Job Input](Docs_MD/SLURM_Input.md)
-  - [Job Script](Docs_MD/SLURM_Script.md)
-  - [Run a SLURM Job](Docs_MD/SLURM_Run.md)
-  - [SLURM Job Output](Docs_MD/SLURM_OutErrFiles.md)
-  - [Parameter Sweeps](Docs_MD/SLURMmanual_ParameterSweep.md)
-    - [Write SLURM with Python](Docs_MD/SLURMmanual_PythonFunction.md)
-    - [Advanced Python Function](Docs_MD/SLURMmanual_PythonFunction2.md)
-
-## JupyterHub
-- [JupyterHub Environment](Docs_MD/JupyterHub_Intro.md)
-  - [Accessing JupyterHub](Docs_MD/AccessJupyter.md)
-  - [Workflow in JupyterHub](Docs_MD/JupyterHub_Workflow.md)
-- [JupyterHub Tools](Docs_MD/JupyterHub_Tools.md)
-- [JupyterHub for OpenSees](Docs_MD/RunOpsInDS_JupyterHub_intro.md)
-  - [Terminal CLI](Docs_MD/CLI.md)
-  - [Python Console](Docs_MD/RunOpsInDS_Console.md)
-
-## Tapis
-- [What is Tapis?](Docs_MD/tapis_intro.md)
-- [Tapis Jobs](Docs_MD/tapis_jobs.md)
-- [Tapis Apps](Docs_MD/tapis_apps.md)
+- [Tapis](Docs_MD/tapis_intro.md)
+  - [Tapis Jobs](Docs_MD/tapis_jobs.md)
+  - [Tapis Apps](Docs_MD/tapis_apps.md)
 
 ## Training Modules
 - [Working with Paths](Docs_MD/Paths_Overview.md)
@@ -98,12 +92,11 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [4 PostProcess Ops-MP](Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [Jupyter Notebooks & OpenSees](Docs_MD/RunOpsInDS_JupyterNotebook.md)
+- [OpenSees & Notebooks](Docs_MD/RunOpsInDS_JupyterNotebook.md)
   - [OpenSeesPy Interactive](Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Run ANY OpenSees in Python](Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Python Script within Notebook](Docs_MD/RunOpsInDS_PythonWithinPython.md)
 - [Interfacing with Tapis](Docs_MD/tapis_interfacing.md)
   - [Tapis Authentication](Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb' target='_blank'>Open in JupyterHub</a></sub>
@@ -139,7 +132,7 @@
   - [Explore Jobs Interactively](Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Cancel Tapis Job](Docs_MD/tapis_cancelJob.md)
-- [Exploring Tapis Apps with Notebooks](Docs_MD/tapis_apps_explore.md)
+- [Explore Tapis Apps](Docs_MD/tapis_apps_explore.md)
   - [List Tapis Apps](Jupyter_Notebooks/tapis_getApps_List.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getApps_List.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Get Tapis App Schema](Jupyter_Notebooks/tapis_getApps_Schema.ipynb)
@@ -152,7 +145,7 @@
   - [Run OpenSeesMP App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 
-## Python Utilities
+## Utilities
 - [OpsUtils()](OpsUtils_Docs/Misc/OpsUtils_Intro.md)
   - [Miscellaneous OpsUtils](OpsUtils_Docs/Misc/OpsUtils_Misc.md)
     - [convert_tacc_time()](OpsUtils_Docs/Misc/convert_tacc_time.md)

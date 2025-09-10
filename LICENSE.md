@@ -1,4 +1,4 @@
-<details><summary> License</summary>
+License
 
 This documentation is protected under **BSD 3-Clause License**.
 
@@ -430,4 +430,3 @@ public licenses.
 
 Creative Commons may be contacted at creativecommons.org.
 
-</details>
