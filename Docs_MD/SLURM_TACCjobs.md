@@ -1,4 +1,4 @@
-# TACC SLURM Jobs
+# SLURM Jobs
 ***How Are Jobs Run for DesignSafe on TACC? -- Big Picture***
 
 TACC (Texas Advanced Computing Center) provides the **high-performance computing (HPC)** resources that DesignSafe uses to run jobs. Specifically, jobs submitted from DesignSafe are executed on TACC's systems — typically Stampede3 or similar clusters.

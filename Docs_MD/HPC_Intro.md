@@ -1,5 +1,5 @@
-# HPC Hardware
-***Understanding the TACC HPC Hardware***
+# HPC Resources
+***Understanding the TACC HPC Resources***
 
 ## Core Concepts You’ll See Throughout This Module
 
