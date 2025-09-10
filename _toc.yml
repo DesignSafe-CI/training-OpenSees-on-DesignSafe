@@ -119,7 +119,8 @@ parts:
 
 
 
-  - caption: Training Modules    
+  - caption: Training Modules
+    chapters:
     - file: Docs_MD/Paths_Overview.md
       sections:
       - file: Jupyter_Notebooks/paths_InPython.ipynb
@@ -152,6 +153,7 @@ parts:
 
 
     - file: Docs_MD/tapis_interfacing.md
+      sections:
       - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
       - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
       - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
