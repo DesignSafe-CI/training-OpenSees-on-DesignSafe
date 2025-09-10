@@ -57,6 +57,7 @@ parts:
           sections:
           - file: Docs_MD/CLI.md
           - file: Docs_MD/RunOpsInDS_Console.md
+          - file: Docs_MD/RunOpsInDS_PythonWithinPython.md
 
 
 
@@ -139,7 +140,7 @@ parts:
       sections:
       - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
       - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
-      - file: Docs_MD/RunOpsInDS_PythonWithinPython.md
+      
 
 
     - file: Docs_MD/tapis_interfacing.md
