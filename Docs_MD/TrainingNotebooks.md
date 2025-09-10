@@ -1,7 +1,7 @@
-# Notebooks & Utilities
+# Training Material
 
 
-## Using the Training Notebooks and Python Library
+## Using the Training Notebooks
 
 Many of the pages in this training module are **generated directly from Jupyter notebooks**. These notebooks are designed to be **templates for your own work** — you should *never start from scratch*. Instead:
 
