@@ -1,4 +1,4 @@
-# filter_tapis_jobs_df
+# filter_tapis_jobs_df()
 ***filter_tapis_jobs_df(SelectCriteria, filtered_df, displayIt=False)***
 
 This function filters a **Tapis jobs DataFrame**, which you typically create with *get_tapis_jobs_df()*, based on flexible user-defined selection criteria provided in a Python dictionary. 

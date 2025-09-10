@@ -1,4 +1,4 @@
-# unix_to_tacc_time
+# unix_to_tacc_time()
 ***unix_to_tacc_time(unix_time)***
 
 This function converts a **Unix timestamp** (the standard float or integer representing seconds since the Unix **epoch 1970-01-01 00:00:00 UTC**) into a **TACC-style UTC timestamp string**, matching the format typically returned by Tapis or TACC systems.

@@ -1,4 +1,4 @@
-# get_user_work_tapis_uri
+# get_user_work_tapis_uri()
 
 ***def get_user_path_tapis_uri(
     t,

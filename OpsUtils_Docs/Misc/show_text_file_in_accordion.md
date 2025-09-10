@@ -1,4 +1,4 @@
-# show_text_file_in_accordion
+# show_text_file_in_accordion()
 ***show_text_file_in_accordion(folderPathList, filenameList, background='#d4fbff')***
 
 This function searches through one or more folders (including subfolders) for specified text files, and displays each found file **inside a collapsible accordion-style block** in a Jupyter notebook.

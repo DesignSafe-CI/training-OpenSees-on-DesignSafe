@@ -1,4 +1,4 @@
-# display_images_in_xbox
+# display_images_in_xbox()
 ***display_images_in_xbox(image_paths, box_type='V', width="100%", format='jpg')***
 
 

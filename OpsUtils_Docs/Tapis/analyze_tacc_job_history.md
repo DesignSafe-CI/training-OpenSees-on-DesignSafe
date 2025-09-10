@@ -1,4 +1,4 @@
-# analyze_tacc_job_history
+# analyze_tacc_job_history()
 ***analyze_tacc_job_history(t, jobUuid, mode="summary")***
 
 This is a **Python utility function** designed to simplify inspecting or extracting information from a TACC (Texas Advanced Computing Center) job’s execution history. It’s a wrapper around another function *process_tacc_job_history*, adding convenience “modes” so you don’t have to set many arguments manually.

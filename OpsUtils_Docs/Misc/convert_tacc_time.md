@@ -1,4 +1,4 @@
-# convert_tacc_time
+# convert_tacc_time()
 ***convert_tacc_time(timestamp_str)***
 
 This function converts a **TACC-style timestamp string** (typical of Tapis job metadata and DesignSafe logs) into a **Unix timestamp** (seconds since epoch).

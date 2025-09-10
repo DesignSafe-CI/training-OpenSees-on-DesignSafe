@@ -1,4 +1,4 @@
-# empty_folder
+# empty_folder()
 ***empty_folder(folder_path,delete_folder=False,confirm=True) -> str***
 
 

@@ -1,4 +1,4 @@
-# get_files_recursive
+# get_files_recursive()
 
 **Signature:** `get_files_recursive(path="", displayIt=10, returnItems=False, displayLevel=0)`
 

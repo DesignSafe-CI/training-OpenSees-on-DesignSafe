@@ -1,4 +1,4 @@
-# get_now_unix
+# get_now_unix()
 ***get_now_unix()***
 
 This is a simple utility function that returns the **current time as a Unix timestamp**, in **UTC**.

@@ -1,4 +1,4 @@
-# get_tapis_job_description
+# get_tapis_job_description()
 
 ***get_tapis_job_description(t, tapisInput)***
 

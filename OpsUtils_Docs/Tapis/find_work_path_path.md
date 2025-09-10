@@ -1,4 +1,4 @@
-# find_work_path_path
+# find_work_path_path()
 ***find_work_path_path(t, username)***
 
 ## Wrapper function: find_work_path_path

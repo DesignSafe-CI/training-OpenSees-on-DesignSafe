@@ -1,4 +1,4 @@
-# get_tapis_job_metadata
+# get_tapis_job_metadata()
 ***get_tapis_job_metadata(t,jobUuid)***
 
 

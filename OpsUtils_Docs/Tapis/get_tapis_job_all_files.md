@@ -1,5 +1,5 @@
-# get_tapis_job_all_files
-******get_tapis_job_all_files(t, jobUuid, displayIt=10, local_base_dir=False, overwrite=False)***
+# get_tapis_job_all_files()
+***get_tapis_job_all_files(t, jobUuid, displayIt=10, local_base_dir=False, overwrite=False)***
 
 
 ##  Overview

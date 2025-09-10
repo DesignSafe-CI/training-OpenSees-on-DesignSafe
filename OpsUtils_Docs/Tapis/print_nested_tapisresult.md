@@ -1,4 +1,4 @@
-# print_nested_tapisresult
+# print_nested_tapisresult()
 ***print_nested_tapisresult(obj, key0='obj.', indent=0)***
 
 Pretty-prints a nested **TapisResult/dict/list** in a clean, JSON-like style. It unwraps TapisResult objects via their internal attributes, groups keys for readability (scalars → lists → dicts), and quotes strings so you can visually distinguish values.

@@ -1,4 +1,4 @@
-# flatten_dict
+# flatten_dict()
 
 ***flatten_dict(d, parent_key='', sep='.')***
 

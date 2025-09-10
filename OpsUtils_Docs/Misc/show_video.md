@@ -1,4 +1,4 @@
-# show_video
+# show_video()
 ***show_video(videoPath, width="75%", videoType="video/mp4")***
 
 This function displays a video file **directly inside a Jupyter notebook** using a clean, styled HTML **<video>** tag.

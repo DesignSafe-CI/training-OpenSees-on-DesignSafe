@@ -1,4 +1,4 @@
-# monitor_tapis_job
+# monitor_tapis_job()
 ***monitor_tapis_job(t,jobUuid,job_start_time,askConfirmMonitorRT = True)***
 
 Continuously monitors the status of a Tapis job in **real-time**, polling the job status at progressively increasing intervals and printing structured updates.

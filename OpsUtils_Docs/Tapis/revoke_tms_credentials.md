@@ -1,4 +1,4 @@
-# revoke_tms_credentials
+# revoke_tms_credentials()
 ***revoke_tms_credentials(tapis, system_id: str, username: str)***
 
 **You will, likely, never need to use this function!!**

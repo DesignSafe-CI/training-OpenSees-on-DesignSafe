@@ -1,4 +1,4 @@
-# find_work_path
+# find_work_path()
 ***find_work_path(t, username)***
 
 **This function can take a while and may not be necessary**

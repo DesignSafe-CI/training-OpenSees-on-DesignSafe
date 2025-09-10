@@ -1,4 +1,4 @@
-# run_tapis_job
+# run_tapis_job()
 
 ***run_tapis_job(t, tapisInput, askConfirmJob=True, monitor_job=True, askConfirmMonitorRT=True,
 get_job_history=False, get_job_metadata=False, get_job_filedata=False, job_description={})***

@@ -1,4 +1,4 @@
-# get_tapis_username
+# get_tapis_username()
 ***get_tapis_username(t,*,prefer_userinfo: bool = True,fallback_to_token: bool = True,default=None,verbose: bool = False)***
 
 **Purpose:** Robustly determine the **Tapis username** from an authenticated *tapipy.tapis.Tapis* client, even in environments where certain endpoints are restricted.

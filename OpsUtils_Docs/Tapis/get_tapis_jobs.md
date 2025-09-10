@@ -1,4 +1,4 @@
-# get_tapis_jobs
+# get_tapis_jobs()
 ***get_tapis_jobs(t, SelectCriteria, displayIt=False, NmaxJobs=500)***
 
 

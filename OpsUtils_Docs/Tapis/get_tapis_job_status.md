@@ -1,4 +1,4 @@
-# get_tapis_job_status
+# get_tapis_job_status()
 
 ***get_tapis_job_status(t, jobUuid, print_all=True, return_values=False)***
 

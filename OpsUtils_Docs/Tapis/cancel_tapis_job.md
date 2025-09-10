@@ -1,4 +1,4 @@
-# cancel_tapis_job
+# cancel_tapis_job()
 ***cancel_tapis_job(tapis_client, job_uuid)***
 
 ** Cancel a Tapis Job with Robust Error Handling** 

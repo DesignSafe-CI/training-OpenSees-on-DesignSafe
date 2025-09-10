@@ -1,4 +1,4 @@
-# submit_tapis_job
+# submit_tapis_job()
 ***submit_tapis_job(t,job_description,askConfirmJob = True)***
 
 Submit a job to the **Tapis Jobs** service using a prepared job description. By default, the function **prompts for confirmation** to avoid accidental runs. On success, it prints the new **job UUID** and returns a small dictionary with key submission details.

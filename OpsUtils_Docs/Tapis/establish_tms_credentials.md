@@ -1,4 +1,4 @@
-# establish_tms_credentials
+# establish_tms_credentials()
 ***establish_tms_credentials(tapis, system_id: str, username: str)***
 
 **This function is run only the first time you connect to a specific system, such as Stampede3, on TACC.**

@@ -1,4 +1,4 @@
-# queryDF
+# queryDF()
 ***queryDF(outKey, JobsData_df, key, values, displayIt=False)***
 
 This function provides a **simple way to query a Pandas DataFrame for rows matching a set of values**, then returns the corresponding values from another column (keyed by `outKey`).

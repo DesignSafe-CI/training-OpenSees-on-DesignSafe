@@ -1,4 +1,4 @@
-# get_latest_app_version
+# get_latest_app_version()
 
 ***get_latest_app_version(t,app_id: str,allow_literal_latest_if_only: bool = True,allow_literal_latest_if_newest: bool = False)***
 

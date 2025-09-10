@@ -1,4 +1,4 @@
-# get_tapis_app_schema
+# get_tapis_app_schema()
 
 ***get\_tapis\_app\_schema(t, appId, version='latest', quiet=False)***
 

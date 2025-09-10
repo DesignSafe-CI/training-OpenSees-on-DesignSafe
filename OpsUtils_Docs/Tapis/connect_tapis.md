@@ -1,5 +1,4 @@
-# connect_tapis
-
+# connect_tapis()
 ***connect_tapis(token_filePath="~/.tapis_tokens.json", base_url="https://designsafe.tapis.io", username="", password="", force_connect=False)***
 
 **Purpose.** Create an authenticated **Tapis** client (e.g., for DesignSafe) with **automatic token handling**. It reuses a valid saved token when available, otherwise securely prompts for credentials, fetches a new token, saves it for next time, and returns a ready‑to‑use client.

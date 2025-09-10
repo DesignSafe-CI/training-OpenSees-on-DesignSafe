@@ -1,4 +1,4 @@
-# OpsUtils
+# OpsUtils()
 
 This module brings together all the Python functions we’ve developed and integrated into these training modules.  
 They are designed to make your work with DesignSafe, Tapis, OpenSees, and general Python workflows **simpler, faster, and more robust**.

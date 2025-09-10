@@ -1,4 +1,4 @@
-# get_tapis_jobs_df
+# get_tapis_jobs_df()
 ***get_tapis_jobs_df(t, displayIt=False, NmaxJobs=500)***
 
 

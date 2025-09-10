@@ -1,6 +1,5 @@
-# explore_tapis_job
-
-***explore\_tapis\_job(t, jobUuid)***
+# explore_tapis_job()
+***explore_tapis_job(t, jobUuid)***
 
 Explore a Tapis job end‑to‑end: prints **job name**, **status**, a formatted **history**, and lists the **outputs** (including the *inputDirectory* subtree when present). In Jupyter notebooks with *ipywidgets* installed, it also shows a simple **dropdown** to pick a file for download.
 

@@ -1,4 +1,4 @@
-# get_tapis_job_history_data
+# get_tapis_job_history_data()
 
 ***get_tapis_job_history_data(t, jobUuid, print_out=True, return_data=False, get_job_error_message=False)***
 

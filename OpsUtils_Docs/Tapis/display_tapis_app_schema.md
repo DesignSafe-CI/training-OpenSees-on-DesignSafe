@@ -1,5 +1,4 @@
-# display_tapis_app_schema
-
+# display_tapis_app_schema()
 ***display_tapis_app_schema(thisAppSchema)***
 
 Pretty-prints a **Tapis App schema** (or any nested **TapisResult/dict/list**) in a clean, JSON-like format. Keys are grouped for readability—**scalars first**, then **lists**, then **nested dicts**—and TapisResult objects are seamlessly expanded via their internal attributes.

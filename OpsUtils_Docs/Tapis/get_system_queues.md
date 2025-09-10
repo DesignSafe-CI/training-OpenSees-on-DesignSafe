@@ -1,5 +1,5 @@
-# get_system_queues
-******get_system_queues(t, system_id="stampede3", display=True)***
+# get_system_queues()
+***get_system_queues(t, system_id="stampede3", display=True)***
 
 
 This function retrieves and displays the **batch queues available on a given Tapis system** (such as **stampede3** on DesignSafe/TACC).

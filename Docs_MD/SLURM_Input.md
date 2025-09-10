@@ -59,7 +59,7 @@ The number of **CPU cores (processors) per node** to use.
 - More cores = higher parallelism, but also higher memory use.
 - For memory-heavy jobs, consider using **fewer cores per node** to allocate more memory per core.
 
-_Note_: Many TACC systems have 56 cores per node.
+_Note_: Different TACC systems have different cores per node.
 
 :::
 
@@ -77,7 +77,7 @@ A **custom name** for your job.
 
 Specifies the **storage system** where job results will be saved after execution.
 
-- Defaults to `designsafe.storage.default` or another predefined system.
+- Defaults to *designsafe.storage.default* (MyData) or another predefined system.
 - Best left at the default value unless you have specific storage needs.
 
 :::
@@ -86,7 +86,7 @@ Specifies the **storage system** where job results will be saved after execution
 
 The **folder** where output files will be copied after the job completes.
 
-- This is usually inside your **MyData** space.
+- This is usually inside your **MyData** space -- look for the **MyData/tapis-jobs-archive** folder. There the jobs are stored in nested folders where they are first grouped in a folder for each day. Within that folder you will find your job's folder, which should include the job name.
 - You can specify a custom location if needed, but the default is recommended.
 - Output directories are automatically named using the job name and timestamp.
 

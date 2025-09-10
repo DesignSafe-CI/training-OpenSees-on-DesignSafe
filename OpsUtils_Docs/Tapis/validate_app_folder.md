@@ -1,4 +1,4 @@
-# validate_app_folder
+# validate_app_folder()
 ***validate_app_folder(folder, required_files)***
 
 **Purpose:** Sanity-check an app deployment folder before registration. Confirms **files exist**, **JSON parses**, and prints a compact **summary**—without throwing `KeyError` if some identity fields are missing.

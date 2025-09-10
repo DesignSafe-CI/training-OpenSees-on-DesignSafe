@@ -1,4 +1,4 @@
-# interactive_tapis_job_explorer
+# interactive_tapis_job_explorer()
 ***interactive_tapis_job_explorer(t,JobsData_df)***
 
 Launch an interactive, widget-driven interface to explore Tapis job data directly within a Jupyter Notebook.

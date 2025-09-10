@@ -1,4 +1,4 @@
-## get_tapis_tenant_and_username
+## get_tapis_tenant_and_username()
 ***get_tapis_tenant_and_username(t,*,prefer_userinfo: bool = True,fallback_to_token: bool = True,default_tenant=None,default_username=None,verbose: bool = False)***
 
 **Purpose:** Quickly retrieve the **tenant** and **username** for the current Tapis session in a way that works across hosted hubs and restricted environments.
