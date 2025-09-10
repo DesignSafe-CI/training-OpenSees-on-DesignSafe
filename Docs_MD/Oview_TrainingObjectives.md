@@ -20,13 +20,13 @@ By the end of this module, you’ll know how to:
 * **Automate large parameter studies** by modifying script values on the fly or using loops in Python.
 * **Leverage Tapis APIs** to submit and monitor multiple jobs programmatically.
 
-
+---
 ## Training Material
 
 
 ### Using the Training Notebooks
 
-Many of the pages in this training module are **generated directly from Jupyter notebooks**. These notebooks are designed to be **templates for your own work** — you should *never start from scratch*. Instead:
+The pages in the training modules are **generated directly from Jupyter notebooks**. These notebooks are designed to be **templates for your own work** — you should *never start from scratch*. Instead:
 
 * The notebooks are stored in the **DesignSafe Community Data folder**.
   * You can run them there, but you **cannot save changes** in Community Data.

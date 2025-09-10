@@ -10,7 +10,7 @@ parts:
   - caption: ""  # <- This part has no title, acts like a loose section
     chapters:
     - file: Docs_MD/Oview_TrainingObjectives.md
-    - file: generated_toc.md
+
     
   - caption: Guides
     chapters:
@@ -186,7 +186,7 @@ parts:
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
     
-  - caption: Python Utilities
+  - caption: Utilities
     chapters:
     - file: OpsUtils_Docs/Misc/OpsUtils_Intro.md
       sections:
@@ -237,4 +237,4 @@ parts:
         - file: OpsUtils_Docs/Tapis/run_tapis_job.md
         - file: OpsUtils_Docs/Tapis/submit_tapis_job.md
         - file: OpsUtils_Docs/Tapis/validate_app_folder.md
-    
+    - file: generated_toc.md    
