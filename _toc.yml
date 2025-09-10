@@ -48,9 +48,8 @@ parts:
     - file: Docs_MD/ComputeEnv_JupyterHubContainers.md
       sections:
       - file: Docs_MD/JupyterHub_Intro.md
-        sections:
-        - file: Docs_MD/AccessJupyter.md
-        - file: Docs_MD/JupyterHub_Workflow.md
+      - file: Docs_MD/AccessJupyter.md
+      - file: Docs_MD/JupyterHub_Workflow.md
       - file: Docs_MD/JupyterHub_Tools.md
   
       - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
