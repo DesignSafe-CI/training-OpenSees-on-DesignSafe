@@ -1,5 +1,5 @@
-# JupyterHub Containers 
-***Kubernetes Cluster***
+# JupyterHub 
+***JupyterHub Containers : Kubernetes Cluster***
 
 The DesignSafe **JupyterHub** operates on a Kubernetes-managed cluster at the Texas Advanced Computing Center (TACC), offering an interactive, scalable development environment that supports scripting, job orchestration, and visualization — all from your browser.
 

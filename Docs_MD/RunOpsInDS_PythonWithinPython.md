@@ -1,5 +1,7 @@
-# Python Script within Notebook
-***Executing a Python Script from a Jupyter Notebook: What your options are, how they differ, and when variables stick around***
+# Python Scripts
+***Managing Python Scripts from a Notebook***
+
+Let's look at executing a Python Script from a Jupyter Notebook: What your options are, how they differ, and when variables stick around.
 
 Sometimes you want to run a full script from a notebook—maybe to reuse a workflow, pass command‑line args, or isolate heavy computations. 
 
