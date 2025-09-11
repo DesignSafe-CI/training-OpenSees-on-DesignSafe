@@ -1,4 +1,4 @@
-# Python Scripts
+# Python within Python
 ***Managing Python Scripts from a Notebook***
 
 Let's look at executing a Python Script from a Jupyter Notebook: What your options are, how they differ, and when variables stick around.

@@ -36,7 +36,7 @@ The CLI allows you to:
 | Remote Access | Allows access to remote servers via SSH or other terminals                |
 
 ## Accessing the Terminal
-:::{dropdown} Access the terminal through the **Jupyter interface**
+You can access the terminal through the **Jupyter interface.**
 
 Becoming familiar with how to open and use a terminal is the first step to unlocking the full power of command-line tools like OpenSees on both local and remote systems.
 
@@ -46,7 +46,7 @@ Access the terminal through the **Jupyter interface** by clicking “New > Termi
 <script>
     addSlides("slideShow","../_static/TerminalRun/Slide","JPG",1,4)
 </script>
-:::
+
 
 
 ## Basic Linux Commands
