@@ -185,8 +185,16 @@ parts:
         - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
         - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
     
+
     
-    
+          
+      - file: Docs_MD/tapis_OpenSeesApps.md
+        sections:
+  
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
+
       - file: Docs_MD/tapis_queryJobs.md
         sections:
         - file: Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb
@@ -208,19 +216,8 @@ parts:
           - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb
         - file: Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb
         - file: Docs_MD/tapis_cancelJob.md
-     
-      - file: Docs_MD/tapis_apps_explore.md
-        sections:
-        - file: Jupyter_Notebooks/tapis_getApps_List.ipynb
-        - file: Jupyter_Notebooks/tapis_getApps_Schema.ipynb
-    
-          
-      - file: Docs_MD/tapis_OpenSeesApps.md
-        sections:
-  
-        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
-        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
-        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
+
+        
     
   - caption: Utilities
     chapters:

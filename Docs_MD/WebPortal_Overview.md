@@ -1,4 +1,4 @@
-# DesignSafe Web Portal  
+# OpenSees from Web Portal  
 *Hybrid Workflow with Web Portal + JupyterHub*
 
 DesignSafe provides a suite of **Tapis-powered OpenSees applications** accessible through its **Web Portal**, allowing users to run both sequential and parallel jobs on Stampede3 **without writing SLURM scripts manually**. This section introduces the available apps, how they work, and how to integrate them into a **JupyterHub-driven workflow**.

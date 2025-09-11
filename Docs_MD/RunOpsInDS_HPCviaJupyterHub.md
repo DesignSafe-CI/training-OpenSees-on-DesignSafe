@@ -1,4 +1,5 @@
-# OpenSees on HPC via JupyterHub
+# OpenSees on HPC
+***OpenSees on HPC via JupyterHub***
 
 DesignSafe’s JupyterHub provides an interactive environment where you can prepare, submit, and monitor jobs directly on TACC’s HPC systems. Instead of writing your own SLURM scripts, you can use **Tapis Apps**—predefined job templates that take care of loading the correct modules, staging input files, running OpenSees on HPC nodes, and saving results back to your storage.
 

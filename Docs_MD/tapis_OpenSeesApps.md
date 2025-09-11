@@ -13,7 +13,7 @@ Running OpenSees on a high-performance computing (HPC) system like Stampede3 isn
 
 The **OpenSees Web-Portal app** on DesignSafe does all of this heavy lifting. It:
 
-* **Generates the SLURM job script for you**, tuned to the TACC environment (whether for `OpenSees`, `OpenSeesMP`, or `OpenSeesSP`).
+* **Generates the SLURM job script for you**, tuned to the TACC environment (whether for *OpenSees*, *OpenSeesMP*, or *OpenSeesSP*).
 * **Automatically stages your input files to the HPC scratch directory**, where I/O is fastest.
 * **Executes your analysis** on the compute nodes you requested.
 * **Collects and returns your output files to your DesignSafe My Data workspace** after the job completes.
@@ -101,23 +101,25 @@ Ideal for medium-to-large OpenSeesMP models and for researchers who want reprodu
 
 You can launch the OpenSees apps in three ways:
 
-1. **DesignSafe Web Portal (Apps & Tools) — point-and-click**
+:::{dropdown} DesignSafe Web Portal (Apps & Tools) — point-and-click
 
 * Go to **Apps & Tools** → choose **OpenSeesEXPRESS**, **OpenSeesMP**, or **OpenSeesSP**.
 * Fill in the app form: select your input file(s), set parameters (e.g., cores, wall time), pick the queue/system, and **Submit**.
 * The portal builds a valid Tapis job request, stages inputs to the execution system (e.g., `$SCRATCH` on Stampede3), runs the job, and archives outputs back to **My Data**.
+:::
 
-2. **Jupyter Notebook with Tapipy (Python SDK) — programmatic**
+:::{dropdown} Jupyter Notebook with Tapipy (Python SDK) — programmatic
 
 * Best for automation, parameter sweeps, chaining pre/post-processing, and reproducible pipelines.
 * Outline: authenticate → inspect the app to learn its parameters → build a job payload → submit → poll status → fetch outputs.
-* Detailed example below.
 
-3. **Tapis CLI (or direct HTTP/cURL) — scripting & CI**
+:::
+
+:::{dropdown} Tapis CLI (or direct HTTP/cURL) — scripting & CI
 
 * Use the CLI to submit JSON payloads from your terminal or CI pipelines.
-* Typical flow mirrors the Python example: `tapis apps show`, prepare `job.json`, then `tapis jobs submit -f job.json`, followed by `tapis jobs output …` to retrieve results.
-
+* Typical flow mirrors the Python example: *tapis apps show*, prepare *job.json*, then *tapis jobs submit -f job.json*, followed by *tapis jobs output …* to retrieve results.
+:::
 
 ---
 
