@@ -110,6 +110,12 @@ parts:
       sections:
       - file: Docs_MD/tapis_jobs.md
       - file: Docs_MD/tapis_apps.md
+      - file: Docs_MD/DSapps.md
+      sections:
+        - file: Docs_MD/DSapps_OpenSees.md
+        - file: Docs_MD/DSapps_OpenFOAM.md
+        - file: Docs_MD/DSapps_ADCIRC.md
+        - file: Docs_MD/DSapps_Compare.md
 
       
   - caption: Training Modules
