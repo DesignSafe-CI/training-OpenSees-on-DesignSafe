@@ -1,4 +1,4 @@
-# OpenSees Tapis Apps
+# Run OpenSees Tapis Apps
 ***OpenSees Tapis Apps on DesignSafe***
 
 
