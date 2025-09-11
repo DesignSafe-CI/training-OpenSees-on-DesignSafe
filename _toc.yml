@@ -60,6 +60,9 @@ parts:
 
 
 
+
+
+
       
 
     - file: Docs_MD/ComputeEnv_HPC.md
@@ -87,7 +90,8 @@ parts:
         - file: Docs_MD/SLURMmanual_ParameterSweep.md
           sections:
           - file: Docs_MD/SLURMmanual_PythonFunction.md
-          - file: Docs_MD/SLURMmanual_PythonFunction2.md    
+          - file: Docs_MD/SLURMmanual_PythonFunction2.md
+      - file: Docs_MD/HPC_manageResources.md
       - file: Docs_MD/ComputeEnv_VirtualMachines.md
   
 
