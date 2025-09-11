@@ -1,14 +1,13 @@
 # get_user_work_tapis_uri()
-
-***def get_user_path_tapis_uri(
-    t,
-    file_system: str = "none",                  # "none" | "mydata" | "community" | "work/stampede3","work/ls6","work/frontera"
-
-    paths_file_path: str = "~/MyData/.tapis_user_paths.json",
-    force_refresh: bool = False,
-) -> Union[str, Dict]***
+***def get_user_path_tapis_uri(t,file_system: str = "none",paths_file_path: str = "~/MyData/.tapis_user_paths.json",force_refresh: bool = False)***
     
-    
+```def get_user_path_tapis_uri(
+t,
+file_system: str = "none",                  # "none" | "mydata" | "community" | "work/stampede3","work/ls6","work/frontera"
+paths_file_path: str = "~/MyData/.tapis_user_paths.json",
+force_refresh: bool = False,
+) -> Union[str, Dict]```
+
 ## Purpose
 
 Return the user’s **Work base** as a **Tapis URI** for a given HPC system (e.g., *stampede3*, *ls6*, *frontera*). The function submits the system’s **credential app**, reads the job’s *archiveSystemDir* (an HPC filesystem path), and constructs a Tapis URI by taking the path prefix up to the system name and converting it to:
@@ -80,9 +79,3 @@ You can find these files in Community Data.
 :language: none
 ```
 
-
----
-
-**Author:** Silvia Mazzoni, DesignSafe (silviamazzoni@yahoo.com)
-**Date:** 2025-08-14
-**Version:** 1.0

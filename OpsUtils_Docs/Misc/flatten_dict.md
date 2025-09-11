@@ -91,9 +91,3 @@ You can find these files in **Community Data**.
 ```{literalinclude} ../../OpsUtils/OpsUtils/Misc/flatten_dict.py
 :language: none
 ````
-
----
-
-**Author:** Silvia Mazzoni
-**Date:** 2025-08-14
-**Version:** 1.0

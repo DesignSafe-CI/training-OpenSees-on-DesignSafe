@@ -59,9 +59,3 @@ You can find these files in Community Data.
 ```
 
 
-
----
-
-**Author:** Silvia Mazzoni, DesignSafe (silviamazzoni@yahoo.com)
-**Date:** 2025-08-14
-**Version:** 1.0
