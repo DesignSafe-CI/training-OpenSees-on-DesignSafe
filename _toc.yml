@@ -158,7 +158,7 @@ parts:
       sections:
       - file: Docs_MD/CLI.md
         sections:
-        - file: Docs_MD/RunOpenSees_CLI.ipynb
+        - file: Docs_MD/RunOpenSees_CLI.md
       - file: Docs_MD/RunOpsInDS_Console.md
       
       - file: Docs_MD/Paths_Overview.md

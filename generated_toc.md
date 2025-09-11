@@ -82,7 +82,7 @@
       - [tapisjob_app.sh](Docs_MD/OpsApps_MPs3_tapisjob_app_sh.md)
 
 ## Training Modules
-- [DesignSafe Web Portal](Docs_MD/WebPortal_Overview.md)
+- [OpenSees from Web Portal](Docs_MD/WebPortal_Overview.md)
   - [Web-Portal Workflow](Docs_MD/WebPortal_Overview_Workflow.md)
   - [1 Create Input](Docs_MD/WebPortal_1_CreateInput.md)
   - [2 Submit OpenSees-Express](Docs_MD/WebPortal_2_SubmitJob_OpenSeesExpress.md)
@@ -115,7 +115,7 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Run ANY OpenSees in Python](Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [OpenSees on HPC via JupyterHub](Docs_MD/RunOpsInDS_HPCviaJupyterHub.md)
+- [OpenSees on HPC](Docs_MD/RunOpsInDS_HPCviaJupyterHub.md)
   - [Interface with Tapis](Docs_MD/tapis_interfacing.md)
     - [Tapis Authentication](Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb' target='_blank'>Open in JupyterHub</a></sub>
@@ -125,6 +125,13 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb' target='_blank'>Open in JupyterHub</a></sub>
     - [Tapis Paths](Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+  - [Run OpenSees Tapis Apps](Docs_MD/tapis_OpenSeesApps.md)
+    - [Step-by-Step OpenSees App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Run OpenSees-Express App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Run OpenSeesMP App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Query and Retrieve Jobs](Docs_MD/tapis_queryJobs.md)
     - [Step 1: Explore All Jobs](Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb' target='_blank'>Open in JupyterHub</a></sub>
@@ -151,18 +158,6 @@
     - [Explore Jobs Interactively](Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb' target='_blank'>Open in JupyterHub</a></sub>
     - [Cancel Tapis Job](Docs_MD/tapis_cancelJob.md)
-  - [Explore Tapis Apps](Docs_MD/tapis_apps_explore.md)
-    - [List Tapis Apps](Jupyter_Notebooks/tapis_getApps_List.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getApps_List.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Get Tapis App Schema](Jupyter_Notebooks/tapis_getApps_Schema.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getApps_Schema.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Run OpenSees Tapis Apps](Docs_MD/tapis_OpenSeesApps.md)
-    - [Step-by-Step OpenSees App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Run OpenSees-Express App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Run OpenSeesMP App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 
 ## Utilities
 - [OpsUtils()](OpsUtils_Docs/Misc/OpsUtils_Intro.md)
