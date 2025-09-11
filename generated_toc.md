@@ -27,10 +27,8 @@
   - [Accessing JupyterHub](Docs_MD/AccessJupyter.md)
   - [Workflow in JupyterHub](Docs_MD/JupyterHub_Workflow.md)
   - [JupyterHub Tools](Docs_MD/JupyterHub_Tools.md)
-  - [JupyterHub for OpenSees](Docs_MD/RunOpsInDS_JupyterHub_intro.md)
-    - [Terminal CLI](Docs_MD/CLI.md)
-    - [Python Console](Docs_MD/RunOpsInDS_Console.md)
-    - [Python Scripts](Docs_MD/RunOpsInDS_PythonWithinPython.md)
+  - [OpenSees & Notebooks](Docs_MD/RunOpsInDS_JupyterNotebook.md)
+  - [Python within Python](Docs_MD/RunOpsInDS_PythonWithinPython.md)
 - [HPC on TACC](Docs_MD/ComputeEnv_HPC.md)
   - [HPC Resources](Docs_MD/HPC_Intro.md)
     - [Nodes](Docs_MD/HPC_Node.md)
@@ -70,23 +68,20 @@
     - [OpenFOAM app](Docs_MD/DSapps_OpenFOAM.md)
     - [ADCIRC app](Docs_MD/DSapps_ADCIRC.md)
     - [Compare Apps](Docs_MD/DSapps_Compare.md)
+  - [OpenSees Tapis Apps](Docs_MD/OpsApps_Overview.md)
+    - [App-Definition Files](Docs_MD/tapis_app_def_files.md)
+    - [OpenSees-EXPRESS App](Docs_MD/OpsApps_Express.md)
+      - [App Structure](Docs_MD/OpsApps_Express_fileStrux.md)
+      - [app.json](Docs_MD/OpsApps_Express_app_json.md)
+      - [tapisjob_app.sh](Docs_MD/OpsApps_Express_app_sh.md)
+      - [Example](Docs_MD/OpsApps_Express_example.md)
+    - [OpenSeesMP App](Docs_MD/OpsApps_MPs3.md)
+      - [App Structure](Docs_MD/OpsApps_MPs3_fileStrux.md)
+      - [app.json](Docs_MD/OpsApps_MPs3_app_json.md)
+      - [profile.json](Docs_MD/OpsApps_MPs3_profile_json.md)
+      - [tapisjob_app.sh](Docs_MD/OpsApps_MPs3_tapisjob_app_sh.md)
 
 ## Training Modules
-- [Working with Paths](Docs_MD/Paths_Overview.md)
-  - [Paths in Python](Jupyter_Notebooks/paths_InPython.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Absolute vs Relative Path](Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Root & Home Paths](Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Managing Paths](Jupyter_Notebooks/paths_InPython_Manage.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_Manage.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Directory Contents](Jupyter_Notebooks/paths_InPython_Contents.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_Contents.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Building Paths](Jupyter_Notebooks/paths_InPython_BuildPath.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_BuildPath.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Storage-System Paths](Jupyter_Notebooks/paths_StorageSystems.ipynb)
-      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_StorageSystems.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 - [DesignSafe Web Portal](Docs_MD/WebPortal_Overview.md)
   - [Web-Portal Workflow](Docs_MD/WebPortal_Overview_Workflow.md)
   - [1 Create Input](Docs_MD/WebPortal_1_CreateInput.md)
@@ -98,57 +93,75 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesExpress.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [4 PostProcess Ops-MP](Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [OpenSees & Notebooks](Docs_MD/RunOpsInDS_JupyterNotebook.md)
+- [OpenSees on JupyterHub](Docs_MD/RunOpsInDS_JupyterHub_intro.md)
+  - [Terminal CLI](Docs_MD/CLI.md)
+  - [Python Console](Docs_MD/RunOpsInDS_Console.md)
+  - [Working with Paths](Docs_MD/Paths_Overview.md)
+    - [Paths in Python](Jupyter_Notebooks/paths_InPython.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Absolute vs Relative Path](Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Root & Home Paths](Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Managing Paths](Jupyter_Notebooks/paths_InPython_Manage.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_Manage.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Directory Contents](Jupyter_Notebooks/paths_InPython_Contents.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_Contents.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Building Paths](Jupyter_Notebooks/paths_InPython_BuildPath.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_InPython_BuildPath.ipynb' target='_blank'>Open in JupyterHub</a></sub>
+    - [Storage-System Paths](Jupyter_Notebooks/paths_StorageSystems.ipynb)
+      <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/paths_StorageSystems.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [OpenSeesPy Interactive](Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb' target='_blank'>Open in JupyterHub</a></sub>
   - [Run ANY OpenSees in Python](Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [Interfacing with Tapis](Docs_MD/tapis_interfacing.md)
-  - [Tapis Authentication](Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb)
+- [OpenSees on HPC via JupyterHub](Docs_MD/RunOpsInDS_HPCviaJupyterHub.md)
+  - [Interface with Tapis](Docs_MD/tapis_interfacing.md)
+    - [Tapis Authentication](Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [System Specifications](Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb)
+    - [System Specifications](Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Establish TMS Credentials](Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb)
+    - [Establish TMS Credentials](Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Tapis Paths](Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb)
+    - [Tapis Paths](Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [Query and Retrieve Jobs](Docs_MD/tapis_queryJobs.md)
-  - [Step 1: Explore All Jobs](Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb)
+  - [Query and Retrieve Jobs](Docs_MD/tapis_queryJobs.md)
+    - [Step 1: Explore All Jobs](Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Explore All Jobs](Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb)
+      - [Explore All Jobs](Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Filter Tapis Jobs](Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb)
+      - [Filter Tapis Jobs](Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Step 2: Inspect Job](Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb)
+    - [Step 2: Inspect Job](Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Job Status](Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb)
+      - [Job Status](Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Job Metadata](Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb)
+      - [Job Metadata](Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Job History](Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb)
+      - [Job History](Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Step 3: Retrieve Output](Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb)
+    - [Step 3: Retrieve Output](Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Access Output Data](Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb)
+      - [Access Output Data](Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [List All Job Output](Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb)
+      - [List All Job Output](Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-    - [Download All Job Output](Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb)
+      - [Download All Job Output](Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Explore Jobs Interactively](Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb)
+    - [Explore Jobs Interactively](Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Cancel Tapis Job](Docs_MD/tapis_cancelJob.md)
-- [Explore Tapis Apps](Docs_MD/tapis_apps_explore.md)
-  - [List Tapis Apps](Jupyter_Notebooks/tapis_getApps_List.ipynb)
+    - [Cancel Tapis Job](Docs_MD/tapis_cancelJob.md)
+  - [Explore Tapis Apps](Docs_MD/tapis_apps_explore.md)
+    - [List Tapis Apps](Jupyter_Notebooks/tapis_getApps_List.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getApps_List.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Get Tapis App Schema](Jupyter_Notebooks/tapis_getApps_Schema.ipynb)
+    - [Get Tapis App Schema](Jupyter_Notebooks/tapis_getApps_Schema.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_getApps_Schema.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-- [OpenSees Tapis Apps](Docs_MD/tapis_OpenSeesApps.md)
-  - [Step-by-Step OpenSees App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb)
+  - [Run OpenSees Tapis Apps](Docs_MD/tapis_OpenSeesApps.md)
+    - [Step-by-Step OpenSees App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Run OpenSees-Express App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb)
+    - [Run OpenSees-Express App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb' target='_blank'>Open in JupyterHub</a></sub>
-  - [Run OpenSeesMP App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb)
+    - [Run OpenSeesMP App](Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb)
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 
 ## Utilities

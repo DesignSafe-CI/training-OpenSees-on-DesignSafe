@@ -140,15 +140,6 @@ parts:
       
   - caption: Training Modules
     chapters:
-    - file: Docs_MD/Paths_Overview.md
-      sections:
-      - file: Jupyter_Notebooks/paths_InPython.ipynb
-      - file: Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb
-      - file: Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb
-      - file: Jupyter_Notebooks/paths_InPython_Manage.ipynb
-      - file: Jupyter_Notebooks/paths_InPython_Contents.ipynb
-      - file: Jupyter_Notebooks/paths_InPython_BuildPath.ipynb
-      - file: Jupyter_Notebooks/paths_StorageSystems.ipynb    
     
   
     - file: Docs_MD/WebPortal_Overview.md
@@ -168,59 +159,68 @@ parts:
       - file: Docs_MD/CLI.md
       - file: Docs_MD/RunOpsInDS_Console.md
       
+      - file: Docs_MD/Paths_Overview.md
+        sections:
+        - file: Jupyter_Notebooks/paths_InPython.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_AbsVsRelative.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_RootAndHome.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_Manage.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_Contents.ipynb
+        - file: Jupyter_Notebooks/paths_InPython_BuildPath.ipynb
+        - file: Jupyter_Notebooks/paths_StorageSystems.ipynb    
+
+
       
       - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
       - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
       
 
-
-    - file: Docs_MD/tapis_interfacing.md
+    - file: Docs_MD/RunOpsInDS_HPCviaJupyterHub.md
       sections:
-      - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
-      - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
-      - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
-      - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
-
-
+  
+      - file: Docs_MD/tapis_interfacing.md
+        sections:
+        - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
+        - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
+        - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
+        - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
     
-    - file: Docs_MD/tapis_queryJobs.md
-      sections:
-      - file: Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb
+    
+    
+      - file: Docs_MD/tapis_queryJobs.md
         sections:
-        - file: Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb
-        - file: Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb
-
-      - file: Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb
+        - file: Jupyter_Notebooks/tapis_queryJobs_ExploreAllJobs.ipynb
+          sections:
+          - file: Jupyter_Notebooks/tapis_getJobList_AllJobs.ipynb
+          - file: Jupyter_Notebooks/tapis_getJobList_FilterJobs.ipynb
+    
+        - file: Jupyter_Notebooks/tapis_queryJobs_InspectJob.ipynb
+          sections:
+          - file: Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb
+          - file: Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb
+          - file: Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb
+    
+          
+        - file: Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb
+          sections:
+          - file: Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb
+          - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb
+          - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb
+        - file: Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb
+        - file: Docs_MD/tapis_cancelJob.md
+     
+      - file: Docs_MD/tapis_apps_explore.md
         sections:
-        - file: Jupyter_Notebooks/tapis_getJobMeta_JobStatus.ipynb
-        - file: Jupyter_Notebooks/tapis_getJobMeta_JobMetaData.ipynb
-        - file: Jupyter_Notebooks/tapis_getJobMeta_JobHistoryData.ipynb
-
-      
-      - file: Jupyter_Notebooks/tapis_queryJobs_RetrieveOutput.ipynb
+        - file: Jupyter_Notebooks/tapis_getApps_List.ipynb
+        - file: Jupyter_Notebooks/tapis_getApps_Schema.ipynb
+    
+          
+      - file: Docs_MD/tapis_OpenSeesApps.md
         sections:
-        - file: Jupyter_Notebooks/tapis_getJobOutData_AccessData.ipynb
-        - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Metadata.ipynb
-        - file: Jupyter_Notebooks/tapis_getJobOutData_OutputFiles_Download.ipynb
-      - file: Jupyter_Notebooks/tapis_getJobList_ExploreJobsInteractive.ipynb
-      - file: Docs_MD/tapis_cancelJob.md
- 
-    - file: Docs_MD/tapis_apps_explore.md
-      sections:
-      - file: Jupyter_Notebooks/tapis_getApps_List.ipynb
-      - file: Jupyter_Notebooks/tapis_getApps_Schema.ipynb
-
-      
-    - file: Docs_MD/tapis_OpenSeesApps.md
-      sections:
-
-
-
-      
-      # - file: Docs_MD/tapis_submit_process.md
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
-      - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
+  
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
+        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsMP.ipynb
     
   - caption: Utilities
     chapters:

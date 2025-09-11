@@ -1,4 +1,4 @@
-# DesignSafe JupyterHub
+# OpenSees on JupyterHub
 ***The Primary Interface for Scripting, Testing, and Orchestrating Your Workflow***
 
 The **DesignSafe JupyterHub** is your command center for running OpenSees in all its forms—whether you're writing Tcl scripts for the traditional interpreter or Python scripts using OpenSeesPy. It is the **primary portal for scripting, visualization, data management, and HPC job orchestration**.
