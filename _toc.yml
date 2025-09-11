@@ -52,11 +52,7 @@ parts:
       - file: Docs_MD/JupyterHub_Workflow.md
       - file: Docs_MD/JupyterHub_Tools.md
   
-      - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
-        sections:
-        - file: Docs_MD/CLI.md
-        - file: Docs_MD/RunOpsInDS_Console.md
-        - file: Docs_MD/RunOpsInDS_PythonWithinPython.md
+
 
 
 
@@ -165,9 +161,12 @@ parts:
       - file: Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb
       
 
-  
-    - file: Docs_MD/RunOpsInDS_JupyterNotebook.md
+    - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
       sections:
+      - file: Docs_MD/CLI.md
+      - file: Docs_MD/RunOpsInDS_Console.md
+      - file: Docs_MD/RunOpsInDS_PythonWithinPython.md  
+      - file: Docs_MD/RunOpsInDS_JupyterNotebook.md
       - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
       - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
       
