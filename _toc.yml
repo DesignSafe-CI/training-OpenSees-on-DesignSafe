@@ -78,6 +78,7 @@ parts:
         - file: Docs_MD/HPC_allocations.md
         - file: Docs_MD/HPCenv_Access.md
         - file: Docs_MD/HPCenv_HPCjupyter.md
+      - file: Docs_MD/HPC_manageResources.md
       - file: Docs_MD/SLURM_TACCjobs.md
         sections:
         - file: Docs_MD/SLURM_Intro.md
@@ -91,7 +92,6 @@ parts:
           sections:
           - file: Docs_MD/SLURMmanual_PythonFunction.md
           - file: Docs_MD/SLURMmanual_PythonFunction2.md
-      - file: Docs_MD/HPC_manageResources.md
       - file: Docs_MD/ComputeEnv_VirtualMachines.md
   
 

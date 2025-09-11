@@ -37,11 +37,12 @@ Step-by-step Process:
     - You can view, download, or analyze the data directly in the platform.
 
 
-## DesignSafe Apps do all this automatically!
+## **DesignSafe Apps** do all this automatically!
 - Sets up SLURM job scripts for you
 - Submits jobs via APIs to TACC’s scheduling system
 - Manages your allocation (so you don’t have to use TACC’s sbatch, squeue, etc.)
 You can access the APIs (Tapis) directly from your Python script.
+
 
 or you can **manage intermediate steps yourself.**
 
