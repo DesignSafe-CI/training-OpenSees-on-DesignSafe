@@ -118,7 +118,6 @@ parts:
         - file: Docs_MD/DSapps_OpenFOAM.md
         - file: Docs_MD/DSapps_ADCIRC.md
         - file: Docs_MD/DSapps_Compare.md
-
       - file: Docs_MD/OpsApps_Overview.md
         sections:
         - file: Docs_MD/tapis_app_def_files.md
@@ -134,6 +133,7 @@ parts:
           - file: Docs_MD/OpsApps_MPs3_app_json.md
           - file: Docs_MD/OpsApps_MPs3_profile_json.md
           - file: Docs_MD/OpsApps_MPs3_tapisjob_app_sh.md
+      - file: Docs_MD/tapis_interfacing.md
 
 
 
@@ -181,7 +181,7 @@ parts:
     - file: Docs_MD/RunOpsInDS_HPCviaJupyterHub.md
       sections:
   
-      - file: Docs_MD/tapis_interfacing.md
+      - file: Docs_MD/tapis_setup.md
         sections:
         - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
         - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
