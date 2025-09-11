@@ -121,21 +121,7 @@ parts:
         - file: Docs_MD/DSapps_ADCIRC.md
         - file: Docs_MD/DSapps_Compare.md
 
-      - file: Docs_MD/OpsApps_Overview.md
-        sections:
-        - file: Docs_MD/tapis_app_def_files.md
-        - file: Docs_MD/OpsApps_Express.md
-          sections:
-          - file: Docs_MD/OpsApps_Express_fileStrux.md
-          - file: Docs_MD/OpsApps_Express_app_json.md
-          - file: Docs_MD/OpsApps_Express_app_sh.md
-          - file: Docs_MD/OpsApps_Express_example.md
-        - file: Docs_MD/OpsApps_MPs3.md
-          sections:
-          - file: Docs_MD/OpsApps_MPs3_fileStrux.md
-          - file: Docs_MD/OpsApps_MPs3_app_json.md
-          - file: Docs_MD/OpsApps_MPs3_profile_json.md
-          - file: Docs_MD/OpsApps_MPs3_tapisjob_app_sh.md
+
 
 
 
@@ -212,6 +198,24 @@ parts:
       
     - file: Docs_MD/tapis_OpenSeesApps.md
       sections:
+
+      - file: Docs_MD/OpsApps_Overview.md
+        sections:
+        - file: Docs_MD/tapis_app_def_files.md
+        - file: Docs_MD/OpsApps_Express.md
+          sections:
+          - file: Docs_MD/OpsApps_Express_fileStrux.md
+          - file: Docs_MD/OpsApps_Express_app_json.md
+          - file: Docs_MD/OpsApps_Express_app_sh.md
+          - file: Docs_MD/OpsApps_Express_example.md
+        - file: Docs_MD/OpsApps_MPs3.md
+          sections:
+          - file: Docs_MD/OpsApps_MPs3_fileStrux.md
+          - file: Docs_MD/OpsApps_MPs3_app_json.md
+          - file: Docs_MD/OpsApps_MPs3_profile_json.md
+          - file: Docs_MD/OpsApps_MPs3_tapisjob_app_sh.md
+
+      
       # - file: Docs_MD/tapis_submit_process.md
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Detailed.ipynb
       - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Compact_OpsExpress.ipynb
