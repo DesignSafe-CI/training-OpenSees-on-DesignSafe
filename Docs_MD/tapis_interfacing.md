@@ -1,4 +1,4 @@
-# Interfacing with Tapis
+# Interface with Tapis
 ***Communicating with Tapis: API vs SDK***
 
 Tapis is a powerful platform designed to support **remote job execution**, **data transfer**, and **workflow automation** across heterogeneous systems like supercomputers, cloud nodes, and containers.
