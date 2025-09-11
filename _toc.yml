@@ -157,6 +157,8 @@ parts:
     - file: Docs_MD/RunOpsInDS_JupyterHub_intro.md
       sections:
       - file: Docs_MD/CLI.md
+        sections:
+        - file: Docs_MD/RunOpenSees_CLI.ipynb
       - file: Docs_MD/RunOpsInDS_Console.md
       
       - file: Docs_MD/Paths_Overview.md
@@ -185,7 +187,7 @@ parts:
         - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
         - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
     
-
+    
     
           
       - file: Docs_MD/tapis_OpenSeesApps.md

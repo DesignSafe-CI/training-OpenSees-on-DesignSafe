@@ -13,8 +13,7 @@ If you already have a completed Python script, you can execute it directly in th
 This is especially useful if you've developed your script in another environment (like Spyder or VS Code) and want to validate or rerun it within the JupyterHub environment without launching a full notebook.
 
 
-
-## Interactive Console
+## OpenSeesPy Interactive Console
 **Example** Run Sequential OpenSees Analyses Interactively at the Python Console
 
 <div id="slideShowInter">
