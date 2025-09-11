@@ -12,6 +12,10 @@ This environment is ideal for:
 
 Each JupyterHub session runs in a dedicated container on a TACC-managed Kubernetes cluster, with **up to 8 CPU cores and 20 GB of RAM**—perfect for medium-scale simulations and full-featured development workflows.
 
+All OpenSees have been pre-installed and are available in JupyterHub:
+* Tcl: OpenSees, OpenSeesMP, and OpenSeesSP
+* Pythong: OpenSeesPy
+
 ## Choosing the Right Interface for Your Task
     
 JupyterHub offers a suite of interfaces tailored to different stages of your modeling and analysis process:

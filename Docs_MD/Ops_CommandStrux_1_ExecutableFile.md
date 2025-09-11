@@ -70,12 +70,12 @@ You can now enter your commands at the prompt, one at a time, as shown below:
     OpenSees > model BasicBuilder -ndm 2 -ndf 3
     OpenSees > exit
 
-<div id="slideShowTCL">
+<!-- <div id="slideShowTCL">
 <script>
     addSlides("slideShowTCL","../_static/Interactive_Tcl/Slide","JPG",1,7)
 </script>
 
-
+ -->
 
 :::
 
@@ -101,11 +101,11 @@ You can now enter your commands at the prompt, one at a time, as shown below. Yo
     >>> exit()
     Process 0 Terminating
 
-<div id="slideShowPY">
+<!-- <div id="slideShowPY">
 <script>
     addSlides("slideShowPY","../_static/Interactive_Py/Slide","JPG",1,8)
 </script>
-
+ -->
 **2. In a Jupyter Notebook**<br>
 You can also run OpenSeesPy interactive by importing it into your Jupyter notebook:
 

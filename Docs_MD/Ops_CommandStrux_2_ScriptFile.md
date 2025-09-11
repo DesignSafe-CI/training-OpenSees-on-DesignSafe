@@ -171,7 +171,7 @@ You will see the following response:
     
 :::
 ::::
-
+<!-- 
 ### Demo
 ::::{dropdown} Run Script in Terminal
 
@@ -194,7 +194,7 @@ The following images show how to run OpenSees Tcl and OpenSeesPy at the terminal
 
 
 
-::::
+:::: -->
     
 ##  **Parallel Execution (N cores)**
 

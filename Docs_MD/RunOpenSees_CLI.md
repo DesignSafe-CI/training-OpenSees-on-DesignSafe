@@ -16,10 +16,7 @@ Start OpenSees-Tcl interactively by simply typing at the terminal:
 
     OpenSees
 
-    
 You’ll see a prompt like:
-
-
 
         OpenSees -- Open System For Earthquake Engineering Simulation
                 Pacific Earthquake Engineering Research Center
@@ -32,11 +29,8 @@ You’ll see a prompt like:
 
     OpenSees > 
 
-
-  
 You can now enter your commands at the prompt, one at a time, as shown below:
   
-
     OpenSees > wipe
     OpenSees > model BasicBuilder -ndm 2 -ndf 3
     OpenSees > exit
@@ -47,14 +41,12 @@ You can now enter your commands at the prompt, one at a time, as shown below:
 </script>
 
 
-
 ### OpenSeesPy
 
 Start python interactively by simply typing at the terminal:
 
        python
     
-
 The command-line command will start an interactive session. 
 
     Python 3.10.6 | packaged by conda-forge | (main, Aug 22 2022, 20:35:26) [GCC 10.4.0] on linux
@@ -74,8 +66,8 @@ You can now enter your commands at the prompt, one at a time, as shown below. Yo
     addSlides("slideShowPY","../_static/Interactive_Py/Slide","JPG",1,8)
 </script>
 
+---
 
-    
 ## Run OpenSees Script at the CLI
 
 
@@ -88,7 +80,7 @@ Being able to work with this script in an interactive environment allows to have
 
 This is your starting place. Develop your script for a few test cases.
 
-The following images show how to run OpenSees Tcl and OpenSeesPy at the terminal for both sequential and parallel analyses.
+The following images show how to run OpenSees Tcl and OpenSeesPy at the terminal for both **sequential** and **parallel** analyses, for both Tcl and Python interpreters.
 
 <div id="slideShow">
 <script>
@@ -97,3 +89,41 @@ The following images show how to run OpenSees Tcl and OpenSeesPy at the terminal
 
 
 
+
+## Example Files Used in this demo
+You can find these files in Community Data:
+
+:::{dropdown} OpenSeesMP
+
+```{dropdown}  Ex1a.Canti2D.Push.tcl
+:icon: file-code
+```{literalinclude} ../Examples_OpenSees/BasicExamples/Ex1a.Canti2D.Push.tcl
+:language: none
+```
+```{dropdown} Ex1a.Canti2D.Push.mp.tcl
+:icon: file-code
+```{literalinclude} ../Examples_OpenSees/BasicExamples/Ex1a.Canti2D.Push.mp.tcl
+:language: none
+```
+
+:::
+
+:::{dropdown} OpenSeesPy
+
+
+```{dropdown} Ex1a.Canti2D.Push.py
+:icon: file-code
+```{literalinclude} ../Examples_OpenSees/BasicExamples/Ex1a.Canti2D.Push.py
+:language: none
+```
+```{dropdown} Ex1a.Canti2D.Push.mpi.py
+:icon: file-code
+```{literalinclude} ../Examples_OpenSees/BasicExamples/Ex1a.Canti2D.Push.mpi.py
+:language: none
+```
+```{dropdown} Ex1a.Canti2D.Push.mpi4py.py
+:icon: file-code
+```{literalinclude} ../Examples_OpenSees/BasicExamples/Ex1a.Canti2D.Push.mpi4py.py
+:language: none
+```
+:::
