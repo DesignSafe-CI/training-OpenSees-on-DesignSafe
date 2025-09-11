@@ -93,7 +93,7 @@ The following images show how to run OpenSees Tcl and OpenSeesPy at the terminal
 ## Example Files Used in this demo
 You can find these files in Community Data:
 
-:::{dropdown} OpenSeesMP
+:::{dropdown} OpenSees-Tcl
 
 ```{dropdown}  Ex1a.Canti2D.Push.tcl
 :icon: file-code

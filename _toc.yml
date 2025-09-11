@@ -222,7 +222,7 @@ parts:
 
         
     
-  - caption: Utilities
+  - caption: ""  # <- This part has no title, acts like a loose section
     chapters:
     - file: OpsUtils_Docs/Misc/OpsUtils_Intro.md
       sections:
