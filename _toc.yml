@@ -106,16 +106,38 @@ parts:
         - file: Docs_MD/FileStorage_2_compsys.md      
         - file: Docs_MD/FileStorage_3_compnode.md
       - file: Docs_MD/FileStorage_c_Guide.md
+
+
+
+      
     - file: Docs_MD/tapis_intro.md
       sections:
       - file: Docs_MD/tapis_jobs.md
       - file: Docs_MD/tapis_apps.md
       - file: Docs_MD/DSapps.md
-      sections:
+        sections:
         - file: Docs_MD/DSapps_OpenSees.md
         - file: Docs_MD/DSapps_OpenFOAM.md
         - file: Docs_MD/DSapps_ADCIRC.md
         - file: Docs_MD/DSapps_Compare.md
+
+      - file: Docs_MD/Tapis/OpsApps_Overview.md
+        sections:
+        - file: Docs_MD/Tapis/tapis_app_def_files.md
+        - file: Docs_MD/Tapis/OpsApps_Express.md
+          sections:
+          - file: Docs_MD/Tapis/OpsApps_Express_fileStrux.md
+          - file: Docs_MD/Tapis/OpsApps_Express_app_json.md
+          - file: Docs_MD/Tapis/OpsApps_Express_app_sh.md
+          - file: Docs_MD/Tapis/OpsApps_Express_example.md
+        - file: Docs_MD/Tapis/OpsApps_MPs3.md
+          sections:
+          - file: Docs_MD/Tapis/OpsApps_MPs3_fileStrux.md
+          - file: Docs_MD/Tapis/OpsApps_MPs3_app_json.md
+          - file: Docs_MD/Tapis/OpsApps_MPs3_profile_json.md
+          - file: Docs_MD/Tapis/OpsApps_MPs3_tapisjob_app_sh.md
+
+
 
       
   - caption: Training Modules
