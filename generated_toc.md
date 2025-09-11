@@ -95,6 +95,7 @@
       <sub>📂 <a href='https://jupyter.designsafe-ci.org/hub/user-redirect/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks/webPortal_4_PostProcess_OpenSeesMP.ipynb' target='_blank'>Open in JupyterHub</a></sub>
 - [OpenSees on JupyterHub](Docs_MD/RunOpsInDS_JupyterHub_intro.md)
   - [Terminal CLI](Docs_MD/CLI.md)
+    - [Run OpenSees in CLI](Docs_MD/RunOpenSees_CLI.md)
   - [Python Console](Docs_MD/RunOpsInDS_Console.md)
   - [Working with Paths](Docs_MD/Paths_Overview.md)
     - [Paths in Python](Jupyter_Notebooks/paths_InPython.ipynb)

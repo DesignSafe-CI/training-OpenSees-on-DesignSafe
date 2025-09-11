@@ -1,12 +1,7 @@
 # get_user_work_tapis_uri()
 ***def get_user_path_tapis_uri(t,file_system: str = "none",paths_file_path: str = "~/MyData/.tapis_user_paths.json",force_refresh: bool = False)***
-    
-```def get_user_path_tapis_uri(
-t,
-file_system: str = "none",                  # "none" | "mydata" | "community" | "work/stampede3","work/ls6","work/frontera"
-paths_file_path: str = "~/MyData/.tapis_user_paths.json",
-force_refresh: bool = False,
-) -> Union[str, Dict]```
+
+
 
 ## Purpose
 
