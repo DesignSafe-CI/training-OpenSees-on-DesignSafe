@@ -4,7 +4,7 @@
 
 Running ADCIRC on an HPC system like Stampede3 is challenging because:
 
-* You need to prepare multiple specialized input files: meshes (e.g. `fort.14`), boundary conditions (`fort.15`), forcing data (`fort.61`...), and more.
+* You need to prepare multiple specialized input files: meshes (e.g. *fort.14*), boundary conditions (*fort.15*), forcing data (*fort.61*...), and more.
 * The solver requires careful MPI configuration, meaning you must write precise **SLURM batch scripts** that set up the parallel environment correctly.
 * You have to manually stage your input files to the **scratch** space on the compute cluster (for high I/O speed), execute the solver, and then gather the output files.
 * If you want to run multiple storm scenarios (for example in an ensemble study), you have to carefully manage directories, job submissions, and resource allocation to avoid collisions and maximize throughput.

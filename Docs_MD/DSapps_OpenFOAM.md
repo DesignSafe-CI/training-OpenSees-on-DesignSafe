@@ -2,9 +2,9 @@
 
 OpenFOAM is a powerful, open-source computational fluid dynamics (CFD) toolkit, widely used for modeling fluid flow, turbulence, heat transfer, and more. But running OpenFOAM on a large-scale HPC system like Stampede3 is **notoriously complex**, for several reasons:
 
-* You typically work with **case directories** containing `system/`, `constant/`, and `0/` folders — these must be staged properly to the compute environment.
-* Running in parallel requires careful setup with `decomposePar`, plus a correctly configured `SLURM` script that specifies the MPI processes and threads.
-* After execution, you often need to reconstruct data (`reconstructPar`) and post-process, then gather results back into persistent storage.
+* You typically work with **case directories** containing *system/*, *constant/*, and *0/* folders — these must be staged properly to the compute environment.
+* Running in parallel requires careful setup with *decomposePar*, plus a correctly configured *SLURM* script that specifies the MPI processes and threads.
+* After execution, you often need to reconstruct data (*reconstructPar*) and post-process, then gather results back into persistent storage.
 
 Doing this manually means:
 
@@ -18,7 +18,7 @@ Doing this manually means:
 The **OpenFOAM Web-Portal app** on DesignSafe takes care of these complexities by:
 
 * Accepting your **full OpenFOAM case directory**, packaged for upload.
-* Automatically **generating the SLURM submission script** to run on TACC systems, with the correct `mpirun` or `srun` calls for your requested resources.
+* Automatically **generating the SLURM submission script** to run on TACC systems, with the correct *mpirun* or *srun* calls for your requested resources.
 * Staging your case files to the HPC scratch space for maximum I/O performance.
 * Executing your solver, then reconstructing the results (if required).
 * **Copying the results back** to your DesignSafe workspace so you can download or continue post-processing.

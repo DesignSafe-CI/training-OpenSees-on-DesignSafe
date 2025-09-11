@@ -14,7 +14,7 @@ All of this is crucial for taking full advantage of HPC resources — but it can
 
 The **OpenSees Web-Portal app** on DesignSafe does all of this heavy lifting. It:
 
-* **Generates the SLURM job script for you**, tuned to the TACC environment (whether for `OpenSees`, `OpenSeesMP`, or `OpenSeesSP`).
+* **Generates the SLURM job script for you**, tuned to the TACC environment (whether for *OpenSees*, *OpenSeesMP*, or *OpenSeesSP*).
 * **Automatically stages your input files to the HPC scratch directory**, where I/O is fastest.
 * **Executes your analysis** on the compute nodes you requested.
 * **Collects and returns your output files to your DesignSafe My Data workspace** after the job completes.
