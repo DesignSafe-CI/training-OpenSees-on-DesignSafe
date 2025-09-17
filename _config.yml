@@ -16,7 +16,7 @@ sphinx:
   config:
     suppress_warnings:
       - myst.header
-    html_baseurl: "https://silviamazzoni.github.io/training-OpenSees-on-DesignSafe/"
+    html_baseurl: "https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/"
     html_copy_source: true
 
 launch_buttons:
@@ -25,7 +25,7 @@ launch_buttons:
   thebe: true
 
 repository:
-  url: https://github.com/silviamazzoni/training-OpenSees-on-DesignSafe
+  url: https://github.com/DesignSafe-CI/training-OpenSees-on-DesignSafe
   branch: main
 
 html:
