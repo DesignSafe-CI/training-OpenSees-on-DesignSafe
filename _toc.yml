@@ -186,8 +186,10 @@ parts:
         - file: Jupyter_Notebooks/tapisConnect_connectToTapis.ipynb
         - file: Jupyter_Notebooks/tapisConnect_getSystemSpecs.ipynb
         - file: Jupyter_Notebooks/tapisConnect_establishSystemCredentials.ipynb
-        - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
     
+      - file: Docs_MD/tapis_OpenSeesApps.md
+        sections:
+        - file: Jupyter_Notebooks/tapisConnect_tapisPaths.ipynb
     
     
           

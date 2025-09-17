@@ -25,32 +25,9 @@ There are two main ways to interact with Tapis:
 
 
 
-:::{dropdown} **Tapis API (REST API)**
 
-* The raw interface that powers everything behind the scenes.
-* Uses standard web protocols (HTTP, HTTPS, GET, POST, PUT, etc.).
-* You send requests directly to Tapis endpoints.
-* Can be accessed using any language (Python, Java, curl, etc.)
-* Requires you to:
 
-  * Build request URLs
-  * Add authentication headers
-  * Manage tokens
-  * Format request bodies (payloads) as JSON
-  * Parse JSON responses
-  * Handle HTTP errors and headers manually
-
-:::{dropdown} **Example (using `curl`):**
-
-```bash
-    curl -X GET https://tacc.tapis.io/v3/jobs \
-      -H "Authorization: Bearer <token>"
-```
-:::
-
-:::
-
-:::{dropdown} **Tapis SDK (Tapipy)**
+:::{dropdown} **Tapis SDK (Tapipy) Recommended here**
 
 **Tapipy** is a Python SDK generated directly from the Tapis OpenAPI specification. It provides:
 
@@ -110,6 +87,32 @@ In simple terms:
 :::
 
 :::
+
+:::{dropdown} **Tapis API (REST API)**
+
+* The raw interface that powers everything behind the scenes.
+* Uses standard web protocols (HTTP, HTTPS, GET, POST, PUT, etc.).
+* You send requests directly to Tapis endpoints.
+* Can be accessed using any language (Python, Java, curl, etc.)
+* Requires you to:
+
+  * Build request URLs
+  * Add authentication headers
+  * Manage tokens
+  * Format request bodies (payloads) as JSON
+  * Parse JSON responses
+  * Handle HTTP errors and headers manually
+
+:::{dropdown} **Example (using `curl`):**
+
+```bash
+    curl -X GET https://tacc.tapis.io/v3/jobs \
+      -H "Authorization: Bearer <token>"
+```
+:::
+
+:::
+
 
 ## Rule of thumb
 

@@ -4,9 +4,9 @@
 
 Running OpenSees on a high-performance computing (HPC) system like Stampede3 isn’t as simple as just launching a command. DesignSafe has developed and published three official **OpenSees Tapis Apps** that automate all of this setup and submission:
 
-* **OpenSeesEXPRESS** – for sequential simulations
-* **OpenSeesMP** – for parallel simulations
-* **OpenSeesSP** – for single-processor jobs
+* **OpenSeesEXPRESS** – for sequential simulations -- runs on a dedicated VM
+* **OpenSeesMP** – for parallel simulations -- runs on Stampede3
+* **OpenSeesSP** – for single-processor jobs -- runs on Stampede3
 
 
 ## The OpenSees app on DesignSafe automates OpenSees Jobs on TACC
@@ -108,7 +108,7 @@ You can launch the OpenSees apps in three ways:
 * The portal builds a valid Tapis job request, stages inputs to the execution system (e.g., `$SCRATCH` on Stampede3), runs the job, and archives outputs back to **My Data**.
 :::
 
-:::{dropdown} Jupyter Notebook with Tapipy (Python SDK) — programmatic
+:::{dropdown} Jupyter Notebook with Tapipy (Python SDK) — programmatic -- **Recommended and demonstrated here!!!**
 
 * Best for automation, parameter sweeps, chaining pre/post-processing, and reproducible pipelines.
 * Outline: authenticate → inspect the app to learn its parameters → build a job payload → submit → poll status → fetch outputs.
@@ -119,6 +119,7 @@ You can launch the OpenSees apps in three ways:
 
 * Use the CLI to submit JSON payloads from your terminal or CI pipelines.
 * Typical flow mirrors the Python example: *tapis apps show*, prepare *job.json*, then *tapis jobs submit -f job.json*, followed by *tapis jobs output …* to retrieve results.
+* This method gives you full control (and responsibility) for the entire job-submittal and file movement process.
 :::
 
 ---

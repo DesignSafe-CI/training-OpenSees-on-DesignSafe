@@ -1,14 +1,32 @@
-# OpenSees App
+# OpenSees Apps
 
-Running OpenSees on an HPC system like Stampede3 isn’t as simple as just launching a command. You’d normally have to:
+Running OpenSees on an HPC system like Stampede3 isn’t as simple as just typing a command. Normally, you would need to:
 
-* Write your own **SLURM batch scripts**, specifying resources, module loads, and MPI or OpenMP directives.
-* **Manually copy input files** from your storage area to the compute cluster’s scratch space (for speed).
-* Ensure your script requests the right cores/nodes, so you neither waste allocation time nor hit resource limits.
-* **Handle output files** — copying them back from scratch to your long-term storage.
-* Troubleshoot environment issues (e.g., making sure OpenSeesMP or OpenSeesSP is correctly compiled and on your path).
+* Write a **SLURM batch script**, specifying resources, module loads, and MPI/OpenMP directives.
+* **Stage input files** — manually copying them from your storage area to the cluster’s scratch space for faster execution.
+* Request the correct **cores and nodes**, balancing efficiency against allocation limits.
+* **Retrieve results** by copying output files back from scratch to long-term storage.
+* Troubleshoot environment setup — ensuring that OpenSeesMP or OpenSeesSP is properly compiled, loaded, and on your path.
 
-All of this is crucial for taking full advantage of HPC resources — but it can be error-prone and requires familiarity with Linux, SLURM, and the cluster’s architecture.
+These steps are essential for leveraging HPC resources effectively, but they can also be error-prone and require deep familiarity with Linux, SLURM, and system architecture.
+
+## OpenSees Tapis Apps
+
+To simplify this process, DesignSafe provides three official **OpenSees Tapis Apps** that automate job setup, submission, and file handling:
+
+* **OpenSeesEXPRESS** – for sequential (single-core) simulations
+* **OpenSeesMP** – for parallel simulations across multiple cores/nodes
+* **OpenSeesSP** – for single-processor jobs on Stampede3
+
+(A Tapis app for **OpenSeesPy** is currently in development.)
+
+## Where They Run
+
+The *OpenSeesMP* and *OpenSeesSP* apps run on **Stampede3**, where jobs are submitted through the SLURM scheduler and enter the HPC queue.
+
+The *OpenSeesEXPRESS* app, by contrast, runs single-processor OpenSees on a **Virtual Machine**. These jobs do not go through the HPC queue, so they typically start immediately.
+
+
 
 ## The OpenSees app on DesignSafe automates this for you
 
@@ -18,6 +36,8 @@ The **OpenSees Web-Portal app** on DesignSafe does all of this heavy lifting. It
 * **Automatically stages your input files to the HPC scratch directory**, where I/O is fastest.
 * **Executes your analysis** on the compute nodes you requested.
 * **Collects and returns your output files to your DesignSafe My Data workspace** after the job completes.
+
+**This app can also be used when submitting a job to Stampede3 via the Tapis interface**
 
 This means you can:
 
