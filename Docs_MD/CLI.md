@@ -1,6 +1,6 @@
 # Terminal CLI
 
-The **CLI (Command-Line Interface)** is a text-based way to interact with a computer program or operating system by typing commands into a **Terminal** or console window, instead of using graphical elements like buttons and menus. 
+The **CLI (Command-Line Interface)** is a text-based way to interact with a computer program or operating system by typing commands into a **Terminal** or **Console** window, instead of using graphical elements like buttons and menus. 
 
 A CLI/Terminal  allows you to:
 
