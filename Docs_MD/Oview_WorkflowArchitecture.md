@@ -12,7 +12,7 @@ To guide you through the full landscape, we divide the system into three key lay
 ---
 The following diagram gives you a snapshot of the workflow we will be presenting in this training module.
 
-<img src="../_images/ComputeWorkflowjpg" alt="Compute Environment" width="75%" />
+<img src="../_images/ComputeWorkflow.jpg" alt="Compute Environment" width="75%" />
 
 
 <br>
