@@ -6,8 +6,6 @@
 
 The choice of *OpenSees Application* and *DesignSafe Platform* depends on your project needs, which may be different at different stages. The integrated environment on DesignSafe allows seamless scalability.
 
-
-
 ## Workflows for OpenSees on DesignSafe
 1. Submit Job to HPC from the Web Portal via Tapis Apps
 2. Run OpenSees within Jupyter Hub
