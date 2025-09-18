@@ -16,10 +16,12 @@ These methods are shown in the diagram below.
 <img src="../_images/WaysToRunOpenSeesOnDS_all.jpg" alt="Workflows for OpenSees on DesignSafe" width="75%" />
 
 ## Recommendations
-1. Run small/medium jobs within Jupyter Hub -- it has 8 processors
+### 1. Run small/medium jobs within Jupyter Hub
+No wait time, no time limit, it has 8 processors
 <img src="../_images/WaysToRunOpenSeesOnDS_JupHub.jpg" alt=" Workflows for OpenSees on DesignSafe -- Jupyter Hub" width="75%" />
 
-2. Submit medium/large jobs to HPC from JupyterHub -- it has the most efficient job-handling workflow
+### 2. Submit medium/large jobs to HPC from JupyterHub 
+It has the most efficient job-and-file handling workflow
 <img src="../_images/WaysToRunOpenSeesOnDS_HPC.jpg" alt=" Workflows for OpenSees on DesignSafe HPC" width="75%" />
 
 
