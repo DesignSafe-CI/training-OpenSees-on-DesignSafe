@@ -194,7 +194,8 @@ parts:
         sections:
         - file: Jupyter_Notebooks/tapis_getApps_List.ipynb
         - file: Jupyter_Notebooks/tapis_getApps_Schema.ipynb
-        - file: Jupyter_Notebooks/tapis_submitJob_DSapp_OpenSees_CreateInput.ipynb
+        - file: upyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Discover_OSexpress.ipynb
+        - file: upyter_Notebooks/tapis_submitJob_DSapp_OpenSees_Discover_OSmpS3.ipynb
     
     
           
