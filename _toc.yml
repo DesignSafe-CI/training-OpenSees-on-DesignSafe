@@ -164,6 +164,7 @@ parts:
       - file: Docs_MD/RunOpsInDS_Console.md
 
       - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
+      - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
 
       - file: Docs_MD/Paths_Overview.md
         sections:
@@ -177,7 +178,6 @@ parts:
 
 
       
-      - file: Jupyter_Notebooks/runOps_RunAnyOpenSeesInPython.ipynb
       
 
     - file: Docs_MD/RunOpsInDS_HPCviaJupyterHub.md
