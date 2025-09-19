@@ -23,6 +23,7 @@ parts:
 
     - file: Docs_MD/OpenSees_AndDesignSafe.md
       sections:
+      - file: Docs_MD/OpenSeesComputationalNeeds.md
       - file: Docs_MD/OpenSees_Interpreters.md
       - file: Docs_MD/OpenSees_Applications.md
       - file: Docs_MD/OpenSees_Workflows.md
