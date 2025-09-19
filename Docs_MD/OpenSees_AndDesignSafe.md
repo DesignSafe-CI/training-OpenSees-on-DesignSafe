@@ -1,26 +1,42 @@
 # OpenSees on DesignSafe
 
-**OpenSees** was conceptualized, designed, and developed with parallel computing as its core objective. An application designed for parallel computing takes advantage of multiple processors working simultaneously on independent tasks as well as on interdependent ones where the processors can pass information to each other. Within these parallel-computing design concepts, there are 3+1 application of OpenSees, each designed with a different objective
+**OpenSees** was conceptualized, designed, and developed with **parallel computing** as a core objective. A parallel computing application leverages multiple processors working simultaneously — not only on independent tasks but also on interdependent tasks where processors exchange information.
 
-**DesignSafe** provides different platforms to run the OpenSees applications in **TACC**. These platforms have been designed with scalability in mind -- each platform is optimized for a wide range of project objectives, size, and scope.
+Building on these design principles, OpenSees now includes **3 + 1 applications**, each optimized for different objectives and computational models.
 
-The choice of *OpenSees Application* and *DesignSafe Platform* depends on your project needs, which may be different at different stages. The integrated environment on DesignSafe allows seamless scalability.
+**DesignSafe**, through the Texas Advanced Computing Center (**TACC**), provides multiple platforms to run these OpenSees applications. Each platform is designed with **scalability and adaptability** in mind, supporting a wide range of project objectives, sizes, and scopes.
+
+The **choice of OpenSees application and DesignSafe platform** depends on your project needs, which may change across different stages of your work. The integrated environment on DesignSafe allows you to move seamlessly between platforms, scaling your workflows as needed. Importantly, scaling is not simply a matter of “adding more nodes” — different analyses demand different strategies, whether memory-intensive, embarrassingly parallel, or GPU-accelerated.
+
+---
 
 ## Workflows for OpenSees on DesignSafe
-1. Submit Job to HPC from the Web Portal via Tapis Apps
-2. Run OpenSees within Jupyter Hub
-3. Submit Job to HPC from JupyterHub via Tapis Apps
-4. Submit SLURM Job to HPC manually from a Node in HPC
 
-These methods are shown in the diagram below.
-<img src="../_images/WaysToRunOpenSeesOnDS_all.jpg" alt="Workflows for OpenSees on DesignSafe" width="75%" />
+There are four main ways to run OpenSees on DesignSafe:
+
+1. **Submit jobs to HPC from the Web Portal via Tapis Apps**
+2. **Run OpenSees directly within JupyterHub**
+3. **Submit jobs to HPC from JupyterHub using Tapis Apps**
+4. **Manually submit SLURM jobs to HPC from a login node**
+
+These workflows are illustrated below:
+
+<img src="../_images/WaysToRunOpenSeesOnDS_all.jpg" alt="Workflows for OpenSees on DesignSafe" width="75%" />  
+
+---
 
 ## Recommendations
-### 1. Run small/medium jobs within Jupyter Hub
-No wait time, no time limit, it has 8 processors
-<img src="../_images/WaysToRunOpenSeesOnDS_JupHub.jpg" alt=" Workflows for OpenSees on DesignSafe -- Jupyter Hub" width="50%" />
 
-### 2. Submit medium/large jobs to HPC from JupyterHub 
-It has the most efficient job-and-file handling workflow
-<img src="../_images/WaysToRunOpenSeesOnDS_HPC.jpg" alt=" Workflows for OpenSees on DesignSafe HPC" width="50%" />
+### 1. Run small to medium jobs within JupyterHub
+
+* No wait time, no walltime limits.
+* Allocated with **8 processors**.
+
+  <img src="../_images/WaysToRunOpenSeesOnDS_JupHub.jpg" alt="Workflows for OpenSees on DesignSafe -- Jupyter Hub" width="50%" />  
+
+### 2. Submit medium to large jobs to HPC from JupyterHub
+
+* The most efficient workflow for job and file management.
+
+  <img src="../_images/WaysToRunOpenSeesOnDS_HPC.jpg" alt="Workflows for OpenSees on DesignSafe HPC" width="50%" />  
 
