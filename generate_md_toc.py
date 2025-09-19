@@ -5,11 +5,17 @@ import nbformat
 
 from urllib.parse import quote
 
+from nbformat.v4 import new_markdown_cell
+
+
 # things to go ahead and do
 doTagCells = True
 doJubHubLinks = True
 doAppendTOC = False
 addNBicon = False # they are distracting
+
+do_add_intro_markdown = False; # do this only once, but keep here as template.
+do_replace_first_markdown = True; # this is good to have since it makes sure the link at the top is good.
 
 # jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/"
 jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/tree/"
@@ -66,6 +72,19 @@ def generate_jupyterhub_links(notebook_path):
 def get_heading_from_file(file_path):
     """Extract the first level-1 Markdown heading from a file."""
     if file_path.endswith(".ipynb") or file_path.endswith(".py"):
+        if do_add_intro_markdown:
+            add_intro_markdown(file_path,1); # we really only need to do this once
+        if do_replace_first_markdown:
+            new_text = ''
+            new_text += '\n<a class="reference external" href="'
+            new_text += get_notebook_link(file_path)
+            new_text += '" target="_blank">\n'
+            new_text += '<img alt="Try on DesignSafe" src="https://raw.githubusercontent.com/DesignSafe-Training/pinn/main/DesignSafe-Badge.svg" /></a>'
+            new_text += '\n'
+            new_text += '<br>\n'
+            new_text += '\n'
+            new_text += 'This notebook is part of the **OpenSees-On-DesignSafe Training Module** -- [CLICK HERE to access the Module](https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/README.html)'
+            replace_first_markdown(file_path, new_text)
         return get_heading_from_notebook(file_path)
     else:
         try:
@@ -85,8 +104,83 @@ def get_heading_from_file(file_path):
         return Path(file_path).stem  # fallback if no heading found
 
 
+
+
+def replace_first_markdown(notebook_path, new_text):
+    try:
+        # Load notebook
+        with open(notebook_path, 'r', encoding='utf-8') as f:
+            nb = nbformat.read(f, as_version=4)
+
+        # Find the first markdown cell
+        for cell in nb['cells']:
+            if cell['cell_type'] == 'markdown':
+                cell['source'] = new_text  # Replace its contents
+                break  # stop after first markdown cell
+
+        # Save notebook
+        with open(notebook_path, 'w', encoding='utf-8') as f:
+            nbformat.write(nb, f)
+
+        print(f"Replaced first markdown cell in {notebook_path}")
+
+    except FileNotFoundError:
+        print("FileNotFoundError")
+        return Path(notebook_path).stem
+
+def replace_cell_by_index(notebook_path, cell_index, new_text):
+    try:
+        with open(notebook_path, 'r', encoding='utf-8') as f:
+            nb = nbformat.read(f, as_version=4)
+
+        if 0 <= cell_index < len(nb['cells']):
+            nb['cells'][cell_index]['source'] = new_text
+        else:
+            print(f"Cell index {cell_index} out of range.")
+
+        with open(notebook_path, 'w', encoding='utf-8') as f:
+            nbformat.write(nb, f)
+
+        print(f"Updated cell {cell_index} in {notebook_path}")
+
+    except FileNotFoundError:
+        print("FileNotFoundError")
+        return Path(notebook_path).stem
+
+
+
+
+def add_intro_markdown(notebook_path,cellIndexIN):
+    intro_text = "This notebook is part of the OpenSees-On-DesignSafe Training Module [CLICK HERE to access the Module](https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/README.html)"
+
+    try:
+        # Load notebook
+        with open(notebook_path, 'r', encoding='utf-8') as f:
+            nb = nbformat.read(f, as_version=4)
+
+        # Create new markdown cell
+        new_cell = new_markdown_cell(intro_text)
+
+        # Insert new cell at the top (index 0)
+        nb['cells'].insert(cellIndexIN, new_cell)
+
+        # Save the modified notebook
+        with open(notebook_path, 'w', encoding='utf-8') as f:
+            nbformat.write(nb, f)
+
+        print(f"Intro markdown cell added to {notebook_path}")
+
+    except FileNotFoundError:
+        print("FileNotFoundError")
+        return Path(notebook_path).stem
+
+
 def get_heading_from_notebook(notebook_path):
-    functionTagMap = {'# Local Utilities Library':'remove-input','OpsUtils.show_video':'remove-input','OpsUtils.show_text_file_in_accordion':'remove-input'}
+    functionTagMap = {
+        '# Local Utilities Library': 'remove-input',
+        'OpsUtils.show_video': 'remove-input',
+        'OpsUtils.show_text_file_in_accordion': 'remove-input'
+    }
     # Load notebook
     try:
         with open(notebook_path, 'r', encoding='utf-8') as f:
