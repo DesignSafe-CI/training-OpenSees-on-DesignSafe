@@ -160,6 +160,8 @@ parts:
       - file: Docs_MD/CLI.md
         sections:
         - file: Docs_MD/RunOpenSees_CLI.md
+        - file: Docs_MD/RunOpenSees_CLI_interactive.md
+        - file: Docs_MD/RunOpenSees_CLI_script.md
       - file: Docs_MD/RunOpsInDS_Console.md
 
       - file: Jupyter_Notebooks/runOps_Ex1a.py.Canti2D.Push.ipynb
