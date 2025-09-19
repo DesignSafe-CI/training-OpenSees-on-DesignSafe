@@ -141,7 +141,7 @@ parts:
       
   - caption: Training Modules
     chapters:
-    
+    - file: Docs_MD/TrainingDocsIntro.md
   
     - file: Docs_MD/WebPortal_Overview.md
       sections:
