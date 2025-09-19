@@ -74,6 +74,8 @@ This architecture supports a **modular and scalable workflow**, empowering both 
 
 :::
 
+<br>
+
 The following diagram gives you a snapshot of these components and how they contribute to the workflow we will be presenting in this training module.
 
 <img src="../_images/ComputeWorkflow.jpg" alt="Compute Environment" width="75%" />

@@ -84,13 +84,13 @@ Here’s a simple **decision tree** to guide you:
   * Submit it to the scheduler
   * Wait in queue and retrieve results from HPC file systems
 
-\:::{tip}
+:::{tip}
 JupyterHub is the most flexible environment — it supports OpenSees, OpenSeesMP, OpenSeesSP, and OpenSeesPy, with integrated file editing, scripting, and post-processing.
 
 OpenSees-Express is ideal for short Tcl jobs when you want **instant results** through a simple web form.
 
 HPC jobs (MP/SP) are best for large-scale work — and can be launched via the portal or automated from Jupyter.
-\:::
+:::
 
 ```{admonition} Quick Tips
 
