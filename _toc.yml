@@ -16,13 +16,9 @@ parts:
     chapters:
     
     - file: Docs_MD/Oview_DesignSafeOnTACC.md
-      sections:
-      - file: Docs_MD/Oview_WorkflowArchitecture.md
-      - file: Docs_MD/ComputeEnvironments.md
-      - file: Docs_MD/Oview_WorkflowArchitectureGuide.md
-
     - file: Docs_MD/OpenSees_AndDesignSafe.md
       sections:
+      - file: Docs_MD/Oview_WorkflowArchitectureGuide.md
       - file: Docs_MD/OpenSeesComputationalNeeds.md
       - file: Docs_MD/OpenSees_Interpreters.md
       - file: Docs_MD/OpenSees_Applications.md
@@ -40,6 +36,7 @@ parts:
         - file: Docs_MD/Ops_ParallelExec_Ibrun.md
         - file: Docs_MD/Ops_ParallelExec_python.md
       - file: Docs_MD/Ops_ExecGuide.md
+    - file: Docs_MD/ComputeEnvironments.md
 
 
 
@@ -91,7 +88,8 @@ parts:
           sections:
           - file: Docs_MD/SLURMmanual_PythonFunction.md
           - file: Docs_MD/SLURMmanual_PythonFunction2.md
-      - file: Docs_MD/ComputeEnv_VirtualMachines.md
+          
+    - file: Docs_MD/ComputeEnv_VirtualMachines.md
   
 
     
