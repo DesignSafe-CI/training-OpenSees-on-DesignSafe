@@ -1,4 +1,41 @@
-# Run OpenSees Interactively at the CLI
+# Run OpenSees Interactive at the CLI
+
+
+## Why Start with OpenSees Interactive?
+
+Before running scripts or submitting jobs to HPC, it’s useful to begin by running **OpenSees interactively at the command line**. This simple step serves several important purposes:
+
+* **Confirm installation** → Running interactively checks that OpenSees is available in your current environment.
+* **Check version information** → When the interpreter starts, it displays the version number, which is important to record for reproducibility.
+* **Understand which interpreter you’re using** →
+
+  * Typing `OpenSees` launches the **Tcl interpreter**.
+  * Typing `python` launches the **Python interpreter**, where you must import `openseespy.opensees` before calling OpenSees commands.
+
+Starting interactively also helps you get comfortable with the prompt and experiment with simple commands one at a time. This is especially helpful when learning OpenSees or troubleshooting a new environment.
+
+
+
+### Tcl vs. Python in OpenSees
+
+Both interpreters provide access to the same core simulation engine, but each has its own advantages:
+
+* **OpenSees-Tcl**
+
+  * Best for running existing Tcl scripts (many legacy examples are Tcl-based).
+  * Provides a minimal environment focused solely on OpenSees commands.
+  * Good for quick checks or lightweight scripting.
+
+* **OpenSeesPy (Python)**
+
+  * Best for new projects or when integrating OpenSees with the broader scientific Python ecosystem (NumPy, Pandas, Matplotlib, Jupyter notebooks, etc.).
+  * Supports modern scripting, automation, and data analysis workflows.
+  * Easier to combine OpenSees with pre- and post-processing tools.
+
+In short: **use Tcl if you are following older tutorials or running legacy scripts**, and **use Python for modern workflows and HPC integration**.
+
+
+---
 
 ## OpenSees-Tcl
 

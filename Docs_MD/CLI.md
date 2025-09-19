@@ -1,5 +1,13 @@
 # Terminal CLI
 
+Running an OpenSees at the command line allows you to test the program and make sure you have set up the right environment. This is ideal for:
+
+* Testing syntax or exploring commands in real time
+* Building a small model step-by-step
+* Debugging specific lines of code without running an entire script
+
+---
+
 The **CLI (Command-Line Interface)** is a text-based way to interact with a computer program or operating system by typing commands into a **Terminal** or **Console** window, instead of using graphical elements like buttons and menus. 
 
 A CLI/Terminal  allows you to:

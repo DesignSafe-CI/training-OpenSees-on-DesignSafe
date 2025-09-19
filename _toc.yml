@@ -159,7 +159,6 @@ parts:
       sections:
       - file: Docs_MD/CLI.md
         sections:
-        - file: Docs_MD/RunOpenSees_CLI.md
         - file: Docs_MD/RunOpenSees_CLI_interactive.md
         - file: Docs_MD/RunOpenSees_CLI_script.md
       - file: Docs_MD/RunOpsInDS_Console.md
