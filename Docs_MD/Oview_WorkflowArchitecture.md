@@ -9,14 +9,6 @@ To guide you through the full landscape, we divide the system into three key lay
 * **Interface Environments** — How you access the execution environments, interact with DesignSafe, and prepare/submit/postprocess jobs
 * **APIs** — The middleware that interface connects your tools to compute resources (e.g., Tapis)
 
----
-The following diagram gives you a snapshot of the workflow we will be presenting in this training module.
-
-<img src="../_images/ComputeWorkflow.jpg" alt="Compute Environment" width="75%" />
-
-
-<br>
-
 Let's study detail each of these three layers:
 
 ## Execution Environments
@@ -82,4 +74,6 @@ This architecture supports a **modular and scalable workflow**, empowering both 
 
 :::
 
-Now that we’ve mapped the environments and how they connect, let’s compare your available options side-by-side and choose the right workflow for your needs.
+The following diagram gives you a snapshot of these components and how they contribute to the workflow we will be presenting in this training module.
+
+<img src="../_images/ComputeWorkflow.jpg" alt="Compute Environment" width="75%" />
