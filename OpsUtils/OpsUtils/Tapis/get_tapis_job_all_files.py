@@ -1,3 +1,9 @@
+import os
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+from html import escape
+
+
 def get_tapis_job_all_files(
     t, jobUuid, 
     displayIt=10, 
@@ -78,38 +84,78 @@ def get_tapis_job_all_files(
 
     import os
     import OpsUtils
-    def view_tapis_file_in_accordion(selected_path):
-        import ipywidgets as widgets
-        from IPython.display import display, clear_output
 
-        
-    
+    def view_tapis_file_in_accordion(selected_path):
         view_select_out = widgets.Output()
         view_select_out_acc = widgets.Accordion(children=[view_select_out])
         view_select_out_acc.set_title(0, f" View File: {selected_path}")
         if selected_path == '.':
             view_select_out_acc.selected_index = 0
         display(view_select_out_acc)
+    
         with view_select_out:
-            if not os.path.splitext(selected_path)[-1] in ['.zip','.ZIP']:
-                clear_output()
-                if selected_path:
-                    local_file = selected_path.split('/')[-1]
-                    # print('selected_path',selected_path)
-                    data = t.jobs.getJobOutputDownload(jobUuid=jobUuid, outputPath=selected_path)
-                    print(f" Viewing: {selected_path}")
-                    textarea = widgets.Textarea(
-                        value=data,
-                        placeholder='',
-                        description='',
-                        disabled=False,
-                        layout=widgets.Layout(width='100%', height='500px')
-                    )
-                    display(textarea)
-                else:
-                    print(" No output file selected to download.")
-            else:
-                print("can't display content")
+            clear_output()
+            if not selected_path:
+                print(" No output file selected to download.")
+                return
+    
+            data = t.jobs.getJobOutputDownload(jobUuid=jobUuid, outputPath=selected_path)
+            text = _bytes_to_text(data, selected_path)
+            print(f" Viewing: {selected_path}")
+    
+            if text is None:
+                print(" (binary file; not displayed here)")
+                return
+    
+            # Option A: HTML <pre> (fast for large text)
+            html = widgets.HTML(
+                value=f'<pre style="margin:0;white-space:pre;overflow:auto;max-height:500px;'
+                      f'font-family:monospace;">{escape(text)}</pre>'
+            )
+            display(html)
+    
+            # Option B (alternative): Textarea (slower for huge files)
+            # ta = widgets.Textarea(
+            #     value=text,
+            #     layout=widgets.Layout(width='100%', height='500px'),
+            #     disabled=False
+            # )
+            # display(ta)
+
+
+    
+    # def view_tapis_file_in_accordion(selected_path):
+    #     import ipywidgets as widgets
+    #     from IPython.display import display, clear_output
+
+        
+    
+    #     view_select_out = widgets.Output()
+    #     view_select_out_acc = widgets.Accordion(children=[view_select_out])
+    #     view_select_out_acc.set_title(0, f" View File: {selected_path}")
+    #     if selected_path == '.':
+    #         view_select_out_acc.selected_index = 0
+    #     display(view_select_out_acc)
+    #     with view_select_out:
+    #         if not os.path.splitext(selected_path)[-1] in ['.zip','.ZIP']:
+    #             clear_output()
+    #             if selected_path:
+    #                 local_file = selected_path.split('/')[-1]
+    #                 # print('selected_path',selected_path)
+    #                 data = t.jobs.getJobOutputDownload(jobUuid=jobUuid, outputPath=selected_path)
+    #                 print(f" Viewing: {selected_path}")
+    #                 textarea = widgets.Textarea(
+    #                     value=data,
+    #                     placeholder='',
+    #                     description='',
+    #                     disabled=False,
+    #                     layout=widgets.Layout(width='100%', height='500px')
+    #                 )
+    #                 display(textarea)
+    #             else:
+    #                 print(" No output file selected to download.")
+    #         else:
+    #             print("can't display content")
 
 
     # normalize displayIt
