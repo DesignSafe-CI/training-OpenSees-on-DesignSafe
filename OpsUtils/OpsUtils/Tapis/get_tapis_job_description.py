@@ -197,11 +197,11 @@ def get_tapis_job_description(t, tapisInput):
 
             
             HEREkey = 'appArgs'
-            print('HEREkey',HEREkey)
+            # print('HEREkey',HEREkey)
             parameterSet[HEREkey] = []
             for app_Dict in app_parameterSet[HEREkey]:
                 app_Dict = app_Dict.__dict__
-                print('app_Dict',app_Dict)
+                # print('app_Dict',app_Dict)
                 here_name = app_Dict['name']
                 here_dict = {"name":here_name,"arg":app_Dict['arg']}
                 if 'notes' in app_Dict:
@@ -212,11 +212,11 @@ def get_tapis_job_description(t, tapisInput):
                     here_dict["arg"] = tapisInput[here_name]
                 parameterSet[HEREkey].append(here_dict)
             HEREkey = 'envVariables'
-            print('HEREkey',HEREkey)
+            # print('HEREkey',HEREkey)
             parameterSet[HEREkey] = []
             for app_Dict in app_parameterSet[HEREkey]:
                 app_Dict = app_Dict.__dict__
-                print('app_Dict',app_Dict)
+                # print('app_Dict',app_Dict)
                 here_name = app_Dict['key']
                 here_dict = {"key":here_name,"value":app_Dict['value']}
                 if 'notes' in app_Dict:
