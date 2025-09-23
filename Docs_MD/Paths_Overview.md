@@ -4,38 +4,7 @@
 
 A **path** is the address of a file or directory. It tells applications—like OpenSees or any Tapis app—**where to find inputs and where to write outputs** across your storage spaces (*MyData*, *MyProjects*, shared work areas, and HPC systems like Stampede3).
 
----
 
-## Relative vs. Full (Absolute) Paths
-
-**Relative path**
-
-* Interpreted **from your current working directory (CWD)**.
-* Short and convenient when you’re “already in” the right folder.
-* **Does not start with `/`**.
-* Changes meaning if your CWD changes.
-
-**Full (absolute) path**
-
-* The **complete address from the filesystem root**, starting with **/**.
-* Works regardless of CWD—**safer for batch jobs, Tapis jobs, and SLURM**.
-* Often uses env vars (*$HOME*, *$WORK*, *$SCRATCH*) for portability.
-
-**What Jupyter shows vs. what the OS/HPC uses**
-
-* The **Jupyter file browser** and notebooks operate relative to the notebook’s CWD, so *data/run1.csv* “just works” there.
-* HPC/Tapis launchers may change CWD; **absolute paths are more reliable** in wrappers and batch jobs.
-
-### Quick examples
-
-| Context                             | You write                         | Resolves to                     |
-| ----------------------------------- | --------------------------------- | ------------------------------- |
-| Relative (CWD = */home/user/book/*) | *data/run1.csv*                   | */home/user/book/data/run1.csv* |
-| “Go up one level”                   | *../inputs/record.at2*            | */home/user/inputs/record.at2*  |
-| Full (absolute)                     | */home/user/book/data/run1.csv*   | Always that path                |
-| Home shortcut                       | *~/book/data/run1.csv*            | *$HOME/book/data/run1.csv*      |
-| HPC env var                         | *$WORK/myproj/cases/c1*           | Your site’s “work” area         |
-| Python (portable)                   | *Path("data/run1.csv").resolve()* | Absolute path computed from CWD |
 
 ---
 
@@ -63,62 +32,6 @@ Although they’re under the DesignSafe umbrella, **compute and storage systems 
 * Files written to **Stampede3 scratch** during execution **aren’t visible** in JupyterHub/Data Depot **unless you copy them** to *Work* or *MyData*. (During an active job, the portal may show an *execution directory* view, but that’s transient.)
 * **Tapis can access all of these systems**—it’s a unifying layer—but you must provide **the correct path for the target system** in Tapis format (more on this later).
 
----
-
-## When to Use Relative vs. Full Paths
-
-* **Use relative paths** for quick local work **inside Jupyter** when you control CWD (notebooks, small scripts).
-* **Use full paths** when:
-
-  * Submitting **Tapis** or **SLURM** jobs (launchers may change CWD).
-  * Sharing inputs/outputs across scripts, nodes, or users.
-  * Writing **reusable automation** that must run from any directory.
-
----
-
-:::{dropdown}Practical Recipes
-
-**In a Notebook (Python):**
-
-```python
-from pathlib import Path
-print("CWD:", Path.cwd())                           # where you are
-print("Absolute:", Path("data/run1.csv").resolve()) # get a full path
-print("Home:", Path("~").expanduser())              # your home dir
-```
-
-**In a shell (terminal or notebook cell):**
-
-```bash
-pwd                  # show current directory
-echo "$HOME"         # home
-echo "$WORK"         # HPC work area (if defined by site)
-# show absolute path (many Linux systems)
-readlink -f data/run1.csv
-```
-
-**Anchor relative paths to a script’s location (Python):**
-
-```python
-from pathlib import Path
-BASE = Path(__file__).resolve().parent
-inp = BASE / "inputs" / "model.tcl"    # stable even if CWD changes
-```
-
-**Keep outputs portable (Python):**
-
-```python
-outdir = Path("~/results").expanduser()
-outdir.mkdir(parents=True, exist_ok=True)
-f = outdir / "run1.csv"
-```
-
-**Tapis transfers (conceptual):**
-
-* Think: **`(systemId="designsafe.storage.default", path="/Users/you/inputs/model.tcl")`**
-* For HPC job I/O, your wrapper will typically use **absolute filesystem paths** on the compute system (e.g., `$WORK/myproj/...`).
-
-:::
 ---
 
 ## Common Errors & Quick Fixes
