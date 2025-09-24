@@ -66,3 +66,17 @@ Most DesignSafe applications powered by Tapis follow this general pattern:
 4. **Monitor job status** (pending → running → finished)
 5. **Download or archive output data** for further analysis
 
+---
+
+## Tapis Documentation
+1. [Tapis Project Page](https://tapis-project.org/)
+2. [Tapis Documentation](https://tapis.readthedocs.io/en/latest/index.html)
+3. [tapipy Documentation](https://tapis.readthedocs.io/en/latest/technical/pythondev.html)
+4. [tapipy GitHub Page](https://github.com/tapis-project/tapipy/blob/main/tapipy/resources/openapi_v3-apps.yml)
+
+
+
+
+
+
+
