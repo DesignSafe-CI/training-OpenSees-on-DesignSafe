@@ -18,6 +18,7 @@ sphinx:
       - myst.header
     html_baseurl: "https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/"
     html_copy_source: true
+    html_favicon: "favicon.528227ad5610.ico"
 
 launch_buttons:
   notebook_interface: "jupyterlab"
