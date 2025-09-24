@@ -1,4 +1,4 @@
-## Varying Computational Needs
+## Computational Needs
 
 OpenSees users run many different kinds of analyses on DesignSafe, and not all of them stress the hardware in the same way. To make this clearer, we separate the information into two parts:
 
