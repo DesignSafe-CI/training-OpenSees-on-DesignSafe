@@ -16,7 +16,7 @@ parts:
     chapters:
     
     - file: Docs_MD/Oview_DesignSafeOnTACC.md
-    - file: Docs_MD/OpenSeesComputationalNeeds.md
+    - file: Docs_MD/ComputationalNeeds.md
     - file: Docs_MD/OpenSees_AndDesignSafe.md
       sections:
       - file: Docs_MD/Oview_WorkflowArchitectureGuide.md

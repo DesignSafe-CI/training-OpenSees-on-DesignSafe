@@ -15,7 +15,7 @@ This separation emphasizes two points:
 
 ### 1. Analysis Types
 
-The following table provides an overview of the kinds of analyses that OpenSees users may run on DesignSafe:
+The following table provides an overview of the kinds of analyses that users may run on DesignSafe:
 
 | Analysis Type                 | Description                                                                                                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ The table below shows how these analyses differ in their computational character
 
 ### How to Use These Tables
 
-* If your workload looks like **Monte Carlo** or **parametric sweeps** → Use **OpenSeesMP** or a job array, since these are *embarrassingly parallel*.
+* If your workload looks like **Monte Carlo** or **parametric sweeps** → Use a job array, since these are *embarrassingly parallel*.
 * If you are doing a **stepwise time simulation** → Expect moderate scaling, and prefer CPU jobs with sufficient walltime.
 * If you are combining **multiple solvers (coupled simulation)** → Prioritize **memory per node** and consider domain decomposition.
 * If you are doing **ML training or pre/post-processing** → These may use different DesignSafe resources (Python/GPU environments, batch preprocessing tools).
