@@ -1,6 +1,6 @@
 # Stampede3 Nodes
 
-The execution system on TACC used in this training module is **Stampede3**. You can learn more about this system on the TACC documentation: [Stampede3 User Guide](https://docs.tacc.utexas.edu/hpc/stampede3/)
+The execution system on TACC used in this training module is **Stampede3**. 
 - **Login Nodes**
     - The Stampede3 login nodes are Intel Xeon Platinum 8468 "Sapphire Rapids" (SPR) nodes, each with 96 cores on two sockets (48 cores/socket) with 250 GB of DDR.
     - These nodes are used for job testing and submittal, not for computation.
@@ -42,4 +42,4 @@ The execution system on TACC used in this training module is **Stampede3**. You 
 | **GPU Memory**         | --                       | --                      | --                         | 128 GB HBM2e per GPU     | --                |
 
 
-
+You can learn more about Stampede3 on the TACC documentation: [Stampede3 User Guide](https://docs.tacc.utexas.edu/hpc/stampede3/)

@@ -1,7 +1,7 @@
 # OpenSees-on-DesignSafe Training
 by **Silvia Mazzoni**<br>
 Applications Specialist @ DesignSafe<br>
-July 2025
+September 2025
 
 
 As a unified platform for natural hazards engineering, **DesignSafe** supports the full research lifecycle by integrating interactive tools, data management services, and high-performance computing resources. Whether you're developing models, running large-scale simulations, or conducting detailed post-processing, DesignSafe provides the infrastructure to streamline and scale your workflow.
