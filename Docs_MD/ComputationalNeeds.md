@@ -1,6 +1,6 @@
 ## Computational Needs
 
-OpenSees users run many different kinds of analyses on DesignSafe, and not all of them stress the hardware in the same way. To make this clearer, we separate the information into two parts:
+Users run many different kinds of analyses on DesignSafe, and not all of them stress the hardware in the same way. To make this clearer, we separate the information into two parts:
 
 1. **Analysis Types** — describes what each type of workload is, with examples of how it is used in earthquake engineering and simulation.
 2. **Computational Needs** — summarizes the demands of each workload in terms of memory, CPU/GPU usage, scalability, and speed sensitivity.
@@ -8,7 +8,7 @@ OpenSees users run many different kinds of analyses on DesignSafe, and not all o
 This separation emphasizes two points:
 
 * **Conceptual clarity** → Users can first identify the type of analysis they’re doing without worrying about compute details.
-* **Computational diversity** → Even within OpenSees workflows, some tasks are trivially parallel (Monte Carlo, sweeps), while others are memory-bound (coupled simulations) or GPU-accelerated (ML training).
+* **Computational diversity** → Some tasks are trivially parallel (Monte Carlo, sweeps), while others are memory-bound (coupled simulations) or GPU-accelerated (ML training).
 * **Scalable *and* adaptable environments** → DesignSafe provides access to HPC resources that are both scalable and adaptable, because there is no “one-size-fits-all” solution. Some workloads benefit from spreading across many nodes (parallel Monte Carlo), while others require large memory per node (coupled multiphysics). Importantly, you can’t simply add more nodes as a simulation grows in scope — different analysis types demand different strategies for scaling.
 
 ---
