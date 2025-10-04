@@ -9,6 +9,8 @@ Beyond OpenSees-specific workflows, this training covers the **core fundamentals
 * Navigate **file storage systems** on DesignSafe, including data staging, transfer, and archival strategies.
 * Interact with different computational environments — from terminal-based CLI to Jupyter notebooks and batch script submissions — and know when to use each.
 
+[Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording of the webinar I presented to introduce this training document.
+
 ---
 
 By the end of this module, you’ll know how to:
