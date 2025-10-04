@@ -22,6 +22,9 @@ By the end of this module, you’ll know how to:
 * **Automate large parameter studies** by modifying script values on the fly or using loops in Python.
 * **Leverage Tapis APIs** to submit and monitor multiple jobs programmatically.
 
+
+<iframe width="50%" src="https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ---
 ## Training Material
 
