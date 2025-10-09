@@ -18,7 +18,7 @@ do_add_intro_markdown = False; # do this only once, but keep here as template.
 do_replace_first_markdown = True; # this is good to have since it makes sure the link at the top is good.
 
 # jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/notebooks/"
-jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/lab/tree/"
+jupyterNotebooksPath_start = f"https://jupyter.designsafe-ci.org/hub/user-redirect/tree/"
 jupyterNotebooksPath_mid = f"CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/"
 
 # https://jupyter.designsafe-ci.org/hub/user-redirect/lab/tree/CommunityData/OpenSees/TrainingMaterial/training-OpenSees-on-DesignSafe/Jupyter_Notebooks
@@ -76,14 +76,14 @@ def get_heading_from_file(file_path):
             add_intro_markdown(file_path,1); # we really only need to do this once
         if do_replace_first_markdown:
             new_text = ''
-            new_text += '<a class="reference external" href="'
+            new_text += '\n<a class="reference external" href="'
             new_text += get_notebook_link(file_path)
             new_text += '" target="_blank">\n'
             new_text += '<img alt="Try on DesignSafe" src="https://raw.githubusercontent.com/DesignSafe-Training/pinn/main/DesignSafe-Badge.svg" /></a>'
-            # new_text += '\n'
-            # new_text += '<br>\n'
-            # new_text += '\n'
-            # new_text += 'This notebook is part of the **OpenSees-On-DesignSafe Training Module** -- [CLICK HERE to access the Module](https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/README.html)'
+            new_text += '\n'
+            new_text += '<br>\n'
+            new_text += '\n'
+            new_text += 'This notebook is part of the **OpenSees-On-DesignSafe Training Module** -- [CLICK HERE to access the Module](https://designsafe-ci.github.io/training-OpenSees-on-DesignSafe/README.html)'
             replace_first_markdown(file_path, new_text)
         return get_heading_from_notebook(file_path)
     else:
