@@ -16,6 +16,7 @@ parts:
     chapters:
     
     - file: Docs_MD/Oview_DesignSafeOnTACC.md
+    - file: Docs_MD/Oview_ComputationalWorkflow.md
     - file: Docs_MD/ComputationalNeeds.md
 
     - file: Docs_MD/ComputeEnvironments.md
