@@ -10,9 +10,8 @@ parts:
   - caption: ""  # <- This part has no title, acts like a loose section
     chapters:
     - file: Docs_MD/Oview_TrainingObjectives.md
-
     
-  - caption: Guides
+  - caption: Computational Resources
     chapters:
     
     - file: Docs_MD/Oview_DesignSafeOnTACC.md
@@ -107,7 +106,7 @@ parts:
       
       - file: Docs_MD/OpenSees_Interpreters.md
       - file: Docs_MD/OpenSees_Applications.md
-      - file: Docs_MD/OpenSees_Workflows.md
+      - file: Docs_MD/OpenSees_InterpWorkflows.md
       - file: Docs_MD/OpenSees_DecisionMatrixOpsDS.md
 
       - file: Docs_MD/Ops_CommandStrux.md
@@ -124,8 +123,7 @@ parts:
       
   - caption: Training Modules
     chapters:
-    - file: Docs_MD/TrainingDocsIntro.md
-  
+    - file: Docs_MD/OpenSees_Workflows.md
     - file: Docs_MD/WebPortal_Overview.md
       sections:
       - file: Docs_MD/WebPortal_Overview_Workflow.md

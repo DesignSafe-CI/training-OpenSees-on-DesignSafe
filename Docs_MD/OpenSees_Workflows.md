@@ -1,94 +1,42 @@
-# Interpreters & Workflows
-***OpenSees-Tcl vs OpenSeesPy: Workflow Patterns & App Selection***
+## OpenSees Workflows
 
-## Conceptual difference (why workflows feel different)
+DesignSafe provides multiple computational pathways for running OpenSees analyses, each suited to different stages of research and levels of user experience. To help you choose and use these effectively, we provide three structured training modules. Each module contains detailed instructions and Jupyter notebooks that demonstrate one of the three main ways you can run OpenSees on DesignSafe:
 
-* **OpenSees-Tcl** is a standalone executable. You launch it as its own process; control and visibility live *inside* that process. External tools can’t easily “peek” while it runs except via files/logs you write.
-* **OpenSeesPy** runs *inside Python*. Python is the main runtime; OpenSees is a library you call. Your script can inspect/modify state mid-analysis, branch logic based on results, stream metrics to dashboards, and coordinate other Python tools (NumPy, pandas, Plotly, mpi4py, etc.).
+1. **Submitting jobs from the Web Portal**
 
-**Implication:** with OpenSeesPy your workflow code can *query and steer* the model during an analysis; with OpenSees-Tcl you typically coordinate via input files, checkpoints, and post-processing.
+   * The simplest way to launch OpenSees jobs on HPC systems.
+   * Ideal for users who want a quick, browser-based interface to submit and manage batch jobs.
 
----
+2. **Running OpenSees directly in JupyterHub**
 
-## Common workflow patterns
+   * Provides an interactive coding environment where you can run OpenSees jobs inside Jupyter notebooks or terminals.
+   * Useful for rapid prototyping, pre/post-processing, and smaller analyses that can run within JupyterHub’s allocated resources.
 
-### Interactive development (iterate, visualize, debug)
+3. **Submitting HPC jobs via Tapis inside JupyterHub**
 
-* **Best with:** OpenSeesPy in a Jupyter Notebook (single thread).
-* **Why:** Tight feedback loop, inline plots/tables, easy parameter sweeps at small scale.
-* **Tip:** When it’s “right,” graduate the same Python code to batch runs via Tapis.
+   * The most flexible and advanced method.
+   * You can launch full HPC jobs from within JupyterHub by calling Tapis through Python or the command line, integrating job submission, monitoring, and results retrieval into one workflow.
 
-### Batch runs at scale (automate, reproduce, share)
+These methods are shown in the diagram below.
 
-* **Best with:** Python scripts (OpenSeesPy) or Tcl scripts, submitted via **Tapis** (Web Portal or Python SDK).
-* **Why:** Job metadata, inputs/outputs, and logs are tracked; trivial to rerun or parameterize.
+<img src="../_images/WaysToRunOpenSeesOnDS_all.jpg" alt="Workflows for OpenSees on DesignSafe" width="75%" />
 
-### Parallelism style
 
-* **Embarrassingly parallel sweeps** (many independent runs):
-  Use **OpenSeesMP** or Python + **mpi4py**/**concurrent.futures**; map one case per rank/worker.
-* **Single large model that needs distributed memory / domain decomposition**:
-  Use **OpenSeesSP**.
+These three modules illustrate that there is **no one-size-fits-all approach**. DesignSafe provides both scalable and adaptable computational environments, meaning that the “best” method depends on the type of analysis, the size of the problem, and your workflow needs. Importantly, scaling on HPC is not simply a matter of adding more nodes — some analyses benefit from massive parallelism, while others require high memory per node or GPU acceleration.
 
-### Tight coupling with other Python tools (ML, filtering, live metrics)
-
-* **Best with:** OpenSeesPy (inside Python).
-  Stream intermediate results, adapt time-steps, trigger early stop, etc.
 
 ---
 
-## Which app is best for which use case?
+### Recommended Path for Getting Started
 
-| Use case                                                 | Recommended app / environment                              | Why it’s a good fit                                 | Notes / trade-offs                                             |
-| -------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
-| Quick, small **sequential** runs; “first job” experience | **OpenSees-Express (sequential VM)** via Web Portal        | No queue, minimal inputs, fast turnaround           | Shared VM, no GUI; great for correctness checks & small models |
-| Interactive prototyping, plotting, teaching              | **JupyterHub + OpenSeesPy**                                | Single-threaded, rich notebooks, inline plots       | Not for big parallel jobs; scale later via Tapis               |
-| Many independent analyses (records/parameters)           | **OpenSeesMP** (Web Portal / Tapis) or **Python + mpi4py** | One case per rank; high throughput                  | Ensure per-case I/O is isolated; use scratch/work storage      |
-| One very large model (memory/DOF heavy)                  | **OpenSeesSP** (Web Portal / Tapis)                        | Domain decomposition across ranks                   | Requires parallel solvers; expect longer queue times           |
-| Python-centric pipelines (pre/post + control during run) | **OpenSeesPy + Tapis** (programmatic)                      | Full Python ecosystem; easy automation & provenance | Use *mpi4py* or job arrays to scale                            |
-| Legacy Tcl scripts, reproducible batch                   | **OpenSees (Tcl) via Web Portal/Tapis**                    | Stable scripts; minimal refactor                    | Coordination & mid-run queries via files/logs                  |
+Whether you are just beginning or preparing to optimize your use of DesignSafe, we recommend that you first go through the training modules, and then follow the following progression:
 
----
+1. **Start with an MWE (Minimum Working Example).**
+2. **Test the MWE in JupyterHub.**
+3. **Personalize and test your script in JupyterHub.**
+4. **Submit your modified script through the Web Portal.**
+5. **Use Tapis to query your job metadata.**
+6. **Access your analysis results in JupyterHub.**
+7. **Submit the same script to HPC via Tapis.**
 
-## Decision guide (quick chooser)
-
-1. **Need to poke the model mid-run or use Python tooling?** → **OpenSeesPy**.
-2. **Independent sweeps?** → **OpenSeesMP** (or Python + *mpi4py*).
-3. **One huge model that must distribute DOFs/memory?** → **OpenSeesSP**.
-4. **Just testing sequential logic or teaching?** → **Notebook (OpenSeesPy)** or **OpenSees-Express**.
-5. **Ready to scale or automate?** → Submit via **Tapis** (Web Portal or Python SDK).
-
----
-
-## Example workflows
-
-### A. Notebook → Batch at scale (OpenSeesPy)
-
-1. Prototype in Jupyter (plots, sanity checks).
-2. Move the notebook logic into a *model.py* script.
-3. Use **Tapis** to submit many runs (vary IM levels, records, parameters).
-
-   * For MPI: *ibrun python -m mpi4py model.py --cases cases.json*
-   * For arrays: job array or many small jobs.
-
-### B. Legacy Tcl → Parallel domain model (OpenSeesSP)
-
-1. Validate sequential Tcl on small DOFs.
-2. Migrate to SP (domain decomposition objects).
-3. Submit via **Tapis**; monitor *.out*/*.err*, extract results to structured files for post-processing.
-
-### C. Embarrassingly parallel sweeps (OpenSeesMP)
-
-1. Design a single Tcl/Py driver that reads one case spec.
-2. Launch **OpenSeesMP** and assign one spec per rank.
-3. Aggregate outputs (each rank writes to a unique subfolder).
-
----
-
-## Practical tips & pitfalls
-
-* **Notebook limits:** single process; great for learning and viz, not for production parallel runs.
-* **Storage layout:** keep one output folder per run/rank to avoid collisions; prefer work/scratch storage for performance.
-* **Logging:** always check SLURM **.out*/**.err* first; stream key metrics to a lightweight CSV for quick triage.
-* **Reproducibility:** pin versions (modules/containers), record seeds/IMs/parameters in metadata, archive outputs consistently.
-* **Graduation path:** prototype (Notebook) → script (CLI) → scale (Tapis) with **no logic rewrites**, only a change in launcher/parameters.
+Following this sequence ensures you build confidence step by step: first verifying that your model works, then adapting it to your research needs, and finally scaling it efficiently across DesignSafe’s HPC systems.
