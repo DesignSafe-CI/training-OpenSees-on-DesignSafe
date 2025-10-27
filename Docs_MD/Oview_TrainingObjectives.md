@@ -9,7 +9,6 @@ Beyond OpenSees-specific workflows, this training covers the **core fundamentals
 * Navigate **file storage systems** on DesignSafe, including data staging, transfer, and archival strategies.
 * Interact with different computational environments — from terminal-based CLI to Jupyter notebooks and batch script submissions — and know when to use each.
 
-[Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording of the webinar I presented to introduce this training document.
 
 ---
 
@@ -23,11 +22,24 @@ By the end of this module, you’ll know how to:
 * **Leverage Tapis APIs** to submit and monitor multiple jobs programmatically.
 
 
-<iframe width="50%" src="https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 ## Training Material
 
+### Introductory Webinar
+
+On September 17, 2025 we held a webinar introducing this training document. This webinar introduced DesignSafe as a unified platform for advancing natural hazards research, offering integrated tools for data management, interactive modeling, and high-performance computing. Using OpenSees as the primary case study, participants explored how to design and scale computational workflows — from small exploratory runs to automated HPC pipelines. The session emphasized the complete scientific workflow lifecycle, including model setup, job submission, monitoring, and results management. While focused on earthquake engineering, the strategies presented are broadly transferable to other domains such as CFD, climate modeling, and structural simulation.
+
+[Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording.
+
+:::{dropdown} Presentation Slides
+
+<div id="slideShow">
+<script>
+    addSlides("slideShow","../Webinar/WebinarSlides/Slide","JPG",1,29)
+</script>
+
+:::
 
 ### Using the Training Notebooks
 
