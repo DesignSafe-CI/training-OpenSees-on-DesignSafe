@@ -21,7 +21,22 @@ By the end of this module, you’ll know how to:
 * **Automate large parameter studies** by modifying script values on the fly or using loops in Python.
 * **Leverage Tapis APIs** to submit and monitor multiple jobs programmatically.
 
+---
 
+### Introductory Webinar
+
+On September 17, 2025 we held a webinar introducing this training document. This webinar introduced DesignSafe as a unified platform for advancing natural hazards research, offering integrated tools for data management, interactive modeling, and high-performance computing. Using OpenSees as the primary case study, participants explored how to design and scale computational workflows — from small exploratory runs to automated HPC pipelines. The session emphasized the complete scientific workflow lifecycle, including model setup, job submission, monitoring, and results management. While focused on earthquake engineering, the strategies presented are broadly transferable to other domains such as CFD, climate modeling, and structural simulation.
+
+[Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording.
+
+:::{dropdown} Presentation Slides
+
+<div id="slideShow_WebinarSlides">
+<script>
+    addSlides("slideShow_WebinarSlides","../_static/Webinar/WebinarSlides/Slide","JPG",1,29)
+</script>
+
+:::
 
 ---
 ## Training Material
@@ -48,19 +63,3 @@ Alongside the notebooks, this training relies on a **custom library of Python fu
 * You *can* copy the library directly from Community Data, but I **don’t recommend it**, since I am continually updating and improving it.
 * Instead, look at the **script near the top of any notebook** that uses the library — copy that snippet into your own path so you can use a stable version of the library in your work.
 
----
-
-### Introductory Webinar
-
-On September 17, 2025 we held a webinar introducing this training document. This webinar introduced DesignSafe as a unified platform for advancing natural hazards research, offering integrated tools for data management, interactive modeling, and high-performance computing. Using OpenSees as the primary case study, participants explored how to design and scale computational workflows — from small exploratory runs to automated HPC pipelines. The session emphasized the complete scientific workflow lifecycle, including model setup, job submission, monitoring, and results management. While focused on earthquake engineering, the strategies presented are broadly transferable to other domains such as CFD, climate modeling, and structural simulation.
-
-[Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording.
-
-:::{dropdown} Presentation Slides
-
-<div id="slideShow_WebinarSlides">
-<script>
-    addSlides("slideShow_WebinarSlides","../_static/Webinar/WebinarSlides/Slide","JPG",1,29)
-</script>
-
-:::
