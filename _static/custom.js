@@ -3,6 +3,7 @@ firstSlide = {}
 lastSlide = {}
 
 function addSlides(divLabel,imgSrc0,imgExt,startSlide,endSlide) {
+    console.log('divLabel',divLabel)
 
     currentSlide[divLabel] = startSlide
     firstSlide[divLabel] = startSlide
@@ -17,6 +18,7 @@ function addSlides(divLabel,imgSrc0,imgExt,startSlide,endSlide) {
       <button onclick='nextSlide("${divLabel}","${imgSrc0}","${imgExt}")' class="pushable"><span class="front">Next ➡️</span></button>
     </div>
     `
+    console.log('divTXT',divTXT)
     document.getElementById(divLabel).innerHTML = divTXT;
 
 }
