@@ -34,9 +34,9 @@ On September 17, 2025 we held a webinar introducing this training document. This
 
 :::{dropdown} Presentation Slides
 
-<div id="slideShow">
+<div id="slideShow_WebinarSlides">
 <script>
-    addSlides("slideShow","../Webinar/WebinarSlides/Slide","JPG",1,29)
+    addSlides("slideShow","../_static/Webinar/WebinarSlides/Slide","JPG",1,29)
 </script>
 
 :::
