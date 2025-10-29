@@ -56,10 +56,11 @@ On September 17, 2025 we held a webinar introducing this training document. This
 
 [Click here](https://youtu.be/hexvyWy6G20?si=bo-n58AZ3loR0VuF) to access to the recording.
 
-**Presentation Slides**
+:::{dropdown} Presentation Slides
 
 <div id="slideShow_WebinarSlides">
 <script>
     addSlides("slideShow_WebinarSlides","../_static/Webinar/WebinarSlides/Slide","JPG",1,29)
 </script>
 
+:::
